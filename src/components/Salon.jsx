@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 
-export const Ranking = () => {
+export const Salon = () => {
   return (
     <div>
         ranking
