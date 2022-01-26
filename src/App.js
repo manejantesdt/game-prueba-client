@@ -1,29 +1,30 @@
-import "./App.css";
+import React from "react";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
+import { About } from "./components/About";
 import { Home } from "./components/Home";
-import { Salon } from "./components/Salon";
-import { NavBar } from "./components/NavBar";
+import { Provider } from "react-redux";
 import { EditPlayer } from "./components/EditPlayer";
 import { CreatePlayer } from "./components/CreatePlayer";
-import { About } from "./components/About";
 import NotFound from "./components/NotFound";
-import {Link} from 'react-router-dom';
+import store from "./store/store";
+import "./styles/styles.scss";
+/* import { Link } from "react-router-dom"; */
 
-function App() {
-  return (
+const App = () => (
+  <Provider store={store}>
     <BrowserRouter>
-        <NavBar />
-      <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route path="/salon" element={<Salon />} />
-        <Route path="/edit" element={<EditPlayer />} />
-        <Route path="/create" element={<CreatePlayer />} />
-        <Route path="/about" element={<About />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-      <Link to="/about">About</Link>
-    </BrowserRouter>
-  );
-}
+    <Routes>
+    <Route path="/about" element={<About />} />
+    <Route exact path="/" element={<Home />} />
+    <Route path="/edit" element={<EditPlayer />} />
+    <Route path="/create" element={<CreatePlayer />} />
+    <Route path="*" element={<NotFound />} />
+    {/* <Link to="/about">About</Link> */}
+    </Routes>
+  </BrowserRouter>
+  </Provider>
 
-export default App;
+  );
+
+
+export default App;  
