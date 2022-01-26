@@ -8,18 +8,16 @@ import { CreatePlayer } from "./components/CreatePlayer";
 import NotFound from "./components/NotFound";
 import store from "./store/store";
 import "./styles/styles.scss";
-/* import { Link } from "react-router-dom"; */
 
 const App = () => (
   <Provider store={store}>
     <BrowserRouter>
     <Routes>
+    <Route path="/" element={<Home />} />
     <Route path="/about" element={<About />} />
-    <Route exact path="/" element={<Home />} />
     <Route path="/edit" element={<EditPlayer />} />
     <Route path="/create" element={<CreatePlayer />} />
     <Route path="*" element={<NotFound />} />
-    {/* <Link to="/about">About</Link> */}
     </Routes>
   </BrowserRouter>
   </Provider>
