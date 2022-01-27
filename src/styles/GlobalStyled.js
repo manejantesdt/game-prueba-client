@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
+ @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -23,18 +24,19 @@ Link{
 }
 
 body{
-  font-family: sans-serif;
   background: #67A9B2;
   position: center;
   min-height: 100vh;
   width: 100%;
   text-decoration: none;
+  font-family: Lato, Arial, Helvetica, sans-serif;
 }
 
 h1 {
   color: white;
   margin-bottom: 3rem;
   font-size: 2.5rem;
+  font-family: Lato, Arial, Helvetica, sans-serif;
 }
 
 hr{
