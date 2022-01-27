@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import cancha from "../cancha.svg";
+import fondo from "../img/teatro.png";
 
 const TopTen = ({ titulares, quitarTitular }) => (
   <section>
@@ -17,7 +17,7 @@ const TopTen = ({ titulares, quitarTitular }) => (
           <p>{j.ranking}</p>
         </article>
       ))}
-      <img src={cancha} alt="Cancha de fútbol" />
+      <img src={fondo} alt="fondo" />
     </div>
   </section>
 );

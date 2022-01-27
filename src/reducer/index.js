@@ -1,13 +1,8 @@
-const inizialstate = {
-  players: [],
-  player: {},
-};
-
-function rootReducer(state = inizialstate, { type, payload }) {
-  switch (type) {
+/* const inizialstate = {
+    form:{}
+ }
+ 
+ function rootReducer(state = inizialstate, { type, payload }) {
     
-    default:
-      return state;
-  }
-}
-export default rootReducer;
+ }
+ export default rootReducer; */
