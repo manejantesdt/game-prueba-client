@@ -1,20 +1,14 @@
-
 import Players from "./Players";
-//import Login from "./Login";
+import {BoldPlayers} from "./BoldPlayers";
 import MainPanel from "./MainPanel";
 import "../styles/styles.scss";
-
-
-
-
 
 export const Home = () => {
   return (
     <main>
       <Players />
       <MainPanel />
-      {/* <Login /> */}
-      
+      <BoldPlayers />
     </main>
   );
 };
