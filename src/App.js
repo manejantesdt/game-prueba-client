@@ -7,11 +7,12 @@ import { EditPlayer } from "./components/EditPlayer";
 import { CreatePlayer } from "./components/CreatePlayer";
 import NotFound from "./components/NotFound";
 import store from "./store/store";
-import "./styles/styles.scss";
+import NavBar from "./components/NavBar";
 
 const App = () => (
   <Provider store={store}>
     <BrowserRouter>
+    <NavBar />
     <Routes>
     <Route path="/" element={<Home />} />
     <Route path="/about" element={<About />} />

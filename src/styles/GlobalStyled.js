@@ -24,7 +24,7 @@ Link{
 
 body{
   font-family: sans-serif;
-  background: #67A9B2;
+  background: #1F3A52;
   position: center;
   min-height: 100vh;
   width: 100%;
@@ -32,26 +32,30 @@ body{
 }
 
 h1 {
-  color: white;
+  color: #fbf3e4;
   margin-bottom: 3rem;
   font-size: 2.5rem;
+}
+
+h6{
+  color: #fbf3e4;
 }
 
 hr{
   color: #FBF3E4;
 }
 
-h2 {
+${'' /* h2 {
   margin-bottom: 1rem;
   color: #FBF3E4;
-}
+} */}
 
-section {
+${'' /* section {
   margin-bottom: 4rem;
   padding: 1rem;
-  background: #3A6351;
+  background: #FBF3E4;
   border-radius: 8px;
-}
+} */}
 
 .contenedor-jugadores {
   overflow: auto;
