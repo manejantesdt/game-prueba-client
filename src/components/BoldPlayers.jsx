@@ -1,8 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
+import {BoldPlayersSections} from "../styles/BoldPlayers";
 
 const Suplentes = ({ suplentes, quitarSuplente }) => (
-  <section>
+  <BoldPlayersSections>
     <h2>Bold Players</h2>
     <div className="suplentes">
       {suplentes.map((j) => (
@@ -17,7 +18,7 @@ const Suplentes = ({ suplentes, quitarSuplente }) => (
         </article>
       ))}
     </div>
-  </section>
+  </BoldPlayersSections>
 );
 
 const mapStateToProps = (state) => ({

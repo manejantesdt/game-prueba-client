@@ -5,7 +5,6 @@ import BoldPlayers from "./BoldPlayers";
 const MainPanel = () => (
   <section>
     <TopTen />
-    <hr/>
     <BoldPlayers />
   </section>
 );

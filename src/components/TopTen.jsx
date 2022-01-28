@@ -1,9 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
 import fondo from "../img/teatro.png";
+import { TopTenSection } from "../styles/TopTen";
 
 const TopTen = ({ titulares, quitarTitular }) => (
-  <section>
+  <TopTenSection>
     <h2>Top Ten</h2>
     <div className="cancha">
       {titulares.map((j) => (
@@ -19,7 +20,7 @@ const TopTen = ({ titulares, quitarTitular }) => (
       ))}
       <img src={fondo} alt="fondo" />
     </div>
-  </section>
+  </TopTenSection>
 );
 
 const mapStateToProps = (state) => ({
