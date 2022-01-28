@@ -1,6 +1,6 @@
 
 import Players from "./Players";
-import Login from "./Login";
+//import Login from "./Login";
 import MainPanel from "./MainPanel";
 import "../styles/styles.scss";
 
@@ -13,7 +13,7 @@ export const Home = () => {
     <main>
       <Players />
       <MainPanel />
-      <Login />
+      {/* <Login /> */}
       
     </main>
   );

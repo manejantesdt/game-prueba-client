@@ -5,8 +5,7 @@ import TopTen from "./TopTen";
 const MainPanel = () => (
   <section>
     <TopTen />
-    <hr/>
-    {/* <BoldPlayers /> */}
+    <BoldPlayers />
   </section>
 );
 
