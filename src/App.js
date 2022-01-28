@@ -8,7 +8,6 @@ import { CreatePlayer } from "./components/CreatePlayer";
 import  NavBar  from "./components/NavBar";
 import NotFound from "./components/NotFound";
 import store from "./store/store";
-import NavBar from "./components/NavBar";
 
 const App = () => (
   <Provider store={store}>
@@ -25,4 +24,4 @@ const App = () => (
   </Provider>
 );
 
-export default App;
+export default App;  
