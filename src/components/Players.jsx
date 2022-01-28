@@ -1,5 +1,8 @@
 import React, { useEffect, createRef } from "react";
 import { connect } from "react-redux";
+import {
+  PlayerSection
+} from "../styles/Players.js";
 
 const Players = ({ jugadores, agregarTitular, agregarSuplente }) => {
   const gridJugadores = createRef();
@@ -42,7 +45,7 @@ const Players = ({ jugadores, agregarTitular, agregarSuplente }) => {
   };
 
   return (
-    <section>
+    <PlayerSection>
       <h2>Players</h2>
       <div className="contenedor-jugadores">
         <div ref={gridJugadores} onClick={() => setScrollContainer.bind(this)}>
@@ -58,7 +61,7 @@ const Players = ({ jugadores, agregarTitular, agregarSuplente }) => {
           ))}
         </div>
       </div>
-    </section>
+    </PlayerSection>
   );
 };
 

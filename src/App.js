@@ -8,20 +8,20 @@ import { CreatePlayer } from "./components/CreatePlayer";
 import  NavBar  from "./components/NavBar";
 import NotFound from "./components/NotFound";
 import store from "./store/store";
-import "./styles/styles.scss";
+import NavBar from "./components/NavBar";
 
 const App = () => (
   <Provider store={store}>
     <BrowserRouter>
-        <NavBar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/edit" element={<EditPlayer />} />
-        <Route path="/create" element={<CreatePlayer />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </BrowserRouter>
+    <NavBar />
+    <Routes>
+    <Route path="/" element={<Home />} />
+    <Route path="/about" element={<About />} />
+    <Route path="/edit" element={<EditPlayer />} />
+    <Route path="/create" element={<CreatePlayer />} />
+    <Route path="*" element={<NotFound />} />
+    </Routes>
+  </BrowserRouter>
   </Provider>
 );
 
