@@ -1,7 +1,10 @@
-import { CREATE_PLAYER } from "../action/actions";
+import { CREATE_PLAYER } from "../actions/index";
+import data from "../Aux_Data";
 
 const inizialstate = {
   form: {},
+  player: {},
+  players:data
 };
 
 function rootReducer(state = inizialstate, { type, payload }) {

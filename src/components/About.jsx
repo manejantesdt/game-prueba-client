@@ -1,11 +1,13 @@
-import { Link } from "react-router-dom";
 
 
 export const About = () => {
   return (
     <div>
-        soy un jueguito divertido
-        <Link to="/">home</Link>
+      <p>
+        este lindo juego nacio, de una idea eco-responsable, la cual desea
+        enseñar a las nuevas y no tan nuevas generaciones la importancia de
+        reciclar
+      </p>
     </div>
   );
 };

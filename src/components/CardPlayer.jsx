@@ -1,11 +1,13 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-
-export const CreatePlayer = () => {
+export const CreatePlayer = ({ id, nickname, image, status, ...props }) => {
   return (
-    <div>
-        soy carta
-        <Link to="/ranking">ranking</Link>
-    </div>
+    <article {...props} className="jugador">
+      <NavLink to={`/id/${id}`}>
+        <img src={image} alt={nickname} />
+        <h3>{nickname}</h3>
+      </NavLink>
+        <span>{status}</span>
+    </article>
   );
 };
