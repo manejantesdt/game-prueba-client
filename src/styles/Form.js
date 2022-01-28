@@ -1,13 +1,14 @@
 import styled from "styled-components";
 
 
+
 export const ContForm = styled.div`
 display: flex;
     flex-direction: row;
     justify-content: space-around;
 margin-top: 10%; 
 position: absolute;
-margin-left: 275px;
+margin-left: 338px;
 margin-top: 70px;
 width: 814px;
 height: 300px;

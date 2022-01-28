@@ -1,25 +1,31 @@
 import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch} from "react-redux";
 import { ContForm, IntoForm } from "../styles/Form.js";
+import { createPlayer } from "../actions/index";
+import default_avatar from "../img/Avatars/avataaars(1).png";
 
-// ------------------------< gestion errors >------------------------
+// ------------------------< gestion errors >---------------------------
 
-function validate(player) {
-  const errors = {};
-  if (!player.nickname) errors.name = "Nickname is required";
-  return errors;
-}
+// function validate(player) {
+//   const errors = {};
+//   if (!player.nickname) errors.name = "Nickname is required";
+//   return errors;
+// }
+// _____________________________________________________________________
 
 export const CreatePlayer = () => {
+  // ------------------------< Uses react >-----------------------------
   const [player, setPlayer] = useState({
     nickname: "",
     status: "steel",
     avatar: "",
     ranking: 0,
   });
+  
+  const dispatch = useDispatch();
+  // _____________________________________________________________________
 
-  const { form } = useSelector((state) => state);
-  // const useDispatch = useDispatch();
+  // ------------------------<variables>----------------------------------
 
   const avatar = [
     "https://drive.google.com/thumbnail?id=1FvgHhPmYNwruvKSjok1dp-ikpKVD2O5z",
@@ -35,12 +41,9 @@ export const CreatePlayer = () => {
     "https://drive.google.com/thumbnail?id=1ZhFz6JMOtT3107w-z2KuO0PZMOKEzIYx",
     "https://drive.google.com/thumbnail?id=1gqJ8yhqsmyQ5sJcLIFGt-DmN_5mDyBu-",
   ];
+  // _____________________________________________________________________________________________
 
   // -----------------------------------< handles >------------------------------------------------
-  function handleSubmit(e) {
-    e.preventDefault();
-  }
-
   function handleSelect(e) {
     setPlayer({
       ...player,
@@ -55,13 +58,23 @@ export const CreatePlayer = () => {
       [e.target.name]: e.target.value,
     });
   }
+  function onSubmit(e) {
+    e.preventDefault();
+    dispatch(createPlayer(player));
+    window.location.reload(false);
+  }
   // _______________________________________________________________________________________________
 
   return (
     <ContForm>
       <div className="image">
-        <img src={player.avatar} alt="Avatar" />
+        {!player.avatar ? (
+          <img src={default_avatar} alt="Error" />
+        ) : (
+          <img src={player.avatar} alt="Error" />
+        )}
       </div>
+
       <IntoForm>
         <div>
           <span>Nickname:</span>
@@ -98,7 +111,7 @@ export const CreatePlayer = () => {
             className="button_form"
             type="submit"
             name="submit"
-            onClick={(e) => handleSubmit(e)}
+            onClick={(e) => onSubmit(e)}
           >
             Create Player
           </button>
