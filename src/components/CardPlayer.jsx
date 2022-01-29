@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 
-export const CardPlayer = ({ id, nickname, image, status, ...props }) => {
+export const CardPlayer = ({ranking, id, nickname, image, status, ...props }) => {
   
   return (
     <article {...props} className="jugador">
@@ -9,6 +9,7 @@ export const CardPlayer = ({ id, nickname, image, status, ...props }) => {
         <h3>{nickname}</h3>
       </NavLink>
         <span>{status}</span>
+        <span>{ranking}</span>
     </article>
   );
 };

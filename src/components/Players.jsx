@@ -55,6 +55,7 @@ const Players = () => {
                 image={j.avatar}
                 key={j.Id}
                 id={j.Id}
+                ranking={j.ranking}
                 status={j.status}
               />
             );
