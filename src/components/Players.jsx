@@ -53,8 +53,8 @@ const Players = () => {
               <CardPlayer
                 nickname={j.nickname}
                 image={j.avatar}
-                key={j.id}
-                id={j.id}
+                key={j.Id}
+                id={j.Id}
                 status={j.status}
               />
             );

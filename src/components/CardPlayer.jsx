@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 
 export const CardPlayer = ({ id, nickname, image, status, ...props }) => {
+  
   return (
     <article {...props} className="jugador">
       <NavLink to={`/id/${id}`}>
