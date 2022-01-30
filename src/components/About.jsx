@@ -257,11 +257,9 @@ export const About = () => {
             <a href="/contact-us">Contact Us</a>
           </p>
         </div>
-        <div>
-        </div>
         <Link to="/">
-            <button className="button_form">Back </button>
-          </Link>
+          <button className="button_form">Back </button>
+        </Link>
       </article>
     </AboutSection>
   );

@@ -5,8 +5,8 @@ import {Home} from "./components/Home";
 import { Provider } from "react-redux";
 import { EditPlayer } from "./components/EditPlayer";
 import { CreatePlayer } from "./components/CreatePlayer";
-import  NavBar  from "./components/NavBar";
-import NotFound from "./components/NotFound";
+import  {NavBar}  from "./components/NavBar";
+import {NotFound} from "./components/NotFound";
 import store from "./store/store";
 
 const App = () => (

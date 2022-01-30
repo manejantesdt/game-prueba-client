@@ -10,7 +10,7 @@ import {
 } from "../styles/NavBar.js";
 import logo from "../img/Logo3.png";
 
-const NavBar = () => {
+export const NavBar = () => {
   return (
     <ContNavBar>
       <ContLogo>
@@ -39,4 +39,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+

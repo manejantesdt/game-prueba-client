@@ -6,8 +6,8 @@ export const FiltrosBar = () => {
       <h6>Status</h6>
       <select>
         <option value="">All</option>
-        <option value="">Gold</option>
-        <option value="">Silver</option>
+        <option value="">Oro</option>
+        <option value="">Plata</option>
         <option value="">Bronze</option>
         </select>
       
@@ -18,5 +18,3 @@ export const FiltrosBar = () => {
 
 
 
-//status
-//ranking

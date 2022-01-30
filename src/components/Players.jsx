@@ -2,7 +2,7 @@ import React, { useEffect, createRef } from "react";
 import { CardPlayer } from "./CardPlayer";
 import { useSelector } from "react-redux";
 
-const Players = () => {
+export const Players = () => {
   const { players } = useSelector((state) => state);
   const gridJugadores = createRef();
 
@@ -65,5 +65,3 @@ const Players = () => {
     </section>
   );
 };
-
-export default Players;
