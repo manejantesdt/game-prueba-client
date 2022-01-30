@@ -28,10 +28,11 @@ export const ContLogo = styled.div`
 
 export const Ul = styled.ul`
   .link {
-    font-family: "Chakra Petch", sans-serif;
+    /* font-family: "Chakra Petch", sans-serif; */
+    font-family: Lato, Arial, Helvetica, sans-serif;
     font-width: bold 500;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #fbf3e4;
     padding-left: 11.2rem;
     padding-right: 11.2rem;
@@ -41,14 +42,15 @@ export const Ul = styled.ul`
       padding-left: 11.2rem;
       padding-right: 11.2rem;
       height: 2rem;
-      background-color: #102132;
+      color: #102132;
+     /*  background-color: #102132; */
     }
 
     :active{
       padding-left: 11.2rem;
       padding-right: 11.2rem;
       height: 2rem;
-      background-color: #102132;
+     /*  background-color: #102132; */
     }
   }
 `;

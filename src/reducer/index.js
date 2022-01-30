@@ -4,7 +4,7 @@ import  { data, avatars } from "../Aux_Data";
 const inizialstate = {
   form: {},
   player: {},
-  players: data,
+  players:data,
   avatars : avatars, //declaro un nuevo estado avatars donde guardo los avatars
 };
 

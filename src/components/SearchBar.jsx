@@ -1,11 +1,11 @@
 import React from "react";
+import { SearchBarSection } from "../styles/SearchBar";
 
 export const SearchBar = () => {
   return (
-    <div>
-      <h6>Search</h6>
+    <SearchBarSection>
       <imput placeholder="Search Player" />
-      <button onClick={() => {}}>Search</button>
-    </div>
+      <button className="button" onClick={() => {}}>Search Player</button>
+    </SearchBarSection>
   );
 };

@@ -13,10 +13,12 @@ export const createPlayer = (payload) => {
 
 export function getAvatar() {
     return async function (dispatch) {
-        var json = await axios.get("http://localhost:3001/api/avatar/");
+        var json = await axios.get("http://localhost:3001/avatar/");
         return dispatch({
             type: "GET_AVATAR",
             payload: json.data
         })
     }
 };
+
+

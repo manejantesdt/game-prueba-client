@@ -200,7 +200,7 @@ export const data = [
     "https://drive.google.com/thumbnail?id=1gqJ8yhqsmyQ5sJcLIFGt-DmN_5mDyBu-",
   ];
 
-/* export default data; */
+
 
 
 

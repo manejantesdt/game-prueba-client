@@ -25,11 +25,6 @@ const NavBar = () => {
           </Link>
         </Ul>
         <Ul>
-          <Link to="/edit" className="link">
-            Edit Player
-          </Link>
-        </Ul>
-        <Ul>
           <Link to="/create" className="link">
             Create Player
           </Link>
@@ -41,20 +36,6 @@ const NavBar = () => {
         </Ul>
       </ContNav>
     </ContNavBar>
-    // <div>
-    //     <input placeholder="buscar jugador"/>
-    //     <select>
-    //       <option value="">Todos</option>
-    //       <option value="">jp</option>
-    //       <option value="">fabri</option>
-    //       <option value="">nel</option>
-    //       <option value="">ram</option>
-    //       <option value="">mar</option>
-    //     </select>
-    //     <Link to="/">home</Link>
-    //     <br/>
-    //     <Link to="/salon">salon</Link>
-    // </div>
   );
 };
 
