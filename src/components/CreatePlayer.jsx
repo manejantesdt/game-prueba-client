@@ -20,18 +20,18 @@ export const CreatePlayer = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [errors, setErrors] = useState({}); //genero un estado local errors y setErrors que va ser un objeto vacío
-  const avatars = useSelector((state) => state.avatars);
+  const { avatars } = useSelector((state) => state);
   // ------------------------< Uses react >-----------------------------
   const [player, setPlayer] = useState({
     nickname: "",
-    status: "steel",
-    avatar: [],
+    status: "hierro",
     ranking: 0,
+    avatar: "",
   });
 
-  useEffect(() => {
-    dispatch(getAvatar());
-  });
+  // useEffect(() => {
+  //   dispatch(getAvatar());
+  // });
 
   // _____________________________________________________________________________________________
 
@@ -56,7 +56,7 @@ export const CreatePlayer = () => {
         [e.target.name]: e.target.value,
       })
     );
-    console.log(player);
+
   }
 
   function handleSubmit(e) {
@@ -64,17 +64,13 @@ export const CreatePlayer = () => {
       document.getElementById("DoNotSubmit"); //con document.getElementById() selecciono el form por medio del atributo id que le asigné ("DontSubmit")
       return alert("Please complete the fields with valid data");
     }
-    const addPlayer = {
-      nickname: player.nickname,
-      avatar: player.avatar,
-    };
-    e.preventDefault(); //e.preventDefault() me permite prevenir el comportamiento por default de un submit (el comportamiento predeterminado) que en este caso es el envío del formulario
-    dispatch(createPlayer(addPlayer)); //si no salió por ninguna de las validaciones incorrectas, entonces envío el formulario
+    // const addPlayer = {
+    //   nickname: player.nickname,
+    //   avatar: player.avatar,
+    // };
+    e.preventDefault();
+    dispatch(createPlayer(player)); 
     alert("Your player was successfully created!");
-    //setPlayer({                                    //seteo el input en cero otra vez
-    //nickname: "",
-    //avatar: [],
-    //})
     window.location.reload(false);
     navigate({ pathname: "/" });
   }

@@ -3,16 +3,17 @@ import axios from "axios";
 // -----------------------<Gets>------------------------
 
 export const getPlayers = ({ nickname, order, status }) => {
-  console.log(nickname, order, status);
+  console.log(nickname, order, status, "console de actions");
   return async (dispatch) => {
     try {
-      var json = (
+      const json = (
         await axios.get(
-          `http://localhost:3001/player?nickname=${
+          `http://localhost:3001/players?nickname=${
             nickname ? nickname : ""
           }&order=${order ? order : ""}&status=${status ? status : ""}`
         )
       ).data;
+      console.log(json, "json de actions");
       dispatch({
         type: "GET_PLAYERS",
         payload: json,
@@ -26,24 +27,33 @@ export const getPlayers = ({ nickname, order, status }) => {
 export const getAvatar = () => {
   return async (dispatch) => {
     try {
-      var json = (await axios.get("http://localhost:3001/avatar/")).data;
+      const avatar = (await axios.get("http://localhost:3001/avatar/")).data;
       dispatch({
         type: "GET_AVATAR",
-        payload: json,
+        payload: avatar,
       });
     } catch (error) {
       console.error(error);
     }
   };
 };
-// ______________________________________________________
-
-export const createPlayer = (payload) => {
-  return {
-    type: "CREATE_PLAYER",
-    payload: payload,
+export const createPlayer = (player) => {
+  return async (dispatch) => {
+    try {
+      const json = (await axios.post("http://localhost:3001/player/", player))
+        .data;
+      dispatch({
+        type: "CREATE_PLAYER",
+        // payload: json,
+         json,
+      });
+    } catch (error) {
+      console.log(error);
+    }
   };
 };
+// ______________________________________________________
+
 export const setStatus = (status) => {
   return {
     type: "SET_STATUS",
@@ -56,8 +66,7 @@ export const setNickname = (nickname) => {
     payload: nickname,
   };
 };
-export const setOrder= (order) => {
-  console.log(order, "action");
+export const setOrder = (order) => {
   return {
     type: "SET_ORDER",
     payload: order,

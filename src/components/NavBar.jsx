@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { SearchBar } from "./SearchBar";
-import { FiltrosBar } from "./FiltrosBar";
+import { FilterBar } from "./FilterBar";
 import {
   ContNavBar,
   LogoImg,
@@ -16,7 +16,7 @@ export const NavBar = () => {
       <ContLogo>
         <LogoImg src={logo} alt="logo" />
         <SearchBar />
-        <FiltrosBar />
+        <FilterBar />
       </ContLogo>
       <ContNav>
         <Ul>

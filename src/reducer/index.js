@@ -3,7 +3,7 @@ import { data, avatars } from "../Aux_Data";
 const inizialstate = {
   form: {},
   player: {},
-  players: data,
+  players: [],
   avatars: avatars,
   nickname: "",
   avatar: "",
@@ -13,6 +13,11 @@ const inizialstate = {
 
 function rootReducer(state = inizialstate, action /* { type, payload } */) {
   switch (action.type) {
+    case "GET_PLAYERS":
+      return {
+        ...state,
+        players:action.payload,
+      };
     case "CREATE_PLAYER":
       return {
         ...state,

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const SearchBarSection = styled.section`
+export const SearchBarSection = styled.form`
   h1, h2, h3 {
   margin-bottom: 1rem;
 /*   margin-left: 1rem; */
