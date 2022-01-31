@@ -3,6 +3,7 @@ import axios from "axios";
 // -----------------------<Gets>------------------------
 
 export const getPlayers = ({ nick_name, order, status }) => {
+  console.log(nick_name, order, status);
   return async (dispatch) => {
     try {
       var json = (
@@ -41,5 +42,24 @@ export const createPlayer = (payload) => {
   return {
     type: "CREATE_PLAYER",
     payload: payload,
+  };
+};
+export const setStatus = (status) => {
+  return {
+    type: "SET_STATUS",
+    payload: status,
+  };
+};
+export const setNickname = (nickname) => {
+  return {
+    type: "SET_NICKNAME",
+    payload: nickname,
+  };
+};
+export const setOrder= (order) => {
+  console.log(order, "action");
+  return {
+    type: "SET_ORDER",
+    payload: order,
   };
 };

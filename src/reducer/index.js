@@ -1,11 +1,14 @@
-/* import { CREATE_PLAYER } from "../actions/index"; */
-import  { data, avatars } from "../Aux_Data";
+import { data, avatars } from "../Aux_Data";
 
 const inizialstate = {
   form: {},
   player: {},
-  players:data,
-  avatars : avatars, //declaro un nuevo estado avatars donde guardo los avatars
+  players: data,
+  avatars: avatars,
+  nickname: "",
+  avatar: "",
+  order: "",
+  status: "",
 };
 
 function rootReducer(state = inizialstate, action /* { type, payload } */) {
@@ -15,11 +18,26 @@ function rootReducer(state = inizialstate, action /* { type, payload } */) {
         ...state,
         form: action.payload,
       };
-      case "GET_AVATAR" :
-            return {
-                ...state,
-                avatars: action.payload
-            }
+    case "GET_AVATAR":
+      return {
+        ...state,
+        avatars: action.payload,
+      };
+    case "SET_ORDER":
+      return {
+        ...state,
+        order: action.payload,
+      };
+    case "SET_NICKNAME":
+      return {
+        ...state,
+        nickname: action.payload,
+      };
+    case "SET_STATUS":
+      return {
+        ...state,
+        status: action.payload,
+      };
 
     default:
       return state;
