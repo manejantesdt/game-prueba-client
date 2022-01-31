@@ -2,14 +2,14 @@ import axios from "axios";
 
 // -----------------------<Gets>------------------------
 
-export const getPlayers = ({ nick_name, order, status }) => {
-  console.log(nick_name, order, status);
+export const getPlayers = ({ nickname, order, status }) => {
+  console.log(nickname, order, status);
   return async (dispatch) => {
     try {
       var json = (
         await axios.get(
           `http://localhost:3001/player?nickname=${
-            nick_name ? nick_name : ""
+            nickname ? nickname : ""
           }&order=${order ? order : ""}&status=${status ? status : ""}`
         )
       ).data;
