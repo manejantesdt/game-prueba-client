@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { SearchBarSection } from "../styles/SearchBar";
 import { useDispatch } from "react-redux";
-import { setNickname, getPlayers } from "../actions";
+import { setNickname, searchPlayers } from "../actions";
 
 export const SearchBar = () => {
   const [nick_name, setInput] = useState("");
@@ -15,7 +15,7 @@ export const SearchBar = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     dispatch(setNickname(nick_name));
-    dispatch(getPlayers({ nick_name:nick_name}));
+    dispatch(searchPlayers({ nick_name:nick_name}));
     setInput("");
   };
 

@@ -5,10 +5,11 @@ import { BoldPlayersSections } from "../styles/BoldPlayers";
 
 export const BoldPlayers = () => {
   const { players } = useSelector((state) => state);
+  const bold = players.slice(24,50);
   return (
     <BoldPlayersSections>
       <div className="suplentes">
-      {players.map((j) => {
+      {bold.map((j) => {
             return (
               <CardPlayer
                 nickname={j.nickname}

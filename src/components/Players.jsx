@@ -42,13 +42,13 @@ export const Players = () => {
       container.setAttribute("style", styles);
     }
   };
-
+const tenPlayers=players.slice(0,10);
   return (
     <section>
       <h2>Players</h2>
       <div className="contenedor-jugadores">
         <div ref={gridJugadores} onClick={() => setScrollContainer.bind(this)}>
-          {players.map((j) => {
+          {tenPlayers.map((j) => {
             return (
               <CardPlayer
                 nickname={j.nickname}

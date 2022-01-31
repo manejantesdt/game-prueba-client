@@ -1,3 +1,4 @@
+import avatar1 from './img/Avatars/avataaars(1).png';
 export const data = [
     {
       Id: 1235,
@@ -186,6 +187,7 @@ export const data = [
   ];
 
   export const avatars = [
+    avatar1,
     "https://drive.google.com/thumbnail?id=1FvgHhPmYNwruvKSjok1dp-ikpKVD2O5z",
     "https://drive.google.com/thumbnail?id=17fBzEwLjVC4wbHBi1O64PA-D-i8G_Z4b",
     "https://drive.google.com/thumbnail?id=1Wuh2EYq9-txwdlUqVt82zm9egwXCMlhh",

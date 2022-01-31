@@ -1,8 +1,9 @@
-import { data, avatars } from "../Aux_Data";
+import { avatars } from "../Aux_Data";
 
 const inizialstate = {
   form: {},
   player: {},
+  searchPlayer:[],
   players: [],
   avatars: avatars,
   nickname: "",
@@ -17,6 +18,13 @@ function rootReducer(state = inizialstate, action /* { type, payload } */) {
       return {
         ...state,
         players:action.payload,
+       
+      };
+    case "SEARCH_PLAYERS":
+      return {
+        ...state,
+        searchPlayer:action.payload,
+       
       };
     case "CREATE_PLAYER":
       return {

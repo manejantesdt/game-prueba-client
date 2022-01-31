@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { ContForm, IntoForm } from "../styles/Form.js";
-import { createPlayer, getAvatar } from "../actions/index";
+import { createPlayer } from "../actions/index";
 import default_avatar from "../img/Avatars/avataaars(1).png";
 
 //------------------------< gestion errors >---------------------------
@@ -19,13 +19,13 @@ function validate(player) {
 export const CreatePlayer = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const [errors, setErrors] = useState({}); //genero un estado local errors y setErrors que va ser un objeto vacío
-  const { avatars } = useSelector((state) => state);
+  const [errors, setErrors] = useState({}); 
+  const { avatars,players } = useSelector((state) => state);
   // ------------------------< Uses react >-----------------------------
   const [player, setPlayer] = useState({
     nickname: "",
     status: "hierro",
-    ranking: 0,
+    ranking: players.length + 1,
     avatar: "",
   });
 
@@ -111,7 +111,7 @@ export const CreatePlayer = () => {
             <option value={null}></option>
             {avatars.map((e, id) => (
               <option key={id} value={e}>
-                {e}
+                {"Avatar " + (id + 1)}
               </option>
             ))}
           </select>
