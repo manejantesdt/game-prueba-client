@@ -2,17 +2,18 @@ import axios from "axios";
 
 // -----------------------<Gets>------------------------
 
-export const getPlayers = ({ nickname, order, status }) => {
-  console.log(nickname, order, status, "console de actions");
+export const getPlayers = ({ nick_name, order, status }) => {
+  console.log(nick_name, order, status, "console de actions");
   return async (dispatch) => {
     try {
       const json = (
         await axios.get(
-          `http://localhost:3001/players?nickname=${
-            nickname ? nickname : ""
-          }&order=${order ? order : ""}&status=${status ? status : ""}`
+          `http://localhost:3001/players?nick_name=${
+            nick_name ? nick_name : ""
+          }`
         )
       ).data;
+      
       console.log(json, "json de actions");
       dispatch({
         type: "GET_PLAYERS",
@@ -44,7 +45,6 @@ export const createPlayer = (player) => {
         .data;
       dispatch({
         type: "CREATE_PLAYER",
-        // payload: json,
          json,
       });
     } catch (error) {
