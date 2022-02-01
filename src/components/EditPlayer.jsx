@@ -1,26 +1,28 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router";
 import { ContEdit, IntoEdit } from "../styles/EditForm.js";
+import { getPlayerId, editPlayer } from "../actions/index";
 
 export const EditPlayer = (props) => {
-  // ------------------------------<State>----------------------------------
-  const { players } = useSelector((state) => state);
-  const [checkform, setCheckform] = useState(false);
-  const [editform, setEditform] = useState({
-    nickname: "",
-    avatar: "",
-    status: "",
-    ranking: 0,
-  });
-  // __________________________________________________________________________
-
   // ------------------------------<Variables>--------------------------------
+  const { player, avatars } = useSelector((state) => state);
   const dispatch = useDispatch();
-  let { id } = useParams();
-  var filter = players.filter((e) => e.Id == id);
+  var { id } = useParams();
 
   // _____________________________________________________________________________
+  // ------------------------------<State>----------------------------------
+  const [checkform, setCheckform] = useState(false);
+  const [editform, setEditform] = useState({
+    nickname:player.nickname,
+    status: player.status,
+    ranking: player.ranking,
+    avatar: player.avatar,
+  });
+  useEffect(() => {
+    dispatch(getPlayerId(id));
+  }, [dispatch, id]);
+  // __________________________________________________________________________
 
   // ------------------------------<Functions>---------------------------------
   const onClick = () => {
@@ -31,15 +33,28 @@ export const EditPlayer = (props) => {
       : setCheckform(false);
   };
   const handleSubmit = (e) => {
-   e.preventDefault();
+    e.preventDefault();
+    dispatch(editPlayer(id, editform));
   };
-
+  const handleChange = (e) => {
+    setEditform({
+      ...editform,
+      [e.target.name]: e.target.value,
+    });
+  };
+  function handleSelect(e) {
+    setEditform({
+      ...editform,
+      [e.target.name]: e.target.value,
+    });
+  }
+ console.log('soy el player',editform);
   // _____________________________________________________________________________
 
   return checkform === false ? (
     <ContEdit>
-      {players ? (
-        filter.map((e) => {
+      {player ? (
+        player.map((e) => {
           return (
             <div key={e.Id}>
               <span>{e.nickname}</span>
@@ -56,14 +71,55 @@ export const EditPlayer = (props) => {
     </ContEdit>
   ) : (
     <ContEdit>
-      {players ? (
-        filter.map((e) => {
+      {player ? (
+        player.map((e) => {
           return (
-            <IntoEdit key={e.Id} >
+            <IntoEdit key={e.Id} onSubmit={handleSubmit}>
               <img src={e.avatar} alt="" />
-              <input type="text" placeholder={e.nickname} />
-              <input type="text" placeholder={e.status} />
-              <input type="number" min="0" max="9999" placeholder={e.ranking} />
+              <div>
+                <select
+                  type="text"
+                  name="avatar"
+                  className="input_form"
+                  onChange={(e) => handleSelect(e)}
+                >
+                  <option value={null}></option>
+                  {avatars.map((e, id) => (
+                    <option key={id} value={e}>
+                      {"Avatar " + (id + 1)}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div>
+                <select
+                  type="text"
+                  name="status"
+                  className="input_form"
+                  onChange={(e) => handleSelect(e)}
+                >
+                  <option value={null}></option>
+                  <option value="oro">Oro</option>
+                  <option value="bronce">Bronce</option>
+                  <option value="plata">Plata</option>
+                  <option value="hierro">Hierro</option>
+                </select>
+              </div>
+              <input
+                type="text"
+                name="nickname"
+                placeholder={e.nickname}
+                onChange={(e) => handleChange(e)}
+              />
+          
+              <input
+                type="number"
+                min="0"
+                max="9999"
+                name="ranking"
+                placeholder={e.ranking}
+                onChange={(e) => handleChange(e)}
+              />
               <button type="submit">change</button>
               <button onClick={onClick}>cancel</button>
             </IntoEdit>
@@ -74,4 +130,5 @@ export const EditPlayer = (props) => {
       )}
     </ContEdit>
   );
+ 
 };

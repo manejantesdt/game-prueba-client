@@ -3,8 +3,7 @@ import axios from "axios";
 // -----------------------<Gets>------------------------
 
 export const searchPlayers = ({ nick_name, order, status }) => {
-  console.log ("searchPlayers",nick_name,order,status);
-    return async (dispatch) => {
+  return async (dispatch) => {
     try {
       const json = (
         await axios.get(
@@ -26,9 +25,8 @@ export const searchPlayers = ({ nick_name, order, status }) => {
 export const getPlayers = () => {
   return async (dispatch) => {
     try {
-      const json = (
-        await axios.get(`http://localhost:3001/players?amount=50`)
-      ).data;
+      const json = (await axios.get(`http://localhost:3001/players?amount=50`))
+        .data;
 
       dispatch({
         type: "GET_PLAYERS",
@@ -61,6 +59,34 @@ export const createPlayer = (player) => {
       dispatch({
         type: "CREATE_PLAYER",
         json,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+};
+export const getPlayerId = (Id) => {
+  return async (dispatch) => {
+    try {
+      const json = (await axios.get(`http://localhost:3001/players/${Id}`)).data;
+      console.log("soy el json",json);
+      dispatch({
+        type: "GET_PLAYER_ID",
+        payload:json,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+};
+export const editPlayer = (Id,player) => {
+  return async (dispatch) => {
+    try {
+      const json = (await axios.put(`http://localhost:3001/editPlayer/`+ Id,player)).data;
+      console.log("soy el json",json);
+      dispatch({
+        type: "EDIT_PLAYER",
+        payload:json,
       });
     } catch (error) {
       console.log(error);
