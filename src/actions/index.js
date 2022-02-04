@@ -9,7 +9,9 @@ export const searchPlayers = ({ nick_name, order, status }) => {
         await axios.get(
           `https://mrsemsqfk6.execute-api.us-east-1.amazonaws.com/player?nick_name=${
             nick_name ? nick_name : ""
-          }&order=${order ? order : ""}&status=${status ? status : ""}`
+          }&order=${order ? order : ""}&status=${
+            status ? status : ""
+          }&amount=50`
         )
       ).data;
       const players = json.body.players;
@@ -27,7 +29,7 @@ export const getPlayers = () => {
     try {
       const json = (
         await axios.get(
-          `https://mrsemsqfk6.execute-api.us-east-1.amazonaws.com/player?nickname=&amount=50`
+          `https://mrsemsqfk6.execute-api.us-east-1.amazonaws.com/player?nickname=&amount=50&order=desc`
         )
       ).data;
       const players = json.body.players;
@@ -78,7 +80,7 @@ export const getPlayerId = (Id) => {
         )
       ).data;
       console.log(json, "soy editplayer");
-      const player = json.body.players;
+      const player = json.body;
       dispatch({
         type: "GET_PLAYER_ID",
         payload: player,
@@ -89,10 +91,14 @@ export const getPlayerId = (Id) => {
   };
 };
 export const editPlayer = (Id, player) => {
+  console.log(Id, player);
   return async (dispatch) => {
     try {
       const json = (
-        await axios.put(`http://localhost:3001/editPlayer/` + Id, player)
+        await axios.put(
+          `https://mrsemsqfk6.execute-api.us-east-1.amazonaws.com/player/` + Id,
+          player
+        )
       ).data;
       console.log("soy el json", json);
       dispatch({

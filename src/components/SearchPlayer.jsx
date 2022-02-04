@@ -4,7 +4,7 @@ import { BoldPlayersSections } from "../styles/BoldPlayers";
 
 export const SearchPlayer = () => {
   const { searchPlayer } = useSelector((state) => state);
-  console.log(searchPlayer);
+
   return searchPlayer?.length > 0 ? (
     <BoldPlayersSections>
       <div className="suplentes">
@@ -21,5 +21,9 @@ export const SearchPlayer = () => {
         })}
       </div>
     </BoldPlayersSections>
-  ):(<><h1>...loading</h1></>);
+  ) : (
+    <>
+      <h1>...loading</h1>
+    </>
+  );
 };

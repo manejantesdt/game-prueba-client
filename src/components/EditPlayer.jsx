@@ -9,19 +9,14 @@ export const EditPlayer = (props) => {
   const { player, avatars } = useSelector((state) => state);
   const dispatch = useDispatch();
   var { id } = useParams();
-
-  // _____________________________________________________________________________
-  // ------------------------------<State>----------------------------------
-  const [checkform, setCheckform] = useState(false);
-  const [editform, setEditform] = useState({
-    nickname: player.nickname,
-    status: player.status,
-    ranking: player.ranking,
-    avatar: player.avatar,
-  });
   useEffect(() => {
     dispatch(getPlayerId(id));
   }, [dispatch, id]);
+  // _____________________________________________________________________________
+  // ------------------------------<State>----------------------------------
+  const [checkform, setCheckform] = useState(false);
+  const [editform, setEditform] = useState({});
+
   // __________________________________________________________________________
 
   // ------------------------------<Functions>---------------------------------
@@ -31,9 +26,16 @@ export const EditPlayer = (props) => {
       : checkform === false
       ? setCheckform(true)
       : setCheckform(false);
+    setEditform({
+      nickname: player.nickname,
+      status: player.status,
+      ranking: player.ranking,
+      avatar: player.avatar,
+      score: player.score,
+    });
   };
   const handleSubmit = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     dispatch(editPlayer(id, editform));
   };
   const handleChange = (e) => {
@@ -48,23 +50,20 @@ export const EditPlayer = (props) => {
       [e.target.name]: e.target.value,
     });
   }
-  console.log("soy el player", editform);
+
+  console.log(editform, "SOY EL PLAYE");
   // _____________________________________________________________________________
 
   return checkform === false ? (
     <ContEdit>
       {player ? (
-        player.map((e) => {
-          return (
-            <div key={e.Id}>
-              <span>{e.nickname}</span>
-              <img src={e.avatar} alt="" />
-              <span>{e.status}</span>
-              <span>{e.ranking}</span>
-              <button onClick={onClick}>Edit</button>
-            </div>
-          );
-        })
+        <div key={player.Id}>
+          <span>{player.nickname}</span>
+          <img src={player.avatar} alt="" />
+          <span>{player.status}</span>
+          <span>{player.ranking}</span>
+          <button onClick={onClick}>Edit</button>
+        </div>
       ) : (
         <div>...loading...</div>
       )}
@@ -72,59 +71,55 @@ export const EditPlayer = (props) => {
   ) : (
     <ContEdit>
       {player ? (
-        player.map((e) => {
-          return (
-            <IntoEdit key={e.Id} onSubmit={handleSubmit}>
-              <img src={e.avatar} alt="" />
-              <div>
-                <select
-                  type="text"
-                  name="avatar"
-                  className="input_form"
-                  onChange={(e) => handleSelect(e)}
-                >
-                  <option value={null}></option>
-                  {avatars.map((e, id) => (
-                    <option key={id} value={e}>
-                      {"Avatar " + (id + 1)}
-                    </option>
-                  ))}
-                </select>
-              </div>
-              <div>
-                <select
-                  type="text"
-                  name="status"
-                  className="input_form"
-                  onChange={(e) => handleSelect(e)}
-                >
-                  <option value={null}></option>
-                  <option value="oro">Oro</option>
-                  <option value="bronce">Bronce</option>
-                  <option value="plata">Plata</option>
-                  <option value="hierro">Hierro</option>
-                </select>
-              </div>
-              <input
-                type="text"
-                name="nickname"
-                placeholder={e.nickname}
-                onChange={(e) => handleChange(e)}
-              />
+        <IntoEdit key={player.Id} onSubmit={handleSubmit}>
+          <img src={editform.avatar} alt="" />
+          <div>
+            <select
+              type="text"
+              name="avatar"
+              className="input_form"
+              onChange={(e) => handleSelect(e)}
+            >
+              <option value={null}></option>
+              {avatars.map((e, id) => (
+                <option key={id} value={e}>
+                  {"Avatar " + (id + 1)}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div>
+            <select
+              type="text"
+              name="status"
+              className="input_form"
+              onChange={(e) => handleSelect(e)}
+            >
+              <option value={null}>{editform.status}</option>
+              <option value="oro">Oro</option>
+              <option value="bronce">Bronce</option>
+              <option value="plata">Plata</option>
+              <option value="hierro">Hierro</option>
+            </select>
+          </div>
+          <input
+            type="text"
+            name="nickname"
+            placeholder={player.nickname}
+            onChange={(e) => handleChange(e)}
+          />
 
-              <input
-                type="number"
-                min="0"
-                max="9999"
-                name="ranking"
-                placeholder={e.ranking}
-                onChange={(e) => handleChange(e)}
-              />
-              <button type="submit">change</button>
-              <button onClick={onClick}>cancel</button>
-            </IntoEdit>
-          );
-        })
+          <input
+            type="number"
+            min="0"
+            max="9999"
+            name="ranking"
+            placeholder={player.ranking}
+            onChange={(e) => handleChange(e)}
+          />
+          <button type="submit">change</button>
+          <button onClick={onClick}>cancel</button>
+        </IntoEdit>
       ) : (
         <div>...loading...</div>
       )}
