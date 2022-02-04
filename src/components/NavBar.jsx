@@ -21,7 +21,7 @@ export const NavBar = () => {
       <ContNav>
         <Ul>
           <Link to="/" className="link">
-            <srong>Home</srong>
+            Home
           </Link>
         </Ul>
         <Ul>
@@ -38,5 +38,3 @@ export const NavBar = () => {
     </ContNavBar>
   );
 };
-
-

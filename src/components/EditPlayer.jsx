@@ -14,7 +14,7 @@ export const EditPlayer = (props) => {
   // ------------------------------<State>----------------------------------
   const [checkform, setCheckform] = useState(false);
   const [editform, setEditform] = useState({
-    nickname:player.nickname,
+    nickname: player.nickname,
     status: player.status,
     ranking: player.ranking,
     avatar: player.avatar,
@@ -48,7 +48,7 @@ export const EditPlayer = (props) => {
       [e.target.name]: e.target.value,
     });
   }
- console.log('soy el player',editform);
+  console.log("soy el player", editform);
   // _____________________________________________________________________________
 
   return checkform === false ? (
@@ -111,7 +111,7 @@ export const EditPlayer = (props) => {
                 placeholder={e.nickname}
                 onChange={(e) => handleChange(e)}
               />
-          
+
               <input
                 type="number"
                 min="0"
@@ -130,5 +130,4 @@ export const EditPlayer = (props) => {
       )}
     </ContEdit>
   );
- 
 };

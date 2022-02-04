@@ -7,15 +7,15 @@ export const searchPlayers = ({ nick_name, order, status }) => {
     try {
       const json = (
         await axios.get(
-          `http://localhost:3001/players?nick_name=${
+          `https://mrsemsqfk6.execute-api.us-east-1.amazonaws.com/player?nick_name=${
             nick_name ? nick_name : ""
           }&order=${order ? order : ""}&status=${status ? status : ""}`
         )
       ).data;
-
+      const players = json.body.players;
       dispatch({
         type: "SEARCH_PLAYERS",
-        payload: json,
+        payload: players,
       });
     } catch (error) {
       console.error(error);
@@ -25,12 +25,15 @@ export const searchPlayers = ({ nick_name, order, status }) => {
 export const getPlayers = () => {
   return async (dispatch) => {
     try {
-      const json = (await axios.get(`http://localhost:3001/players?amount=50`))
-        .data;
-
+      const json = (
+        await axios.get(
+          `https://mrsemsqfk6.execute-api.us-east-1.amazonaws.com/player?nickname=&amount=50`
+        )
+      ).data;
+      const players = json.body.players;
       dispatch({
         type: "GET_PLAYERS",
-        payload: json,
+        payload: players,
       });
     } catch (error) {
       console.error(error);
@@ -66,27 +69,35 @@ export const createPlayer = (player) => {
   };
 };
 export const getPlayerId = (Id) => {
+  console.log(Id, "SOY EL ID");
   return async (dispatch) => {
     try {
-      const json = (await axios.get(`http://localhost:3001/players/${Id}`)).data;
-      console.log("soy el json",json);
+      const json = (
+        await axios.get(
+          `https://mrsemsqfk6.execute-api.us-east-1.amazonaws.com/player/${Id}`
+        )
+      ).data;
+      console.log(json, "soy editplayer");
+      const player = json.body.players;
       dispatch({
         type: "GET_PLAYER_ID",
-        payload:json,
+        payload: player,
       });
     } catch (error) {
       console.log(error);
     }
   };
 };
-export const editPlayer = (Id,player) => {
+export const editPlayer = (Id, player) => {
   return async (dispatch) => {
     try {
-      const json = (await axios.put(`http://localhost:3001/editPlayer/`+ Id,player)).data;
-      console.log("soy el json",json);
+      const json = (
+        await axios.put(`http://localhost:3001/editPlayer/` + Id, player)
+      ).data;
+      console.log("soy el json", json);
       dispatch({
         type: "EDIT_PLAYER",
-        payload:json,
+        payload: json,
       });
     } catch (error) {
       console.log(error);
