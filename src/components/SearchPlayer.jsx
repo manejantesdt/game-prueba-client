@@ -4,8 +4,9 @@ import { BoldPlayersSections } from "../styles/BoldPlayers";
 
 export const SearchPlayer = () => {
   const { searchPlayer } = useSelector((state) => state);
+  console.log("search", searchPlayer);
 
-  return searchPlayer?.length > 0 ? (
+  return searchPlayer?.length > 0 && searchPlayer[0] !== null ?(
     <BoldPlayersSections>
       <div className="suplentes">
         {searchPlayer.map((j) => {
