@@ -79,7 +79,6 @@ export const getPlayerId = (Id) => {
           `https://mrsemsqfk6.execute-api.us-east-1.amazonaws.com/player/${Id}`
         )
       ).data;
-      console.log(json, "soy editplayer");
       const player = json.body;
       dispatch({
         type: "GET_PLAYER_ID",
@@ -91,7 +90,6 @@ export const getPlayerId = (Id) => {
   };
 };
 export const editPlayer = (Id, player) => {
-  console.log(Id, player);
   return async (dispatch) => {
     try {
       const json = (
@@ -100,10 +98,27 @@ export const editPlayer = (Id, player) => {
           player
         )
       ).data;
-      console.log("soy el json", json);
       dispatch({
         type: "EDIT_PLAYER",
         payload: json,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+};
+export const deletePlayer = (Id) => {
+  return async (dispatch) => {
+    try {
+      const json = (
+        await axios.delete(
+          `https://mrsemsqfk6.execute-api.us-east-1.amazonaws.com/player/${Id}`
+        )
+      ).data;
+      console.log("soy el json", json);
+      dispatch({
+        type: "DELETE_PLAYER",
+        json,
       });
     } catch (error) {
       console.log(error);

@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { ContForm, IntoForm } from "../styles/Form.js";
 import { createPlayer } from "../actions/index";
-import default_avatar from "../img/Avatars/avataaars(1).png";
+import default_avatar from "../img/Avatars/avatar1.png";
 
 //------------------------< gestion errors >---------------------------
 
