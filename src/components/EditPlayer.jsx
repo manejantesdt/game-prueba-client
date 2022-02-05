@@ -51,7 +51,6 @@ export const EditPlayer = (props) => {
     });
   }
 
-  console.log(editform, "SOY EL PLAYE");
   // _____________________________________________________________________________
 
   return checkform === false ? (

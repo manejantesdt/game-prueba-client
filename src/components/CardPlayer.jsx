@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import { deletePlayer } from "../actions/index";
 import { useDispatch } from "react-redux";
 
+
 export const CardPlayer = ({
   ranking,
   id,
@@ -10,11 +11,18 @@ export const CardPlayer = ({
   status,
   ...props
 }) => {
+ const onClick = (e) => {
+   e.preventDefault();
+dispatch(deletePlayer(id));
+window.location.reload(false);
+}
+
 const dispatch = useDispatch();
 
   return (
     <article {...props} className="jugador">
-      <button onClick={() => dispatch(deletePlayer(id))}>X</button>
+      {/* <button type="onSubmit" onClick={() => dispatch(deletePlayer(id))}>X</button> */}
+      <button type="onSubmit" onClick={onClick}>X</button>
       <NavLink to={`/id/${id}`}>
         <img src={image} alt={nickname} />
         <h3>{nickname}</h3>

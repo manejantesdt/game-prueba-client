@@ -3,9 +3,12 @@ import { CardPlayer } from "./CardPlayer";
 import { BoldPlayersSections } from "../styles/BoldPlayers";
 import { useEffect } from "react";
 
+
 export const SearchPlayer = () => {
   const { searchPlayer } = useSelector((state) => state);
-  useEffect(() => {}, [searchPlayer]);
+ useEffect(() => {
+  // window.location.reload(false);
+}, [searchPlayer]);
 
   return searchPlayer?.length > 0 && searchPlayer[0] !== null ? (
     <BoldPlayersSections>
