@@ -1,12 +1,13 @@
 import { useSelector } from "react-redux";
 import { CardPlayer } from "./CardPlayer";
 import { BoldPlayersSections } from "../styles/BoldPlayers";
+import { useEffect } from "react";
 
 export const SearchPlayer = () => {
   const { searchPlayer } = useSelector((state) => state);
-  console.log("search", searchPlayer);
+  useEffect(() => {}, [searchPlayer]);
 
-  return searchPlayer?.length > 0 && searchPlayer[0] !== null ?(
+  return searchPlayer?.length > 0 && searchPlayer[0] !== null ? (
     <BoldPlayersSections>
       <div className="suplentes">
         {searchPlayer.map((j) => {
