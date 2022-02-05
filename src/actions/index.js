@@ -59,7 +59,7 @@ export const getAvatar = () => {
 export const createPlayer = (player) => {
   return async (dispatch) => {
     try {
-      const json = (await axios.post("http://localhost:3001/player/", player))
+      const json = (await axios.post("https://mrsemsqfk6.execute-api.us-east-1.amazonaws.com/player", player))
         .data;
       dispatch({
         type: "CREATE_PLAYER",
