@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.1816d590.css",
+    "main.js": "/static/js/main.3dfc97e4.js",
+    "static/media/teatro.png": "/static/media/teatro.a845dd73a3fafa2411ae.png",
+    "static/media/Logo3.png": "/static/media/Logo3.ec89aab5c7d294b1dba5.png",
+    "static/media/avataaars(1).png": "/static/media/avataaars(1).178e4baa8ff67be25ca2.png",
+    "index.html": "/index.html",
+    "main.1816d590.css.map": "/static/css/main.1816d590.css.map",
+    "main.3dfc97e4.js.map": "/static/js/main.3dfc97e4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1816d590.css",
+    "static/js/main.3dfc97e4.js"
+  ]
+}
