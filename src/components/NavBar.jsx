@@ -8,7 +8,7 @@ import {
   ContLogo,
   Ul,
 } from "../styles/NavBar.js";
-import logo from "../img/Logo3.png";
+import logo from "../img/LogoNvo.png";
 
 export const NavBar = () => {
   return (
