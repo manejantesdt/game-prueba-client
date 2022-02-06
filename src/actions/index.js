@@ -11,7 +11,7 @@ export const searchPlayers = ({ nick_name, order, status }) => {
             nick_name ? nick_name : ""
           }&order=${order ? order : ""}&status=${
             status ? status : ""
-          }&amount=50`
+          }&amount=3200`
         )
       ).data;
       const players = json.body.players;
@@ -144,4 +144,11 @@ export const setOrder = (order) => {
     type: "SET_ORDER",
     payload: order,
   };
+};
+
+export const orderbyRanking = (orderbyRanking) => {
+  return {
+      type: "ORDER_BY_RANKING",
+      payload: orderbyRanking,
+  }
 };

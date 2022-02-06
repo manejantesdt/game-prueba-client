@@ -11,21 +11,20 @@ export const SearchBar = () => {
     e.preventDefault();
     setInput(e.target.value);
   }
-  
+
   const onSubmit = (e) => {
     e.preventDefault();
     dispatch(setNickname(nick_name));
-    dispatch(searchPlayers({ nick_name:nick_name}));
+    dispatch(searchPlayers({ nick_name: nick_name }));
     setInput("");
   };
 
   return (
     <SearchBarSection onSubmit={onSubmit}>
-
       <input
         placeholder="Buscar Player"
         type="text"
-        value={nick_name?nick_name:""}
+        value={nick_name ? nick_name : ""}
         onChange={handleOnChange}
       />
 

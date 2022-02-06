@@ -19,8 +19,8 @@ const dispatch = useDispatch();
         <img src={image} alt={nickname} />
         <h3>{nickname}</h3>
       </NavLink>
-      <span>{status}</span>
-      <span>{ranking}</span>
+      <h3>{status}</h3>
+      <h3>{ranking}</h3>
     </article>
   );
 };
