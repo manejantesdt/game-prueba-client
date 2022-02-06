@@ -1,0 +1,13 @@
+- name: Use S3cmd
+  # You may pin to the exact commit or the version.
+  # uses: s3-actions/s3cmd@4a2a23baac468fd99c43dddc2be4a2d614921022
+  uses: s3-actions/s3cmd@v1.1
+  with:
+    # config provider to make it easier to use the cli as action
+    provider: # optional, default is linode
+    # s3 region
+    region: us-east-1
+    # s3 access key
+    access_key: AKIAVNTFFXCRBACWAQ4J
+    # s3 secret key
+    secret_key: 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
