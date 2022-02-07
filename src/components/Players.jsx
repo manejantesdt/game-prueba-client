@@ -5,11 +5,13 @@ import { useSelector } from "react-redux";
 export const Players = () => {
   const { players } = useSelector((state) => state);
   const gridJugadores = createRef();
+  
 
   useEffect(() => {
     setScrollContainer();
     document.addEventListener("click", setScrollContainer);
   });
+
 
   
   const setScrollContainer = (desktop = true) => {

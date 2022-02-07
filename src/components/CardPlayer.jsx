@@ -31,7 +31,7 @@ export const CardPlayer = ({
         <h3>{nickname}</h3>
       </NavLink>
       <span>{status}</span>
-      <span>{("soy rank", ranking)}</span>
+      <span>{(ranking)}</span>
     </article>
   );
 };
