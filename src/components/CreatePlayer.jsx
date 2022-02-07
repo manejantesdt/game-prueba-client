@@ -19,8 +19,8 @@ function validate(player) {
 export const CreatePlayer = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const [errors, setErrors] = useState({}); 
-  const { avatars,players } = useSelector((state) => state);
+  const [errors, setErrors] = useState({});
+  const { avatars, players } = useSelector((state) => state);
   // ------------------------< Uses react >-----------------------------
   const [player, setPlayer] = useState({
     nickname: "",
@@ -29,21 +29,17 @@ export const CreatePlayer = () => {
     avatar: "",
   });
 
-  // useEffect(() => {
-  //   dispatch(getAvatar());
-  // });
-
   // _____________________________________________________________________________________________
 
   // -----------------------------------< handles >------------------------------------------------
-  function handleSelect(e) {
+  const handleSelect = (e) => {
     setPlayer({
       ...player,
       avatar: e.target.value,
     });
-  }
+  };
 
-  function handleChange(e) {
+  const handleChange = (e) => {
     e.preventDefault();
     setPlayer({
       ...player,
@@ -51,29 +47,23 @@ export const CreatePlayer = () => {
     });
     setErrors(
       validate({
-        //seteame mi estado errores, pasándole la función validate de más arriba,
-        ...player, //con el estado input y el e.target.name en el e.target.value
+        ...player,
         [e.target.name]: e.target.value,
       })
     );
+  };
 
-  }
-
-  function handleSubmit(e) {
+  const handleSubmit = (e) => {
     if (errors.nickname !== undefined || errors.avatar !== undefined) {
-      document.getElementById("DoNotSubmit"); //con document.getElementById() selecciono el form por medio del atributo id que le asigné ("DontSubmit")
+      document.getElementById("DoNotSubmit");
       return alert("Please complete the fields with valid data");
     }
-    // const addPlayer = {
-    //   nickname: player.nickname,
-    //   avatar: player.avatar,
-    // };
     e.preventDefault();
-    dispatch(createPlayer(player)); 
+    dispatch(createPlayer(player));
     alert("Your player was successfully created!");
     window.location.reload(false);
     navigate({ pathname: "/" });
-  }
+  };
   // _______________________________________________________________________________________________
 
   return (

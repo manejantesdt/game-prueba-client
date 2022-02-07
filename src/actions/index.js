@@ -146,9 +146,4 @@ export const setOrder = (order) => {
   };
 };
 
-export const orderbyRanking = (orderbyRanking) => {
-  return {
-      type: "ORDER_BY_RANKING",
-      payload: orderbyRanking,
-  }
-};
+

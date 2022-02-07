@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { SearchBarSection } from "../styles/SearchBar";
 import { useDispatch } from "react-redux";
 import { setNickname, searchPlayers } from "../actions";
-import { useNavigate } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 export const SearchBar = () => {
   const navigate = useNavigate();
@@ -20,6 +20,7 @@ export const SearchBar = () => {
     dispatch(searchPlayers({ nick_name: nick_name }));
     setInput("");
     navigate("/search");
+    
   };
 
   return (

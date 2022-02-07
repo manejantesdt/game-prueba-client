@@ -14,7 +14,6 @@ export const CardPlayer = ({
     e.preventDefault();
     dispatch(deletePlayer(id));
     dispatch(getPlayers());
-    // window.location.reload(false);
   };
 
   const dispatch = useDispatch();
@@ -22,9 +21,11 @@ export const CardPlayer = ({
   return (
     <article {...props} className="jugador">
       {/* <button type="onSubmit" onClick={() => dispatch(deletePlayer(id))}>X</button> */}
+      ,
       <button type="onSubmit" onClick={onClick}>
         X
       </button>
+      ,
       <NavLink to={`/id/${id}`}>
         <div className="avatar"><img src={image} alt={nickname} /></div>
         
