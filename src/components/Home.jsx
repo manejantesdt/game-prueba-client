@@ -3,37 +3,29 @@ import { useDispatch, useSelector } from "react-redux";
 import { Players } from "./Players";
 import { BoldPlayers } from "./BoldPlayers";
 import { MainPanel } from "./MainPanel";
-import { SearchPlayer } from "./SearchPlayer";
 import "../styles/styles.scss";
-import { getPlayers, searchPlayers } from "../actions";
+import { getPlayers } from "../actions";
 
 export const Home = () => {
-  const { searchPlayer } = useSelector((state) => state);
+  const { players } = useSelector((state) => state);
   const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getPlayers({}));
-    dispatch(searchPlayers({ nick_name: "" }));
-  }, []);
 
-  // return searchPlayer?.length > 0 &&
-  //   searchPlayer[0] !== null &&
-  //   searchPlayer[0] !== "" ? (
-  //   <main>
-  //     <SearchPlayer />
-  //   </main>
-  // ) : (
-  //   <main>
-  //     <Players />
-  //     <MainPanel />
-  //     <BoldPlayers />
-  //   </main>
-  // );
+  useEffect(() => {
+    // for (let i = 0; i === 2; i++) {
+    //   console.log(i);
+    //   dispatch(getPlayers({}));
+    // }
+    // i <= 2,i++ ? dispatch(getPlayers()) : null;
+    // dispatch(searchPlayers({ nick_name: "" }));
+    dispatch(getPlayers({}));
+    // searchPlayers(nickname ? { nick_name: nickname } : { nick_name: "" });
+  }, [dispatch]);
+
   return (
     <main>
       <Players />
       <MainPanel />
       <BoldPlayers />
-      {/* <SearchPlayer /> */}
     </main>
   );
 };
