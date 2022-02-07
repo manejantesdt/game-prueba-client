@@ -21,22 +21,14 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-<<<<<<< HEAD
     runs-on: ubuntu-latest
-=======
-    runs-on: windows-latest
->>>>>>> 9c47762d29682a3f3227af2c8d47d3b0937c8775
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
-<<<<<<< HEAD
           node-version: "16.x"
-=======
-          node-version: "14"
->>>>>>> 9c47762d29682a3f3227af2c8d47d3b0937c8775
           check-latest: true
       - run: npm install
       - run: npm run build
@@ -47,9 +39,5 @@ jobs:
           AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET_NAME }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-<<<<<<< HEAD
           AWS_REGION: "us-east-1" # optional: defaults to us-east-1
-=======
-          AWS_REGION: "<YOUR-REGION>" # optional: defaults to us-east-1
->>>>>>> 9c47762d29682a3f3227af2c8d47d3b0937c8775
           SOURCE_DIR: "build" # optional: defaults to entire repository
