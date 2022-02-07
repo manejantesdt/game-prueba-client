@@ -13,7 +13,7 @@ export const SearchPlayer = () => {
     dispatch(
       searchPlayers(nickname ? { nick_name: nickname } : { nick_name: "" })
     );
-  }, [Players]);
+  }, [Players,nickname,dispatch]);
 
   //paginado
   const [currentPage, setCurrentPage] = useState(1); //le paso el estado local con la primera página que se renderiza

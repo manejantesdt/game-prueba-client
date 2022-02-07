@@ -21,15 +21,17 @@ export const CardPlayer = ({
   return (
     <article {...props} className="jugador">
       {/* <button type="onSubmit" onClick={() => dispatch(deletePlayer(id))}>X</button> */}
+      ,
       <button type="onSubmit" onClick={onClick}>
         X
       </button>
+      ,
       <NavLink to={`/id/${id}`}>
         <img src={image} alt={nickname} />
         <h3>{nickname}</h3>
       </NavLink>
       <span>{status}</span>
-      <span>{"soy rank",ranking}</span>
+      <span>{("soy rank", ranking)}</span>
     </article>
   );
 };
