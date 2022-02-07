@@ -1,13 +1,43 @@
-- name: Use S3cmd
-  # You may pin to the exact commit or the version.
-  # uses: s3-actions/s3cmd@4a2a23baac468fd99c43dddc2be4a2d614921022
-  uses: s3-actions/s3cmd@v1.1
-  with:
-    # config provider to make it easier to use the cli as action
-    provider: # optional, default is linode
-    # s3 region
-    region: us-east-1
-    # s3 access key
-    access_key: AKIAVNTFFXCRBACWAQ4J
-    # s3 secret key
-    secret_key: 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
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the action will run.
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches:
+      - main
+
+  pull_request:
+    branches:
+      - main
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "16.x"
+          check-latest: true
+      - run: npm install
+      - run: npm run build
+      - uses: jakejarvis/s3-sync-action@master
+        with:
+          args: --acl public-read --follow-symlinks --delete
+        env:
+          AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET_NAME }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: "us-east-1" # optional: defaults to us-east-1
+          SOURCE_DIR: "build" # optional: defaults to entire repository

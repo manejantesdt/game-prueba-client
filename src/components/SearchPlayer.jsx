@@ -26,7 +26,7 @@ export const SearchPlayer = () => {
     setCurrentPage(pageNumber); //acá el paginado va a setear la pagina en el numero de pagina que se vaya clickeando
   }; //cuando setea la página los índices cambian y el slide se va modificando
 
-  const [order, setOrder] = useState(""); // esto es solo un estado local para que me renderize el ordenamiento por ranking
+  const [setOrder] = useState(""); // esto es solo un estado local para que me renderize el ordenamiento por ranking
 
   function handleOrderByRanking(e) {
     e.preventDefault();
