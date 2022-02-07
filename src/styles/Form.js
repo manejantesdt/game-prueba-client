@@ -34,7 +34,7 @@ export const IntoForm = styled.form`
   color: #311601;
   font-weight: bolder;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
 
@@ -44,12 +44,16 @@ export const IntoForm = styled.form`
     padding: 5px;
     margin-top: 5px;
     border-radius: 5px;
-    width: 268px;
+    width: 120px;
+    height: 30px;
     margin: 7px;
     text-align: left;
     textdecoration: none;
     &:hover {
-      background-color: #ffffcc73;
+      background-color: #77D970;
+    }
+    &:focus {
+      outline: 1px solid #77D970;
     }
   }
   .button_form {
@@ -75,5 +79,11 @@ export const IntoForm = styled.form`
     color: #ff0000;
     text-align: center;
     font-size: 14px;
+  }
+
+  p {
+    margin: 0 10px;
+    color: #fff;
+    font-size: 1rem;
   }
 `;

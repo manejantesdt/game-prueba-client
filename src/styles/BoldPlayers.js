@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const BoldPlayersSections = styled.section`
   margin-bottom: 4rem;
   padding: 1rem;
-  background: #102132;
+  // background: #102132;
   border-radius: 8px;
 
   h2 {

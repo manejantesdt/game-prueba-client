@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { deletePlayer } from "../actions/index";
+import { deletePlayer, getPlayers } from "../actions/index";
 import { useDispatch } from "react-redux";
 
 export const CardPlayer = ({
@@ -10,17 +10,28 @@ export const CardPlayer = ({
   status,
   ...props
 }) => {
-const dispatch = useDispatch();
+  const onClick = (e) => {
+    e.preventDefault();
+    dispatch(deletePlayer(id));
+    dispatch(getPlayers());
+    // window.location.reload(false);
+  };
+
+  const dispatch = useDispatch();
 
   return (
     <article {...props} className="jugador">
-      <button onClick={() => dispatch(deletePlayer(id))}>X</button>
+      {/* <button type="onSubmit" onClick={() => dispatch(deletePlayer(id))}>X</button> */}
+      <button type="onSubmit" onClick={onClick}>
+        X
+      </button>
       <NavLink to={`/id/${id}`}>
-        <img src={image} alt={nickname} />
+        <div className="avatar"><img src={image} alt={nickname} /></div>
+        
         <h3>{nickname}</h3>
       </NavLink>
-      <h3>{status}</h3>
-      <h3>{ranking}</h3>
+      <span style={{color: '#77D970', marginBottom:5}}>{status}</span>
+      <span style={{color: '#FF0075'}}>Rank: {ranking}</span>
     </article>
   );
 };
