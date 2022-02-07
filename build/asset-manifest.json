@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.e86668dd.css",
-    "main.js": "/static/js/main.582f8cb6.js",
+    "main.js": "/static/js/main.b9f35947.js",
     "static/media/LogoNvo.png": "/static/media/LogoNvo.f62c293b55342018eb91.png",
     "static/media/teatro.png": "/static/media/teatro.a845dd73a3fafa2411ae.png",
     "static/media/avatar6.png": "/static/media/avatar6.fced86cb9e7af140c96e.png",
@@ -18,10 +18,10 @@
     "static/media/avatar10.png": "/static/media/avatar10.3426e535c36f8931bbe1.png",
     "index.html": "/index.html",
     "main.e86668dd.css.map": "/static/css/main.e86668dd.css.map",
-    "main.582f8cb6.js.map": "/static/js/main.582f8cb6.js.map"
+    "main.b9f35947.js.map": "/static/js/main.b9f35947.js.map"
   },
   "entrypoints": [
     "static/css/main.e86668dd.css",
-    "static/js/main.582f8cb6.js"
+    "static/js/main.b9f35947.js"
   ]
 }
