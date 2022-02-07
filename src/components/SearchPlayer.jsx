@@ -13,7 +13,7 @@ export const SearchPlayer = () => {
     dispatch(
       searchPlayers(nickname ? { nick_name: nickname } : { nick_name: "" })
     );
-  }, [nickname, dispatch]);
+  }, [players,nickname, dispatch]);
 
   const [currentPage, setCurrentPage] = useState(1);
   const [playersPerPage] = useState(6);
