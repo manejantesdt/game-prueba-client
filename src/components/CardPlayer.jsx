@@ -14,7 +14,6 @@ export const CardPlayer = ({
     e.preventDefault();
     dispatch(deletePlayer(id));
     dispatch(getPlayers());
-    // window.location.reload(false);
   };
 
   const dispatch = useDispatch();

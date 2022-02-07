@@ -6,13 +6,37 @@ import { useEffect } from "react";
 
 export const SearchPlayer = () => {
   const dispatch = useDispatch();
-  const { searchPlayer, nickname } = useSelector((state) => state);
+  const { searchPlayer, nickname,Players } = useSelector((state) => state);
 
   useEffect(() => {
-    dispatch(searchPlayers({ nick_name: nickname }));
-  }, [dispatch,nickname]);
+    dispatch(
+      searchPlayers(nickname ? { nick_name: nickname } : { nick_name: "" })
+    );
+  }, [ Players]);
 
-  return nickname ? (
+  // return nickname !== "" ? (
+  //   <BoldPlayersSections>
+  //     <div className="suplentes">
+  //       {searchPlayer.map((j) => {
+  //         return (
+  //           <CardPlayer
+  //             nickname={j.nickname}
+  //             image={j.avatar}
+  //             key={j.Id}
+  //             id={j.Id}
+  //             status={j.status}
+  //             ranking={j.ranking}
+  //           />
+  //         );
+  //       })}
+  //     </div>
+  //   </BoldPlayersSections>
+  // ) : (
+  //   <>
+  //     <h1>...loading</h1>
+  //   </>
+  // );
+  return searchPlayer?.length > 0 || searchPlayer[0] !== null ? (
     <BoldPlayersSections>
       <div className="suplentes">
         {searchPlayer.map((j) => {
@@ -34,25 +58,4 @@ export const SearchPlayer = () => {
       <h1>...loading</h1>
     </>
   );
-  // return searchPlayer?.length > 0 || searchPlayer[0] !== null ? (
-  //   <BoldPlayersSections>
-  //     <div className="suplentes">
-  //       {searchPlayer.map((j) => {
-  //         return (
-  //           <CardPlayer
-  //             nickname={j.nickname}
-  //             image={j.avatar}
-  //             key={j.Id}
-  //             id={j.Id}
-  //             status={j.status}
-  //           />
-  //         );
-  //       })}
-  //     </div>
-  //   </BoldPlayersSections>
-  // ) : (
-  //   <>
-  //     <h1>...loading</h1>
-  //   </>
-  // );
 };
