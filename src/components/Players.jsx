@@ -11,7 +11,7 @@ export const Players = () => {
     document.addEventListener("click", setScrollContainer);
   });
 
-  // Función que fija el tamaño del grid de los jugadores
+  
   const setScrollContainer = (desktop = true) => {
     let container = gridJugadores.current;
     if (container) {
@@ -42,7 +42,7 @@ export const Players = () => {
       container.setAttribute("style", styles);
     }
   };
-const tenPlayers=players.slice(0,10);
+const tenPlayers=players.slice(2,10);
   return (
     <section>
       <h2>Players</h2>
