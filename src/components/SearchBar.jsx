@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import { SearchBarSection } from "../styles/SearchBar";
 import { useDispatch } from "react-redux";
 import { setNickname, searchPlayers } from "../actions";
-import { Link } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 export const SearchBar = () => {
+  const navigate = useNavigate();
   const [nick_name, setInput] = useState("");
   const dispatch = useDispatch();
 
@@ -18,6 +19,8 @@ export const SearchBar = () => {
     dispatch(setNickname(nick_name));
     dispatch(searchPlayers({ nick_name: nick_name }));
     setInput("");
+    navigate("/search");
+    
   };
 
   return (
@@ -30,7 +33,7 @@ export const SearchBar = () => {
       />
 
       <button className="button" type="submit">
-        <Link to="/search">Search Player</Link>
+        Search Player
       </button>
     </SearchBarSection>
   );

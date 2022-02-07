@@ -56,6 +56,7 @@ function rootReducer(state = inizialstate, action /* { type, payload } */) {
         status: action.payload,
       };
 
+       
 
     default:
       return state;

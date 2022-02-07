@@ -4,7 +4,6 @@ import { BoldPlayersSections } from "../styles/BoldPlayers";
 import { searchPlayers } from "../actions";
 import { useEffect, useState } from "react";
 import Paged from "./Paged";
-import { Link } from "react-router-dom";
 
 export const SearchPlayer = () => {
   const dispatch = useDispatch();
@@ -15,7 +14,6 @@ export const SearchPlayer = () => {
       searchPlayers(nickname ? { nick_name: nickname } : { nick_name: "" })
     );
   }, [Players]);
-
 
   //paginado
   const [currentPage, setCurrentPage] = useState(1); //le paso el estado local con la primera página que se renderiza
@@ -31,21 +29,18 @@ export const SearchPlayer = () => {
     setCurrentPage(pageNumber); //acá el paginado va a setear la pagina en el numero de pagina que se vaya clickeando
   }; //cuando setea la página los índices cambian y el slide se va modificando
 
-  return searchPlayer?.length > 0 || searchPlayer[0] !== null ? (
+  return searchPlayer?.length > 0 && searchPlayer[0] !== null ? (
     <BoldPlayersSections>
-     
       <div className="suplentes">
         {currentPlayers?.map((j) => {
           return (
-            <Link /* className={styles.a} */ to={"/player/" + j.Id}>
-              <CardPlayer
-                nickname={j.nickname}
-                image={j.avatar}
-                id={j.Id}
-                status={j.status}
-                ranking={j.ranking}
-              />
-            </Link>
+            <CardPlayer
+              nickname={j.nickname}
+              image={j.avatar}
+              id={j.Id}
+              status={j.status}
+              ranking={j.ranking}
+            />
           );
         })}
       </div>
@@ -57,20 +52,6 @@ export const SearchPlayer = () => {
           pagedTotal={pagedTotal}
         />
       </div>
-      {/* <div className="suplentes">
-        {searchPlayer.map((j) => {
-          return (
-            <CardPlayer
-            nickname={j.nickname}
-            image={j.avatar}
-            key={j.Id}
-            id={j.Id}
-            status={j.status}
-              ranking={j.ranking}
-            />
-          );
-        })}
-      </div> */}
     </BoldPlayersSections>
   ) : (
     <>
