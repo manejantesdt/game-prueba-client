@@ -13,23 +13,19 @@ export const SearchPlayer = () => {
     dispatch(
       searchPlayers(nickname ? { nick_name: nickname } : { nick_name: "" })
     );
-  }, [players,nickname,dispatch]);
+  }, [nickname, dispatch]);
 
-  console.log("hola soy search",searchPlayer);
-
-
-  const [currentPage, setCurrentPage] = useState(1); 
-  const [playersPerPage] = useState(6); 
-  const indexOfLastPlayer = currentPage * playersPerPage; 
-  const indexOffirstPlayer = indexOfLastPlayer - playersPerPage; 
-  const currentPlayers = searchPlayer? searchPlayer.slice(
-    indexOffirstPlayer,
-    indexOfLastPlayer
-  ):[];; 
+  const [currentPage, setCurrentPage] = useState(1);
+  const [playersPerPage] = useState(6);
+  const indexOfLastPlayer = currentPage * playersPerPage;
+  const indexOffirstPlayer = indexOfLastPlayer - playersPerPage;
+  const currentPlayers = searchPlayer
+    ? searchPlayer.slice(indexOffirstPlayer, indexOfLastPlayer)
+    : [];
 
   const pagedTotal = (pageNumber) => {
-    setCurrentPage(pageNumber); 
-  }; 
+    setCurrentPage(pageNumber);
+  };
 
   return searchPlayer?.length > 0 && searchPlayer[0] !== null ? (
     <BoldPlayersSections>

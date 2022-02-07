@@ -12,9 +12,8 @@ export const Home = () => {
   useEffect(() => {
     dispatch(getPlayers({}));
     dispatch(searchPlayers({ nick_name: "" }));
-  }, [dispatch,players]);
+  }, [dispatch]);
 
-  
   return (
     <main>
       <Players />
