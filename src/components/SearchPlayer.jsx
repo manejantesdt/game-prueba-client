@@ -4,7 +4,6 @@ import { BoldPlayersSections } from "../styles/BoldPlayers";
 import { searchPlayers } from "../actions";
 import { useEffect, useState } from "react";
 import Paged from "./Paged";
-import { orderbyRanking } from "../actions";
 import { Link } from "react-router-dom";
 
 export const SearchPlayer = () => {
