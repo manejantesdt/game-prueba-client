@@ -40,8 +40,10 @@ h1 {
   font-family: Lato, Arial, Helvetica, sans-serif;
 }
 
-h6{
-  color: #fbf3e4;
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  color: #FBF3E4;
 }
 
 hr{
