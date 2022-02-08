@@ -1,12 +1,8 @@
 <p align='left'>
-    <img src='https://static.wixstatic.com/media/85087f_0d84cbeaeb824fca8f7ff18d7c9eaafd~mv2.png/v1/fill/w_160,h_30,al_c,q_85,usm_0.66_1.00_0.01/Logo_completo_Color_1PNG.webp' </img>
+    <img src='https://github.com/manejantesdt/game-prueba-client/blob/marisa/LogoNvo.png' </img>
 </p> 
 
-# Group Project - Gimme a Ride (Subi Que Te Llevo)
-
-<p align="left">
-  <img height="30" src="./logo_peq.png" />
-</p>
+# Group Project - Recicle Being
 
 🤔 De qué se trata?
 Recicle Being es una página web creada como prueba técnica para la empresa CrediTu. 
