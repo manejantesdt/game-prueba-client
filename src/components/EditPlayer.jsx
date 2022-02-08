@@ -14,9 +14,10 @@ export const EditPlayer = () => {
   const { player, avatars } = useSelector((state) => state);
   const dispatch = useDispatch();
   var { id } = useParams();
+
   useEffect(() => {
     dispatch(getPlayerId(id));
-  }, [dispatch]);
+  }, [dispatch, id]);
   // _____________________________________________________________________________
   // ------------------------------<State>----------------------------------
   const [checkform, setCheckform] = useState(false);
@@ -33,25 +34,21 @@ export const EditPlayer = () => {
       avatar: player.avatar,
       score: player.score,
     });
-    checkform === true
-      ? setCheckform(false)
-      : checkform === false
-      ? setCheckform(true)
-      : setCheckform(false);
+    checkform === true ? setCheckform(false) : setCheckform(true);
   };
 
   const onClickCancel = () => {
     checkform === false ? setCheckform(true) : setCheckform(false);
   };
 
-  const onClick = async () => {
-    await dispatch(editPlayer(id, editform));
+  const onClick = () => {
+    dispatch(editPlayer(id, editform));
     dispatch(getPlayers({}));
   };
 
-  const handleSubmit = async () => {
-    dispatch(editPlayer(id, editform));
-    dispatch(getPlayers({}));
+  const handleSubmit =  () => {
+     dispatch(editPlayer(id, editform));
+
   };
 
   const handleChange = (e) => {
