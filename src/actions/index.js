@@ -70,8 +70,8 @@ export const createPlayer = (player) => {
     }
   };
 };
+
 export const getPlayerId = (Id) => {
-  console.log(Id, "SOY EL ID");
   return async (dispatch) => {
     try {
       const json = (
@@ -89,6 +89,7 @@ export const getPlayerId = (Id) => {
     }
   };
 };
+
 export const editPlayer = (Id, player) => {
   return async (dispatch) => {
     try {
@@ -115,7 +116,6 @@ export const deletePlayer = (Id) => {
           `https://mrsemsqfk6.execute-api.us-east-1.amazonaws.com/player/${Id}`
         )
       ).data;
-      console.log("soy el json", json);
       dispatch({
         type: "DELETE_PLAYER",
         json,

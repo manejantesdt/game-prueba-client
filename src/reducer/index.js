@@ -10,7 +10,6 @@ const inizialstate = {
   avatar: "",
   order: "",
   status: "",
-  orderbyRanking: []
 };
 
 function rootReducer(state = inizialstate, action /* { type, payload } */) {

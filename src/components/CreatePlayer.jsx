@@ -17,10 +17,13 @@ function validate(player) {
 // _____________________________________________________________________
 
 export const CreatePlayer = () => {
+  // --------------------<variables de estado>---------------------------
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [errors, setErrors] = useState({});
   const { avatars, players } = useSelector((state) => state);
+  // ___________________________________________________________________
+
   // ------------------------< Uses react >-----------------------------
   const [player, setPlayer] = useState({
     nickname: "",

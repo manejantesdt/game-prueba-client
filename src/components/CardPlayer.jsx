@@ -10,10 +10,10 @@ export const CardPlayer = ({
   status,
   ...props
 }) => {
-  const onClick = (e) => {
+  const onClick = async (e) => {
     e.preventDefault();
-    dispatch(deletePlayer(id));
-    dispatch(getPlayers());
+    await dispatch(deletePlayer(id));
+    dispatch(getPlayers({}));
   };
 
   const dispatch = useDispatch();
@@ -31,7 +31,7 @@ export const CardPlayer = ({
         <h3>{nickname}</h3>
       </NavLink>
       <span>{status}</span>
-      <span>{(ranking)}</span>
+      <span>{ranking}</span>
     </article>
   );
 };

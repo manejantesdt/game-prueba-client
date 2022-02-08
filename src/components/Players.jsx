@@ -1,8 +1,10 @@
 import React, { useEffect, createRef } from "react";
 import { CardPlayer } from "./CardPlayer";
-import { useSelector } from "react-redux";
+import { useSelector,useDispatch  } from "react-redux";
+import { getPlayers } from "../actions";
 
 export const Players = () => {
+  const dispatch = useDispatch();
   const { players } = useSelector((state) => state);
   const gridJugadores = createRef();
   
@@ -10,8 +12,10 @@ export const Players = () => {
   useEffect(() => {
     setScrollContainer();
     document.addEventListener("click", setScrollContainer);
-  });
-
+    dispatch (getPlayers({}));
+  },[players?.length]);
+  console.log(players.length);
+ 
 
   
   const setScrollContainer = (desktop = true) => {
