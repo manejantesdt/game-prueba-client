@@ -86,7 +86,7 @@ export const EditPlayer = () => {
               className="input_form"
               onChange={(e) => handleSelect(e)}
             >
-              <option value={null}></option>
+              <option value={null}>{player.avatar}</option>
               {avatars.map((e, id) => (
                 <option key={id} value={e}>
                   {"Avatar " + (id + 1)}
