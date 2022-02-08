@@ -50,7 +50,7 @@ export const EditPlayer = () => {
 
   // };
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
     dispatch(editPlayer(id, editform));
     dispatch(getPlayers({}));
     // navigate.go(0)
@@ -211,8 +211,8 @@ export const EditPlayer = () => {
                   name="ranking"
                   placeholder={parseInt(player.ranking)}
                   onChange={(e) => handleChange(e)}
-                  />
-                  {console.log(player.ranking)}
+                />
+                {console.log(player.ranking)}
               </div>
 
               <div className="editButtons">
