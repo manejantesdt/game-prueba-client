@@ -11,9 +11,9 @@ export const TopTen = () => {
     <TopTenSection>
       <div className="cancha">
         <img src={fondo} alt="fondo" />
-        {players?.map((player) => {
+        {players?.map((player,i) => {
           return (
-            <div className="jugador">
+            <div className="jugador" key={i}>
               <img src={player.avatar} alt="jugador" />
             </div>
           );

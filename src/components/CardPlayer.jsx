@@ -17,10 +17,11 @@ export const CardPlayer = ({
   };
 
   const dispatch = useDispatch();
+  
 
   return (
-    <article {...props} className="jugador">
-      <NavLink to={`/id/${id}`}>
+    <NavLink to={`/id/${id}`}>
+      <article {...props} className="jugador">
         <button type="onSubmit" onClick={onClick}>
           X
         </button>
@@ -28,7 +29,7 @@ export const CardPlayer = ({
         <h3>{nickname}</h3>
         <span style={{ color: "#77D970", marginBottom: 5 }}>{status}</span>
         <span style={{ color: "#FF0075" }}>Rank: {ranking}</span>
-      </NavLink>
-    </article>
+      </article>
+    </NavLink>
   );
 };

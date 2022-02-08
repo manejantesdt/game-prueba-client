@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router";
+import { useParams, useNavigate } from "react-router";
 import { ContEdit, IntoEdit } from "../styles/EditForm.js";
 import {
   getPlayerId,
@@ -8,7 +8,6 @@ import {
   deletePlayer,
   getPlayers,
 } from "../actions/index";
-import { useNavigate } from "react-router";
 
 export const EditPlayer = () => {
   // ------------------------------<Variables>--------------------------------
@@ -18,8 +17,8 @@ export const EditPlayer = () => {
   var { id } = useParams();
 
   useEffect(() => {
-   dispatch(getPlayerId(id));
-    // dispatch(getPlayers({}));
+    dispatch(getPlayerId(id));
+    dispatch(getPlayers({}));
   }, [dispatch, id]);
   // _____________________________________________________________________________
   // ------------------------------<State>----------------------------------
@@ -29,7 +28,7 @@ export const EditPlayer = () => {
   // __________________________________________________________________________
 
   // ------------------------------<Functions>---------------------------------
-  const onClickCheck = () => {
+  const onClickCheck = async () => {
     setEditform({
       nickname: player.nickname,
       status: player.status,
@@ -44,15 +43,17 @@ export const EditPlayer = () => {
     checkform === false ? setCheckform(true) : setCheckform(false);
   };
 
-  const onClick = async () => {
-    await dispatch(editPlayer(id, editform));
+  // const onClick = async () => {
+  //   await dispatch(editPlayer(id, editform));
+  //   dispatch(getPlayers({}));
+  //   console.log(editform,id);
+
+  // };
+
+  const handleSubmit = () => {
+    dispatch(editPlayer(id, editform));
     dispatch(getPlayers({}));
-    
-  };
-  
-  const handleSubmit =  async () => {
-    await dispatch(editPlayer(id, editform));
-    dispatch(getPlayers({}));
+    // navigate.go(0)
   };
 
   const handleChange = (e) => {
@@ -61,6 +62,7 @@ export const EditPlayer = () => {
       [e.target.name]: e.target.value,
     });
   };
+
   const handleSelect = (e) => {
     setEditform({
       ...editform,
@@ -93,7 +95,7 @@ export const EditPlayer = () => {
               <button
                 className="btnCloseDetail"
                 type="button"
-                onClick={() => dispatch(deletePlayer(player.Id),navigate("/"))}
+                onClick={() => dispatch(deletePlayer(player.Id), navigate("/"))}
               >
                 X
               </button>
@@ -112,10 +114,12 @@ export const EditPlayer = () => {
                 <div className="detail">
                   <p>Status:</p>
                   <span>{player.status}</span>
+                  {console.log(player.status)}
                 </div>
 
                 <div className="detail">
                   <p>Ranking:</p>
+                  {console.log(player.ranking)}
                   <span>{player.ranking}</span>
                 </div>
 
@@ -208,7 +212,8 @@ export const EditPlayer = () => {
             </div>
 
             <div className="editButtons">
-              <button onClick={onClick} type="submit" className="btnChange">
+              {/* <button onClick={onClick} type="submit" className="btnChange"> */}
+              <button type="submit" className="btnChange">
                 Change
               </button>
               <button onClick={onClickCancel} className="btnChange">
