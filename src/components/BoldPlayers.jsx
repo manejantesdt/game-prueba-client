@@ -5,7 +5,7 @@ import { BoldPlayersSections } from "../styles/BoldPlayers";
 
 export const BoldPlayers = () => {
   const { players } = useSelector((state) => state);
-  const boldPlayers=players.slice(0,6);
+  const boldPlayers=players.slice(10,16);
   return (
     <BoldPlayersSections>
       <h2>Bold Players</h2>
@@ -18,6 +18,7 @@ export const BoldPlayers = () => {
                 key={j.Id}
                 id={j.Id}
                 status={j.status}
+                ranking={j.ranking}
               />
             );
           })}

@@ -84,6 +84,6 @@ export const IntoForm = styled.form`
   p {
     margin: 0 10px;
     color: #fff;
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 `;
