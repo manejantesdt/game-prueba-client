@@ -44,9 +44,9 @@ export const Players = () => {
       container.setAttribute("style", styles);
     }
   };
-  const tenPlayers = players.slice(2, 10);
+  const tenPlayers = players.slice(3, 10);
   return (
-    <section>
+    <section className="Players">
       <h2>Players</h2>
       <div className="contenedor-jugadores">
         <div ref={gridJugadores} onClick={() => setScrollContainer.bind(this)}>
