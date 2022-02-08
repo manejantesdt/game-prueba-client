@@ -7,6 +7,7 @@ import {
   editPlayer,
   deletePlayer,
   getPlayers,
+  searchPlayers,
 } from "../actions/index";
 
 export const EditPlayer = () => {
@@ -19,6 +20,7 @@ export const EditPlayer = () => {
   useEffect(() => {
     dispatch(getPlayerId(id));
     dispatch(getPlayers({}));
+    dispatch(searchPlayers({nick_name: ""}));
   }, [dispatch, id]);
   // _____________________________________________________________________________
   // ------------------------------<State>----------------------------------
@@ -28,7 +30,7 @@ export const EditPlayer = () => {
   // __________________________________________________________________________
 
   // ------------------------------<Functions>---------------------------------
-  const onClickCheck = async () => {
+  const onClickCheck = () => {
     setEditform({
       nickname: player.nickname,
       status: player.status,
@@ -50,7 +52,7 @@ export const EditPlayer = () => {
 
   // };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = () => {
     dispatch(editPlayer(id, editform));
     dispatch(getPlayers({}));
     // navigate.go(0)
@@ -90,7 +92,7 @@ export const EditPlayer = () => {
           Player Details
         </h2>
         <ContEdit>
-          {player ? (
+          {player ?.ranking!== undefined ?(
             <div key={player.Id} className="DetailContainer">
               <div className="CloseDetail">
                 <button
@@ -137,6 +139,8 @@ export const EditPlayer = () => {
           )}
         </ContEdit>
       </>
+      // --------------------------------<parte formulario>--------------------------------
+      
     ) : (
       <>
         <h2
