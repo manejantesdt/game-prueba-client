@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import { CardPlayer } from "./CardPlayer";
-import { BoldPlayersSections, BoldPlayersPagination } from "../styles/BoldPlayers";
-import { searchPlayers,getPlayers } from "../actions";
+import { BoldPlayersSections } from "../styles/BoldPlayers";
+import { searchPlayers, getPlayers } from "../actions";
 import { useEffect, useState } from "react";
 import Paged from "./Paged";
 
@@ -14,7 +14,7 @@ export const SearchPlayer = () => {
       searchPlayers(nickname ? { nick_name: nickname } : { nick_name: "" }),
       getPlayers({})
     );
-  }, [players,nickname, dispatch]);
+  }, [players, nickname, dispatch]);
 
   const [currentPage, setCurrentPage] = useState(1);
   const [playersPerPage] = useState(6);
