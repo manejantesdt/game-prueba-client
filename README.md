@@ -3,7 +3,7 @@
 </p> 
 
 <p align='left'>
-    <img src='http://game-prueba-client.s3-website-us-east-1.amazonaws.com/static/media/podio.56d7824ee98f76bacb0e.png' </img>
+    <img height="250" src='http://game-prueba-client.s3-website-us-east-1.amazonaws.com/static/media/podio.56d7824ee98f76bacb0e.png' </img>
 </p> 
 
 # Group Project - Recicle Being
@@ -58,10 +58,9 @@ Puedes navegar por todo el sitio web, puedes ir a la pestaña "crear un jugador"
 
 REVISAR ESTO: Si tienes permisos de Administrador, también puedes editar los jugadores que están creados, e incluso borrarlos.
 
-<p align="left">
-  <img height="200" src="./routes_2.jpg" />
-</p>
-
+<p align='left'>
+    <img height="120" src='https://drive.google.com/thumbnail?id=1ZhFz6JMOtT3107w-z2KuO0PZMOKEzIYx' </img>
+</p> 
 ### Aplicación de jugadores
 
 - Registro encriptado. Los usuarios deben tener la oportunidad de crear una cuenta de forma rápida y segura con sus cuentas de redes sociales o Gmail.
