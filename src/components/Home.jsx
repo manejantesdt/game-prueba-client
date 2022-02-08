@@ -4,12 +4,13 @@ import { Players } from "./Players";
 import { BoldPlayers } from "./BoldPlayers";
 import { MainPanel } from "./MainPanel";
 import "../styles/styles.scss";
-import { getPlayers } from "../actions";
+import { getPlayers,searchPlayers } from "../actions";
 
 export const Home = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
+    dispatch(searchPlayers({nick_name:""}));
     dispatch(getPlayers({}));
   }, [dispatch]);
 

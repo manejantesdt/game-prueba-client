@@ -8,10 +8,12 @@ import {
   deletePlayer,
   getPlayers,
 } from "../actions/index";
+import { useNavigate } from "react-router";
 
 export const EditPlayer = () => {
   // ------------------------------<Variables>--------------------------------
   const { player, avatars } = useSelector((state) => state);
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   var { id } = useParams();
 
@@ -89,7 +91,7 @@ export const EditPlayer = () => {
               <button
                 className="btnCloseDetail"
                 type="button"
-                onClick={() => dispatch(deletePlayer(player.Id))}
+                onClick={() => dispatch(deletePlayer(player.Id),navigate("/"))}
               >
                 X
               </button>
