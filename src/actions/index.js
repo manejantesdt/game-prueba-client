@@ -59,8 +59,12 @@ export const getAvatar = () => {
 export const createPlayer = (player) => {
   return async (dispatch) => {
     try {
-      const json = (await axios.post("https://mrsemsqfk6.execute-api.us-east-1.amazonaws.com/player", player))
-        .data;
+      const json = (
+        await axios.post(
+          "https://mrsemsqfk6.execute-api.us-east-1.amazonaws.com/player",
+          player
+        )
+      ).data;
       dispatch({
         type: "CREATE_PLAYER",
         json,
@@ -109,7 +113,7 @@ export const editPlayer = (Id, player) => {
   };
 };
 export const deletePlayer = (Id) => {
-  console.log(Id)
+  console.log(Id);
   return async (dispatch) => {
     try {
       const json = (
@@ -146,5 +150,3 @@ export const setOrder = (order) => {
     payload: order,
   };
 };
-
-

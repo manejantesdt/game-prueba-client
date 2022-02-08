@@ -40,6 +40,7 @@ export const EditPlayer = () => {
   };
 
   const onClickCancel = () => {
+    setEditform({});
     checkform === false ? setCheckform(true) : setCheckform(false);
   };
 
@@ -50,10 +51,12 @@ export const EditPlayer = () => {
 
   // };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     dispatch(editPlayer(id, editform));
-    dispatch(getPlayers({}));
-    // navigate.go(0)
+    dispatch(getPlayerId(id));
+
+    checkform === false ? setCheckform(true) : setCheckform(false);
   };
 
   const handleChange = (e) => {
@@ -105,25 +108,33 @@ export const EditPlayer = () => {
               </div>
               <div className="InfoContainer">
                 <div className="AvatarDetail">
-                  <img src={player.avatar} alt={player.nickname} />
+                  <img
+                    src={editform.avatar ? editform.avatar : player.avatar}
+                    alt={player.nickname}
+                  />
                 </div>
 
                 <div className="InfoDetail">
                   <div className="detail">
                     <p>Nickname:</p>
-                    <span>{player.nickname}</span>
+                    <span>
+                      {editform.nickname ? editform.nickname : player.nickname}
+                    </span>
                   </div>
 
                   <div className="detail">
                     <p>Status:</p>
-                    <span>{player.status}</span>
-                    {console.log(player.status)}
+                    <span>
+                      {editform.status ? editform.status : player.status}
+                    </span>
                   </div>
 
                   <div className="detail">
                     <p>Ranking:</p>
-                    {console.log(player.ranking)}
-                    <span>{player.ranking}</span>
+
+                    <span>
+                      {editform.ranking ? editform.ranking : player.ranking}
+                    </span>
                   </div>
 
                   <button className="btnEditPlayer" onClick={onClickCheck}>
