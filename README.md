@@ -1,5 +1,5 @@
 <p align='left'>
-    <img src='https://github.com/manejantesdt/game-prueba-client/blob/marisa/LogoNvo.png' </img>
+     <img height="30" src="./LogoNvo.png" />
 </p> 
 
 # Group Project - Recicle Being
