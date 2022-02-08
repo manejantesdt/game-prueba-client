@@ -25,7 +25,7 @@ Link{
 
 body{
   font-family: sans-serif;
-  background: #1F3A52;
+  background: #172774;
   position: center;
   min-height: 100vh;
   width: 100%;
@@ -40,15 +40,14 @@ h1 {
   font-family: Lato, Arial, Helvetica, sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  margin-bottom: 1rem;
-  margin-left: 1rem;
-  color: #FBF3E4;
+h6{
+  color: #fbf3e4;
 }
 
 hr{
   color: #FBF3E4;
 }
+
 
 ${'' /* h2 {
   margin-bottom: 1rem;
@@ -63,8 +62,50 @@ ${'' /* section {
 } */}
 
 .contenedor-jugadores {
+  // overflowY: hidden;
   overflow: auto;
   padding-bottom: 2rem;
+  // border: 1px solid #00f;
+}
+
+.contenedor-jugadores::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.contenedor-jugadores::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+
+.contenedor-jugadores::-webkit-scrollbar-thumb {
+  background-color: #ffffff15;
+  border-radius: 20px;
+}
+
+.contenedor-jugadores::-webkit-scrollbar-track {
+  border-radius: 10px;  
+}
+
+.contenedor-jugadores::-webkit-scrollbar-thumb:active {
+  background-color: #ffffff40;
+  cursor: pointer;
+}
+
+.Players{
+  width: 88%;
+  height: 330px;
+  margin: 0 auto;
+  margin-top: 20px;
+  color: #fff;
+  overflowX: scroll;
+  text-align: center;
+  // border: 1px solid #fff;
+}
+
+.Players h2{
+  height: 50px;
+  color: #FF0075;
+  letter-spacing: 20px;
+  text-transform: uppercase;
 }
 
 section > div:not(.cancha):not(.contenedor-jugadores) {

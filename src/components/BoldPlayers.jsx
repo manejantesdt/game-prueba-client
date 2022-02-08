@@ -6,7 +6,6 @@ import { BoldPlayersSections } from "../styles/BoldPlayers";
 export const BoldPlayers = () => {
   const { players } = useSelector((state) => state);
   const boldPlayers=players.slice(0,6);
- /*  const bold = players.slice(1,7); */
   return (
     <BoldPlayersSections>
       <h2>Bold Players</h2>

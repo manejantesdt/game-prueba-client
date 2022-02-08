@@ -1,17 +1,19 @@
 import React, { useEffect, createRef } from "react";
 import { CardPlayer } from "./CardPlayer";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { getPlayers } from "../actions";
 
 export const Players = () => {
+  const dispatch = useDispatch();
   const { players } = useSelector((state) => state);
   const gridJugadores = createRef();
 
   useEffect(() => {
     setScrollContainer();
     document.addEventListener("click", setScrollContainer);
-  });
+    dispatch(getPlayers({}));
+  }, [players?.length,dispatch]);
 
-  // Función que fija el tamaño del grid de los jugadores
   const setScrollContainer = (desktop = true) => {
     let container = gridJugadores.current;
     if (container) {
@@ -42,7 +44,7 @@ export const Players = () => {
       container.setAttribute("style", styles);
     }
   };
-const tenPlayers=players.slice(0,10);
+  const tenPlayers = players.slice(2, 10);
   return (
     <section>
       <h2>Players</h2>

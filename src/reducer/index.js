@@ -10,7 +10,6 @@ const inizialstate = {
   avatar: "",
   order: "",
   status: "",
-  orderbyRanking: []
 };
 
 function rootReducer(state = inizialstate, action /* { type, payload } */) {
@@ -56,22 +55,7 @@ function rootReducer(state = inizialstate, action /* { type, payload } */) {
         status: action.payload,
       };
 
-        case "ORDER_BY_RANKING" :
-          const orderPlayers = action.payload === "Asc" ?  
-          state.searchPlayer.sort(function(a, b) {              
-              if(a.ranking > b.ranking) return 1;              
-              if(b.ranking > a.ranking) return -1;
-              return 0;                                 
-          }) :                                          
-          state.searchPlayer.sort(function(a, b) {
-              if(a.ranking > b.ranking) return -1;
-              if(b.ranking > a.ranking) return 1;
-              return 0;
-          });
-          return {
-              ...state,
-              orderbyRanking: orderPlayers
-          };
+       
 
     default:
       return state;

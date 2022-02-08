@@ -6,6 +6,7 @@ import { Provider } from "react-redux";
 import { EditPlayer } from "./components/EditPlayer";
 import { CreatePlayer } from "./components/CreatePlayer";
 import  {NavBar}  from "./components/NavBar";
+import  {SearchPlayer}  from "./components/SearchPlayer";
 import {NotFound} from "./components/NotFound";
 import store from "./store/store";
 
@@ -18,6 +19,7 @@ const App = () => (
         <Route path="/about" element={<About />} />
         <Route path="/id/:id" element={<EditPlayer />} />
         <Route path="/create" element={<CreatePlayer />} />
+        <Route path="/search" element={<SearchPlayer />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>

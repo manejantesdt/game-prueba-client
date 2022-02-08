@@ -33,7 +33,7 @@ width: 814px;
 /* height: 1900px; */
 outline: none;
 border-radius: 15px;
-background-color: #fdf6fc73;
+background-color: #fdf6ffffc73;
 backdrop-filter: 1px;
 box-shadow:0 0 2px #2a8ce1, 0 0 2px #3a6351, 0 0 2px #e40320;
 
@@ -57,23 +57,46 @@ li {
    /*  color: #102132; */
 }
 
-.button {
-    width: 140px;
-    height: 30px;
-    border: none;
-    font-size: .98rem;
-    position: right;
-    background-color: #de6200;
-    color: white;
-    border-radius: 10px;
-    text-align: center;
-    cursor: pointer;
-    &:hover {
-      background-color: #fdf6fc73;
-      box-shadow: 0 0 5px rgba(44, 11, 34, 0.404),
-        0 0 5px rgba(44, 11, 34, 0.404), 0 0 5px rgba(44, 11, 34, 0.404);
-      transition-delay: 0.2s;
-      transition: 0.8s;
-      color: #311601;
+.inputSearch {
+  width: 300px;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  padding: 0 10px;
+  margin-right: 10px;
+  &:focus{
+    outline: solid 1px #77D970;
   }
+}
+
+
+.button {
+  width: 140px;
+  height: 30px;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #77D970;
+  color: #fff;
+  border-radius: 10px;
+  transition: 0.5s all;
+  &:hover {
+    // background-color: #fdf6fc73;
+    background-color: #172774;
+    // box-shadow: 0 0 5px rgba(44, 11, 34, 0.404),
+    //   0 0 5px rgba(44, 11, 34, 0.404), 0 0 5px rgba(44, 11, 34, 0.404);
+    // transition-delay: 0.2s;
+    color: #fff;
+    box-shadow: 0 3px 10px 0 rgba(0,0,0,0.5);
+    cursor: pointer;
+  }
+}
+
+.LinkSearch {
+  color: #fff;
+}
+
+.LinkSearch:hover{
+  color: #fff;
+}
 `;

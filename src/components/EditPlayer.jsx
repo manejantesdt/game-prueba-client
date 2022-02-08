@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router";
 import { ContEdit, IntoEdit } from "../styles/EditForm.js";
-import { getPlayerId, editPlayer } from "../actions/index";
+import { getPlayerId, editPlayer, deletePlayer } from "../actions/index";
 
-export const EditPlayer = (props) => {
+export const EditPlayer = () => {
   // ------------------------------<Variables>--------------------------------
   const { player, avatars } = useSelector((state) => state);
   const dispatch = useDispatch();
@@ -34,8 +34,7 @@ export const EditPlayer = (props) => {
       score: player.score,
     });
   };
-  const handleSubmit = (e) => {
-    // e.preventDefault();
+  const handleSubmit = () => {
     dispatch(editPlayer(id, editform));
   };
   const handleChange = (e) => {
@@ -44,20 +43,27 @@ export const EditPlayer = (props) => {
       [e.target.name]: e.target.value,
     });
   };
-  function handleSelect(e) {
+  const handleSelect=(e)=> {
     setEditform({
       ...editform,
       [e.target.name]: e.target.value,
     });
   }
 
-  console.log(editform, "SOY EL PLAYE");
   // _____________________________________________________________________________
 
   return checkform === false ? (
     <ContEdit>
       {player ? (
         <div key={player.Id}>
+          <div>
+            <button
+              type="button"
+              onClick={() => dispatch(deletePlayer(player.Id))}
+            >
+              x
+            </button>
+          </div>
           <span>{player.nickname}</span>
           <img src={player.avatar} alt="" />
           <span>{player.status}</span>
