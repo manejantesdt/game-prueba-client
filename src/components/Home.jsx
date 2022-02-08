@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useDispatch} from "react-redux";
+import { useDispatch } from "react-redux";
 import { Players } from "./Players";
 import { BoldPlayers } from "./BoldPlayers";
 import { MainPanel } from "./MainPanel";

@@ -10,10 +10,10 @@ export const CardPlayer = ({
   status,
   ...props
 }) => {
-  const onClick = (e) => {
+  const onClick = async (e) => {
     e.preventDefault();
-    dispatch(deletePlayer(id));
-    dispatch(getPlayers());
+    await dispatch(deletePlayer(id));
+    dispatch(getPlayers({}));
   };
 
   const dispatch = useDispatch();
@@ -26,12 +26,11 @@ export const CardPlayer = ({
       </button>
       ,
       <NavLink to={`/id/${id}`}>
-        <div className="avatar"><img src={image} alt={nickname} /></div>
-        
+        <img src={image} alt={nickname} />
         <h3>{nickname}</h3>
       </NavLink>
-      <span style={{color: '#77D970', marginBottom:5}}>{status}</span>
-      <span style={{color: '#FF0075'}}>Rank: {ranking}</span>
+      <span>{status}</span>
+      <span>{ranking}</span>
     </article>
   );
 };
