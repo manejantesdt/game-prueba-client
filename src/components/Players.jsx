@@ -44,7 +44,7 @@ export const Players = () => {
   };
 const tenPlayers=players.slice(0,10);
   return (
-    <section>
+    <section className="Players">
       <h2>Players</h2>
       <div className="contenedor-jugadores">
         <div ref={gridJugadores} onClick={() => setScrollContainer.bind(this)}>

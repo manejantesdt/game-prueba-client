@@ -53,33 +53,90 @@ export const EditPlayer = () => {
   // _____________________________________________________________________________
 
   return checkform === false ? (
-    <ContEdit>
-      {player ? (
-        <div key={player.Id}>
-          <div>
-            <button
-              type="button"
-              onClick={() => dispatch(deletePlayer(player.Id))}
-            >
-              x
-            </button>
-          </div>
-          <span>{player.nickname}</span>
-          <img src={player.avatar} alt="" />
-          <span>{player.status}</span>
-          <span>{player.ranking}</span>
-          <button onClick={onClick}>Edit</button>
-        </div>
-      ) : (
-        <div>...loading...</div>
-      )}
-    </ContEdit>
+    <>
+      <h2 
+        style={{
+          width: 500,
+          margin: '0 auto', 
+          color: 'white',
+          textAlign: 'center',
+          marginTop: 60,
+          color: '#FF0075',
+          letterSpacing: 20,
+          textTransform: 'uppercase',
+        }}>
+          Player Details
+      </h2>
+      <ContEdit>
+        {player ? (
+            <div key={player.Id} className="DetailContainer">
+              <div className="CloseDetail">
+                <button 
+                  className="btnCloseDetail"
+                  type="button" 
+                  onClick={() => dispatch(deletePlayer(player.Id))} >
+                  X
+                </button>
+              </div>
+              <div className="InfoContainer">
+                <div className="AvatarDetail">
+                  <img src={player.avatar} alt={player.nickname} />
+                </div>
+
+                <div className="InfoDetail">
+                  <div className="detail">
+                    <p>Nickname:</p>
+                    <span>{player.nickname}</span>
+                  </div>
+
+                  <div className="detail">
+                    <p>Status:</p>
+                    <span>{player.status}</span>
+                  </div>
+
+                  <div className="detail">
+                    <p>Ranking:</p>
+                    <span>{player.ranking}</span>
+                  </div>
+
+                  <button 
+                    className="btnEditPlayer"
+                    onClick={onClick}
+                    >
+                      Edit
+                  </button>
+                </div>
+                
+              </div>
+            </div>
+        ) : (
+          <div>...loading...</div>
+          )}
+      </ContEdit>
+    </>
   ) : (
+    <>
+    <h2 
+      style={{
+        width: 700,
+        margin: '0 auto', 
+        color: 'white',
+        textAlign: 'center',
+        marginTop: 20,
+        color: '#FF0075',
+        letterSpacing: 20,
+        textTransform: 'uppercase',
+      }}>
+        Edit Player Details
+    </h2>
     <ContEdit>
       {player ? (
         <IntoEdit key={player.Id} onSubmit={handleSubmit}>
-          <img src={editform.avatar} alt="" />
-          <div>
+
+          <img src={editform.avatar} alt="Ávatar" className="editAvatar" />
+
+          <div className="editPlayerAvatar">
+            <p>Ávatar</p>
             <select
               type="text"
               name="avatar"
@@ -94,7 +151,9 @@ export const EditPlayer = () => {
               ))}
             </select>
           </div>
-          <div>
+
+          <div className="editPlayerAvatar">
+            <p>Status</p>
             <select
               type="text"
               name="status"
@@ -108,27 +167,42 @@ export const EditPlayer = () => {
               <option value="hierro">Hierro</option>
             </select>
           </div>
-          <input
-            type="text"
-            name="nickname"
-            placeholder={player.nickname}
-            onChange={(e) => handleChange(e)}
-          />
 
-          <input
-            type="number"
-            min="0"
-            max="9999"
-            name="ranking"
-            placeholder={player.ranking}
-            onChange={(e) => handleChange(e)}
-          />
-          <button type="submit">change</button>
-          <button onClick={onClick}>cancel</button>
+          <div className="editPlayerAvatar">
+            <p>Nickname</p>
+            <input
+              className="input_form"
+              type="text"
+              name="nickname"
+              placeholder={player.nickname}
+              onChange={(e) => handleChange(e)}
+              />
+
+          </div>
+
+          <div className="editPlayerAvatar">
+            <p>Ranking</p>
+            <input
+              className="input_form"
+              type="number"
+              min="0"
+              max="9999"
+              name="ranking"
+              placeholder={player.ranking}
+              onChange={(e) => handleChange(e)}
+            />
+          </div>
+
+          <div className="editButtons">
+            <button type="submit" className="btnChange">Change</button>
+            <button onClick={onClick} className="btnChange">Cancel</button>
+          </div>
+
         </IntoEdit>
       ) : (
         <div>...loading...</div>
       )}
     </ContEdit>
+    </>
   );
 };
