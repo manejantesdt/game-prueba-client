@@ -50,9 +50,9 @@ La idea general es crear una aplicación para el salón de la fama de un juego i
 💡 Qué puedo hacer en la versión online (in live version)?
 Cuando visitas la página web verás que hemos creado un "Salón de la fama de jugadores", donde se despliega una interfaz con los 10
 jugadores con mayor ranking, incluyendo id, nickname, ranking, status y avatar.
-Puedes ver efectivamente que en el panel superior aparecen las tarjetas de los 10 jugadores con mayor ranking de toda la aplicación, que cuenta actualmente 
-con una base de datos de más de tres mil jugadores.
+Puedes ver efectivamente que en el panel superior, en la sección titulada "Players", aparecen las tarjetas de los 10 jugadores con mayor ranking de toda la aplicación, que cuenta actualmente con una base de datos de más de tres mil jugadores.
 En el panel central, puedes ver en el podio, en un lugar destacado, a los 3 mejores de esos 10 primeros. 
+En el panel inferior, llamado "Bold Players", puedes ver 6 jugadores destacados - es decir, 10 forman parte del Top Ten y otros 6 forman parte de Bold Players porque quisimos que esos jugadores también tengan un lugar dentro del Salón de la Fama.
 Al hacer click sobre la tarjeta de cualquier jugador, puedes mirar los detalles específicos de ese jugador:  Id, avatar, nickname, status y ranking. 
 Puedes navegar por todo el sitio web, puedes ir a la pestaña "crear un jugador", donde podrás elegir tu nickname, tu avatar favorito, tu status y tus puntaje dentro del ranking. 
 
