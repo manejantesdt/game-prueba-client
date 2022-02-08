@@ -2,6 +2,10 @@
      <img height="30" src="./LogoNvo.png" />
 </p> 
 
+<p align='left'>
+    <img src='http://game-prueba-client.s3-website-us-east-1.amazonaws.com/static/media/podio.56d7824ee98f76bacb0e.png' </img>
+</p> 
+
 # Group Project - Recicle Being
 
 🤔 De qué se trata?
