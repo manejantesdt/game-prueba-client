@@ -11,11 +11,12 @@ import {
 
 export const EditPlayer = () => {
   // ------------------------------<Variables>--------------------------------
-  const { player, avatars} = useSelector((state) => state);
+  const { player, avatars } = useSelector((state) => state);
   const dispatch = useDispatch();
   var { id } = useParams();
   useEffect(() => {
     dispatch(getPlayerId(id));
+    dispatch(getPlayers());
   }, [dispatch, id]);
   // _____________________________________________________________________________
   // ------------------------------<State>----------------------------------
@@ -39,16 +40,14 @@ export const EditPlayer = () => {
       score: player.score,
     });
   };
-  const handleSubmit = async () => {
-     await dispatch(editPlayer(id, editform));
-    dispatch(getPlayers({}));
+  const handleSubmit = () => {
+    dispatch(editPlayer(id, editform));
   };
   const handleChange = (e) => {
     setEditform({
       ...editform,
       [e.target.name]: e.target.value,
     });
-    
   };
   const handleSelect = (e) => {
     setEditform({
@@ -191,18 +190,16 @@ export const EditPlayer = () => {
                 type="number"
                 min="0"
                 name="ranking"
-                placeholder={parseInt (player.ranking)}
+                placeholder={parseInt(player.ranking)}
                 onChange={(e) => handleChange(e)}
               />
             </div>
 
-            <div className="editButtons">
-              <button type="submit" className="btnChange">
+            <div  className="editButtons">
+              <button onClick={onClick} type="submit" className="btnChange">
                 Change
               </button>
-              <button onClick={onClick} className="btnChange">
-                Cancel
-              </button>
+              <button className="btnChange">Cancel</button>
             </div>
           </IntoEdit>
         ) : (
