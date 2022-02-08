@@ -24,7 +24,7 @@ export const SearchBar = () => {
   };
 
   return (
-    <SearchBarSection onSubmit={onSubmit}>
+    <SearchBarSection onSubmit={onSubmit} >
       <input
         className="inputSearch"
         placeholder="Buscar Player"

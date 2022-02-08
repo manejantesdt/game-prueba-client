@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import { CardPlayer } from "./CardPlayer";
-import { BoldPlayersSections } from "../styles/BoldPlayers";
-import { searchPlayers,getPlayers } from "../actions";
+import { BoldPlayersSections, BoldPlayersPagination } from "../styles/BoldPlayers";
+import { searchPlayers } from "../actions";
 import { useEffect, useState } from "react";
 import Paged from "./Paged";
 
@@ -29,29 +29,38 @@ export const SearchPlayer = () => {
   };
 
   return searchPlayer?.length > 0 && searchPlayer[0] !== null ? (
-    <BoldPlayersSections>
-      <div className="suplentes">
-        {currentPlayers?.map((j) => {
-          return (
-            <CardPlayer
-              nickname={j.nickname}
-              image={j.avatar}
-              id={j.Id}
-              status={j.status}
-              ranking={j.ranking}
-            />
-          );
-        })}
-      </div>
+    <>
+      <BoldPlayersSections>
+        <div className="suplentes">
+          {currentPlayers?.map((j) => {
+            return (
+              <CardPlayer
+                nickname={j.nickname}
+                image={j.avatar}
+                id={j.Id}
+                status={j.status}
+                ranking={j.ranking}
+              />
+            );
+          })}
+        </div>
 
-      <div>
-        <Paged
-          playersPerPage={playersPerPage}
-          searchPlayer={searchPlayer.length}
-          pagedTotal={pagedTotal}
-        />
-      </div>
-    </BoldPlayersSections>
+      </BoldPlayersSections>
+
+      <BoldPlayersPagination >
+        <div className="pagesContainer">
+          <Paged
+            playersPerPage={playersPerPage}
+            searchPlayer={searchPlayer.length}
+            pagedTotal={pagedTotal}
+            currentPage={currentPage}
+          />
+        </div>
+        <div className="returnContainer"> 
+          <a href="/" className="BackHome" >Regresar</a>  
+        </div>
+      </BoldPlayersPagination>
+    </>
   ) : (
     <>
       <h4>...loading search</h4>

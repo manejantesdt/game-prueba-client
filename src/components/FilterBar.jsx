@@ -18,6 +18,7 @@ export const FilterBar = () => {
 
   return (
     <IntoForm>
+      <p>Filtrar por status</p>
       <select className="input_form" onChange={handleStatus} name="status">
         <option value="">Todos</option>
         <option value="oro">Oro</option>
@@ -26,10 +27,11 @@ export const FilterBar = () => {
         <option value="hierro">Hierro</option>
       </select>
 
+      <p>Filtrar por orden</p>
       <select className="input_form" onChange={handleOrder} name="order">
         <option value="">Todos</option>
-        <option value="asc">ascendente</option>
-        <option value="desc">descendente</option>
+        <option value="asc">Ascendente</option>
+        <option value="desc">Descendente</option>
       </select>
     </IntoForm>
   );
