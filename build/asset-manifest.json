@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/static/css/main.e86668dd.css",
-    "main.js": "/static/js/main.582f8cb6.js",
+    "main.css": "/static/css/main.0a986fe8.css",
+    "main.js": "/static/js/main.a8e79f9f.js",
     "static/media/LogoNvo.png": "/static/media/LogoNvo.f62c293b55342018eb91.png",
-    "static/media/teatro.png": "/static/media/teatro.a845dd73a3fafa2411ae.png",
+    "static/media/podio.png": "/static/media/podio.56d7824ee98f76bacb0e.png",
     "static/media/avatar6.png": "/static/media/avatar6.fced86cb9e7af140c96e.png",
     "static/media/avatar12.png": "/static/media/avatar12.1517c73bfa41f54a5d7e.png",
     "static/media/avatar5.png": "/static/media/avatar5.7c1d2c0c9f30a8aed092.png",
@@ -17,11 +17,11 @@
     "static/media/avatar4.png": "/static/media/avatar4.ffa1762625acbb8c8d93.png",
     "static/media/avatar10.png": "/static/media/avatar10.3426e535c36f8931bbe1.png",
     "index.html": "/index.html",
-    "main.e86668dd.css.map": "/static/css/main.e86668dd.css.map",
-    "main.582f8cb6.js.map": "/static/js/main.582f8cb6.js.map"
+    "main.0a986fe8.css.map": "/static/css/main.0a986fe8.css.map",
+    "main.a8e79f9f.js.map": "/static/js/main.a8e79f9f.js.map"
   },
   "entrypoints": [
-    "static/css/main.e86668dd.css",
-    "static/js/main.582f8cb6.js"
+    "static/css/main.0a986fe8.css",
+    "static/js/main.a8e79f9f.js"
   ]
 }

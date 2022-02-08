@@ -8,41 +8,43 @@ export const LogoImg = styled.img`
 `;
 
 export const ContNav = styled.nav`
-  display: flex;
-  align-items: center;
-  background-color: #1f3a52;
-  align-items: center;
-  justify-content: center;
-  height: 2rem;
-  ${"" /* border-top: 1px solid #21212D; */}
+display: flex;
+flex-direction: row;
+// background-color: #1f3a52;
+align-items: center;
+justify-content: center;
+height: 4rem;
+${"" /* border-top: 1px solid #21212D; */}
 `;
 
 export const ContLogo = styled.div`
-  background: #102132;
-  display: flex;
-  width: 100%;
-  height: 5rem;
-  align-items: center;
-  justify-content: space-around;
+background: #FF0075;
+display: flex;
+width: 100%;
+height: 5rem;
+align-items: center;
+justify-content: space-around;
 `;
 
 export const Ul = styled.ul`
-  .link {
+.link {
     /* font-family: "Chakra Petch", sans-serif; */
     font-family: Lato, Arial, Helvetica, sans-serif;
     font-width: bold 500;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: #fbf3e4;
     padding-left: 11.2rem;
     padding-right: 11.2rem;
     height: 2rem;
+    transition: 0.5s all;
 
     :hover {
       padding-left: 11.2rem;
       padding-right: 11.2rem;
       height: 2rem;
-      color: #102132;
+      color: #77D970;
+      text-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
      /*  background-color: #102132; */
     }
 

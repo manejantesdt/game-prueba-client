@@ -26,6 +26,7 @@ export const SearchBar = () => {
   return (
     <SearchBarSection onSubmit={onSubmit}>
       <input
+        className="inputSearch"
         placeholder="Buscar Player"
         type="text"
         value={nick_name ? nick_name : ""}
