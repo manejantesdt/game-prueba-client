@@ -18,7 +18,8 @@ export const EditPlayer = () => {
   var { id } = useParams();
 
   useEffect(() => {
-    dispatch(getPlayerId(id));
+   dispatch(getPlayerId(id));
+    dispatch(getPlayers({}));
   }, [dispatch, id]);
   // _____________________________________________________________________________
   // ------------------------------<State>----------------------------------
@@ -43,14 +44,14 @@ export const EditPlayer = () => {
     checkform === false ? setCheckform(true) : setCheckform(false);
   };
 
-  const onClick = () => {
-    dispatch(editPlayer(id, editform));
+  const onClick = async () => {
+    await dispatch(editPlayer(id, editform));
     dispatch(getPlayers({}));
+    
   };
 
   const handleSubmit =  () => {
      dispatch(editPlayer(id, editform));
-
   };
 
   const handleChange = (e) => {

@@ -12,24 +12,23 @@ export const CardPlayer = ({
 }) => {
   const onClick = async (e) => {
     e.preventDefault();
-   await  dispatch(deletePlayer(id));
+    await dispatch(deletePlayer(id));
     dispatch(getPlayers({}));
-    console.log(id)
   };
 
   const dispatch = useDispatch();
 
   return (
     <article {...props} className="jugador">
-      <button type="onSubmit" onClick={onClick}>
-        X
-      </button>
       <NavLink to={`/id/${id}`}>
+        <button type="onSubmit" onClick={onClick}>
+          X
+        </button>
         <img src={image} alt={nickname} />
         <h3>{nickname}</h3>
+        <span style={{ color: "#77D970", marginBottom: 5 }}>{status}</span>
+        <span style={{ color: "#FF0075" }}>Rank: {ranking}</span>
       </NavLink>
-      <span style={{ color: "#77D970", marginBottom: 5 }}>{status}</span>
-      <span style={{ color: "#FF0075" }}>Rank: {ranking}</span>
     </article>
   );
 };
