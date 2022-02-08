@@ -19,7 +19,7 @@ export const EditPlayer = () => {
 
   useEffect(() => {
    dispatch(getPlayerId(id));
-    dispatch(getPlayers({}));
+    // dispatch(getPlayers({}));
   }, [dispatch, id]);
   // _____________________________________________________________________________
   // ------------------------------<State>----------------------------------
@@ -49,9 +49,10 @@ export const EditPlayer = () => {
     dispatch(getPlayers({}));
     
   };
-
-  const handleSubmit =  () => {
-     dispatch(editPlayer(id, editform));
+  
+  const handleSubmit =  async () => {
+    await dispatch(editPlayer(id, editform));
+    dispatch(getPlayers({}));
   };
 
   const handleChange = (e) => {
