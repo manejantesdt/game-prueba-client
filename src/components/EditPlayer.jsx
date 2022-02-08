@@ -16,8 +16,7 @@ export const EditPlayer = () => {
   var { id } = useParams();
   useEffect(() => {
     dispatch(getPlayerId(id));
-    dispatch(getPlayers());
-  }, [dispatch, id]);
+  }, [dispatch]);
   // _____________________________________________________________________________
   // ------------------------------<State>----------------------------------
   const [checkform, setCheckform] = useState(false);
@@ -26,12 +25,7 @@ export const EditPlayer = () => {
   // __________________________________________________________________________
 
   // ------------------------------<Functions>---------------------------------
-  const onClick = () => {
-    checkform === true
-      ? setCheckform(false)
-      : checkform === false
-      ? setCheckform(true)
-      : setCheckform(false);
+  const onClickCheck = () => {
     setEditform({
       nickname: player.nickname,
       status: player.status,
@@ -39,10 +33,27 @@ export const EditPlayer = () => {
       avatar: player.avatar,
       score: player.score,
     });
+    checkform === true
+      ? setCheckform(false)
+      : checkform === false
+      ? setCheckform(true)
+      : setCheckform(false);
   };
-  const handleSubmit = () => {
+
+  const onClickCancel = () => {
+    checkform === false ? setCheckform(true) : setCheckform(false);
+  };
+
+  const onClick = async () => {
+    await dispatch(editPlayer(id, editform));
+    dispatch(getPlayers({}));
+  };
+
+  const handleSubmit = async () => {
     dispatch(editPlayer(id, editform));
+    dispatch(getPlayers({}));
   };
+
   const handleChange = (e) => {
     setEditform({
       ...editform,
@@ -67,7 +78,7 @@ export const EditPlayer = () => {
           color: "white",
           textAlign: "center",
           marginTop: 60,
-          color: "#FF0075",
+          // color: "#FF0075",
           letterSpacing: 20,
           textTransform: "uppercase",
         }}
@@ -107,7 +118,7 @@ export const EditPlayer = () => {
                   <span>{player.ranking}</span>
                 </div>
 
-                <button className="btnEditPlayer" onClick={onClick}>
+                <button className="btnEditPlayer" onClick={onClickCheck}>
                   Edit
                 </button>
               </div>
@@ -127,7 +138,7 @@ export const EditPlayer = () => {
           color: "white",
           textAlign: "center",
           marginTop: 20,
-          color: "#FF0075",
+          // color: "#FF0075",
           letterSpacing: 20,
           textTransform: "uppercase",
         }}
@@ -195,11 +206,13 @@ export const EditPlayer = () => {
               />
             </div>
 
-            <div  className="editButtons">
+            <div className="editButtons">
               <button onClick={onClick} type="submit" className="btnChange">
                 Change
               </button>
-              <button className="btnChange">Cancel</button>
+              <button onClick={onClickCancel} className="btnChange">
+                Cancel
+              </button>
             </div>
           </IntoEdit>
         ) : (
