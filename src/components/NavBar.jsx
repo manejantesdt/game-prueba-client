@@ -1,3 +1,4 @@
+import { useStore } from "react-redux";
 import { Link } from "react-router-dom";
 import { SearchBar } from "./SearchBar";
 import { FilterBar } from "./FilterBar";

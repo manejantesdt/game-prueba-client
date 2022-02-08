@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import { CardPlayer } from "./CardPlayer";
 import { BoldPlayersSections, BoldPlayersPagination } from "../styles/BoldPlayers";
-import { searchPlayers } from "../actions";
+import { searchPlayers,getPlayers } from "../actions";
 import { useEffect, useState } from "react";
 import Paged from "./Paged";
 
