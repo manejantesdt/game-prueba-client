@@ -29,8 +29,8 @@ export const CardPlayer = ({
         <img src={image} alt={nickname} />
         <h3>{nickname}</h3>
       </NavLink>
-      <span>{status}</span>
-      <span>{ranking}</span>
+      <span style={{ color: "#77D970", marginBottom: 5 }}>{status}</span>
+      <span style={{ color: "#FF0075" }}>Rank: {ranking}</span>
     </article>
   );
 };
