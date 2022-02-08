@@ -2,6 +2,7 @@ import { AboutSection } from "../styles/About";
 import { Link } from "react-router-dom";
 
 export const About = () => {
+  console.log("hola, borrenlo después");
   return (
     <AboutSection>
       <article>
