@@ -36,6 +36,7 @@ export const NavBar = () => {
           <Link to="about" className="link">
             About
           </Link>
+          
         </Ul>
       </ContNav>
     </ContNavBar>
