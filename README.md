@@ -1,5 +1,5 @@
 <p align='left'>
-     <img height="30" src="./LogoNvo.png" />
+     <img height="250" src="./LogoNvo.png" />
 </p> 
 
 <p align='left'>
@@ -26,7 +26,7 @@ También podrás ver si hay errores en la consola.
 💻 Puedo ver esta aplicación en vivo?
 Claro que sí! Tanto el Front-end como el Back-end fueron deployadas utilizando diferentes servicios en AWS (Lambda, Dynamo, S3). 
 Puedes visitar la versión online haciendo click en el siguiente  enlace:
-http://game-prueba-client.s3-website-us-east-1.amazonaws.com/
+https://dfuf67ce7t2lm.cloudfront.net/
 
 ## Objetivos del Proyecto
 
