@@ -1,5 +1,5 @@
 <p align='left'>
-     <img height="250" src="./LogoNvo.png" />
+     <img height="150" src="./LogoNvo.png" />
 </p> 
 
 <p align='left'>
