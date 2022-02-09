@@ -32,13 +32,14 @@ export const About = () => {
             la actitud de reciclar requiere del desarrollo de nuestro ser!{" "}
           </p>
           <p>
-            Así, Recicle Being fue creado como un modo entretenido e interesante de
-            tener la experiencia de convertirnos en un "Ser Reciclador", un
-            personaje que contribuye a crear un medio-ambiente más
-            saludable. Creemos que una de las mejores maneras de aprender es
-            jugando! la mayoría no puede aprender de un libro. Pero sabemos que
-            si jugamos a reciclar, terminaremos aprendiendo y aplicándolo en la
-            vida real.
+            Así, Recicle Being fue creado como un modo entretenido e interesante
+            de tener la experiencia de convertirnos en un "Ser Reciclador", un
+            personaje que contribuye a crear un medio-ambiente más saludable.{" "}
+          </p>
+          <p>
+            Creemos que una de las mejores maneras de aprender es jugando! la
+            mayoría no puede aprender de un libro. Pero sabemos que si jugamos a
+            reciclar, terminaremos aprendiendo y aplicándolo en la vida real.
           </p>
           <p>
             Diseñamos un juego donde puedes crear tu propio personaje, un
@@ -48,13 +49,21 @@ export const About = () => {
           </p>
           <p>
             En Recicle Being como en cualquier otro juego siempre hay jugadores
-            que se destacan por sobre los demás, y merecen un lugar especial, por
-            eso creamos el "Salón de la Fama", una solución especialmente
-            desarrollada para reconocer a los 10 jugadores con mayor ranking.
+            que se destacan por sobre los demás, y merecen estar en un lugar
+            especial.{" "}
+          </p>
+          <p>
+            Por eso creamos el "Salón de la Fama", una solución especialmente
+            desarrollada para reconocer a los 10 jugadores con mayor ranking
+            entre todos los jugadores. También nos pareció justo reconocer a
+            otros 6 jugadores que, sin estar entre los 10 mejores, aún son muy
+            buenos así que reciben su reconocimiento en la sección "Bold
+            Players"{" "}
+          </p>
+          <p>
             Desarrollar las habilidades de reciclar requiere constancia,
-            dedicación, amor por la naturaleza, y tiempo. Por eso es
-            importante reconocer a quienes con esfuerzo se destacan por sobre
-            los demás.{" "}
+            dedicación, amor por la naturaleza, y tiempo. Por eso es importante
+            reconocer a quienes con esfuerzo se destacan por sobre los demás.{" "}
           </p>
           <p>
             En la barra de búsqueda podrás buscar cualquier usuario, tanto por
@@ -63,15 +72,26 @@ export const About = () => {
           </p>
           <p>
             Una funcionalidad que destaca en el Salón de la fama, es que puedes
-            filtrar a los jugadores por status: Oro, Plata, Bronce e Hierro.{" "}
+            filtrar a los jugadores por status: Oro, Plata, Bronce, Hierro. Esta
+            última categoría es la que obtienes cuando creas un nuevo jugador,
+            por lo tanto aún no acumula puntos para ascender al status
+            siguiente.{" "}
           </p>
           <p>
             Esperamos que disfrutes el juego mientras aprendes conceptos
-            valiosos y desarrollas nuevos hábitos saludables. Nuestro profundo
-            agradecimiento por ser parte de esta propuesta! ¡Empieza a jugar y
-            diviértete reciclando!{" "}
+            valiosos y desarrollas nuevos hábitos amigables con el medio
+            ambiente.
           </p>
-         {/*  <p>
+          <p>
+            Tienes nuestro profundo agradecimiento por ser parte de esta
+            propuesta...
+          </p>
+          <p>
+            {" "}
+            ¡Empieza a jugar y diviértete mientras reciclas! Esperamos verte
+            en el podio muy pronto :){" "}
+          </p>
+          {/*  <p>
             El personaje principal contribuye a cambiar el mundo reciclando
             elementos que encuentra en los tableros (son varios escenarios
             distintos como un bosque, una ciudad, un volcán, una montaña, etc. )
@@ -311,7 +331,8 @@ export const About = () => {
           <p>
             <a href="/contact-us">Contact Us</a>
           </p>
-         */}</div>
+         */}
+        </div>
         <Link to="/">
           <button className="button_form">Back </button>
         </Link>
