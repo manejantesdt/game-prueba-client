@@ -13,7 +13,7 @@ import logo from "../img/LogoNvo.png";
 
 export const NavBar = () => {
   const { searchPlayer } = useSelector((state) => state);
-  
+  console.log(searchPlayer);
   return searchPlayer?.length > 0 ? (
     <ContNavBar>
       <ContLogo>
