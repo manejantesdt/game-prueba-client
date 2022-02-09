@@ -3,6 +3,7 @@ import fondo from "../img/podio.png";
 import shadow from "../img/shadow.png";
 import { TopTenSection } from "../styles/TopTen";
 import { useSelector } from "react-redux";
+import {CardPlayer}from "./CardPlayer"
 
 export const TopTen = () => {
 
@@ -21,14 +22,27 @@ export const TopTen = () => {
             var playerPodio = "playerPodio" + ( index + 1 )
             var playerShadow = "playerShadow" + ( index + 1 )
             return (
-              <>
-                <div className={playerPodio}>
-                  <img src={player.avatar} alt="jugador" />
-                  <div className={playerShadow}>
-                    <img src={shadow} alt="sombra"  />
-                  </div>
-                </div>
-              </>
+              <div className={playerPodio}>
+              <CardPlayer
+              nickname={player.nickname}
+              image={player.avatar} 
+              key={player.Id}
+              id={player.Id}
+              ranking={player.ranking}
+              status={player.status}
+            />
+             <div className={playerShadow}>
+              //       <img src={shadow} alt="sombra"  />
+              //     </div>
+            </div>
+              // <>
+              //   <div className={playerPodio}>
+              //     <img src={player.avatar} alt="jugador" />
+              //     <div className={playerShadow}>
+              //       <img src={shadow} alt="sombra"  />
+              //     </div>
+              //   </div>
+              // </>
             );
           })}
         </div>
