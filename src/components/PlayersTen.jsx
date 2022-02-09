@@ -2,7 +2,7 @@ import React, { useEffect, createRef } from "react";
 import { CardPlayer } from "./CardPlayer";
 import { useSelector, useDispatch } from "react-redux";
 
-export const Players = () => {
+export const PlayersTen = () => {
   const dispatch = useDispatch();
   const { players } = useSelector((state) => state);
   const gridJugadores = createRef();

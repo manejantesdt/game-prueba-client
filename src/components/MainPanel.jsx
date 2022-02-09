@@ -1,10 +1,10 @@
 import React from "react";
 
-import {TopTen} from "./TopTen";
+import {TopThree} from "./TopThree";
 
 export const MainPanel = () => (
   <section>
-     <TopTen />
+     <TopThree />
   </section>
 );
 
