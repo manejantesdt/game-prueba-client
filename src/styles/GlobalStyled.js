@@ -29,6 +29,7 @@ body{
   position: center;
   min-height: 100vh;
   width: 100%;
+  overflow-x: hidden;
   text-decoration: none;
   font-family: Lato, Arial, Helvetica, sans-serif;
 }

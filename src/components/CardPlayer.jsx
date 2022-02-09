@@ -18,18 +18,25 @@ export const CardPlayer = ({
 
   const dispatch = useDispatch();
   
-
   return (
-    <NavLink to={`/id/${id}`}>
-      <article {...props} className="jugador">
-        <button type="onSubmit" onClick={onClick}>
-          X
-        </button>
-        <img src={image} alt={nickname} />
+    <article {...props} className="jugador">
+      <NavLink to={`/id/${id}`}>
+        <div className="btnClose">
+          <button type="onSubmit" onClick={onClick}>
+            X
+          </button>
+        </div>
+        <div className="avatar">
+          <img src={image} alt={nickname} />
+        </div>
         <h3>{nickname}</h3>
-        <span style={{ color: "#77D970", marginBottom: 5 }}>{status}</span>
-        <span style={{ color: "#FF0075" }}>Rank: {ranking}</span>
-      </article>
-    </NavLink>
+        <div className="avatarStatus">
+          <span  >{status}</span>
+        </div>
+        <div className="avatarRanking">
+          <span  >Rank: {ranking}</span>
+        </div>
+      </NavLink>
+    </article>
   );
 };
