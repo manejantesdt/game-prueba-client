@@ -1,5 +1,5 @@
 <p align='left'>
-     <img height="150" src="./LogoNvo.png" />
+     <img height="100" src="./LogoNvo.png" />
 </p> 
 
 <p align='left'>
@@ -8,7 +8,7 @@
 
 # Group Project - Recicle Being
 
-🤔 De qué se trata?
+## 🤔 De qué se trata?
 Recicle Being es una página web creada como prueba técnica para la empresa CrediTu. 
 
 ## Scripts Disponibles
@@ -23,7 +23,8 @@ Abre [http://localhost:3000](http://localhost:3000) para verlo en tu navegador.
 La página se volverá a descargar si haces cambios en el código.\
 También podrás ver si hay errores en la consola.
 
-💻 Puedo ver esta aplicación en vivo?
+## 💻 Puedo ver esta aplicación en vivo?
+
 Claro que sí! Tanto el Front-end como el Back-end fueron deployadas utilizando diferentes servicios en AWS (Lambda, Dynamo, S3). 
 Puedes visitar la versión online haciendo click en el siguiente  enlace:
 https://dfuf67ce7t2lm.cloudfront.net/
