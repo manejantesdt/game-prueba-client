@@ -17,7 +17,6 @@ export const CardPlayer = ({
   };
 
   const dispatch = useDispatch();
-  
   return (
     <article {...props} className="jugador">
       <NavLink to={`/id/${id}`}>
