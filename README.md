@@ -138,7 +138,11 @@ __Ruta de edición de un personaje__: contiene
 
 ### Los endpoints utilizados son:
 
-  - GET https://api.mapbox.com/geocoding/v5/mapbox.places/${name}.json?country=ar&types=place&access_token=${TOKEN}
+  - POST - https://mrsemsqfk6.execute-api.us-east-1.amazonaws.com/player
+  - GET - https://mrsemsqfk6.execute-api.us-east-1.amazonaws.com/player
+  - GET - https://mrsemsqfk6.execute-api.us-east-1.amazonaws.com/player/{Id}
+  - PUT - https://mrsemsqfk6.execute-api.us-east-1.amazonaws.com/player/{Id}
+  - DELETE - https://mrsemsqfk6.execute-api.us-east-1.amazonaws.com/player/{Id}
   
 #### El modelo de la base de datos contiene las siguientes entidades:
 
