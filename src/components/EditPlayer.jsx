@@ -79,7 +79,7 @@ export const EditPlayer = () => {
           color: "white",
           textAlign: "center",
           marginTop: 60,
-          // color: "#FF0075",
+          color: "#77D970",
           letterSpacing: 20,
           textTransform: "uppercase",
         }}
@@ -139,7 +139,7 @@ export const EditPlayer = () => {
           color: "white",
           textAlign: "center",
           marginTop: 20,
-          // color: "#FF0075",
+          color: "#77D970",
           letterSpacing: 20,
           textTransform: "uppercase",
         }}
