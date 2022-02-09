@@ -1,26 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
+import { About } from "./components/About";
+import {Home} from "./components/Home";
+import { Provider } from "react-redux";
+import { EditPlayer } from "./components/EditPlayer";
+import { CreatePlayer } from "./components/CreatePlayer";
+import  {NavBar}  from "./components/NavBar";
+import  {SearchPlayer}  from "./components/SearchPlayer";
+import {NotFound} from "./components/NotFound";
+import store from "./store/store";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-    
-  );
-}
+const App = () => (
+  <Provider store={store}>
+    <BrowserRouter>
+        <NavBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/id/:id" element={<EditPlayer />} />
+        <Route path="/create" element={<CreatePlayer />} />
+        <Route path="/search" element={<SearchPlayer />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
+  </Provider>
+);
 
-export default App;
+export default App;  
