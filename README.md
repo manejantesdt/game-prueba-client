@@ -40,7 +40,7 @@ https://dfuf67ce7t2lm.cloudfront.net/
 - Utilizamos la metodología SCRUM trabajando en equipo, mediante el uso de Trello.
 - Pusimos en práctica el workflow de GIT implementando CI (integración continua) y desarrollo continuo. 
 
-## BoilerPlate
+## Boiler Plate
 
 El boilerplate cuenta con dos carpetas: `api` y `client`. En estas carpetas estará el código del back-end y el front-end respectivamente.
 
