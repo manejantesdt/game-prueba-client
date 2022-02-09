@@ -4,7 +4,7 @@ import shadow from "../img/shadow.png";
 import { TopTenSection } from "../styles/TopTen";
 import { useSelector } from "react-redux";
 
-export const TopTen = () => {
+export const TopThree = () => {
 
   var { players } = useSelector((state) => state);
   
