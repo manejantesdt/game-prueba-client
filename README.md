@@ -2,10 +2,6 @@
      <img height="100" src="./LogoNvo.png" />
 </p> 
 
-<p align='left'>
-    <img height="250" src='http://game-prueba-client.s3-website-us-east-1.amazonaws.com/static/media/podio.56d7824ee98f76bacb0e.png' </img>
-</p> 
-
 # Group Project - Recicle Being
 
 ## 🤔 De qué se trata?
@@ -63,6 +59,10 @@ jugadores con mayor ranking, incluyendo id, nickname, ranking, status y avatar.
 Puedes ver efectivamente que en el panel superior, en la sección titulada "Players", aparecen las tarjetas de los 10 jugadores con mayor ranking de toda la aplicación, que cuenta actualmente con una base de datos de más de tres mil jugadores.
 
 En el panel central, puedes ver en el podio, en un lugar destacado, a los 3 mejores de esos 10 primeros. 
+
+<p align='left'>
+    <img height="250" src='http://game-prueba-client.s3-website-us-east-1.amazonaws.com/static/media/podio.56d7824ee98f76bacb0e.png' </img>
+</p> 
 
 En el panel inferior, llamado "Bold Players", puedes ver 6 jugadores destacados - es decir, 10 forman parte del Top Ten y otros 6 forman parte de Bold Players porque quisimos que esos jugadores también tengan un lugar dentro del Salón de la Fama.
 
