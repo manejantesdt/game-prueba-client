@@ -185,8 +185,6 @@ De esta manera has subido nuestra aplicación de React a un backet de AWS.
 
 ## Construido con 🛠️
 
-_Menciona las herramientas que utilizaste para crear tu proyecto_
-
 * [React](https://es.reactjs.org/) - La librería de JavaScript para construir interfaces de usuario
 * [Redux](https://es.redux.js.org/) - Redux es un contenedor predecible del estado de aplicaciones JavaScript. Lo hacemos combinado con React.
 * [Styled Components](https://styled-components.com/) - La librería que nos permite estilizar nuestros componentes escribiendo código CSS en JavaScrip
@@ -194,10 +192,6 @@ _Menciona las herramientas que utilizaste para crear tu proyecto_
 * [Amazon S3](https://aws.amazon.com/es/s3/) - Almacenamiento de objetos de Amazon creado para recuperar cualquier volumen de datos desde cualquier ubicación
 * [Cypress](https://www.cypress.io/) - Un framework de testing moderno, es una de las herramientas más populares de testing
 
-
-## Versionado 📌
-
-Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/tu/proyecto/tags).
 
 ## Autores ✒️
 
