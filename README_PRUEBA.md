@@ -40,13 +40,13 @@ Una vez que tengas AWS instalado y configurado, vas a ir a la terminal y ejecuta
 Al presionar enter nos pedirá la clave de acceso que hemos obtenido de nuestro usuario IAM:
 
 ```sh
-AWS_ACCESS_KEY_ID  (ingresa tu clave de acceso, y enter)
+AWS_ACCESS_KEY_ID  (ingresa tu clave de acceso)  -> Enter
 
-AWS_SECRET_ACCESS_KEY  (ingresa tu clave secreta, y enter)
+AWS_SECRET_ACCESS_KEY  (ingresa tu clave secreta)  -> Enter
 
-AWS_DEFAULT_REGION  (ingresa la región de tu cuenta de Amazon, por ejemplo us-west-1, y enter)
+AWS_DEFAULT_REGION  (ingresa la región de tu cuenta de Amazon, por ejemplo us-west-1)  -> Enter
 
-Default output format [None]: (lo dejamos vacío, y enter)
+Default output format [None]: (lo dejamos vacío)  -> Enter
 ```
 
 Y así tienes tu AWS configurado en tu equipo.
@@ -117,9 +117,7 @@ El script deploy toma la carpeta "build" y la sube al S3, publicarla con "public
 
 Así que ahora pudes introducir el siguiente comando:
 
-```sh
-npm run deploy
-```
+### `npm run deploy`
 
 Esto se va a ocupar de subir tu aplicación al S3 de Amazon. Cuando termine, puedes ir a tu cuenta de Amazon, buscar tu backet y ver que todo lo que contiene la carpeta build se ha subido automáticamente con el comando deploy desde tu consola. Si dentro de los archivos pinchas en el archivo index.html, verás que tienes la ruta (url del objeto). Si haces click te llevará a tu página web. Verás la página que hemos construido con todos los archivos que has descargado. 
 
