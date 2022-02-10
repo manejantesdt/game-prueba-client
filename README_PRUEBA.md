@@ -23,14 +23,16 @@ Mira **Deployment** para conocer como desplegar el proyecto.
 
 _Que cosas necesitas para instalar el software y como instalarlas_
 
-Lo primero que tenemos que hacer para es [crear una cuenta en la página web de amazon web services]  (https://docs.aws.amazon.com) o niicar sesión si ya tenemos una cuenta.
+Lo primero que tenemos que hacer para es [crear una cuenta en la página web de amazon web services]  (https://docs.aws.amazon.com) o inicar sesión si ya tenemos una cuenta.
 En los servicios de AWS buscamos IAM para [crear un nuevo usuario IAM] (https://docs.aws.amazon.com/es_es/es_es/IAM/latest/UserGuide/id_roles_create.html). 
 Introducimos un nombre de usuario, (por ejemplo serverless-admin), le damos acceso mediante programación.
 En la siguiente ventana, le vamos a asignar los permisos vamos a ir a la opción "asociar directamente las políticas existentes" y vamos a buscar y seleccionar únicamente
 "AministratorAccess" y vamos al siguiente, dejamos vacío (añadir etiquetas es opcional), vamos a revisar y clickeamos en crear usuario.  Nuestro usuario se crea y tenemos el Id de acceso y la clave secreta. No reveles tus claves a nadie. Es muy importante que descarges el archivo csv que las contiene y lo guardes o bien las copias en un bloc de notas.
 
-Después de obtener estas claves vas a ir al terminal y vas a instalar AWS CLI 
- una
+Después de obtener estas claves vas a ir al terminal y vas a instalar AWS CLI. 
+Para [ instalar AWS CLI sigue los pasos en esta documentación:] (https://docs.aws.amazon.com/es_es/cli/latest/userguide/cli-chap-install.html)
+Vas a elegir instalar la versión más reciente de la AWS CLI, es decir, la versión 2.
+Aquí tienes más información para que puedas tener un conjunto de [credenciales de AWS válidas configuradas en tu sistema] (https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html).
 vez que tengamos el a ws clic instalado
 el siguiente comando que tenemos que
 ejecutar es a w
@@ -261,7 +263,6 @@ preguntar lo que necesitéis así que nada
 nos vemos en el siguiente vídeo
 
 
-Debes tener un conjunto de [credenciales de AWS válidas configuradas en tu sistema] (https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html).
 
 ```
 Da un ejemplo
