@@ -59,46 +59,13 @@ La aplicación se desplegará en http://localhost:3000/
 
 Has verificado que la aplicación funciona! Vas a detener la aplicaicón con CTRL + C.
 
-vamos a parar qué es lo que tenemos que
-hacer hacemos que ir a amazon y quedar
-nuestro s 3 para ello vamos a la vez a
-amazon aquí vale abrimos este panel y
-aquí vamos a buscar ese 3 aquí los
-bikers s 3 entramos encontraremos algo
-parecido a esto vale yo tengo varios
-bancos ya creados pero vosotros lo
-debéis tener vacío vamos a decirle que
-creemos que queremos crear un nuevo
-baquet vale aquí ponemos el nombre que
-de nuestro baquet que nosotros creamos
-por ejemplo voy a poner guiar a ps3
-guión agustín vale la región la voy a
-dejar así y esto lo voy a dejar así
-efecto le damos la siguiente aquí nos
-pedirá el tema de permisos bajamos y
-aquí en configuración avanzada lo así
-que queremos pero bueno pero estaba
-régimen ta ta ta ta ta ta bloqueo de
-objetos no esto lo vamos a ganar si le
-vamos a dar siguiente y aquí aquí
-tenemos la sección de permisos
-actualmente no lo da bloqueado a todo el
-público pero nosotros queremos que el
-público sea capaz de entrar nuestro
-baquet para visualizar la página web lo
-cual hacemos quitamos esto nos dice no
-tirar que des gritando el bloqueo todo
-todo todo el público tendrá acceso este
-va que es lo que queremos y le decimos
-aquí reconozco que esta configuración
-actual es la que yo necesito vale le
-damos a siguiente y esto tenía que dar
-algo parecido a esto vale
-amazon suele ir cambiando sus pantallas
-vale pero no cambiará mucho así que hago
-precio esto debéis temer
-le vamos a quedar barquet y no estaba
-que ya se ha creado aquí lo tenemos bear
+Ahora vas a ir a Amazon y crear tu S3. En tu cuenta de Amazon, busca S3 y cuando ingreses al panel, vas a crear un nuevo backet. 
+
+Ingresa el nombre de tu baquet, el que prefieras, por ejemplo S3-(tunombre). La región la dejas como está y clickeas en siguiente. 
+En el paso 2 (Configuar opciones) no cambias nada y le das a siguiente. 
+En el paso 3, "Establecer Permisos", actualmente te aparece bloqueado a todo el público pero tú quieres que el público sea capaz de entrar a tu  baquet para visualizar la página web. Entonces desmarcas la casilla "Bloquear todo acceso público". Nos dará un mensaje de advertencia de que ahora todo el público tendrá acceso a este backet - es lo que queremos y le marcas la casilla donde reconoces que "esta configuración actual..." es la que necesitas. Vamos a la siguiente pestaña donde vas al botón "crear backet". y tu backet ya se ha creado: S3-(tunombre) 
+
+aquí lo tenemos bear
 s 3 guión agustín ahora lo que vamos a
 hacer es entrar dentro del bar qué
 perfecto y qué es lo que vamos a hacer
