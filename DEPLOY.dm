@@ -109,3 +109,25 @@ Esto se va a ocupar de subir tu aplicación al S3 de Amazon. Cuando termine, pue
 Si dentro de los archivos pinchas en el archivo index.html, verás que tienes la ruta (url del objeto). Si haces click te llevará a tu página web. Verás la página que hemos construido con todos los archivos que has descargado. 
 
 De esta manera has subido nuestra aplicación de React a un backet de AWS 😊
+
+
+## Autores ✒️
+
+* **Ramiro Villamizar ** - [pivotsk8](https://github.com/pivotsk8)
+* **Marisa Lia Pascal ** - [Marisaliap](https://github.com/Marisaliap)
+* **Nelson Albera ** - [nalbera](https://github.com/nalbera)
+* **Gustavo Montero ** - [gamontero](https://github.com/gamontero)
+* **Daneil Alberto Mena ** - [BtoMJ](https://github.com/BtoMJ)
+* **Fabrizio Santandrea ** - [fabsantandrea](https://github.com/fabsantandrea)
+
+
+## Licencia 📄
+
+Este proyecto está bajo la Licencia de Dream Team Manejantes 
+
+## Expresiones de Gratitud 🎁
+
+* Comenta a otros sobre este proyecto 📢
+* Invita una cerveza 🍺 o un café ☕ a alguien del equipo. 
+* Da las gracias públicamente 🤓.
+* etc.
