@@ -14,51 +14,40 @@ https://dfuf67ce7t2lm.cloudfront.net/
 
 ## Comenzando 🚀
 
-_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
+_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de pruebas._
 
 Sigue las indicaciones en la sección **Despliegue** para conocer como desplegar el proyecto utilizando los servicios de la nube de AWS.
 
-Forkear el repositorio para tener una copia del mismo en sus cuentas
-Clonar el repositorio en sus computadoras para comenzar a trabajar
-
-### `npm start`
-
+1. Forkea el repositorio para tener una copia del mismo en tu cuenta
+2. Clona el repositorio en tu computadora para hacer pruebas
 
 ### Pre-requisitos 📋
 
-_Que cosas necesitas para instalar el software y como instalarlas_
+Para instalar esta aplicaicón es necesario contar con la última versión estable de Node y NPM. Asegúrate de contar con ellas para poder instalar correctamente las dependencias necesarias para correr el proyecto.
 
-```
-Da un ejemplo
-```
+Actualmente las versiones necesarias son:
+
+ * __Node__: 16.14.0 o mayor
+ * __NPM__: 8.4.1 o mayor
+
+Para verificar que versión tienen instalada:
+
+> node -v
+>
+> npm –v
 
 ### Instalación 🔧
 
-_Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose_
+Para tener un entorno de desarrollo ejecutándose en tu computadora, debes ejecutar los siguientes comandos:
 
+### `npm install`
 
----
-```
-npm add vue-cli-plugin-s3-deploy@next
-```
+Este paso instalará los paquetes (dependencias) utilizados en el proyecto de forma rápida y cómoda.
 
-_Dí cómo será ese paso_
+### `npm start`
 
-```
-Da un ejemplo
-```
+Este paso ejecuta un comando especificado en la propiedad "start" dentro de los "scripts" en el archivo package.json. En este caso, le indicamos que despliegue la aplicación en el navegador. 
 
-_Y repite_
-
-```
-hasta finalizar
-```
-
-Después de la instalación, invoque el complemento con `vue invoque s3-deploy`.
-
-Responda a las indicaciones de configuración. Esto inyectará un comando de secuencia de comandos `deploy` en su archivo `package.json`.
-
-Implementa tu aplicación con `yarn deployment`.
 
 _Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
 
