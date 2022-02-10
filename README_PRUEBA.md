@@ -49,51 +49,16 @@ AWS_DEFAULT_REGION  (ingresa la región de tu cuenta de Amazon, por ejemplo us-w
 Default output format [None]: (lo dejamos vacío, y enter)
 ```
 
-intro aquí lejos está el cual vacío
-vamos a tener nuestro abulense en
-nuestro equipo configurado perfecto
-ahora lo que tenemos que hacer es crear
-una nueva aplicación del río así que me
-voy a mover al escritorio si cabo cede
-burrito play de esto hay y ahora qué
-hago yo y voy a hacer clic clic
-y voy a llamar a la aplicación por
-ejemplo riac a w s 1 s 3 vale voy a
-llamar a la aplicación vía s 3 y hoy
-entro me dice que
-que no ha equivocado he puesto ya aquí
-escribe es n p x en el px perfecto le
-damos nos queda la aplicación dejamos
-que termine de crear la esto depende el
-equipo y depende la conexión a internet
-tardará menos o más suele tardar pues
-cerca de entre 30 segundos y un minutito
-así que nada vamos a dejar que termine
-de que la aplicación y ahora volvemos
-perfecto ya tengo en la aplicación
-nuestra aplicación creada aquí tengo la
-carpeta vale y la vamos a abrir y lo que
-tenemos es simplemente una aplicación de
-riad sencilla y básica perfecto ahora lo
-que van a hacer es abrir esta aplicación
-con nuestro editor de código en este
-caso yo tengo el mismo estudio
-así que hago cd me muevo a la carpeta
-vale hago con punto y aquí me abre el
-editor vale si yo no digo algo que vaya
-país dado para que yo voy a estar me
-ejecutará la aplicación para que la
-tengo aquí
-aquí está en cuanto cargue el servicio y
-está despegando la aplicación perfecto
-aquí tenemos funcionando vamos a cambiar
-esto para que veáis que todo funciona
-por ejemplo no vamos aquí al xérez al pp
-y van a poner el nombre que queramos por
-ejemplo
-riad agustín wss 3 así a sí mismo y aquí
-yo tengo a todos de acá austin a w a s 3
-vale perfecto esta aplicación funciona
+Y así tienes tu AWS configurado en tu equipo.
+
+Ahora estás listo para ejecutar la aplicación en tu equipo. En la consola de Visual Studio, asegúrate de estar en la carpeta donde descargaste el proyecto:
+
+### `npm start` 
+
+La aplicación se desplegará en http://localhost:3000/
+
+Has verificado que la aplicación funciona! Vas a detener la aplicaicón con CTRL + C.
+
 vamos a parar qué es lo que tenemos que
 hacer hacemos que ir a amazon y quedar
 nuestro s 3 para ello vamos a la vez a
