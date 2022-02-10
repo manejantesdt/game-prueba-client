@@ -40,14 +40,14 @@ Una vez que tengas AWS instalado y configurado, vas a ir a la terminal y ejecuta
 Al presionar enter nos pedirá la clave de acceso que hemos obtenido de nuestro usuario IAM:
 
 ```sh
-AWS_ACCESS_KEY_ID AKIAIOSFODNN7EXAMPLE (ingresa tu clave de acceso, y enter)
+AWS_ACCESS_KEY_ID  (ingresa tu clave de acceso, y enter)
 
-AWS_SECRET_ACCESS_KEY wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY (ingresa tu clave secreta, y enter)
+AWS_SECRET_ACCESS_KEY  (ingresa tu clave secreta, y enter)
 
-AWS_DEFAULT_REGION us-west-1 (ingresa la región de tu cuenta de Amazon, por ejemplo us-west-1, y enter)
+AWS_DEFAULT_REGION  (ingresa la región de tu cuenta de Amazon, por ejemplo us-west-1, y enter)
 
 Default output format [None]: (lo dejamos vacío, y enter)
-
+```
 
 intro aquí lejos está el cual vacío
 vamos a tener nuestro abulense en
