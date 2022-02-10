@@ -17,7 +17,7 @@ export const About = () => {
             nuestro entorno requiere, para la mayoría de nosotros, del
             desarrollo de nuevos hábitos, como por ejemplo separar los residuos
             clasificándolos en recipientes adecuados y así facilitar la tarea
-            para que esos elementos puedan ser reciclados.
+            para que esos elementos puedan ser reciclados..
           </p>
           <p>
             Este juego nació de una idea eco-responsable, la cual desea enseñar
