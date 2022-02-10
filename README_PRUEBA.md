@@ -65,48 +65,34 @@ Ingresa el nombre de tu baquet, el que prefieras, por ejemplo S3-(tunombre). La 
 En el paso 2 (Configuar opciones) no cambias nada y le das a siguiente. 
 En el paso 3, "Establecer Permisos", actualmente te aparece bloqueado a todo el público pero tú quieres que el público sea capaz de entrar a tu  baquet para visualizar la página web. Entonces desmarcas la casilla "Bloquear todo acceso público". Nos dará un mensaje de advertencia de que ahora todo el público tendrá acceso a este backet - es lo que queremos y le marcas la casilla donde reconoces que "esta configuración actual..." es la que necesitas. Vamos a la siguiente pestaña donde vas al botón "crear backet". y tu backet ya se ha creado: S3-(tunombre) 
 
-aquí lo tenemos bear
-s 3 guión agustín ahora lo que vamos a
-hacer es entrar dentro del bar qué
-perfecto y qué es lo que vamos a hacer
-vamos a ir exactamente aquí a
-propiedades que aquí en propiedades
-vamos a buscar la excepción que pone
-alojamiento de sitio web
-estático le vamos a pinchar y aquí
-hacemos usar este market para alojar un
-sitio web vale donde pone el documento
-índice ponemos index
-punto html así y doble de error también
-document error punto index html y vamos
-a guardar vale ya tenemos las
-propiedades
-configuradas ahora vamos a ir aquí a
-permisos y aquí vamos a tener que añadir
-un código vamos a permisos y aquí en
-permisos vamos a darle a la política de
-baquet entramos y aquí uso copiar un
-código que os voy a dejar en los
-recursos bueno en la descripción de este
-vídeo así que vais a la descripción de
-este vídeo y yo tendréis un código como
-éste es exactamente el mismo tal cual
-vale no voy a modificar nada y aquí lo
-único que tenemos que hacer es copiar el
-nombre de nuestro baquet este que
-tenemos aquí lo copiamos ya que no la
-ponen baquet
-porque se empleaba que lo borramos y
-pegamos el nombre de nuestro baquet y
-deberá quedar algo como esto perfecto le
-damos aquí a guardar nos dirá que este
-va que tiene acceso público esto es lo
-que queremos porque es una web pública
-para que la gente entre a verla vale y
-no estaba que ya estaría configurado
-ahora
-sólo nos queda irnos a nuestra
-aplicación vale que tenemos aquí voy a
+Ahora entras en el backet y vas a ir a la pestaña propiedades y vas a entrar en la sección llamada "Alojamiento de sitio web estático".  Vas a marcar la casilla "usar este backt para alojar un sitio web". El el campo "documento de índice" escribimos index.html así y en "documento de error" también escribimos index.html
+Y vas a guardar. Ya tienes las propiedades configuradas. 
+
+Ahora vas a ir a la pestaña "Permisos" y vas a tener que añadir un código. En permisos vas a política de backet, y en editor de políticas de bucket, pegas el siguiente código:
+
+```sh
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AllowPublicReadAccess",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": [
+        "s3:GetObject"
+      ],
+      "Resource": [
+        "arn:aws:s3:::example-bucket/*"
+      ]
+    }
+  ]
+}
+```
+Lo único que tienes que hacer es copiar el nombre de tu backet, y reemplazar donde dice "example-bucket" por el nombre de tu backet. Ahora vas a guardar, te dirá que este
+backet tiene acceso público (esto es lo que queremos porque es una web pública para que la gente entre a verla).
+Nuestro backet ya está configurado.
+
+Ahora ve a tu aplicación vale que tenemos aquí voy a
 hacer esto un poquito más grande irnos
 al fichero package puntos jason y aquí
 los tips vamos a crear un nuevo script
