@@ -1,6 +1,9 @@
-# Título del Proyecto
+# Recicle Being - Proyecto Grupal
 
-_Acá va un párrafo que describa lo que es el proyecto_
+Recicle Being es una página web creada como prueba técnica para la empresa CrediTu. 
+El desafío consistió en desarrollar una aplicación web usando un framework SPA, requerida por 
+los creadores de un juego hipotético que desean ofrecer a sus usuarios la posibilidad de consultar 
+quiénes son los jugadores del mismo. 
 
 ## Comenzando 🚀
 
@@ -13,6 +16,7 @@ Mira **Deployment** para conocer como desplegar el proyecto.
 
 _Que cosas necesitas para instalar el software y como instalarlas_
 
+Debes tener un conjunto de [credenciales de AWS válidas configuradas en tu sistema] (https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html).
 ```
 Da un ejemplo
 ```
@@ -20,6 +24,12 @@ Da un ejemplo
 ### Instalación 🔧
 
 _Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose_
+
+
+---
+```
+npm add vue-cli-plugin-s3-deploy@next
+```
 
 _Dí cómo será ese paso_
 
@@ -32,6 +42,12 @@ _Y repite_
 ```
 hasta finalizar
 ```
+
+Después de la instalación, invoque el complemento con `vue invoque s3-deploy`.
+
+Responda a las indicaciones de configuración. Esto inyectará un comando de secuencia de comandos `deploy` en su archivo `package.json`.
+
+Implementa tu aplicación con `yarn deployment`.
 
 _Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
 
@@ -63,17 +79,13 @@ _Agrega notas adicionales sobre como hacer deploy_
 
 _Menciona las herramientas que utilizaste para crear tu proyecto_
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - El framework web usado
-* [Maven](https://maven.apache.org/) - Manejador de dependencias
-* [ROME](https://rometools.github.io/rome/) - Usado para generar RSS
+* [React](https://es.reactjs.org/) - La librería de JavaScript para construir interfaces de usuario
+* [Redux](https://es.redux.js.org/) - Redux es un contenedor predecible del estado de aplicaciones JavaScript. Lo hacemos combinado con React.
+* [Styled Components](https://styled-components.com/) - La librería que nos permite estilizar nuestros componentes escribiendo código CSS en JavaScrip
+* [Servicios de AWS]:(https://aws.amazon.com/) - Es la plataforma en la nube más adoptada y completa en el mundo
+* [Amazon S3](https://aws.amazon.com/es/s3/) - Almacenamiento de objetos de Amazon creado para recuperar cualquier volumen de datos desde cualquier ubicación
+* [Cypress](https://www.cypress.io/) - Un framework de testing moderno, es una de las herramientas más populares de testing
 
-## Contribuyendo 🖇️
-
-Por favor lee el [CONTRIBUTING.md](https://gist.github.com/villanuevand/xxxxxx) para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
-
-## Wiki 📖
-
-Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](https://github.com/tu/proyecto/wiki)
 
 ## Versionado 📌
 
@@ -83,14 +95,18 @@ Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones
 
 _Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
 
-* **Andrés Villanueva** - *Trabajo Inicial* - [villanuevand](https://github.com/villanuevand)
-* **Fulanito Detal** - *Documentación* - [fulanitodetal](#fulanito-de-tal)
+* **Ramiro Villamizar ** - [pivotsk8](https://github.com/pivotsk8)
+* **Marisa Lia Pascal ** - [Marisaliap](https://github.com/Marisaliap)
+* **Nelson Albera ** - [nalbera](https://github.com/nalbera)
+* **Gustavo Montero ** - [gamontero](https://github.com/gamontero)
+* **Daneil Alberto Mena ** - [BtoMJ](https://github.com/BtoMJ)
+* **Fabrizio Santandrea ** - [fabsantandrea](https://github.com/fabsantandrea)
 
 También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto. 
 
 ## Licencia 📄
 
-Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
+Este proyecto está bajo la Licencia de Dream Team Manejantes 
 
 ## Expresiones de Gratitud 🎁
 
@@ -102,4 +118,4 @@ Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md
 
 
 ---
-⌨️ con ❤️ por [Villanuevand](https://github.com/Villanuevand) 😊
+⌨️ con ❤️ por [Manejantes](https://github.com/manejantesdt) 😊
