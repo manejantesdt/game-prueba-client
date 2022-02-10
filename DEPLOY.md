@@ -1,6 +1,6 @@
 ## Despliegue 📦
 
-_Aquí te dejamos instrucciones paso a paso sobre como hacer el deploy de este proyecto utilizando el servicio S3 de AWS_
+_Aquí te dejamos instrucciones paso a paso sobre cómo hacer el deploy de este proyecto utilizando el servicio S3 de AWS_
 
 Lo primero que tenemos que hacer para es [crear una cuenta en la página web de amazon web services]  (https://docs.aws.amazon.com) o inicar sesión si ya tenemos una cuenta.
 
