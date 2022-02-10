@@ -6,7 +6,7 @@ El desafío consistió en desarrollar una aplicación web usando un framework SP
 los creadores de un juego hipotético que desean ofrecer a sus usuarios la posibilidad de consultar 
 quiénes son los jugadores del mismo. 
 
-## 💻 Puedo ver esta aplicación en vivo?
+## ¿Puedo ver esta aplicación en vivo? 💻
 
 Claro que sí! Tanto el Front-end como el Back-end fueron deployadas utilizando diferentes servicios en AWS (Lambda, Dynamo, S3). 
 Puedes visitar la versión online haciendo click en el siguiente  enlace:
@@ -53,7 +53,8 @@ Este comando abrirá [http://localhost:3000](http://localhost:3000) en tu navega
 La página se volverá a descargar si haces cambios en el código.
 También podrás ver si hay errores en la consola.
 
-## 💡 Qué puedo hacer en la versión online (in live version)?
+## ¿Qué puedo hacer en la versión online? 💡
+
 Cuando visitas la página web verás que hemos creado un "Salón de la fama de jugadores", donde se despliega una interfaz con los 10
 jugadores con mayor ranking, incluyendo id, nickname, ranking, status y avatar.
 
@@ -61,7 +62,7 @@ jugadores con mayor ranking, incluyendo id, nickname, ranking, status y avatar.
     <img height="120" src='https://drive.google.com/thumbnail?id=1ZhFz6JMOtT3107w-z2KuO0PZMOKEzIYx' </img>
 </p> 
 
-Puedes ver efectivamente que en el panel superior, en la sección titulada "Players", aparecen las tarjetas de los 10 jugadores con mayor ranking de toda la aplicación, que cuenta actualmente con una base de datos de más de tres mil jugadores.
+Puedes ver efectivamente que en el panel superior, en la sección titulada "Top Ten", aparecen las tarjetas de los 10 jugadores con mayor ranking de toda la aplicación, que cuenta actualmente con una base de datos de más de tres mil jugadores.
 
 En el panel central, puedes ver en el podio, en un lugar destacado, a los 3 mejores de esos 10 primeros. 
 
@@ -69,12 +70,14 @@ En el panel central, puedes ver en el podio, en un lugar destacado, a los 3 mejo
     <img height="150" src='http://game-prueba-client.s3-website-us-east-1.amazonaws.com/static/media/podio.56d7824ee98f76bacb0e.png' </img>
 </p> 
 
-En el panel inferior, llamado "Bold Players", puedes ver 6 jugadores destacados - es decir, 10 forman parte del Top Ten y otros 6 forman parte de Bold Players porque quisimos que esos jugadores también tengan un lugar dentro del Salón de la Fama.
+En el panel inferior, llamado "Jugadores Destacdados", puedes ver 6 jugadores destacados - es decir, 10 forman parte del Top Ten y otros 6 forman parte de Bold Players porque quisimos que esos jugadores también tengan un lugar dentro del Salón de la Fama.
 
 Al hacer click sobre la tarjeta de cualquier jugador, puedes mirar los detalles específicos de ese jugador:  Id, avatar, nickname, status y ranking. 
 Puedes navegar por todo el sitio web, ir a la pestaña "Create Player" (crear un jugador), donde podrás elegir tu nickname, tu avatar favorito, tu status y tu puntaje dentro del campo "ranking". 
 
 También puedes editar los jugadores que están creados, e incluso borrarlos.
+
+# Desarrollo
 
 ## Objetivos del Proyecto
 
@@ -140,8 +143,6 @@ __Ruta de creación de un personaje__: contiene
 
 __Ruta de edición de un personaje__: contiene
 - [ ] 
-
-## Base de datos
 
 ## Ejecutando las pruebas ⚙️
 
