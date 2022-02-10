@@ -82,7 +82,7 @@ También puedes editar los jugadores que están creados, e incluso borrarlos.
 ## Objetivos del Proyecto
 
 - Construímos una aplicación utilizando React, Javascript, Redux, Express, Styled Components.
-- Utilizamos otras tecnologìas : AWS y Jest 
+- Utilizamos otras tecnologìas : AWS y Cypress 
 - Utilizamos la metodología SCRUM trabajando en equipo, mediante el uso de Trello.
 - Pusimos en práctica el workflow de GIT implementando CI (integración continua) y desarrollo continuo. 
 
@@ -96,53 +96,48 @@ El contenido de `client` fue creado usando: Create React App.
 
 ### Aplicación del Salón de la fama
 
-- Registro encriptado. Los usuarios deben tener la oportunidad de crear una cuenta de forma rápida y segura con sus cuentas de redes sociales o Gmail.
-- Búsqueda de jugadores. Si el texto de la búsqueda es una coincidencia exacta con el id de un jugador, se despliega esta única coincidencia. De lo contrario, se
-muestran, usando paginación, todas aquellas coincidencias que en sus atributos nickname y/o status contengan la búsqueda ordenados por ranking.
-- La búsqueda de un jugador incluye filtros de acuerdo al atributo status y ordenados por ranking.
-- Editar un jugador.  Al editar un jugador, puedes manipular todos los campos asociados excepto el id del mismo.
-- Creación de un nuevo jugador. Podrás crear un jugador ingresando el campo nickname y, opcionalmente, seleccionar un avatar.
-- About. En la ruta /about encontrarás información acerca de Recicle Being.
-
 ## Frontend
 
 Se desarrolla una aplicación de React/Redux que contiene las siguientes pantallas/rutas.
 
-__Pagina inicial__: un home page con
-- [ ] Una imagen del logo representativa del proyecto
-- [ ] Texto breve indicando la principal funcionalidad de la app y sus ventajas
-- [ ] Botón para 
-
-- [ ] Paginado
-
-
 __Ruta principal__: contiene
-- [ ] Input de búsqueda para encontrar jugadores
-- [ ] Botón para crear un jugador
-- [ ] Área donde se ven imágenes y textos que amplían la información sobre los jugadores
-  - Imagen
-  - Nickname
-  
- __Ruta de listas de los jugadores existentes__: contiene
-  
-- [ ] Botones/Opciones para filtrar jugadores por:
-    - Ascendente/ Descendente
-    - Por status
+- [ ] Una barra de navegación con una imagen del logo representativa del proyecto
+- [ ] Input de búsqueda para encontrar jugadores, que al ingresar una búsqueda despliega los resultados de la misma en la ruta /search 
+- [ ] Un enlace que lleva al componente para "Crear un jugador"
+- [ ] Un enlace que lleva al componente "Sobre"
+- [ ] Área donde se muestran las tarjetas de 7 dentro los 10 jugadores con ranking más alto
+- [ ] Área donde se muestran las tarjetas de los 3 jugadores con ranking más alto
+- [ ] Área donde se muestran las tarjetas de 6 jugadores destacados pero que no están dentro del ranking de los 10 principales
 
+ __Ruta de búsqueda de jugadores__: contiene
+- [ ] Si el texto de la búsqueda es una coincidencia exacta con el id de un jugador, se despliega esta única coincidencia. De lo contrario, se muestran, usando paginación, todas aquellas coincidencias que en sus atributos nickname y/o status contengan la búsqueda ordenados por ranking.
+- [ ] El paginado organiza los resultados de la búsqueda mostrando las tarjetas de 6 jugadores por cada página.
+- [ ] La búsqueda de un jugador incluye filtros de acuerdo al atributo status y ordenados por ranking.
+- [ ] Opciones para filtrar jugadores por:
+    - Ascendente/ Descendente
+    - Por status (Oro, Plata, Bronce)
+    
+ __Ruta para ver el detalle de los jugadores__: Al hacer click sobre la tarjeta de cualquier jugador, dirije a la ruta por Id que contiene:
 - [ ] Detalle de cada jugador con los siguientes campos:
     - Avatar
     - Nickname
     - Status
     - Ranking
  
-
-__Ruta de creación de un personaje__: contiene
+ __Ruta de creación de un nuevo jugador__: Podrás crear un jugador ingresando el campo nickname y, opcionalmente, seleccionar un avatar. Contiene
 - [ ] Un formulario __controlado__ con los siguientes campos
-  - Nickname
-  - 
+  - Nickname *
+  - Avatar
+  
+ __Ruta para editar a un jugador existente__:  Al editar un jugador, puedes manipular todos los campos asociados excepto el id del mismo. Contiene
+- [ ] Una tarjeta con los datos del jugador donde pueden editarse los campos Avatar, Status, Nickname y Ranking.
+- [ ] Botón para aceptar los cambios
+- [ ] Botón para cancelar los cambios
 
-__Ruta de edición de un personaje__: contiene
-- [ ] 
+ imágenes y textos que amplían la información sobre los jugadores
+ 
+__Ruta Sobre__: contiene
+- [ ] En la ruta /sobre encontrarás información acerca de Recicle Being.
 
 ## Ejecutando las pruebas ⚙️
 
