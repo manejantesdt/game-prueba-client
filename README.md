@@ -15,7 +15,6 @@ El desafío consistió en desarrollar una aplicación web usando un framework SP
 los creadores de un juego hipotético que desean ofrecer a sus usuarios la posibilidad de consultar 
 quiénes son los jugadores del mismo. 
 
-
 ## Scripts Disponibles
 
 En el directorio de proyectos, puedes ejecutar:
