@@ -38,4 +38,5 @@ export const SearchBar = () => {
       </button>
     </SearchBarSection>
   );
+  
 };
