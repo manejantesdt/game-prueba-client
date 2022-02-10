@@ -92,80 +92,38 @@ Lo único que tienes que hacer es copiar el nombre de tu backet, y reemplazar do
 backet tiene acceso público (esto es lo que queremos porque es una web pública para que la gente entre a verla).
 Nuestro backet ya está configurado.
 
-Ahora ve a tu aplicación vale que tenemos aquí voy a
-hacer esto un poquito más grande irnos
-al fichero package puntos jason y aquí
-los tips vamos a crear un nuevo script
-ponemos una como barí este clip se va a
-llamar por ejemplo de play valen dos
-puntos y aquí vamos a añadir el
-siguiente código y lo tengo aquí copiado
-este grande que se ve así
-este este código esta línea de código o
-la voy a dejar también en los recursos
-vale la descripción de este vídeo así
-que ir y la coge jce
-y no os olvidéis ya que vais a la
-descripción suscribiros al canal
-comentar y dar a like así que nada
-continuamos ahora aquí lo que tenemos
-que hacer es modificar esta línea vale
-este nombre este nombre es exactamente
-el mismo de aquí copiamos el nombre de
-'los tubasket lo copiamos vamos a
-nuestro paquete puntos jason y los
-sustituimos cuales sean penn baquet de
-esta manera así guardamos y ya tenemos
-nuestra aplicación terminada para hacer
-deploy en nuestro parque ds3 en amazon
-web services para comprobarlo podemos ir
-aquí vamos aquí a información general y
-vemos que nuestro bakker está vacío
-perfecto
-ahora vamos a cerrar el editor de código
-ya no lo necesitamos aquí estamos dentro
-de nuestra aplicación si yo hago
-uy lo que hacer es crear me vale del
-fichero el muy vale el vil todos los
-ficheros que se lleguen subir a un
-servidor para que funcione este comando
-si hacemos como punto ya abrimos nuestro
-editor está aquí el para katz aquí mil
-lo que hace es hacerle a que scripting y
-el deploy lo que hace es la
-carpeta 1000 y subirla al s 3 para
-publicarla con público iris para que la
-gente la pueda leer así que ahora
-simplemente tengo que hacer hard deploy
-de había intro y esto se va a ocupar de
-subir nuestra aplicación al s 3 de
-amazon en cuanto termine ya tendríamos
-subida que ha tardado 5,6 segundos en
-subirla si vamos a nuestro back que dice
-que está vacío pero si yo refresco la
-página vale ahora puedo ver datos ya
-tengo todos lo que tengo aquí mira lo
-que tengo aquí dentro débil todo esto
-static favicon index server worker todo
-lo tengo en mi ese 3 se ha subido
-automáticamente con el comando y si yo
-le entro por ejemplo aquí en index
-puedo ver que aquí tengo la ruta si
-pincho me llevaba mi página web vale
-esta es la página que hemos construido y
-equipo
-update agustín a w s3 de esta manera
-hemos subido nuestra aplicación gloria a
-los bikers s 3 de amazon web services
-así que nada espero que lo hayas
-entendido todo que no hay gestión ningún
-problema si tienes cualquier problema ya
-sabes en la descripción en los
-comentarios de este vídeo me podéis
-preguntar lo que necesitéis así que nada
-nos vemos en el siguiente vídeo
+Ahora ve a tu aplicación en Visual Staduio y abre el archivo package.json
+En la sección de scripts vamos a crear un nuevo script llamado "deploy", así:
+
+```sh
+"deploy": "aws s3 sync build/ s3://example-bucket --acl public-read"
+```
+
+Reemplaza donde dice "example-backet" por el nombre de tu backet. Guardas los cambios y ya tienes tu aplicación lista para ser deployada en tu backet de S3 en AWS.
 
 
+En la consola de Visual Studio, ejectua el siguiente comando:
+
+### `npm run build #`
+
+Lo que hace este comando es crear el fichero "build", es decir, todos los ficheros que se tienen que subir a un servidor para que funcione. Este comando
+si abrimos nuestro archivo package.json está dentro de los "scripts", así:
+
+```sh
+"build": "react-scripts build",
+```
+
+El script deploy toma la carpeta "build" y la sube al S3, publicarla con "public-read" (para que la gente la pueda leer).
+
+Así que ahora pudes introducir el siguiente comando:
+
+```sh
+npm run deploy
+```
+
+Esto se va a ocupar de subir tu aplicación al S3 de Amazon. Cuando termine, puedes ir a tu cuenta de Amazon, buscar tu backet y ver que todo lo que contiene la carpeta build se ha subido automáticamente con el comando deploy desde tu consola. Si dentro de los archivos pinchas en el archivo index.html, verás que tienes la ruta (url del objeto). Si haces click te llevará a tu página web. Verás la página que hemos construido con todos los archivos que has descargado. 
+
+De esta manera has subido nuestra aplicación de React a un backet de AWS.
 
 ```
 Da un ejemplo
