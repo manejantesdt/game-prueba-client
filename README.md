@@ -1,19 +1,4 @@
-<p align='left'>
-     <img height="100" src="./LogoNvo.png" />
-</p> 
 
-# Group Project - Recicle Being
-
-Recicle Being es una página web creada como prueba técnica para la empresa CrediTu. 
-El desafío consistió en desarrollar una aplicación web usando un framework SPA, requerida por 
-los creadores de un juego hipotético que desean ofrecer a sus usuarios la posibilidad de consultar 
-quiénes son los jugadores del mismo. 
-
-## Comenzando 🚀
-
-_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
-
-Mira **Deployment** para conocer como desplegar el proyecto.
 
 
 ## Scripts Disponibles
@@ -36,12 +21,6 @@ _Que cosas necesitas para instalar el software y como instalarlas_
 Da un ejemplo
 ```
 
-## 💻 Puedo ver esta aplicación en vivo?
-
-Claro que sí! Tanto el Front-end como el Back-end fueron deployadas utilizando diferentes servicios en AWS (Lambda, Dynamo, S3). 
-Puedes visitar la versión online haciendo click en el siguiente  enlace:
-https://dfuf67ce7t2lm.cloudfront.net/
-
 ## Objetivos del Proyecto
 
 - Construímos una aplicación utilizando React, Javascript, Redux, Express, Styled Components.
@@ -57,9 +36,6 @@ Creamos una base de datos llamada `CredituPlayers` utilizando Dynamo.
 
 El contenido de `client` fue creado usando: Create React App.
 
-## Enunciado
-
-La idea general es crear una aplicación para el salón de la fama de un juego imaginario. 
 
 ## 💡 Qué puedo hacer en la versión online (in live version)?
 Cuando visitas la página web verás que hemos creado un "Salón de la fama de jugadores", donde se despliega una interfaz con los 10
