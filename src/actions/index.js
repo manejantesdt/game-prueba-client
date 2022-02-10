@@ -30,13 +30,16 @@ export const getPlayers = () => {
       const json = (
         await axios.get(
           `https://mrsemsqfk6.execute-api.us-east-1.amazonaws.com/player?nickname=&amount=50&order=desc`
+          
         )
       ).data;
-      const players = json.body.players;
+      const players = json.body.console;
       dispatch({
         type: "GET_PLAYERS",
         payload: players,
       });
+      console.log(players, "players");
+
     } catch (error) {
       console.error(error);
     }

@@ -9,6 +9,19 @@ import {
   getPlayers,
 } from "../actions/index";
 
+function validate(editform) {
+  let errorValidate = {};
+  var numbers = /^[1-9][0-9]*$/;
+
+  //name validation
+   if (editform.score.length > 6) {
+    errorValidate.score = "numberp muy largo, cifras max 6";
+  } else if (!editform.score.match(numbers)) {
+    errorValidate.score = "Solo números positivos permitidos";
+  }
+  return errorValidate;
+}
+
 export const EditPlayer = () => {
   // ------------------------------<Variables>--------------------------------
   const { player, avatars } = useSelector((state) => state);
@@ -24,6 +37,7 @@ export const EditPlayer = () => {
   // ------------------------------<State>----------------------------------
   const [checkform, setCheckform] = useState(false);
   const [editform, setEditform] = useState({});
+  const [error, setError] = useState({});
 
   // __________________________________________________________________________
 
@@ -53,17 +67,30 @@ export const EditPlayer = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setError(
+      validate({
+        ...editform,
+        [e.target.name]: e.target.value,
+      })
+    );
+    if (!Object.getOwnPropertyNames(error).length) {
     dispatch(editPlayer(id, editform));
     dispatch(getPlayerId(id));
-
     checkform === false ? setCheckform(true) : setCheckform(false);
-  };
+  } else {
+    alert("Errores, revisar información")}}
 
   const handleChange = (e) => {
     setEditform({
       ...editform,
       [e.target.name]: e.target.value,
     });
+    setError(
+      validate({
+        ...editform,
+        [e.target.name]: e.target.value,
+      })
+    );
   };
 
   const handleSelect = (e) => {
@@ -134,6 +161,14 @@ export const EditPlayer = () => {
 
                     <span>
                       {editform.ranking ? editform.ranking : player.ranking}
+                    </span>
+                  </div>
+
+                  <div className="detail">
+                    <p>Score:</p>
+
+                    <span>
+                      {editform.score ? editform.score : player.score}
                     </span>
                   </div>
 
@@ -214,17 +249,20 @@ export const EditPlayer = () => {
               </div>
 
               <div className="editPlayerAvatar">
-                <p>Ranking</p>
+                <p>Score</p>
                 <input
                   className="input_form"
                   type="number"
-                  min="0"
-                  name="ranking"
-                  placeholder={parseInt(player.ranking)}
+                  name="score"
+                  min = "0"
+                  placeholder={parseInt(player.score)}
                   onChange={(e) => handleChange(e)}
                 />
                 {console.log(player.ranking)}
+                {error.score && <p>{error.score}</p>}
               </div>
+
+              {error.name && <p>{error.name}</p>}
 
               <div className="editButtons">
                 {/* <button onClick={onClick} type="submit" className="btnChange"> */}
@@ -245,5 +283,4 @@ export const EditPlayer = () => {
   ) : (
     <div>...loading...</div>
   );
-
 };
