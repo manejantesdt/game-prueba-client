@@ -4,12 +4,17 @@
 
 # Group Project - Recicle Being
 
-## 🤔 De qué se trata?
 Recicle Being es una página web creada como prueba técnica para la empresa CrediTu. 
-
 El desafío consistió en desarrollar una aplicación web usando un framework SPA, requerida por 
 los creadores de un juego hipotético que desean ofrecer a sus usuarios la posibilidad de consultar 
 quiénes son los jugadores del mismo. 
+
+## Comenzando 🚀
+
+_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
+
+Mira **Deployment** para conocer como desplegar el proyecto.
+
 
 ## Scripts Disponibles
 
@@ -22,6 +27,14 @@ Abre [http://localhost:3000](http://localhost:3000) para verlo en tu navegador.
 
 La página se volverá a descargar si haces cambios en el código.\
 También podrás ver si hay errores en la consola.
+
+### Pre-requisitos 📋
+
+_Que cosas necesitas para instalar el software y como instalarlas_
+
+```
+Da un ejemplo
+```
 
 ## 💻 Puedo ver esta aplicación en vivo?
 
