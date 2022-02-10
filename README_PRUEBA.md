@@ -18,6 +18,11 @@ _Estas instrucciones te permitirán obtener una copia del proyecto en funcionami
 
 Sigue las indicaciones en la sección **Despliegue** para conocer como desplegar el proyecto utilizando los servicios de la nube de AWS.
 
+Forkear el repositorio para tener una copia del mismo en sus cuentas
+Clonar el repositorio en sus computadoras para comenzar a trabajar
+
+### `npm start`
+
 
 ### Pre-requisitos 📋
 
