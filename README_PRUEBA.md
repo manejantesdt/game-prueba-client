@@ -27,43 +27,28 @@ Lo primero que tenemos que hacer para es [crear una cuenta en la página web de 
 En los servicios de AWS buscamos IAM para [crear un nuevo usuario IAM] (https://docs.aws.amazon.com/es_es/es_es/IAM/latest/UserGuide/id_roles_create.html). 
 Introducimos un nombre de usuario, (por ejemplo serverless-admin), le damos acceso mediante programación.
 En la siguiente ventana, le vamos a asignar los permisos vamos a ir a la opción "asociar directamente las políticas existentes" y vamos a buscar y seleccionar únicamente
-"AministratorAccess" y vamos al siguiente, dejamos vacío (añadir etiquetas es opcional), vamos a revisar y clickeamos en crear usuario.  Nuestro usuario se crea y tenemos el Id de acceso y la clave secreta. No reveles tus claves a nadie. Es muy importante que descarges el archivo csv que las contiene y lo guardes o bien las copias en un bloc de notas.
+"AministratorAccess" y vamos al siguiente, dejamos vacío (añadir etiquetas es opcional), vamos a revisar y clickeamos en crear usuario.  Nuestro usuario se crea y tenemos el Id de acceso y la clave secreta. No reveles tus claves a nadie. Es muy importante que descarges el archivo csv que las contiene y lo guardes o bien las copias en un bloc de notas. Después de obtener estas claves vas a instalar AWS CLI. 
 
-Después de obtener estas claves vas a ir al terminal y vas a instalar AWS CLI. 
 Para [ instalar AWS CLI sigue los pasos en esta documentación:] (https://docs.aws.amazon.com/es_es/cli/latest/userguide/cli-chap-install.html)
 Vas a elegir instalar la versión más reciente de la AWS CLI, es decir, la versión 2.
 Aquí tienes más información para que puedas tener un conjunto de [credenciales de AWS válidas configuradas en tu sistema] (https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html).
-vez que tengamos el a ws clic instalado
-el siguiente comando que tenemos que
-ejecutar es a w
-ws lo configure y vamos a intro y me
-dice que a bordo no saldrá de esto yo ya
-tengo una clave creada pero nos impedirá
-meter el acceso a la clave de acceso
-el aib y esta clave es exactamente la
-que nos ha dado el usuario está de aquí
-la copiamos vamos al terminal y la
-pegamos perfecto ahora me dice que que
-pegue para en la clave secreta pues es
-la que tenemos aquí al lado está aquí la
-copiamos
-y aquí la pegamos
-perfecto aquí nos dice que en qué región
-vamos a tener nuestro nuestro servidor
-no esto va que no estuviese 3 vale donde
-podemos ver esto pues si vamos aquí a la
-cuenta de amazona ws vinieron aquí botón
-derecho a abrir una nueva pestaña vale
-ahora aquí arriba donde pone tu nombre
-de usuario soporte en medioambiente en
-el norte de virginia si desplegamos vale
-yo tengo yo estoy recibida del norte de
-virginia y aquí a la derecha nos sale el
-aquí de este servidor que es ese guión y
-yo uno pues esto es lo que tenemos que
-poner así que escribimos ue se vale que
-era
-1 si no me equivoco perfecto de aussa
+
+Una vez que tengas AWS instalado y configurado, vas a ir a la terminal y ejecutar el siguiente comando: 
+
+### `aws configure` 
+
+Al presionar enter nos pedirá la clave de acceso que hemos obtenido de nuestro usuario IAM:
+
+```sh
+AWS_ACCESS_KEY_ID AKIAIOSFODNN7EXAMPLE (ingresa tu clave de acceso, y enter)
+
+AWS_SECRET_ACCESS_KEY wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY (ingresa tu clave secreta, y enter)
+
+AWS_DEFAULT_REGION us-west-1 (ingresa la región de tu cuenta de Amazon, por ejemplo us-west-1, y enter)
+
+Default output format [None]: (lo dejamos vacío, y enter)
+
+
 intro aquí lejos está el cual vacío
 vamos a tener nuestro abulense en
 nuestro equipo configurado perfecto
