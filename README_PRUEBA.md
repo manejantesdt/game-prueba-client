@@ -93,8 +93,6 @@ Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones
 
 ## Autores ✒️
 
-_Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
-
 * **Ramiro Villamizar ** - [pivotsk8](https://github.com/pivotsk8)
 * **Marisa Lia Pascal ** - [Marisaliap](https://github.com/Marisaliap)
 * **Nelson Albera ** - [nalbera](https://github.com/nalbera)
@@ -102,7 +100,6 @@ _Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios
 * **Daneil Alberto Mena ** - [BtoMJ](https://github.com/BtoMJ)
 * **Fabrizio Santandrea ** - [fabsantandrea](https://github.com/fabsantandrea)
 
-También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto. 
 
 ## Licencia 📄
 
