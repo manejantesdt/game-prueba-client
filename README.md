@@ -61,7 +61,7 @@ Puedes ver efectivamente que en el panel superior, en la sección titulada "Play
 En el panel central, puedes ver en el podio, en un lugar destacado, a los 3 mejores de esos 10 primeros. 
 
 <p align='left'>
-    <img height="250" src='http://game-prueba-client.s3-website-us-east-1.amazonaws.com/static/media/podio.56d7824ee98f76bacb0e.png' </img>
+    <img height="150" src='http://game-prueba-client.s3-website-us-east-1.amazonaws.com/static/media/podio.56d7824ee98f76bacb0e.png' </img>
 </p> 
 
 En el panel inferior, llamado "Bold Players", puedes ver 6 jugadores destacados - es decir, 10 forman parte del Top Ten y otros 6 forman parte de Bold Players porque quisimos que esos jugadores también tengan un lugar dentro del Salón de la Fama.
