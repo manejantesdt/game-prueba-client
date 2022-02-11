@@ -176,7 +176,7 @@ Da un ejemplo
 * **Gustavo Montero ** - [gamontero](https://github.com/gamontero)
 * **Daniel Alberto Mena ** - [BtoMJ](https://github.com/BtoMJ)
 
-### Una mención especial por su compañerismo y su aporte a este proyecto para
+#### Una mención especial por su compañerismo y su aporte a este proyecto para
 * **Fabrizio Santandrea ** - [fabsantandrea](https://github.com/fabsantandrea)
 
 ## Licencia 📄
