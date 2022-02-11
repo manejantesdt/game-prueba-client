@@ -8,7 +8,7 @@ quiénes son los jugadores del mismo.
 
 ## ¿Puedo ver esta aplicación en vivo? 💻
 
-Claro que sí! Tanto el Front-end como el Back-end fueron deployadas utilizando diferentes servicios en AWS (Lambda, Dynamo, S3). 
+Claro que sí! Tanto el Front-end como el Back-end fueron deployadas utilizando diferentes servicios en AWS (Lambda, Dynamo, S3 y otros). 
 Puedes visitar la versión online haciendo click en el siguiente  enlace:
 https://dfuf67ce7t2lm.cloudfront.net/
 
