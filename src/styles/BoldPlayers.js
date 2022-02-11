@@ -13,6 +13,7 @@ export const BoldPlayersSections = styled.section`
     height: 50px;
     color: #FF0075;
     letter-spacing: 20px;
+    font-family: 'Russo One', sans-serif;
     text-transform: uppercase;
   }
 
