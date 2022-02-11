@@ -1,11 +1,15 @@
 import styled from "styled-components";
 
 export const AboutSection = styled.section`
-
+// width: 100vw;
+// height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   h1, h2, h3 {
-  margin-bottom: 1rem;
+  // margin-bottom: 1rem;
 /*   margin-left: 1rem; */
-color: #102132;
+  color: #ffffff97;
  /*  color: #FBF3E4; */
 }
 
@@ -20,37 +24,40 @@ hr{
 }
 
   article{
-  display:grid;
-  grid-template-columns: 20% 60% 20%;
+    width: 1400px;
+  // display:grid;
+  // grid-template-columns: 15% 70% 15%;
  /*  display: flex;
     flex-direction: row; */
     justify-content: space-around;
-    padding: 3%;
-margin-top: 10%; 
+    padding: 2% 6%;
+margin-top: 1%; 
 position: absolute;
-margin-left: 438px; 
-margin-top: 70px;
-width: 814px;
+// margin-left: 438px; 
+// margin-top: 20px;
 /* height: 1900px; */
 outline: none;
 border-radius: 15px;
-background-color: #fdf6fc73;
+background-color: #ffffff20;
+// background-color: #fdf6fc73;
 backdrop-filter: 1px;
 box-shadow:0 0 2px #2a8ce1, 0 0 2px #3a6351, 0 0 2px #e40320;
 
 &:hover{
-    box-shadow: 0 0 10px rgba(44, 11, 34, 0.404), 0 0 10px rgba(44, 11, 34, 0.404), 0 0 10px rgba(44, 11, 34, 0.404); 
-    transition-delay: 0.2s;
-    transition: 0.8s; 
+  box-shadow: 0 0 10px rgba(44, 11, 34, 0.404), 0 0 10px rgba(44, 11, 34, 0.404), 0 0 10px rgba(44, 11, 34, 0.404); 
+  transition-delay: 0.2s;
+  transition: 0.8s; 
 }
 }
 
-  p {
+p {
   text-align: justify;
-  margin-bottom: 1rem;
+  // font-family: 'Russo One', sans-serif;
+  font-size: 1rem;
+  margin-bottom: 1.4rem;
   margin-top: 1rem;
   /* color: #102132; */
-  color: #311601;
+  color: #ffffff97;
 }
 
 li {
@@ -61,20 +68,21 @@ li {
 .button_form {
     width: 122px;
     height: 30px;
-    margin-left: 20px;
+    // margin-left: 20px;
     border: none;
-    position: right;
-    background-color: #de6200;
+    position: relative;
+    left: 1050px;
+    background-color: #b42769;
     color: white;
     border-radius: 10px;
     text-align: center;
     cursor: pointer;
     &:hover {
-      background-color: #fdf6fc73;
+      background-color: #172774;
       box-shadow: 0 0 5px rgba(44, 11, 34, 0.404),
         0 0 5px rgba(44, 11, 34, 0.404), 0 0 5px rgba(44, 11, 34, 0.404);
       transition-delay: 0.2s;
       transition: 0.8s;
-      color: #311601;
+      color: #fff;
   }
 `;
