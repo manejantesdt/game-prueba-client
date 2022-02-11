@@ -54,7 +54,8 @@ En el paso 3, "Establecer Permisos", actualmente te aparece bloqueado a todo el 
 
 Tu bucket ya se ha creado: S3-(tunombre) 
 
-Ahora entras en el bucket y vas a ir a la pestaña propiedades y vas a entrar en la sección llamada "Alojamiento de sitio web estático".  Vas a marcar la casilla "usar este bucket para alojar un sitio web". El el campo "documento de índice" escribimos index.html así y en "documento de error" también escribimos index.html
+Ahora entras en el bucket y vas a ir a la pestaña propiedades y vas a entrar en la sección llamada "Alojamiento de sitio web estático".  Vas a marcar la casilla "usar este bucket para alojar un sitio web". En el campo "documento de índice" escribimos index.html y en "documento de error" también escribimos index.html
+
 Vas a guardar. Ya tienes las propiedades configuradas. 
 
 Ahora vas a ir a la pestaña "Permisos" y vas a tener que añadir un código. En "permisos" vas a "política de bucket", y en "editor de políticas de bucket", pegas el siguiente código:
@@ -77,13 +78,13 @@ Ahora vas a ir a la pestaña "Permisos" y vas a tener que añadir un código. En
   ]
 }
 ```
-Lo único que tienes que hacer es copiar ese mismo código, y reemplazar donde dice "example-bucket" por el nombre exacto de tu bucket. Ahora vas a guardar, te dirá que este
+Lo único que tienes que hacer es copiar este mismo código, y reemplazar donde dice "example-bucket" por el nombre exacto de tu bucket. Ahora vas a guardar, te dirá que este
 bucket tiene acceso público (esto es lo que queremos porque es una web pública para que la gente entre a verla).
 
 Nuestro bucket ya está configurado.
 
-Ahora ve a tu aplicación en Visual Staduio o en tu editor favorito y abre el archivo package.json
-En la sección de scripts vamos a crear un nuevo script llamado "deploy", de esta manera:
+Ahora ve a tu aplicación en Visual Studio o en tu editor favorito y abre el archivo package.json
+En la sección de scripts, debajo del último script, vas a agregar una coma y dar enter, y debajo vas a crear un nuevo script llamado "deploy", de esta manera:
 
 ```sh
 "deploy": "aws s3 sync build/ s3://example-bucket --acl public-read"
@@ -102,15 +103,17 @@ si abrimos nuestro archivo package.json está dentro de los "scripts", así:
 "build": "react-scripts build",
 ```
 
-El script deploy toma la carpeta "build" y la sube al S3, y la publica con "public-read" (para que la gente la pueda leer).
+El script "deploy" toma la carpeta "build" y la sube al S3, y la publica con "public-read" (para que la gente la pueda leer).
 
 Así que ahora puedes introducir el siguiente comando:
 
 ### `npm run deploy`
 
-Esto se va a ocupar de subir tu aplicación al S3 de Amazon. Cuando termine, puedes ir a tu cuenta de Amazon, buscar tu bucket y verás que todo lo que contiene la carpeta build se ha subido automáticamente con el comando deploy desde tu consola. 
+Esto se va a ocupar de subir tu aplicación al S3 de Amazon. Cuando termine este proceso, puedes ir a tu cuenta de Amazon, recargar la página, buscar tu bucket y verás que todo lo que contiene la carpeta build se ha subido automáticamente con el comando deploy desde tu consola. 
 
-Si dentro de los archivos pinchas en el archivo index.html, verás que tienes la ruta (url del objeto). Si haces click te llevará a tu página web. Verás la página que hemos construido con todos los archivos que has descargado. 
+Si buscas dentro de los archivos y pinchas en el archivo index.html, verás que tienes la ruta (url del objeto). Si haces click te llevará a tu página web. 
+
+Verás la página que hemos construido con todos los archivos que has descargado. 
 
 De esta manera has subido nuestra aplicación de React a tu bucket de AWS 😊
 
