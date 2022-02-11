@@ -14,7 +14,7 @@ Nuestro usuario se crea y tenemos el Id de acceso y la clave secreta. No reveles
 
 Después de obtener estas claves vas a instalar AWS CLI. 
 
-Para [ instalar AWS CLI sigue los pasos en esta documentación:](https://docs.aws.amazon.com/es_es/cli/latest/userguide/cli-chap-install.html)
+Para [ instalar AWS CLI sigue los pasos en esta documentación.](https://docs.aws.amazon.com/es_es/cli/latest/userguide/cli-chap-install.html)
 Vas a elegir instalar la versión más reciente de la AWS CLI, es decir, la versión 2.
 
 Aquí tienes más información detallada con todos los pasos para que puedas tener un conjunto de [credenciales de AWS válidas configuradas en tu sistema](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html).
