@@ -8,7 +8,7 @@ En los servicios de AWS buscamos IAM para [crear un nuevo usuario IAM](https://d
 Introducimos un nombre de usuario, (por ejemplo serverless-admin), y tildamos la casilla para darle acceso mediante programación.
 
 En la siguiente ventana, le vamos a asignar los permisos. Vamos a ir a la opción "asociar directamente las políticas existentes" y vamos a buscar y seleccionar únicamente
-"AministratorAccess". Vamos a siguiente, dejamos vacío (añadir etiquetas es opcional), vamos a revisar y clickeamos en crear usuario.  
+"AdministratorAccess". Vamos a siguiente, dejamos vacío (añadir etiquetas es opcional), vamos a revisar y clickeamos en crear usuario.  
 
 Nuestro usuario se crea y tenemos el Id de acceso y la clave secreta. No reveles tus claves a nadie. Es muy importante que descarges el archivo csv que las contiene y lo guardes o bien las copias en un bloc de notas. 
 
