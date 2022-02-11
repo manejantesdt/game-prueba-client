@@ -19,7 +19,7 @@ Vas a elegir instalar la versión más reciente de la AWS CLI, es decir, la vers
 
 Aquí tienes más información detallada con todos los pasos para que puedas tener un conjunto de [credenciales de AWS válidas configuradas en tu sistema](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html).
 
-Una vez que tengas AWS instalado y configurado, vas a ir a la terminal y ejecutas el siguiente comando: 
+Una vez que tengas AWS CLI instalado y configurado, vas a ir a la terminal y ejecutas el siguiente comando: 
 
 ### `aws configure` 
 
