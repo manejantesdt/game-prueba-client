@@ -14,7 +14,7 @@ https://dfuf67ce7t2lm.cloudfront.net/
 
 ## Comenzando 🚀
 
-Las siguientes instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de pruebas._
+Las siguientes instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de pruebas.
 
 1. Forkea el repositorio para tener una copia del mismo en tu cuenta
 2. Clona el repositorio en tu computadora para hacer pruebas
