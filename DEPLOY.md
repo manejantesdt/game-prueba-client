@@ -37,7 +37,7 @@ Default output format [None]: (lo dejamos vacío)  -> Enter
 
 Y así tienes tu AWS configurado en tu equipo.
 
-Ahora estás listo para ejecutar la aplicación. En la consola de Visual Studio o en tu editor preferido, asegúrate de estar en la carpeta donde descargaste el proyecto:
+Ahora estás listo para ejecutar la aplicación. En la consola de Visual Studio o en tu editor preferido, asegúrate de estar en la carpeta donde descargaste el proyecto, e ingresa el siguiente comando:
 
 ### `npm start` 
 
