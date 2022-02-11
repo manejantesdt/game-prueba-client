@@ -47,7 +47,7 @@ export const Players = () => {
   const tenPlayers = players.slice(2, 10);
   return (
     <section>
-      <h2>Players</h2>
+      <h2>Jugadores</h2>
       <div className="contenedor-jugadores">
         <div ref={gridJugadores} onClick={() => setScrollContainer.bind(this)}>
           {tenPlayers.map((j) => {
@@ -55,7 +55,7 @@ export const Players = () => {
               <CardPlayer
                 nickname={j.nickname}
                 image={j.avatar}
-                key={j.Id}
+                key={j.Id}s
                 id={j.Id}
                 ranking={j.ranking}
                 status={j.status}

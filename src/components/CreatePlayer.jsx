@@ -94,7 +94,7 @@ export const CreatePlayer = () => {
         </div>
 
         <div>
-          <span>Choose Avatar:</span>
+          <span>Selecciona tu Avatar:</span>
           <select
             type="text"
             name="avatar"
@@ -112,12 +112,12 @@ export const CreatePlayer = () => {
 
         <div>
           <button className="button_form" type="submit" name="submit">
-            Create Player
+            Crear Jugador
           </button>
         </div>
         <div>
           <Link to="/">
-            <button className="button_form">Back </button>
+            <button className="button_form">Volver </button>
           </Link>
         </div>
       </IntoForm>

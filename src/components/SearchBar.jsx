@@ -34,7 +34,7 @@ export const SearchBar = () => {
       />
 
       <button className="button" type="submit">
-        Search Player
+        Buscar Jugador
       </button>
     </SearchBarSection>
   );

@@ -61,14 +61,14 @@ export const SearchPlayer = () => {
         </div>
         <div className="returnContainer">
           <a href="/" className="BackHome">
-            Regresar
+            Volver
           </a>
         </div>
       </BoldPlayersPagination>
     </>
   ) : (
     <>
-      <h4>...loading search</h4>
+      <h4>...descargando búsqueda</h4>
     </>
   );
 };

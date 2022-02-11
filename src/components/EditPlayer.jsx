@@ -117,7 +117,7 @@ export const EditPlayer = () => {
             textTransform: "uppercase",
           }}
         >
-          Player Details
+          Detalle del Jugador
         </h2>
         <ContEdit>
           {player ? (
@@ -173,13 +173,13 @@ export const EditPlayer = () => {
                   </div>
 
                   <button className="btnEditPlayer" onClick={onClickCheck}>
-                    Edit
+                    Editar
                   </button>
                 </div>
               </div>
             </div>
           ) : (
-            <div>...loading...</div>
+            <div>...descargando...</div>
           )}
         </ContEdit>
       </>
@@ -197,7 +197,7 @@ export const EditPlayer = () => {
             textTransform: "uppercase",
           }}
         >
-          Edit Player Details
+          Editar Detalles del Jugador
         </h2>
         <ContEdit>
           {player ? (
@@ -205,7 +205,7 @@ export const EditPlayer = () => {
               <img src={editform.avatar} alt="Ávatar" className="editAvatar" />
 
               <div className="editPlayerAvatar">
-                <p>Ávatar</p>
+                <p>Avatar</p>
                 <select
                   type="text"
                   name="avatar"
@@ -267,20 +267,20 @@ export const EditPlayer = () => {
               <div className="editButtons">
                 {/* <button onClick={onClick} type="submit" className="btnChange"> */}
                 <button type="submit" className="btnChange">
-                  Change
+                  Cambiar
                 </button>
                 <button onClick={onClickCancel} className="btnChange">
-                  Cancel
+                  Cancelar
                 </button>
               </div>
             </IntoEdit>
           ) : (
-            <div>...loading...</div>
+            <div>...descargando...</div>
           )}
         </ContEdit>
       </>
     )
   ) : (
-    <div>...loading...</div>
+    <div>...descargando...</div>
   );
 };

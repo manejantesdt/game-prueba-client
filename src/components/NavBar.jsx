@@ -24,17 +24,17 @@ export const NavBar = () => {
       <ContNav>
         <Ul>
           <Link to="/" className="link">
-            Home
+            Inicio
           </Link>
         </Ul>
         <Ul>
           <Link to="/create" className="link">
-            Create Player
+            Crear Jugador
           </Link>
         </Ul>
         <Ul>
           <Link to="about" className="link">
-            About
+            Sobre
           </Link>
           
         </Ul>
@@ -49,17 +49,17 @@ export const NavBar = () => {
     <ContNav>
       <Ul>
         <Link to="/" className="link">
-          Home
+          Inicio
         </Link>
       </Ul>
       <Ul>
         <Link to="/create" className="link">
-          Create Player
+          Crear Jugador
         </Link>
       </Ul>
       <Ul>
         <Link to="about" className="link">
-          About
+          Sobre
         </Link>
       </Ul>
     </ContNav>
