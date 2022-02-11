@@ -20,6 +20,7 @@ function rootReducer(state = inizialstate, action /* { type, payload } */) {
         player: action.payload,
       };
     case "GET_PLAYERS":
+    
       return {
         ...state,
         players: action.payload,

@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { Players } from "./Players";
+import { PlayersTen } from "./PlayersTen";
 import { BoldPlayers } from "./BoldPlayers";
 import { MainPanel } from "./MainPanel";
 import { Footer } from "./Footer";
@@ -17,7 +17,7 @@ export const Home = () => {
 
   return (
     <main>
-      <Players />
+      <PlayersTen />
       <MainPanel />
       <BoldPlayers />
       <Footer />

@@ -17,7 +17,6 @@ export const CardPlayer = ({
   };
 
   const dispatch = useDispatch();
-
   return (
     <article {...props} className="jugador">
       <NavLink to={`/id/${id}`}>
@@ -34,7 +33,7 @@ export const CardPlayer = ({
           <span  >{status}</span>
         </div>
         <div className="avatarRanking">
-          <span  >Rank: {ranking}</span>
+          <span  >Ranking: {ranking}</span>
         </div>
       </NavLink>
     </article>

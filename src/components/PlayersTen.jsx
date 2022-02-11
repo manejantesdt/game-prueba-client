@@ -1,9 +1,8 @@
 import React, { useEffect, createRef } from "react";
 import { CardPlayer } from "./CardPlayer";
 import { useSelector, useDispatch } from "react-redux";
-import { getPlayers } from "../actions";
 
-export const Players = () => {
+export const PlayersTen = () => {
   const dispatch = useDispatch();
   const { players } = useSelector((state) => state);
   const gridJugadores = createRef();
@@ -11,7 +10,6 @@ export const Players = () => {
   useEffect(() => {
     setScrollContainer();
     document.addEventListener("click", setScrollContainer);
-    dispatch(getPlayers({}));
   }, [players?.length,dispatch]);
 
   const setScrollContainer = (desktop = true) => {
@@ -44,10 +42,10 @@ export const Players = () => {
       container.setAttribute("style", styles);
     }
   };
-  const tenPlayers = players.slice(2, 10);
+  const tenPlayers = players.slice(3, 10);
   return (
-    <section>
-      <h2>Jugadores</h2>
+    <section className="Players">
+      <h2>Top 10</h2>
       <div className="contenedor-jugadores">
         <div ref={gridJugadores} onClick={() => setScrollContainer.bind(this)}>
           {tenPlayers.map((j) => {
@@ -55,7 +53,7 @@ export const Players = () => {
               <CardPlayer
                 nickname={j.nickname}
                 image={j.avatar}
-                key={j.Id}s
+                key={j.Id}
                 id={j.Id}
                 ranking={j.ranking}
                 status={j.status}

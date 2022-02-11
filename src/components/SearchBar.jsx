@@ -27,15 +27,16 @@ export const SearchBar = () => {
     <SearchBarSection onSubmit={onSubmit} >
       <input
         className="inputSearch"
-        placeholder="Buscar Player"
+        placeholder="Buscar Jugador"
         type="text"
         value={nick_name ? nick_name : ""}
         onChange={handleOnChange}
       />
 
       <button className="button" type="submit">
-        Search Player
+        Buscar Jugador
       </button>
     </SearchBarSection>
   );
+  
 };

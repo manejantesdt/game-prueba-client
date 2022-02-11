@@ -1,7 +1,10 @@
 import { useSelector, useDispatch } from "react-redux";
 import { CardPlayer } from "./CardPlayer";
-import { BoldPlayersSections, BoldPlayersPagination } from "../styles/BoldPlayers";
-import { searchPlayers,getPlayers } from "../actions";
+import {
+  BoldPlayersSections,
+  BoldPlayersPagination,
+} from "../styles/BoldPlayers";
+import { searchPlayers, getPlayers } from "../actions";
 import { useEffect, useState } from "react";
 import Paged from "./Paged";
 
@@ -14,7 +17,7 @@ export const SearchPlayer = () => {
       searchPlayers(nickname ? { nick_name: nickname } : { nick_name: "" }),
       getPlayers({})
     );
-  }, [players,nickname, dispatch]);
+  }, [players, nickname, dispatch]);
 
   const [currentPage, setCurrentPage] = useState(1);
   const [playersPerPage] = useState(6);
@@ -32,9 +35,10 @@ export const SearchPlayer = () => {
     <>
       <BoldPlayersSections>
         <div className="suplentes">
-          {currentPlayers?.map((j) => {
+          {currentPlayers?.map((j, i) => {
             return (
               <CardPlayer
+                key={i}
                 nickname={j.nickname}
                 image={j.avatar}
                 id={j.Id}
@@ -44,10 +48,9 @@ export const SearchPlayer = () => {
             );
           })}
         </div>
-
       </BoldPlayersSections>
 
-      <BoldPlayersPagination >
+      <BoldPlayersPagination>
         <div className="pagesContainer">
           <Paged
             playersPerPage={playersPerPage}
@@ -56,14 +59,16 @@ export const SearchPlayer = () => {
             currentPage={currentPage}
           />
         </div>
-        <div className="returnContainer"> 
-          <a href="/" className="BackHome" >Regresar</a>  
+        <div className="returnContainer">
+          <a href="/" className="BackHome">
+            Volver
+          </a>
         </div>
       </BoldPlayersPagination>
     </>
   ) : (
     <>
-      <h4>...loading search</h4>
+      <h4>...descargando búsqueda</h4>
     </>
   );
 };

@@ -13,7 +13,7 @@ import logo from "../img/Recicle.png";
 
 export const NavBar = () => {
   const { searchPlayer } = useSelector((state) => state);
-  
+  console.log(searchPlayer);
   return searchPlayer?.length > 0 ? (
     <ContNavBar>
       <ContLogo>
@@ -24,18 +24,19 @@ export const NavBar = () => {
       <ContNav>
         <Ul>
           <Link to="/" className="link">
-            Home
+            Inicio
           </Link>
         </Ul>
         <Ul>
           <Link to="/create" className="link">
-            Create Player
+            Crear Jugador
           </Link>
         </Ul>
         <Ul>
           <Link to="about" className="link">
-            About
+            Sobre
           </Link>
+          
         </Ul>
       </ContNav>
     </ContNavBar>
@@ -48,17 +49,17 @@ export const NavBar = () => {
     <ContNav>
       <Ul>
         <Link to="/" className="link">
-          Home
+          Inicio
         </Link>
       </Ul>
       <Ul>
         <Link to="/create" className="link">
-          Create Player
+          Crear Jugador
         </Link>
       </Ul>
       <Ul>
         <Link to="about" className="link">
-          About
+          Sobre
         </Link>
       </Ul>
     </ContNav>

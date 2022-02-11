@@ -18,7 +18,7 @@ export const FilterBar = () => {
 
   return (
     <IntoForm>
-      <p>Filtrar por status</p>
+      <p>Filtrar por Status</p>
       <select className="input_form" onChange={handleStatus} name="status">
         <option value="">Todos</option>
         <option value="oro">Oro</option>
@@ -27,7 +27,7 @@ export const FilterBar = () => {
         <option value="hierro">Hierro</option>
       </select>
 
-      <p>Filtrar por orden</p>
+      <p>Ordenar por Ranking</p>
       <select className="input_form" onChange={handleOrder} name="order">
         <option value="">Todos</option>
         <option value="asc">Ascendente</option>
