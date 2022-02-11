@@ -97,6 +97,7 @@ ${'' /* section {
   margin: 0 auto;
   margin-top: 20px;
   color: #fff;
+  font-family: 'Russo One', sans-serif;
   overflowX: scroll;
   text-align: center;
   // border: 1px solid #fff;

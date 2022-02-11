@@ -9,7 +9,7 @@ import {
   ContLogo,
   Ul,
 } from "../styles/NavBar.js";
-import logo from "../img/LogoNvo.png";
+import logo from "../img/Recicle.png";
 
 export const NavBar = () => {
   const { searchPlayer } = useSelector((state) => state);
