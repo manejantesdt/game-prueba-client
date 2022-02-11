@@ -9,8 +9,7 @@ quiénes son los jugadores del mismo.
 ## ¿Puedo ver esta aplicación en vivo? 💻
 
 Claro que sí! Tanto el Front-end como el Back-end fueron deployadas utilizando diferentes servicios en AWS (Lambda, Dynamo, S3 y otros). 
-Puedes visitar la versión online haciendo click en el siguiente  enlace:
-https://dfuf67ce7t2lm.cloudfront.net/
+[Puedes visitar la versión online haciendo click en el siguiente  enlace:](https://dfuf67ce7t2lm.cloudfront.net/)
 
 ## Comenzando 🚀
 
@@ -19,18 +18,18 @@ Las siguientes instrucciones te permitirán obtener una copia del proyecto en fu
 1. Forkea el repositorio para tener una copia del mismo en tu cuenta
 2. Clona el repositorio en tu computadora para hacer pruebas
 
-_Si en cambio prefieres desplegar el proyecto utilizando los servicios de la nube de AWS, sigue las indicaciones en el [documento llamado **DEPLOY**](https://github.com/manejantesdt/game-prueba-client/blob/dev/DEPLOY.md) de este repositorio donde encontrarás instrucciones paso a paso._
+_Si en cambio prefieres desplegar el proyecto utilizando los servicios de la nube de AWS, sigue las indicaciones en el [documento llamado **DEPLOY.md**](https://github.com/manejantesdt/game-prueba-client/blob/dev/DEPLOY.md) de este repositorio donde encontrarás instrucciones paso a paso._
 
 ### Pre-requisitos 📋
 
-Para instalar esta aplicaicón es necesario contar con la última versión estable de Node y NPM. Asegúrate de contar con ellas para poder instalar correctamente las dependencias necesarias para correr el proyecto.
+Para instalar esta aplicación es necesario contar con la última versión estable de Node y NPM. Asegúrate de contar con ellas para poder instalar correctamente las dependencias necesarias para correr el proyecto.
 
 Actualmente las versiones necesarias son:
 
  * __Node__: 16.14.0 o mayor
  * __NPM__: 8.4.1 o mayor
 
-Para verificar que versión tienen instalada:
+Para verificar que versión tienes instalada:
 
 > node -v
 >
@@ -51,7 +50,6 @@ Este paso ejecuta un comando especificado en la propiedad "start" dentro de los 
 Este comando abrirá [http://localhost:3000](http://localhost:3000) en tu navegador.
 
 La página se volverá a descargar si haces cambios en el código.
-También podrás ver si hay errores en la consola.
 
 ## ¿Qué puedo hacer en la versión online? 💡
 
@@ -62,37 +60,36 @@ jugadores con mayor ranking, incluyendo id, nickname, ranking, status y avatar.
     <img height="120" src='https://drive.google.com/thumbnail?id=1ZhFz6JMOtT3107w-z2KuO0PZMOKEzIYx' </img>
 </p> 
 
-- Puedes ver efectivamente que en el panel superior, en la sección titulada "Top Ten", aparecen las tarjetas de los 10 jugadores con mayor ranking de toda la aplicación, que cuenta actualmente con una base de datos de más de tres mil jugadores.
+- Puedes ver efectivamente que en el panel superior, en la sección titulada "Top Ten", aparecen las tarjetas de 7 de los 10 jugadores con mayor ranking de toda la aplicación, que cuenta actualmente con una base de datos de más de tres mil jugadores.
 
-- En el panel central, puedes ver en el podio, en un lugar destacado, a los 3 mejores de esos 10 primeros. 
+- En el panel central, puedes ver en el podio, en un lugar destacado, a los 3 mejores dentro de esos 10 primeros. 
 
 <p align='left'>
     <img height="150" src='http://game-prueba-client.s3-website-us-east-1.amazonaws.com/static/media/podio.56d7824ee98f76bacb0e.png' </img>
 </p> 
 
-- En el panel inferior, llamado "Jugadores Destacdados", puedes ver 6 jugadores destacados - es decir, 10 forman parte del Top Ten y otros 6 forman parte de Bold Players porque quisimos que esos jugadores también tengan un lugar dentro del Salón de la Fama.
+- En el panel inferior, llamado "Jugadores Destacados", puedes ver 6 jugadores destacados - es decir, 10 forman parte del Top Ten y otros 6 forman parte de Jugadores Destacados porque quisimos que esos jugadores también tengan un lugar remarcable dentro del Salón de la Fama.
 
-- Al hacer click sobre la tarjeta de cualquier jugador, puedes mirar los detalles específicos de ese jugador:  Id, avatar, nickname, status y ranking. 
-Puedes navegar por todo el sitio web, ir a la pestaña "Create Player" (crear un jugador), donde podrás elegir tu nickname, tu avatar favorito, tu status y tu puntaje dentro del campo "ranking". 
+- Al hacer click sobre la tarjeta de cualquier jugador, puedes ver los detalles específicos de ese jugador:  Id, avatar, nickname, status y ranking. 
 
-- También puedes editar los jugadores que están creados, e incluso borrarlos.
+- Puedes ir a la pestaña "Create Player" (crear un jugador), donde podrás elegir tu nickname (campo obligatorio) y de manera opcional elegir tu avatar favorito.
 
-- Al hacer click en la pestaña Sobre, encontrarás información sobre este juego.
+- También puedes editar los jugadores que ya están creados, e incluso borrarlos.
+
+- Al hacer click en el enlace "Sobre", encontrarás información sobre este juego y su salón de la fama.
 
 # Desarrollo
 
 ## Objetivos del Proyecto
 
 - Construímos una aplicación utilizando React, Javascript, Redux, Express, Styled Components.
-- Utilizamos otras tecnologìas : AWS y Cypress 
+- Utilizamos otras tecnologìas : AWS para el deploy  y Cypress para hacer pruebas de testing unitario y end-to-end.
 - Utilizamos la metodología SCRUM trabajando en equipo, mediante el uso de Trello.
-- Pusimos en práctica el workflow de GIT implementando CI (integración continua) y desarrollo continuo. 
+- Pusimos en práctica el workflow de GIT implementando integración continua (CI) y despliegue continuo (CD)
 
 ## Boiler Plate
 
 El boilerplate cuenta con dos carpetas: `api` y `client`. En estas carpetas estará el código del back-end y el front-end respectivamente.
-
-Creamos una base de datos llamada `CredituPlayers` utilizando Dynamo.
 
 El contenido de `client` fue creado usando: Create React App.
 
