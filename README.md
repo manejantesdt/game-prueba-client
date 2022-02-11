@@ -14,12 +14,12 @@ https://dfuf67ce7t2lm.cloudfront.net/
 
 ## Comenzando 🚀
 
-_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de pruebas._
-
-Si en cambio prefieres desplegar el proyecto utilizando los servicios de la nube de AWS, sigue las indicaciones en el [documento **DEPLOY**](https://github.com/manejantesdt/game-prueba-client/blob/dev/DEPLOY.md) de este repositorio donde encontrarás instrucciones paso a paso.
+Las siguientes instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de pruebas._
 
 1. Forkea el repositorio para tener una copia del mismo en tu cuenta
 2. Clona el repositorio en tu computadora para hacer pruebas
+
+_Si en cambio prefieres desplegar el proyecto utilizando los servicios de la nube de AWS, sigue las indicaciones en el [documento **DEPLOY**](https://github.com/manejantesdt/game-prueba-client/blob/dev/DEPLOY.md) de este repositorio donde encontrarás instrucciones paso a paso.
 
 ### Pre-requisitos 📋
 
