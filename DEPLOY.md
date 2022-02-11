@@ -132,3 +132,5 @@ Este proyecto está bajo la Licencia de Dream Team Manejantes
 * Comenta a otros sobre este proyecto 📢
 * Invita una cerveza 🍺 o un café ☕ a alguien del equipo. 
 
+---
+⌨️ con ❤️ por [Manejantes](https://github.com/manejantesdt) 😊
