@@ -174,7 +174,7 @@ Da un ejemplo
 * **Marisa Lia Pascal ** - [Marisaliap](https://github.com/Marisaliap)
 * **Nelson Albera ** - [nalbera](https://github.com/nalbera)
 * **Gustavo Montero ** - [gamontero](https://github.com/gamontero)
-* **Daneil Alberto Mena ** - [BtoMJ](https://github.com/BtoMJ)
+* **Daniel Alberto Mena ** - [BtoMJ](https://github.com/BtoMJ)
 * **Fabrizio Santandrea ** - [fabsantandrea](https://github.com/fabsantandrea)
 
 
