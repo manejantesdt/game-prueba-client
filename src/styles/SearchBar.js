@@ -76,7 +76,7 @@ li {
   border: none;
   font-size: 1rem;
   font-weight: bold;
-  background-color: #77D970;
+  background-color: #b42769;
   color: #fff;
   border-radius: 10px;
   transition: 0.5s all;
