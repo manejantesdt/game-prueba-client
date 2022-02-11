@@ -89,11 +89,11 @@ jugadores con mayor ranking, incluyendo id, nickname, ranking, status y avatar.
 
 ## Boiler Plate
 
-El boilerplate cuenta con dos carpetas: `api` y `client`. En estas carpetas estará el código del back-end y el front-end respectivamente.
+El boilerplate cuenta con dos carpetas: `back-aws-game` y `game-prueba-client`. En estas carpetas estará el código del back-end y el front-end respectivamente.
 
-El contenido de `client` fue creado usando: Create React App.
+El contenido de `game-prueba-client` fue creado usando: Create React App.
 
-### Aplicación del Salón de la fama
+### Aplicación del Salón de la Fama
 
 ## Frontend
 
