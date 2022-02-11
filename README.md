@@ -122,6 +122,7 @@ __Ruta principal__: contiene
     - Nickname
     - Status
     - Ranking
+- [ ] Una letra X que al clickear sobre ella dispara la acción de eliminar al jugador
  
  __Ruta de creación de un nuevo jugador__: Podrás crear un jugador ingresando el campo nickname y, opcionalmente, seleccionar un avatar. Contiene
 - [ ] Un formulario __controlado__ con los siguientes campos
