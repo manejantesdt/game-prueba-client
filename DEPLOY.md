@@ -47,7 +47,7 @@ La aplicación se desplegará en [http://localhost:3000/](http://localhost:3000/
 
 Ahora vas a ir a tu cuenta de Amazon a crear tu S3. 
 
-En tu cuenta de Amazon, busca S3 y cuando ingreses al panel, vas a "crear un nuevo bucket". Ingresa el nombre de tu bucket, el que prefieras, por ejemplo S3-(tunombre). 
+En los servicios de Amazon, busca S3 y cuando ingreses al panel, vas a la opción de "Crear un nuevo bucket". Ingresa el nombre de tu bucket, el que prefieras, por ejemplo S3-(tunombre). 
 La región la dejas como está y clickeas en siguiente. En el paso 2 (Configuar opciones) no cambias nada y le das a siguiente. 
 
 En el paso 3, "Establecer Permisos", actualmente te aparece bloqueado a todo el público pero tú quieres que el público sea capaz de entrar a tu bucket para visualizar la página web. Entonces desmarcas la casilla "Bloquear todo acceso público". Te dará un mensaje de advertencia de que ahora todo el público tendrá acceso a este bucket - es lo que queremos y le marcas la casilla donde reconoces que "esta configuración actual..." es la que necesitas. Vamos a la siguiente pestaña donde vas al botón "crear bucket". 
