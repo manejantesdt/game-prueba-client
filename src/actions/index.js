@@ -33,7 +33,7 @@ export const getPlayers = () => {
           
         )
       ).data;
-      const players = json.body.console;
+      const players = json.body.players;
       dispatch({
         type: "GET_PLAYERS",
         payload: players,
