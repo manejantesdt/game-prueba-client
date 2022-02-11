@@ -23,7 +23,7 @@ Una vez que tengas AWS CLI instalado y configurado, vas a ir a la terminal y eje
 
 ### `aws configure` 
 
-Al presionar Enter te pedirá la clave de acceso que hemos obtenido de nuestro usuario IAM:
+Al presionar Enter te pedirá las claves de acceso que has obtenido de tu usuario IAM:
 
 ```sh
 AWS_ACCESS_KEY_ID  (ingresa tu clave de acceso)  -> Enter
