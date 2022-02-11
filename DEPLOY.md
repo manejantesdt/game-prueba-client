@@ -2,7 +2,7 @@
 
 _Aquí te dejamos instrucciones paso a paso sobre cómo hacer el deploy de este proyecto utilizando el servicio S3 de AWS_
 
-Lo primero que tenemos que hacer para es [crear una cuenta en la página web de amazon web services](https://docs.aws.amazon.com) o iniciar sesión si ya tenemos una.
+Lo primero que tenemos que hacer para es [crear una cuenta en la página web de amazon web services](https://aws.amazon.com) o iniciar sesión si ya tenemos una.
 
 En los servicios de AWS buscamos IAM para [crear un nuevo usuario IAM](https://docs.aws.amazon.com/es_es/es_es/IAM/latest/UserGuide/id_roles_create.html). 
 Introducimos un nombre de usuario, (por ejemplo serverless-admin), le damos acceso mediante programación.
