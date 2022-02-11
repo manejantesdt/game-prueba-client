@@ -175,8 +175,9 @@ Da un ejemplo
 * **Nelson Albera ** - [nalbera](https://github.com/nalbera)
 * **Gustavo Montero ** - [gamontero](https://github.com/gamontero)
 * **Daniel Alberto Mena ** - [BtoMJ](https://github.com/BtoMJ)
-* **Fabrizio Santandrea ** - [fabsantandrea](https://github.com/fabsantandrea)
 
+### Una mención especial por su compañerismo y su aporte a este proyecto para
+* **Fabrizio Santandrea ** - [fabsantandrea](https://github.com/fabsantandrea)
 
 ## Licencia 📄
 
