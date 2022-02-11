@@ -19,7 +19,7 @@ Las siguientes instrucciones te permitirán obtener una copia del proyecto en fu
 1. Forkea el repositorio para tener una copia del mismo en tu cuenta
 2. Clona el repositorio en tu computadora para hacer pruebas
 
-_Si en cambio prefieres desplegar el proyecto utilizando los servicios de la nube de AWS, sigue las indicaciones en el [documento **DEPLOY**](https://github.com/manejantesdt/game-prueba-client/blob/dev/DEPLOY.md) de este repositorio donde encontrarás instrucciones paso a paso.
+_Si en cambio prefieres desplegar el proyecto utilizando los servicios de la nube de AWS, sigue las indicaciones en el [documento llamado **DEPLOY**](https://github.com/manejantesdt/game-prueba-client/blob/dev/DEPLOY.md) de este repositorio donde encontrarás instrucciones paso a paso._
 
 ### Pre-requisitos 📋
 
