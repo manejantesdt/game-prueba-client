@@ -2,6 +2,10 @@
 
 _Aquí te dejamos instrucciones paso a paso sobre cómo hacer el deploy de este proyecto utilizando el servicio S3 de AWS_
 
+## Comenzando 🚀
+
+#### Crea las Credenciales de tu cuenta de AWS
+
 Lo primero que tenemos que hacer para es [crear una cuenta en la página web de amazon web services](https://aws.amazon.com) o iniciar sesión si ya tenemos una.
 
 En los servicios de AWS buscamos IAM para [crear un nuevo usuario IAM](https://docs.aws.amazon.com/es_es/es_es/IAM/latest/UserGuide/id_roles_create.html). 
@@ -11,6 +15,8 @@ En la siguiente ventana, le vamos a asignar los permisos. Vamos a ir a la opció
 "AdministratorAccess". Vamos a siguiente, dejamos vacío (añadir etiquetas es opcional), vamos a revisar y clickeamos en crear usuario.  
 
 Nuestro usuario se crea y tenemos el Id de acceso y la clave secreta. No reveles tus claves a nadie. Es muy importante que descarges el archivo csv que las contiene y lo guardes o bien las copias en un bloc de notas. 
+
+#### Instalando y configurando AWS CLI
 
 Después de obtener estas claves vas a instalar AWS CLI. 
 
@@ -44,6 +50,8 @@ Ahora estás listo para ejecutar la aplicación. En la consola de Visual Studio 
 La aplicación se desplegará en [http://localhost:3000/](http://localhost:3000/)
 
 ¡Has verificado que la aplicación funciona! Vas a detener la aplicación presionando al mismo tiempo las teclas: CTRL + C
+
+#### Creando y configurando tu bucket S3 en AWS
 
 Ahora vas a ir a tu cuenta de Amazon a crear tu S3. 
 
@@ -82,6 +90,8 @@ Lo único que tienes que hacer es copiar este mismo código, y reemplazar donde 
 bucket tiene acceso público (esto es lo que queremos porque es una web pública para que la gente entre a verla).
 
 Nuestro bucket ya está configurado.
+
+#### Desplegando el proyecto 😊
 
 Ahora ve a tu aplicación en Visual Studio o en tu editor favorito y abre el archivo package.json
 En la sección de scripts, debajo del último script, vas a agregar una coma y dar enter, y debajo vas a crear un nuevo script llamado "deploy", de esta manera:
