@@ -113,9 +113,9 @@ Esto se va a ocupar de subir tu aplicación al S3 de Amazon. Cuando termine este
 
 Si buscas dentro de los archivos y pinchas en el archivo index.html, verás que tienes la ruta (url del objeto). Si haces click te llevará a tu página web. 
 
-Verás la página que hemos construido con todos los archivos que has descargado. 
+Verás la página que hemos construido con todos los archivos del repositorio. 
 
-De esta manera has subido nuestra aplicación de React a tu bucket de AWS 😊
+Así llegamos al final de este pequeño tutorial. Si llegaste a este punto, habrás desplegado nuestra aplicación game-prueba-client realizada con React en tu bucket S3 de AWS 😊
 
 
 ## Autores ✒️
