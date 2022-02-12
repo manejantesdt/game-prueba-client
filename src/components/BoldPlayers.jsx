@@ -5,12 +5,12 @@ import { BoldPlayersSections } from "../styles/BoldPlayers";
 
 export const BoldPlayers = () => {
   const { players } = useSelector((state) => state);
-  const boldPlayers=players.slice(10,16);
+  // const boldPlayers=players.slice(10,16);
   return (
     <BoldPlayersSections>
       <h2>Jugadores Destacados</h2>
       <div className="suplentes">
-      {boldPlayers.map((j) => {
+      {/* {boldPlayers.map((j) => {
             return (
               <CardPlayer
                 nickname={j.nickname}
@@ -21,7 +21,7 @@ export const BoldPlayers = () => {
                 ranking={j.ranking}
               />
             );
-          })}
+          })} */}
       </div>
     </BoldPlayersSections>
   );

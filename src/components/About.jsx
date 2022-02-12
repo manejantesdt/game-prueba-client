@@ -92,7 +92,7 @@ export const About = () => {
           </p>
            </div>
         <Link to="/">
-          <button className="button_form">Back </button>
+          <button className="button_form">Volver </button>
         </Link>
       </article>
     </AboutSection>

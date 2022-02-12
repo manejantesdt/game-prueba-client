@@ -10,7 +10,7 @@ export const TopThree = () => {
   
   useEffect(() => {}, [players]);
   
-  players = players.slice(0, 3);
+  // players = players.slice(0, 3);
 
   return (
     <TopTenSection>
@@ -22,12 +22,12 @@ export const TopThree = () => {
             var playerShadow = "playerShadow" + ( index + 1 )
             return (
               <>
-                <div className={playerPodio}>
+                {/* <div className={playerPodio}>
                   <img src={player.avatar} alt="jugador" />
                   <div className={playerShadow}>
                     <img src={shadow} alt="sombra"  />
                   </div>
-                </div>
+                </div> */}
               </>
             );
           })}
