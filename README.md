@@ -164,9 +164,10 @@ Da un ejemplo
 * [React](https://es.reactjs.org/) - La librería de JavaScript para construir interfaces de usuario
 * [Redux](https://es.redux.js.org/) - Redux es un contenedor predecible del estado de aplicaciones JavaScript. Lo hacemos combinado con React.
 * [Styled Components](https://styled-components.com/) - La librería que nos permite estilizar nuestros componentes escribiendo código CSS en JavaScrip
-* [Varios servicios de AWS](https://aws.amazon.com/) - Es la plataforma en la nube más adoptada y completa en el mundo
-* [Amazon Web Services S3](https://aws.amazon.com/es/s3/) - Almacenamiento de objetos de Amazon creado para recuperar cualquier volumen de datos desde cualquier ubicación
+* [Amazon Web Services](https://aws.amazon.com/) - Es la plataforma en la nube más adoptada y completa en el mundo
+* [AWS S3](https://aws.amazon.com/es/s3/) - Almacenamiento de objetos de Amazon creado para recuperar cualquier volumen de datos desde cualquier ubicación
 * [Cypress](https://www.cypress.io/) - Un framework de testing moderno, es una de las herramientas más populares de testing
+* [GitHub Actions](https://github.com/features/actions) - GitHub Actions es una plataforma de integración continua y entrega continua (CI/CD) que nos facilita la automatización de todos los flujos de trabajo de software. Podemos crear, testear y desplegar nuestro código directamente desde GitHub. El código creado y enviado desde los equipos locales para actualizar el repositorio de GitHub puede ser testeado y desplegado automáticamente. 
 
 
 ## Autores ✒️
