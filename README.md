@@ -82,10 +82,10 @@ jugadores con mayor ranking, incluyendo id, nickname, ranking, status y avatar.
 
 ## Objetivos del Proyecto
 
-- Construímos una aplicación utilizando React, Javascript, Redux, Express, Styled Components.
-- Utilizamos otras tecnologìas : AWS para el deploy  y Cypress para hacer pruebas de testing unitario y end-to-end.
+- Construímos una aplicación utilizando React, Javascript, Node, Redux, Express, Styled Components.
+- Utilizamos otras tecnologìas : AWS, Serverless Framework, Cypress, Jest
 - Utilizamos la metodología SCRUM trabajando en equipo, mediante el uso de Trello.
-- Pusimos en práctica el workflow de GIT implementando integración continua (CI) y despliegue continuo (CD)
+- Pusimos en práctica el workflow de GIT implementando CI (integración continua) y DC (desarrollo continuo).
 
 ## Boiler Plate
 
