@@ -4,7 +4,7 @@ _Aquí te dejamos instrucciones paso a paso sobre cómo hacer el deploy de este 
 
 ## Comenzando 🚀
 
-#### Crea las Credenciales de tu cuenta de AWS
+## Crea las Credenciales de tu cuenta de AWS
 
 Lo primero que tenemos que hacer para es [crear una cuenta en la página web de amazon web services](https://aws.amazon.com) o iniciar sesión si ya tenemos una.
 
@@ -16,7 +16,7 @@ En la siguiente ventana, le vamos a asignar los permisos. Vamos a ir a la opció
 
 Nuestro usuario se crea y tenemos el Id de acceso y la clave secreta. No reveles tus claves a nadie. Es muy importante que descarges el archivo csv que las contiene y lo guardes o bien las copias en un bloc de notas. 
 
-#### Instalando y configurando AWS CLI
+## Instalando y configurando AWS CLI
 
 Después de obtener estas claves vas a instalar AWS CLI. 
 
@@ -51,7 +51,7 @@ La aplicación se desplegará en [http://localhost:3000/](http://localhost:3000/
 
 ¡Has verificado que la aplicación funciona! Vas a detener la aplicación presionando al mismo tiempo las teclas: CTRL + C
 
-#### Creando y configurando tu bucket S3 en AWS
+## Creando y configurando tu bucket S3 en AWS
 
 Ahora vas a ir a tu cuenta de Amazon a crear tu S3. 
 
@@ -91,7 +91,7 @@ bucket tiene acceso público (esto es lo que queremos porque es una web pública
 
 Nuestro bucket ya está configurado.
 
-#### Desplegando el proyecto 😊
+## Desplegando el proyecto 😊
 
 Ahora ve a tu aplicación en Visual Studio o en tu editor favorito y abre el archivo package.json
 En la sección de scripts, debajo del último script, vas a agregar una coma y dar enter, y debajo vas a crear un nuevo script llamado "deploy", de esta manera:
