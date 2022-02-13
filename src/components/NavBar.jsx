@@ -2,6 +2,9 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { SearchBar } from "./SearchBar";
 import { FilterBar } from "./FilterBar";
+import logo from "../img/Recicle.png";
+import { useDispatch } from "react-redux";
+import {getPlayers} from "../actions/index";
 import {
   ContNavBar,
   LogoImg,
@@ -9,11 +12,11 @@ import {
   ContLogo,
   Ul,
 } from "../styles/NavBar.js";
-import logo from "../img/Recicle.png";
+
 
 export const NavBar = () => {
   const { searchPlayer } = useSelector((state) => state);
-  console.log(searchPlayer);
+  const dispatch = useDispatch();
   return searchPlayer?.length > 0 ? (
     <ContNavBar>
       <ContLogo>
@@ -23,8 +26,9 @@ export const NavBar = () => {
       </ContLogo>
       <ContNav>
         <Ul>
-          <Link to="/" className="link">
+          <Link to="/" className="link" >
             Inicio
+            {dispatch(getPlayers({}))}
           </Link>
         </Ul>
         <Ul>

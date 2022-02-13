@@ -29,10 +29,10 @@ export const EditPlayer = () => {
   const dispatch = useDispatch();
   var { id } = useParams();
 
-  useEffect(async () => {
-    await dispatch(getPlayerId(id));
+  useEffect(() => {
+    dispatch(getPlayerId(id));
     dispatch(getPlayers({}));
-  }, [dispatch, id]);
+  }, []);
   // _____________________________________________________________________________
   // ------------------------------<State>----------------------------------
   const [checkform, setCheckform] = useState(false);
