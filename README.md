@@ -159,7 +159,7 @@ _Explica que verifican estas pruebas y por qué_
 Da un ejemplo
 ```
 
-## Construido con 🛠️
+## Construído con 🛠️
 
 * [React](https://es.reactjs.org/) - La librería de JavaScript para construir interfaces de usuario
 * [Redux](https://es.redux.js.org/) - Redux es un contenedor predecible del estado de aplicaciones JavaScript. Lo hacemos combinado con React.
