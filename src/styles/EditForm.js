@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
 
-
+const media = {
+  cellphone: "@media (min-width: 600px)",
+}
 export const ContEdit = styled.div`
   width: 800px;
   height: 400px;

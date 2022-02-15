@@ -3,7 +3,7 @@ import axios from "axios";
 // -----------------------<Gets>------------------------
 
 export const searchPlayers = ({ nick_name, order, status }) => {
-  return async (dispatch) => {
+ return async (dispatch) => {
     try {
       const json = (
         await axios.get(
@@ -19,6 +19,7 @@ export const searchPlayers = ({ nick_name, order, status }) => {
         type: "SEARCH_PLAYERS",
         payload: players,
       });
+      console.log(players);
     } catch (error) {
       console.error(error);
     }
@@ -38,7 +39,6 @@ export const getPlayers = () => {
         type: "GET_PLAYERS",
         payload: players,
       });
-      console.log(players, "players");
 
     } catch (error) {
       console.error(error);

@@ -15,7 +15,7 @@ export const SearchPlayer = () => {
   useEffect(() => {
     dispatch(
       searchPlayers(nickname ? { nick_name: nickname } : { nick_name: "" }),
-      getPlayers({})
+      // getPlayers({})
     );
   }, [players, nickname, dispatch]);
 
@@ -42,8 +42,8 @@ export const SearchPlayer = () => {
                 nickname={j.nickname}
                 image={j.avatar}
                 id={j.Id}
-                status={j.status}
-                ranking={j.ranking}
+                // status={j.status}
+                // ranking={j.ranking}
               />
             );
           })}

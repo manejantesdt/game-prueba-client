@@ -28,11 +28,11 @@ export const EditPlayer = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   var { id } = useParams();
-
+console.log(player)
   useEffect(() => {
     dispatch(getPlayerId(id));
-    dispatch(getPlayers({}));
-  }, []);
+    // dispatch(getPlayers({}));
+  }, [id,dispatch]);
   // _____________________________________________________________________________
   // ------------------------------<State>----------------------------------
   const [checkform, setCheckform] = useState(false);
