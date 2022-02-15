@@ -4,27 +4,29 @@ import axios from "axios";
 
 export const searchPlayers = ({ nick_name, order, status }) => {
   return async (dispatch) => {
-    try {
-      const json = (
-        await axios.get(
-          `https://mrsemsqfk6.execute-api.us-east-1.amazonaws.com/player?nick_name=${
-            nick_name ? nick_name : ""
-          }&order=${order ? order : ""}&status=${
-            status ? status : ""
-          }&amount=3200`
-        )
-      ).data;
-      const players = json.body.players;
-      dispatch({
-        type: "SEARCH_PLAYERS",
-        payload: players,
-      });
-    } catch (error) {
-      console.error(error);
-    }
-  };
-};
-export const getPlayers = () => {
+     try {
+       const json = (
+         await axios.get(
+           `https://mrsemsqfk6.execute-api.us-east-1.amazonaws.com/player?nick_name=${
+             nick_name ? nick_name : ""
+           }&order=${order ? order : ""}&status=${
+             status ? status : ""
+           }&amount=3200`
+         )
+       ).data;
+       const players = json.body.players;
+       dispatch({
+         type: "SEARCH_PLAYERS",
+         payload: players,
+       });
+       console.log(players);
+     } catch (error) {
+       console.error(error);
+     }
+   };
+ };
+
+ export const getPlayers = () => {
   return async (dispatch) => {
     try {
       const json = (
@@ -34,12 +36,10 @@ export const getPlayers = () => {
         )
       ).data;
       const players = json.body.getPlayers;
-
       dispatch({
         type: "GET_PLAYERS",
         payload: players,
       });
-      console.log(players, "players");
 
     } catch (error) {
       console.error(error);
