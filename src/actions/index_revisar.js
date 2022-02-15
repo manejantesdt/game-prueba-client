@@ -1,14 +1,15 @@
 import axios from "axios";
+require('dotenv').config();
+const{ URL_API } = process.env 
+
 
 // -----------------------<Gets>------------------------
 
 export const searchPlayers = ({ nick_name, order, status }) => {
-
- return async (dispatch) => {
+  return async (dispatch) => {
     try {
       const json = (
-        await axios.get(
-          `https://mrsemsqfk6.execute-api.us-east-1.amazonaws.com/player?nick_name=${
+        await axios.get(`${URL_API}/player?nick_name=${
             nick_name ? nick_name : ""
           }&order=${order ? order : ""}&status=${
             status ? status : ""
@@ -20,28 +21,23 @@ export const searchPlayers = ({ nick_name, order, status }) => {
         type: "SEARCH_PLAYERS",
         payload: players,
       });
-      console.log(players);
     } catch (error) {
       console.error(error);
     }
   };
 };
 export const getPlayers = () => {
-
   return async (dispatch) => {
     try {
       const json = (
-        await axios.get(
-          `https://mrsemsqfk6.execute-api.us-east-1.amazonaws.com/player?nickname=&amount=50&order=desc`
-          
+        await axios.get(`${URL_API}/player?nickname=&amount=50&order=desc`
         )
       ).data;
-      const players = json.body.getPlayers;
+      const players = json.body.players;
       dispatch({
         type: "GET_PLAYERS",
         payload: players,
       });
-
     } catch (error) {
       console.error(error);
     }
@@ -65,8 +61,7 @@ export const createPlayer = (player) => {
   return async (dispatch) => {
     try {
       const json = (
-        await axios.post(
-          "https://mrsemsqfk6.execute-api.us-east-1.amazonaws.com/player",
+        await axios.post(`${URL_API}/player`,
           player
         )
       ).data;
@@ -84,8 +79,7 @@ export const getPlayerId = (Id) => {
   return async (dispatch) => {
     try {
       const json = (
-        await axios.get(
-          `https://mrsemsqfk6.execute-api.us-east-1.amazonaws.com/player/${Id}`
+        await axios.get(`${URL_API}/player/${Id}`
         )
       ).data;
       const player = json.body;
@@ -103,8 +97,7 @@ export const editPlayer = (Id, player) => {
   return async (dispatch) => {
     try {
       const json = (
-        await axios.put(
-          `https://mrsemsqfk6.execute-api.us-east-1.amazonaws.com/player/` + Id,
+        await axios.put(`${URL_API}/player/` + Id,
           player
         )
       ).data;
@@ -121,8 +114,7 @@ export const deletePlayer = (Id) => {
   return async (dispatch) => {
     try {
       const json = (
-        await axios.delete(
-          `https://mrsemsqfk6.execute-api.us-east-1.amazonaws.com/player/${Id}`
+        await axios.delete(`${URL_API}/player/${Id}`
         )
       ).data;
       dispatch({
@@ -154,3 +146,4 @@ export const setOrder = (order) => {
     payload: order,
   };
 };
+

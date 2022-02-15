@@ -20,7 +20,7 @@ export const SearchPlayer = () => {
   }, [players, nickname, dispatch]);
 
   const [currentPage, setCurrentPage] = useState(1);
-  const [playersPerPage] = useState(6);
+  const [playersPerPage] = useState(18);
   const indexOfLastPlayer = currentPage * playersPerPage;
   const indexOffirstPlayer = indexOfLastPlayer - playersPerPage;
   const currentPlayers = searchPlayer
