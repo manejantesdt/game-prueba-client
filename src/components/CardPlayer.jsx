@@ -20,11 +20,11 @@ export const CardPlayer = ({
   return (
     <article {...props} className="jugador">
       <NavLink to={`/id/${id}`}>
-        {/* <div className="btnClose">
+        <div className="btnClose">
           <button type="onSubmit" onClick={onClick}>
             X
           </button>
-        </div> */}
+        </div>
         <div className="avatar">
           <img src={image} alt={nickname} />
         </div>

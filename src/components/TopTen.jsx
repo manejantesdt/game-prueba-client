@@ -2,7 +2,7 @@ import React,{ useEffect } from "react";
 import { TopTenSection } from "../styles/TopTen";
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
-// import fondo from "../img/podio.png";  
+import fondo from "../img/podio.png";
 import shadow from "../img/shadow.png";
 import confeti from "../img/confetti.gif";
 
@@ -23,9 +23,10 @@ export const TopTen = () => {
             var avatarTempo = "avatarTempo" + ( index + 1 )
             // var playerShadow = "playerShadow" + ( index + 1 )
             // var playerInfo = "playerInfo" + ( index + 1 )
-            console.log("Player TopTen",player)
+            console.log(player)
             return (
               <div className="columna">
+                {/* <img src={confeti} alt="confeti" /> */}
                 <div className="Number">
                   {index === 0 ? index +2 : index === 1 ? index: index + 1}
                 </div>
@@ -40,6 +41,10 @@ export const TopTen = () => {
                   <p className="podioRank">{player.ranking}</p>
                   <p > <NavLink className="podioMasInfo" to={`/id/${player.Id}`}>+ info</NavLink></p>
                 </div>
+                {/* <div className="confetti"></div> */}
+
+
+
               </div>
              
                 // <div className={playerPodio}>
