@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# game-prueba
-=======
 # Recicle Being - Proyecto Grupal
 
 Recicle Being es una página web creada como prueba técnica para la empresa CrediTu. 
@@ -199,4 +196,3 @@ Este proyecto está bajo la Licencia de Dream Team Manejantes
 
 ---
 ⌨️ con ❤️ por [Manejantes](https://github.com/manejantesdt) 😊
->>>>>>> 4bc6f50f967dab1322230498d616ba0f2ae26fb6
