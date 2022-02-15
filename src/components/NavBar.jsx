@@ -10,8 +10,11 @@ import {
   Ul,
 } from "../styles/NavBar.js";
 import logo from "../img/Recicle.png";
+import AuthNav from './auth-nav';
+
 
 export const NavBar = () => {
+ 
   const { searchPlayer } = useSelector((state) => state);
   console.log(searchPlayer);
   return searchPlayer?.length > 0 ? (
@@ -20,6 +23,7 @@ export const NavBar = () => {
         <LogoImg src={logo} alt="logo" />
         <SearchBar />
         <FilterBar />
+        
       </ContLogo>
       <ContNav>
         <Ul>
@@ -44,7 +48,8 @@ export const NavBar = () => {
     <ContLogo>
       <LogoImg src={logo} alt="logo" />
       <SearchBar />
-      {/* <FilterBar /> */}
+      <AuthNav />
+       {/* <FilterBar /> */}
     </ContLogo>
     <ContNav>
       <Ul>
