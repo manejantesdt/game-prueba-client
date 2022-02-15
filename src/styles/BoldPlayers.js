@@ -44,6 +44,7 @@ export const BoldPlayersSections = styled.section`
     height: 50px;
     margin-top: 50px;
   }
+  
 `;
 
 export const BoldPlayersPagination = styled.div`
