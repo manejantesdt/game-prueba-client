@@ -34,7 +34,6 @@ export const getPlayers = () => {
         )
       ).data;
       const players = json.body.getPlayers;
-
       dispatch({
         type: "GET_PLAYERS",
         payload: players,
