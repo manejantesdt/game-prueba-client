@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams, useNavigate } from "react-router";
 import { ContEdit, IntoEdit } from "../styles/EditForm.js";
+import { useAuth0 } from '@auth0/auth0-react';
 import {
   getPlayerId,
   editPlayer,
@@ -28,7 +29,9 @@ export const EditPlayer = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   var { id } = useParams();
-
+  const { user, isAuthenticated } = useAuth0();
+  const { email } = user;
+  
   useEffect(() => {
     dispatch(getPlayerId(id));
     dispatch(getPlayers({}));
@@ -38,10 +41,17 @@ export const EditPlayer = () => {
   const [checkform, setCheckform] = useState(false);
   const [editform, setEditform] = useState({});
   const [error, setError] = useState({});
+  const [adminStatus, setAdminStatus] = useState(false)
 
   // __________________________________________________________________________
 
   // ------------------------------<Functions>---------------------------------
+  if (isAuthenticated && email === 'dreamteammanejantes@gmail.com') {
+    setAdminStatus(true)
+  } else {
+    setAdminStatus(false)
+  }
+  
   const onClickCheck = async () => {
     setEditform({
       nickname: player.nickname,
@@ -56,7 +66,7 @@ export const EditPlayer = () => {
   const onClickCancel = () => {
     setEditform({});
     checkform === false ? setCheckform(true) : setCheckform(false);
-  };
+  }
 
   // const onClick = async () => {
   //   await dispatch(editPlayer(id, editform));
@@ -200,7 +210,7 @@ export const EditPlayer = () => {
           Editar Detalles del Jugador
         </h2>
         <ContEdit>
-          {player ? (
+          {player && adminStatus === 'true' ? (
             <IntoEdit key={player.Id} onSubmit={handleSubmit}>
               <img src={editform.avatar} alt="Ávatar" className="editAvatar" />
 
@@ -275,7 +285,11 @@ export const EditPlayer = () => {
               </div>
             </IntoEdit>
           ) : (
-            <div>...descargando...</div>
+            
+            <div>
+              {alert('Log in o Credenciales de administración requeridas')}
+              {navigate('/')}
+            </div>
           )}
         </ContEdit>
       </>
