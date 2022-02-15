@@ -30,7 +30,7 @@ export const ContFooter = styled.div`
     }
 
 .elementFooter{
-    width: 50%;
+    width: 100%;
     font-size: .9rem;
     display: flex;
     flex-direction: row;
@@ -52,7 +52,7 @@ export const ContFooter = styled.div`
     text-align: right;
     padding: 0 10px 0 0;
     // border: solid 1px #fff;
-
+    
     ${media.xs}{
         width: 100%;
         text-align: center;

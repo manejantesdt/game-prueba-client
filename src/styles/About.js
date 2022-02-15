@@ -55,7 +55,7 @@ export const AboutSection = styled.section`
 
     ${media.medium}{
       width: 90%;
-      background-color: red;
+      // background-color: red;
     }
     
     &:hover{

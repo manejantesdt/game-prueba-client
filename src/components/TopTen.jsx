@@ -3,8 +3,8 @@ import { TopTenSection } from "../styles/TopTen";
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 // import fondo from "../img/podio.png";  
-import shadow from "../img/shadow.png";
-import confeti from "../img/confetti.gif";
+// import shadow from "../img/shadow.png";
+// import confeti from "../img/confetti.gif";
 
 export const TopTen = () => {
 
@@ -12,21 +12,23 @@ export const TopTen = () => {
   
   useEffect(() => {}, [players]);
   
-  players = players.slice(0, 3);
+  players = players.slice(4, 10);
 
   return (
     <TopTenSection>
       <div className="cancha">
         <div className="imgPodio">
-          {/* <img src={fondo} alt="fondo" /> */}
-          {players?.map((player, index) => {
+          <img src={fondo} alt="fondo" />
+          {
+            players?.map((player, index) => {
             var avatarTempo = "avatarTempo" + ( index + 1 )
             // var playerShadow = "playerShadow" + ( index + 1 )
             // var playerInfo = "playerInfo" + ( index + 1 )
-            console.log("Player TopTen",player)
+            // console.log("Player TopTen",player)
             return (
-              <div className="columna">
-                <div className="Number">
+              <div className="columna" key={index}>
+                <div>{index}</div>
+                {/* <div className="Number">
                   {index === 0 ? index +2 : index === 1 ? index: index + 1}
                 </div>
                 <div className="avatarPlayer">
@@ -39,7 +41,7 @@ export const TopTen = () => {
                   <p className="podioStatus">{player.status}</p>
                   <p className="podioRank">{player.ranking}</p>
                   <p > <NavLink className="podioMasInfo" to={`/id/${player.Id}`}>+ info</NavLink></p>
-                </div>
+                </div> */}
               </div>
              
                 // <div className={playerPodio}>
@@ -68,8 +70,9 @@ export const TopTen = () => {
               //     </div>
               //   </div>
               // </NavLink>
-            );
-          })}
+              );
+            })
+          }
         </div>
       </div>
     </TopTenSection>

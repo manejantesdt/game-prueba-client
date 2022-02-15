@@ -33,10 +33,7 @@ export const NavBar = () => {
     }
  }
 
-
   const { searchPlayer } = useSelector((state) => state);
-
-  // console.log(searchPlayer);
 
   return searchPlayer?.length > 0 ? (
     <ContNavBar>
@@ -61,7 +58,6 @@ export const NavBar = () => {
           <Link to="about" className="link">
             Sobre
           </Link>
-          
         </Ul>
       </ContNav>
     </ContNavBar>
