@@ -10,13 +10,13 @@ export const CardPlayer = ({
   status,
   ...props
 }) => {
-  const onClick = async (e) => {
-    e.preventDefault();
-    await dispatch(deletePlayer(id));
-    dispatch(getPlayers({}));
-  };
+  // const onClick = async (e) => {
+  //   e.preventDefault();
+  //   await dispatch(deletePlayer(id));
+  //   dispatch(getPlayers({}));
+  // };
 
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   return (
     <article {...props} className="jugador">
       <NavLink to={`/id/${id}`}>
