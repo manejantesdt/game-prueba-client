@@ -9,25 +9,15 @@ const media = {
     ulg: '@media(min-width: 1921px) and (max-width: 2560px)',
   }
 
-
 export const ContFooter = styled.div`
-    width: 100%;
-    height: 30px;
-    margin-bottom: 1rem;
-    color: #ffffff70;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-
-    ${media.xs}{
-        width: 100%;
-        height: 50px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-    }
+width: 100%;
+height: 30px;
+margin-bottom: 1rem;
+color: #ffffff70;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-around;
 
 .elementFooter{
     width: 100%;
@@ -58,27 +48,21 @@ export const ContFooter = styled.div`
         text-align: center;
         font-size: 0.8rem;
     }
+
 }
 
-.element2{
+.element{
     width: 50%;
-    padding: 0 0 0 10px;
-    text-align: left;
-    
-    ${media.xs}{
-        width: 100%;
-        text-align: center;
-        font-size: 0.8rem;
-    }
+    text-align: center;
 }
 
-.element2 a{
+.element a{
     text-decoration: none;
     color: #ff0075;
     transition: all 0.5s;
 }
 
-.element2 a:hover{
+.element a:hover{
     color: #fff
 }
 

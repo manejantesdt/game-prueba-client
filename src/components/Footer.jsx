@@ -5,10 +5,10 @@ export const Footer = () =>{
   return (
     <ContFooter>
         <div className="elementFooter">
-            <div className="element1">
-                Desarrollo a cargo de Dream Team Manejantes &copy; 2022
+            <div className="element">
+                Desarrollo a cargo de InnovaTECH &copy; 2022
             </div>
-            <div className="element2">
+            <div className="element">
                 Tienes alguna duda? <a href="#" className="">escríbenos</a>
             </div>
 

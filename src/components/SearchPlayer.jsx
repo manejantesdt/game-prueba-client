@@ -15,12 +15,12 @@ export const SearchPlayer = () => {
   useEffect(() => {
     dispatch(
       searchPlayers(nickname ? { nick_name: nickname } : { nick_name: "" }),
-      getPlayers({})
+      // getPlayers({})
     );
   }, [players, nickname, dispatch]);
 
   const [currentPage, setCurrentPage] = useState(1);
-  const [playersPerPage] = useState(6);
+  const [playersPerPage] = useState(18);
   const indexOfLastPlayer = currentPage * playersPerPage;
   const indexOffirstPlayer = indexOfLastPlayer - playersPerPage;
   const currentPlayers = searchPlayer
@@ -42,8 +42,8 @@ export const SearchPlayer = () => {
                 nickname={j.nickname}
                 image={j.avatar}
                 id={j.Id}
-                status={j.status}
-                ranking={j.ranking}
+                // status={j.status}
+                // ranking={j.ranking}
               />
             );
           })}
