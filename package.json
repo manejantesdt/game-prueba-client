@@ -5,7 +5,6 @@
   "dependencies": {
     "@auth0/auth0-react": "^1.9.0",
     "@testing-library/jest-dom": "^5.16.1",
-    "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.25.0",
     "node-sass": "^7.0.1",
@@ -28,7 +27,8 @@
     "build": "CI=false react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "aws s3 sync build/ s3://game-prueba-client --acl public-read"
+    "deploy": "aws s3 sync build/ s3://game-prueba-client --acl public-read",
+    "cypress:open": "cypress open"
   },
   "eslintConfig": {
     "extends": [
@@ -47,5 +47,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@testing-library/cypress": "^8.0.2",
+    "@testing-library/react": "^12.1.2",
+    "cypress": "^9.4.1",
+    "eslint-plugin-cypress": "^2.12.1"
   }
 }

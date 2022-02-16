@@ -1,8 +1,7 @@
 import React,{ useEffect } from "react";
-import fondo from "../img/podio.png";
-import shadow from "../img/shadow.png";
 import { TopTenSection } from "../styles/TopTen";
 import { useSelector } from "react-redux";
+import { NavLink } from "react-router-dom";
 
 export const TopThree = () => {
 
@@ -10,27 +9,32 @@ export const TopThree = () => {
   
   useEffect(() => {}, [players]);
   
-  // players = players.slice(0, 3);
+  players = players.slice(0, 3);
 
   return (
     <TopTenSection>
       <div className="cancha">
         <div className="imgPodio">
-          <img src={fondo} alt="fondo" />
-          {players?.map((player, index) => {
-            var playerPodio = "playerPodio" + ( index + 1 )
-            var playerShadow = "playerShadow" + ( index + 1 )
-            return (
-              <>
-                {/* <div className={playerPodio}>
-                  <img src={player.avatar} alt="jugador" />
-                  <div className={playerShadow}>
-                    <img src={shadow} alt="sombra"  />
+          {
+            players?.map((player, index) => {
+              return (
+                <div className="podioPlace" key={index}>
+                  <div className="position">{index+1}</div>
+                  <div className="avatarPosition">
+                    <img src={player.avatar} />
                   </div>
-                </div> */}
-              </>
-            );
-          })}
+                  <div className="rowPosition pulse">{player.nickname}</div>
+                  <div className="rowPosition rank">{player.status}</div>
+                  <div className="rowPosition score">{player.score}</div>
+                  <div className="rowPosition">
+                    <NavLink className="infoLink" to={`/id/${player.Id}`}>
+                    + info    
+                    </NavLink>
+                  </div>
+                </div>
+              );
+           })
+          }
         </div>
       </div>
     </TopTenSection>

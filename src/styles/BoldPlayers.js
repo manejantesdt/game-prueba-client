@@ -27,6 +27,7 @@ export const BoldPlayersSections = styled.section`
     margin-top: 50px;
     border: 1px solid #ccc;
   }
+  
 `;
 
 export const BoldPlayersPagination = styled.div`
