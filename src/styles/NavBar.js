@@ -15,6 +15,9 @@ export const ContNavBar = styled.div`
     background-color: transparent;
   }
 
+
+
+
 `;
 
 export const ContLogo = styled.div`
@@ -75,6 +78,8 @@ export const LogoImg = styled.img`
     margin-right: 10%;
     // border: 1px solid #000;
   }
+
+
 `;  
 
 export const ContNav = styled.nav`

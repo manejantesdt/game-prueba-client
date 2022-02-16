@@ -1,5 +1,14 @@
 import styled from "styled-components";
 
+const media = {
+  xs: '@media(max-width: 480px)',
+  sm: '@media(min-width: 481px) and (max-width: 768px)',
+  md: '@media(min-width: 769px) and (max-width: 992px)',
+  lg: '@media(min-width: 993px) and (max-width: 1200px)',
+  xlg: '@media(min-width: 1201px) and (max-width: 1920px)',
+  ulg: '@media(min-width: 1921px) and (max-width: 2560px)',
+}
+
 export const BoldPlayersSections = styled.section`
   width: 88%;
   margin: 0 auto;
@@ -15,6 +24,15 @@ export const BoldPlayersSections = styled.section`
     letter-spacing: 20px;
     font-family: 'Russo One', sans-serif;
     text-transform: uppercase;
+    
+    ${media.xs}{
+      width: 100%;
+      font-size: 1.4rem;
+      letter-spacing: 8px;
+      text-align: center;
+      margin-bottom: 10%;
+      // border: 1px solid #ccc;
+    }
   }
 
   .pagesContainer{
@@ -25,9 +43,7 @@ export const BoldPlayersSections = styled.section`
     width: 100%;
     height: 50px;
     margin-top: 50px;
-    border: 1px solid #ccc;
   }
-  
 `;
 
 export const BoldPlayersPagination = styled.div`
