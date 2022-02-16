@@ -11,29 +11,29 @@ import {
   ContLogo,
   Ul,
 } from "../styles/NavBar.js";
-import logo from "../img/Recicle.png";
 import AuthNav from './auth-nav';
 
 
-  const [menu, setMenu] = useState(false) 
-  const [move, setMove] = useState(true) 
+  // const [menu, setMenu] = useState(false) 
+  // const [move, setMove] = useState(true) 
 
 
-  function handleHide() {
-    let navigation = document.querySelector('.ContNav');
-    console.log("MOVE INICIAL", move)
-    // navigation.classList.toggle('active');
-    setMenu(!menu)
-    if(move === true){
-      navigation.style.top ='47px'
-      setMove(false)
-    } else {
-      navigation.style.top ='-400px'
-      setMove(true) 
-    }
- }
+//   function handleHide() {
+//     let navigation = document.querySelector('.ContNav');
+//     console.log("MOVE INICIAL", move)
+//     // navigation.classList.toggle('active');
+//     setMenu(!menu)
+//     if(move === true){
+//       navigation.style.top ='47px'
+//       setMove(false)
+//     } else {
+//       navigation.style.top ='-400px'
+//       setMove(true) 
+//     }
+//  }
 
 
+ export const NavBar = () => {
   const { searchPlayer } = useSelector((state) => state);
   
   return searchPlayer?.length > 0 ? (
@@ -42,7 +42,6 @@ import AuthNav from './auth-nav';
         <LogoImg src={logo} alt="logo" />
         <SearchBar />
         <FilterBar />
-        
       </ContLogo>
       <ContNav>
         <Ul>
@@ -67,7 +66,7 @@ import AuthNav from './auth-nav';
       <ContLogo>
         <LogoImg src={logo} alt="logo" />
         <SearchBar />
-        {/* <FilterBar /> */}
+        <AuthNav/>
       </ContLogo>
       <ContNav>
         <Ul>
@@ -87,31 +86,5 @@ import AuthNav from './auth-nav';
         </Ul>
       </ContNav>
     </ContNavBar>
-
-  ):(<ContNavBar>
-    <ContLogo>
-      <LogoImg src={logo} alt="logo" />
-      <SearchBar />
-      <AuthNav />
-       {/* <FilterBar /> */}
-    </ContLogo>
-    <ContNav>
-      <Ul>
-        <Link to="/" className="link">
-          Inicio
-        </Link>
-      </Ul>
-      <Ul>
-        <Link to="/create" className="link">
-          Crear Jugador
-        </Link>
-      </Ul>
-      <Ul>
-        <Link to="about" className="link">
-          Sobre
-        </Link>
-      </Ul>
-    </ContNav>
-  </ContNavBar>)
-
+  )
 };

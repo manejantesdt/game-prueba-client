@@ -31,11 +31,13 @@ export const EditPlayer = () => {
   const dispatch = useDispatch();
   var { id } = useParams();
   const { user, isAuthenticated } = useAuth0();
-  const { email } = user;
-
+ 
   useEffect(() => {
     dispatch(getPlayerId(id));
     // dispatch(getPlayers({}));
+    if (isAuthenticated === true && user.email === 'dreamteammanejantes@gmail.com' ) {
+      setAdminStatus(true)
+    }
   }, [id,dispatch]);
   // _____________________________________________________________________________
   // ------------------------------<State>----------------------------------
@@ -47,12 +49,6 @@ export const EditPlayer = () => {
   // __________________________________________________________________________
 
   // ------------------------------<Functions>---------------------------------
-  if (isAuthenticated && email === 'dreamteammanejantes@gmail.com') {
-    setAdminStatus(true)
-  } else {
-    setAdminStatus(false)
-  }
-  
   const onClickCheck = async () => {
     setEditform({
       nickname: player.nickname,
@@ -137,7 +133,7 @@ export const EditPlayer = () => {
         <ContEdit>
           {player ? (
             <div key={player.Id} className="DetailContainer">
-              <div className="CloseDetail">
+              {/* <div className="CloseDetail">
                 <button
                   className="btnCloseDetail"
                   type="button"
@@ -147,7 +143,7 @@ export const EditPlayer = () => {
                 >
                   X
                 </button>
-              </div>
+              </div> */}
               <div className="InfoContainer">
                 <div className="AvatarDetail">
                   <img
@@ -215,7 +211,7 @@ export const EditPlayer = () => {
           Editar Detalles del Jugador
         </h2>
         <ContEdit>
-          {player && adminStatus === 'true' ? (
+          {player && adminStatus === true ? (
             <IntoEdit key={player.Id} onSubmit={handleSubmit}>
               <img src={editform.avatar} alt="Ávatar" className="editAvatar" />
 
@@ -292,8 +288,9 @@ export const EditPlayer = () => {
           ) : (
             
             <div>
-              {alert('Log in o Credenciales de administración requeridas')}
-              {navigate('/')}
+              {/* {alert('Log in o credenciales de administración requeridas')} */}
+              Log in o credenciales de administración requeridas
+              {/* {navigate(`/id/${id}`)} */}
             </div>
           )}
         </ContEdit>

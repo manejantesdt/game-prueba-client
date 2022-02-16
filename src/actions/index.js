@@ -20,7 +20,6 @@ export const searchPlayers = ({ nick_name, order, status }) => {
         type: "SEARCH_PLAYERS",
         payload: players,
       });
-      console.log(players);
     } catch (error) {
       console.error(error);
     }
