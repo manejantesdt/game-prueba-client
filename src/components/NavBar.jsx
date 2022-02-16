@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import {  useState } from "react";
 import { Link } from "react-router-dom";
 import { SearchBar } from "./SearchBar";
 import { FilterBar } from "./FilterBar";
@@ -14,10 +15,9 @@ import logo from "../img/Recicle.png";
 import AuthNav from './auth-nav';
 
 
-export const NavBar = () => {
- 
-  const [menu, setMenu] = React.useState(false) 
-  const [move, setMove] = React.useState(true) 
+  const [menu, setMenu] = useState(false) 
+  const [move, setMove] = useState(true) 
+
 
   function handleHide() {
     let navigation = document.querySelector('.ContNav');
