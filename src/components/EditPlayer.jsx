@@ -24,11 +24,11 @@ function validate(editform) {
 
 export const EditPlayer = () => {
   // ------------------------------<Variables>--------------------------------
-  const { player, avatars } = useSelector((state) => state);
+  var { player, avatars } = useSelector((state) => state);
+  player= player[0]
   const navigate = useNavigate();
   const dispatch = useDispatch();
   var { id } = useParams();
-console.log(player)
   useEffect(() => {
     dispatch(getPlayerId(id));
     // dispatch(getPlayers({}));
