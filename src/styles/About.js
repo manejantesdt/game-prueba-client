@@ -49,15 +49,27 @@ box-shadow:0 0 2px #2a8ce1, 0 0 2px #3a6351, 0 0 2px #e40320;
   transition: 0.8s; 
 }
 }
-
-p {
-  text-align: justify;
-  // font-family: 'Russo One', sans-serif;
-  font-size: 1rem;
-  margin-bottom: 1.4rem;
-  margin-top: 1rem;
-  /* color: #102132; */
-  color: #ffffff97;
+    ${media.medium}{
+      width: 90%;
+      // background-color: red;
+    }
+    
+    &:hover{
+      box-shadow: 0 0 10px rgba(44, 11, 34, 0.404), 0 0 10px rgba(44, 11, 34, 0.404), 0 0 10px rgba(44, 11, 34, 0.404); 
+      transition-delay: 0.2s;
+      transition: 0.8s; 
+    }
+  }
+  
+  p {
+    text-align: justify;
+    font-size: 1rem;
+    margin-bottom: 1.4rem;
+    margin-top: 1rem;
+    color: #ffffff97;
+    ${media.mobile}{
+      font-size: 0.9rem;
+    }
 }
 
 li {
