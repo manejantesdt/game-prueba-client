@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import {  useState } from "react";
 import { Link } from "react-router-dom";
 import { SearchBar } from "./SearchBar";
 import { FilterBar } from "./FilterBar";
@@ -10,27 +11,29 @@ import {
   ContLogo,
   Ul,
 } from "../styles/NavBar.js";
+import AuthNav from './auth-nav';
 
-export const NavBar = () => {
+
+  // const [menu, setMenu] = useState(false) 
+  // const [move, setMove] = useState(true) 
 
 
-  const [menu, setMenu] = React.useState(false) 
-  const [move, setMove] = React.useState(true) 
+//   function handleHide() {
+//     let navigation = document.querySelector('.ContNav');
+//     console.log("MOVE INICIAL", move)
+//     // navigation.classList.toggle('active');
+//     setMenu(!menu)
+//     if(move === true){
+//       navigation.style.top ='47px'
+//       setMove(false)
+//     } else {
+//       navigation.style.top ='-400px'
+//       setMove(true) 
+//     }
+//  }
 
-  function handleHide() {
-    let navigation = document.querySelector('.ContNav');
-    console.log("MOVE INICIAL", move)
-    // navigation.classList.toggle('active');
-    setMenu(!menu)
-    if(move === true){
-      navigation.style.top ='47px'
-      setMove(false)
-    } else {
-      navigation.style.top ='-400px'
-      setMove(true) 
-    }
- }
 
+ export const NavBar = () => {
   const { searchPlayer } = useSelector((state) => state);
   
   return searchPlayer?.length > 0 ? (
@@ -63,7 +66,7 @@ export const NavBar = () => {
       <ContLogo>
         <LogoImg src={logo} alt="logo" />
         <SearchBar />
-        {/* <FilterBar /> */}
+        <AuthNav/>
       </ContLogo>
       <ContNav>
         <Ul>
@@ -83,5 +86,5 @@ export const NavBar = () => {
         </Ul>
       </ContNav>
     </ContNavBar>
-  );
+  )
 };
