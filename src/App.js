@@ -12,7 +12,7 @@ import store from "./store/store";
 
 const App = () => (
   <Provider store={store}>
-    <BrowserRouter>
+   
         <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -22,7 +22,7 @@ const App = () => (
         <Route path="/search" element={<SearchPlayer />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </BrowserRouter>
+   
   </Provider>
 );
 

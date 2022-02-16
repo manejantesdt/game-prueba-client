@@ -11,12 +11,13 @@ import {
   ContLogo,
   Ul,
 } from "../styles/NavBar.js";
-
-export const NavBar = () => {
+import logo from "../img/Recicle.png";
+import AuthNav from './auth-nav';
 
 
   const [menu, setMenu] = useState(false) 
   const [move, setMove] = useState(true) 
+
 
   function handleHide() {
     let navigation = document.querySelector('.ContNav');
@@ -32,6 +33,7 @@ export const NavBar = () => {
     }
  }
 
+
   const { searchPlayer } = useSelector((state) => state);
   
   return searchPlayer?.length > 0 ? (
@@ -40,6 +42,7 @@ export const NavBar = () => {
         <LogoImg src={logo} alt="logo" />
         <SearchBar />
         <FilterBar />
+        
       </ContLogo>
       <ContNav>
         <Ul>
@@ -84,5 +87,31 @@ export const NavBar = () => {
         </Ul>
       </ContNav>
     </ContNavBar>
-  );
+
+  ):(<ContNavBar>
+    <ContLogo>
+      <LogoImg src={logo} alt="logo" />
+      <SearchBar />
+      <AuthNav />
+       {/* <FilterBar /> */}
+    </ContLogo>
+    <ContNav>
+      <Ul>
+        <Link to="/" className="link">
+          Inicio
+        </Link>
+      </Ul>
+      <Ul>
+        <Link to="/create" className="link">
+          Crear Jugador
+        </Link>
+      </Ul>
+      <Ul>
+        <Link to="about" className="link">
+          Sobre
+        </Link>
+      </Ul>
+    </ContNav>
+  </ContNavBar>)
+
 };
