@@ -79,11 +79,25 @@
 //   outline: none;
 // }
 
+// font-family: 'Fjalla One', sans-serif;
+
+// font-family: 'Orbitron', sans-serif;
+
+// font-family: 'Press Start 2P', cursive;
+
+// font-family: 'Russo One', sans-serif;
+
+// Dream Team Manejantes
+// dreamteammanejantes@gmail.com
+
 //----- Jugadores -----//
+
+
 
 .jugador {
   width: 200px;
   height: 210px;
+  font-family: 'Russo One', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -91,11 +105,11 @@
   padding: 1rem;
   margin: 0 10px;
   border-radius: 0.8rem;
-  background-color: #ffffff10;
+  background-color: #ffffff20;
   border-left: 1px solid #ffffff35;
   border-bottom: 1px solid #ffffff35;
   box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.4);
-  transition: all 0.5s;
+  transition: all 0.5s; 
 
   h3 {
     width: 100%;
@@ -124,7 +138,7 @@
 
   .avatarStatus{
     width: 100%;
-    color: #77D970;
+    color: #D4AC2B;
     margin-bottom: 5px;
   }
 
@@ -243,52 +257,65 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  // margin: 0 auto;
-  // position: relative;
 
   .imgPodio{
-    width: 50%;
-    height: 400px;
+    width: 60%;
+    height: 550px;
     text-align: center;
-    // border: thin dotted #ccc;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-image: url(../img/flags.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    // border: thin dotted rgb(111, 0, 255);
   }
 
-  .imgPodio img{
-    width: 90%;
-    position: relative;
-    top: 30px;
-    margin: 0 auto;
-  }
-
-  .playerPodio1{
-    position: relative;
-    top: -572px;
-    // left: 100px;
-  }
-
-  .playerPodio2{
-    position: relative;
-    top: -800px;
-    left: -260px;
-  } 
-  
-  .playerPodio3{
-    position: relative;
-    top: -1110px;
-    left: 260px;
+  .podioPlace{
+    width: 250px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    // border: 1px solid #000;
   }
   
-  .playerShadow1 img, .playerShadow2 img, .playerShadow3 img{
-    width: 20%;
-    opacity: 0.3;
-    position: relative;
-    top: -92px;
+  .podioPlace:hover{
+    cursor: pointer;
+    background-image: url(../img/confetti.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
   }
+  
 
-  .playerPodio1 img,  .playerPodio2 img,  .playerPodio3 img{
-    width: 180px;
-  }
+  // .columna{
+  //   width: 60%;
+  //   height: 550px;
+  //   text-align: center;
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-items: center;
+  //   justify-content: space-around;
+  //   background-image: url(../img/flags.png);
+  //   background-repeat: no-repeat;
+  //   background-position: center;
+  //   background-size: contain;
+  //   // border: thin dotted rgb(111, 0, 255);
+  // }
 
+  
+  
+  // .columna:hover{
+  //   background-image: url(../img/confetti.gif);
+  //   background-repeat: no-repeat;
+  //   background-position: center;
+  //   background-size: contain;
+  // }
+  
   .titular {
     position: absolute;
 

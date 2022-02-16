@@ -15,12 +15,12 @@ export const SearchPlayer = () => {
   useEffect(() => {
     dispatch(
       searchPlayers(nickname ? { nick_name: nickname } : { nick_name: "" }),
-      getPlayers({})
+      // getPlayers({})
     );
   }, [players, nickname, dispatch]);
 
   const [currentPage, setCurrentPage] = useState(1);
-  const [playersPerPage] = useState(6);
+  const [playersPerPage] = useState(18);
   const indexOfLastPlayer = currentPage * playersPerPage;
   const indexOffirstPlayer = indexOfLastPlayer - playersPerPage;
   const currentPlayers = searchPlayer
@@ -61,14 +61,14 @@ export const SearchPlayer = () => {
         </div>
         <div className="returnContainer">
           <a href="/" className="BackHome">
-            Regresar
+            Volver
           </a>
         </div>
       </BoldPlayersPagination>
     </>
   ) : (
     <>
-      <h4>...loading search</h4>
+      <h4>...descargando búsqueda</h4>
     </>
   );
 };

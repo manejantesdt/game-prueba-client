@@ -8,7 +8,7 @@ export const BoldPlayers = () => {
   const boldPlayers=players.slice(10,16);
   return (
     <BoldPlayersSections>
-      <h2>Bold Players</h2>
+      <h2>Jugadores Destacados</h2>
       <div className="suplentes">
       {boldPlayers.map((j) => {
             return (
