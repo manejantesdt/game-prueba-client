@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams, useNavigate } from "react-router";
 import { ContEdit, IntoEdit } from "../styles/EditForm.js";
-import { useAuth0 } from '@auth0/auth0-react';
 import {
   getPlayerId,
   editPlayer,
@@ -25,26 +24,20 @@ function validate(editform) {
 
 export const EditPlayer = () => {
   // ------------------------------<Variables>--------------------------------
-  var { player, avatars } = useSelector((state) => state);
-  player= player[0]
+  const { player, avatars } = useSelector((state) => state);
   const navigate = useNavigate();
   const dispatch = useDispatch();
   var { id } = useParams();
-  const { user, isAuthenticated } = useAuth0();
- 
+console.log(player)
   useEffect(() => {
     dispatch(getPlayerId(id));
     // dispatch(getPlayers({}));
-    if (isAuthenticated === true && user.email === 'dreamteammanejantes@gmail.com' ) {
-      setAdminStatus(true)
-    }
   }, [id,dispatch]);
   // _____________________________________________________________________________
   // ------------------------------<State>----------------------------------
   const [checkform, setCheckform] = useState(false);
   const [editform, setEditform] = useState({});
   const [error, setError] = useState({});
-  const [adminStatus, setAdminStatus] = useState(false)
 
   // __________________________________________________________________________
 
@@ -63,7 +56,7 @@ export const EditPlayer = () => {
   const onClickCancel = () => {
     setEditform({});
     checkform === false ? setCheckform(true) : setCheckform(false);
-  }
+  };
 
   // const onClick = async () => {
   //   await dispatch(editPlayer(id, editform));
@@ -133,7 +126,7 @@ export const EditPlayer = () => {
         <ContEdit>
           {player ? (
             <div key={player.Id} className="DetailContainer">
-              {/* <div className="CloseDetail">
+              <div className="CloseDetail">
                 <button
                   className="btnCloseDetail"
                   type="button"
@@ -143,7 +136,7 @@ export const EditPlayer = () => {
                 >
                   X
                 </button>
-              </div> */}
+              </div>
               <div className="InfoContainer">
                 <div className="AvatarDetail">
                   <img
@@ -211,7 +204,7 @@ export const EditPlayer = () => {
           Editar Detalles del Jugador
         </h2>
         <ContEdit>
-          {player && adminStatus === true ? (
+          {player ? (
             <IntoEdit key={player.Id} onSubmit={handleSubmit}>
               <img src={editform.avatar} alt="Ávatar" className="editAvatar" />
 
@@ -286,12 +279,7 @@ export const EditPlayer = () => {
               </div>
             </IntoEdit>
           ) : (
-            
-            <div>
-              {/* {alert('Log in o credenciales de administración requeridas')} */}
-              Log in o credenciales de administración requeridas
-              {/* {navigate(`/id/${id}`)} */}
-            </div>
+            <div>...descargando...</div>
           )}
         </ContEdit>
       </>
