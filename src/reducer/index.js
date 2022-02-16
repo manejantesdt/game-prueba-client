@@ -1,6 +1,7 @@
 import { avatars } from "../Aux_Data";
 
 const inizialstate = {
+  form: {},
   player: {},
   searchPlayer: [],
   players: [],

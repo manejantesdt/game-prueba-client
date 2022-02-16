@@ -12,8 +12,7 @@ import store from "./store/store";
 
 const App = () => (
   <Provider store={store}>
-   
-        <NavBar />
+      <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -21,9 +20,9 @@ const App = () => (
         <Route path="/create" element={<CreatePlayer />} />
         <Route path="/search" element={<SearchPlayer />} />
         <Route path="*" element={<NotFound />} />
-      </Routes>
-   
+      </Routes>  
   </Provider>
 );
+
 
 export default App;  

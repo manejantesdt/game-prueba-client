@@ -9,15 +9,25 @@ const media = {
     ulg: '@media(min-width: 1921px) and (max-width: 2560px)',
   }
 
+
 export const ContFooter = styled.div`
-width: 100%;
-height: 30px;
-margin-bottom: 1rem;
-color: #ffffff70;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: space-around;
+    width: 100%;
+    height: 30px;
+    margin-bottom: 1rem;
+    color: #ffffff70;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    ${media.xs}{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
 
 .elementFooter{
     width: 100%;
@@ -48,21 +58,27 @@ justify-content: space-around;
         text-align: center;
         font-size: 0.8rem;
     }
-
 }
 
-.element{
+.element2{
     width: 50%;
-    text-align: center;
+    padding: 0 0 0 10px;
+    text-align: left;
+    
+    ${media.xs}{
+        width: 100%;
+        text-align: center;
+        font-size: 0.8rem;
+    }
 }
 
-.element a{
+.element2 a{
     text-decoration: none;
     color: #ff0075;
     transition: all 0.5s;
 }
 
-.element a:hover{
+.element2 a:hover{
     color: #fff
 }
 

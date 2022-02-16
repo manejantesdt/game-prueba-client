@@ -15,7 +15,7 @@ function validate(editform) {
   var numbers = /^[1-9][0-9]*$/;
 
   //name validation
-  if (editform.score.length > 6) {
+   if (editform.score.length > 6) {
     errorValidate.score = "numberp muy largo, cifras max 6";
   } else if (!editform.score.match(numbers)) {
     errorValidate.score = "Solo números positivos permitidos";
@@ -26,19 +26,20 @@ function validate(editform) {
 export const EditPlayer = () => {
   // ------------------------------<Variables>--------------------------------
   var { player, avatars } = useSelector((state) => state);
-  player= player[0]
+  player = player[0]
   const navigate = useNavigate();
   const dispatch = useDispatch();
   var { id } = useParams();
   const { user, isAuthenticated } = useAuth0();
  
+
   useEffect(() => {
     dispatch(getPlayerId(id));
     // dispatch(getPlayers({}));
     if (isAuthenticated === true && user.email === 'dreamteammanejantes@gmail.com' ) {
       setAdminStatus(true)
-    }
-  }, [id,dispatch]);
+  }
+}, [dispatch, id]);
   // _____________________________________________________________________________
   // ------------------------------<State>----------------------------------
   const [checkform, setCheckform] = useState(false);
@@ -63,7 +64,7 @@ export const EditPlayer = () => {
   const onClickCancel = () => {
     setEditform({});
     checkform === false ? setCheckform(true) : setCheckform(false);
-  }
+  };
 
   // const onClick = async () => {
   //   await dispatch(editPlayer(id, editform));
@@ -74,7 +75,6 @@ export const EditPlayer = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    dispatch(getPlayers({}));
     setError(
       validate({
         ...editform,
@@ -82,14 +82,11 @@ export const EditPlayer = () => {
       })
     );
     if (!Object.getOwnPropertyNames(error).length) {
-      dispatch(editPlayer(id, editform));
-      dispatch(getPlayerId(id));
-      dispatch(getPlayers({}));
-      checkform === false ? setCheckform(true) : setCheckform(false);
-    } else {
-      alert("Errores, revisar información");
-    }
-  };
+    dispatch(editPlayer(id, editform));
+    dispatch(getPlayerId(id));
+    checkform === false ? setCheckform(true) : setCheckform(false);
+  } else {
+    alert("Errores, revisar información")}}
 
   const handleChange = (e) => {
     setEditform({
@@ -133,8 +130,8 @@ export const EditPlayer = () => {
         <ContEdit>
           {player ? (
             <div key={player.Id} className="DetailContainer">
-              {/* <div className="CloseDetail">
-                <button
+              <div className="CloseDetail">
+                {/* <button
                   className="btnCloseDetail"
                   type="button"
                   onClick={() =>
@@ -142,8 +139,8 @@ export const EditPlayer = () => {
                   }
                 >
                   X
-                </button>
-              </div> */}
+                </button> */}
+              </div>
               <div className="InfoContainer">
                 <div className="AvatarDetail">
                   <img
@@ -265,7 +262,7 @@ export const EditPlayer = () => {
                   className="input_form"
                   type="number"
                   name="score"
-                  min="0"
+                  min = "0"
                   placeholder={parseInt(player.score)}
                   onChange={(e) => handleChange(e)}
                 />
@@ -286,12 +283,7 @@ export const EditPlayer = () => {
               </div>
             </IntoEdit>
           ) : (
-            
-            <div>
-              {/* {alert('Log in o credenciales de administración requeridas')} */}
-              Log in o credenciales de administración requeridas
-              {/* {navigate(`/id/${id}`)} */}
-            </div>
+            <div>...Log in o credenciales de administración requeridas...</div>
           )}
         </ContEdit>
       </>

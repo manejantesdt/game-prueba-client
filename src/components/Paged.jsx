@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../styles/Paged.module.css"; 
+/*import "../Sass/Styles/Pagination.scss";*/
 
 export default function Paged({ playersPerPage, searchPlayer, pagedTotal, currentPage }) {
   const pageNumber = [];
