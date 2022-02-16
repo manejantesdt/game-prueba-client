@@ -10,11 +10,11 @@ export const CardPlayer = ({
   status,
   ...props
 }) => {
-  // const onClick = async (e) => {
-  //   e.preventDefault();
-  //   await dispatch(deletePlayer(id));
-  //   dispatch(getPlayers({}));
-  // };
+  const onClick = async (e) => {
+    e.preventDefault();
+    await dispatch(deletePlayer(id));
+    dispatch(getPlayers({}));
+  };
 
   const dispatch = useDispatch();
   return (
