@@ -2,6 +2,7 @@ import React from "react";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 import { About } from "./components/About";
 import {Home} from "./components/Home";
+import {Footer} from "./components/Footer";
 import { Provider } from "react-redux";
 import { EditPlayer } from "./components/EditPlayer";
 import { CreatePlayer } from "./components/CreatePlayer";
@@ -21,6 +22,7 @@ const App = () => (
         <Route path="/search" element={<SearchPlayer />} />
         <Route path="*" element={<NotFound />} />
       </Routes>  
+      <Footer />  
   </Provider>
 );
 
