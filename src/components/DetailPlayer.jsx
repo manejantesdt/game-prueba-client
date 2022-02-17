@@ -27,6 +27,7 @@ export const DetailPlayer = () => {
       user.email === "dreamteammanejantes@gmail.com"
     ) {
       setAdminStatus(true);
+      
     }
   }, [dispatch,player?.score||player?.nickname]);
   // _____________________________________________________________________________
