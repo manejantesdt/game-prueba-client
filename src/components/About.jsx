@@ -92,9 +92,6 @@ export const About = () => {
           </p>
         </div>
         <div>
-              <ul>
-                <li>
-                  <div></div>
                   <pre>
                     <img
                       src="https://avatars.githubusercontent.com/u/85845504?v=4"
@@ -104,19 +101,22 @@ export const About = () => {
                     />
                   </pre>
                   <p className="p">
-                    <strong>Ramiro Villamizar:</strong>
+                    <strong>Ramiro Villamizar</strong>
                   </p>
-                  <a
+                 <p> <a
+              href="https://www.linkedin.com/in/ramiro-villamizar-javascript/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+             in/ramiro-villamizar-javascript/
+            </a></p>
+                  <p><a
               href="https://github.com/pivotsk8"
               target="_blank"
               rel="noopener noreferrer"
             >
               pivotsk8
-            </a>
-                </li>
-                <br></br>
-                <li>
-                  <div></div>
+            </a></p>
                   <pre>
                     <img
                       src="https://avatars.githubusercontent.com/u/87451265?v=4"
@@ -126,19 +126,23 @@ export const About = () => {
                     />
                   </pre>
                   <p className="p">
-                    <strong>Marisa Lia Pascal:</strong>
+                    <strong>Marisa Lia Pascal</strong>
                   </p>
+                  <p>
                   <a
+              href="https://www.linkedin.com/in/marisaliapascal-fullstack/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+             in/marisaliapascal-fullstack
+            </a></p>
+                 <p> <a
               href="https://github.com/Marisaliap"
               target="_blank"
               rel="noopener noreferrer"
             >
               Marisaliap
-            </a>
-                </li>
-                <br></br>
-                <li>
-                  <div></div>
+            </a></p>
                   <pre>
                     <img
                       src="https://avatars.githubusercontent.com/u/79276560?v=4"
@@ -148,19 +152,22 @@ export const About = () => {
                     />
                   </pre>
                   <p className="p">
-                    <strong>Gustavo Montero:</strong>
+                    <strong>Gustavo Montero</strong>
                   </p>
-                  <a
+                  <p><a
+              href="https://www.linkedin.com/in/gamontero/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+             BtoMJ
+            </a></p>
+                  <p><a
               href="https://github.com/gamontero"
               target="_blank"
               rel="noopener noreferrer"
             >
              gamontero
-            </a>
-                </li>
-                <br></br>
-                <li>
-                  <div></div>
+            </a></p>
                   <pre>
                     <img
                       src="https://avatars.githubusercontent.com/u/77559957?v=4"
@@ -170,17 +177,47 @@ export const About = () => {
                     />
                   </pre>
                   <p className="p">
-                    <strong>Daniel Alberto Mena:</strong>
+                    <strong>Daniel Alberto Mena</strong>
                   </p>
-                  <a
+                  <p><a
+              href="https://www.linkedin.com/in/daniel-full-stack/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+             BtoMJ
+            </a></p>
+                  <p><a
               href="https://github.com/BtoMJ"
               target="_blank"
               rel="noopener noreferrer"
             >
              BtoMJ
-            </a>
-                </li>
-          </ul>
+            </a></p>
+                  <pre>
+                    <img
+                      src="https://avatars.githubusercontent.com/u/76404798?v=4"
+                      width="150"
+                      height="150"
+                      alt="Foto 2"
+                    />
+                  </pre>
+                  <p className="p">
+                    <strong>José Ángel Rey</strong>
+                  </p>
+                  <p><a
+              href="https://www.linkedin.com/in/jose-angel-rey/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+             Jose-Angel-Rey
+            </a></p>
+            <p><a
+              href="https://github.com/Jose-Angel-Rey"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+             Jose-Angel-Rey
+            </a></p>
         </div>
         <Link to="/">
           <button className="button_form">Volver </button>
