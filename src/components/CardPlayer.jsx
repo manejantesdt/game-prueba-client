@@ -1,6 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { deletePlayer, getPlayers } from "../actions/index";
-import { useDispatch } from "react-redux";
+
 
 export const CardPlayer = ({
   ranking,
@@ -10,13 +9,7 @@ export const CardPlayer = ({
   status,
   ...props
 }) => {
-  // const onClick = async (e) => {
-  //   e.preventDefault();
-  //   await dispatch(deletePlayer(id));
-  //   dispatch(getPlayers({}));
-  // };
-
-  const dispatch = useDispatch();
+ 
   return (
     <article {...props} className="jugador">
       <NavLink to={`/id/${id}`}>
