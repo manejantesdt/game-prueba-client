@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { Dispatch } from "react";
 
 
 export const CardPlayer = ({
@@ -9,7 +10,6 @@ export const CardPlayer = ({
   status,
   ...props
 }) => {
- 
   return (
     <article {...props} className="jugador">
       <NavLink to={`/id/${id}`}>

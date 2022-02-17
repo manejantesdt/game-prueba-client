@@ -1,4 +1,4 @@
-import { useState,useEffect } from "react";
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {  useParams } from "react-router";
 import { ContEdit, IntoEdit } from "../styles/EditForm.js";
@@ -19,9 +19,6 @@ function validate(editform) {
 }
 
 export const EditPlayer = () => {
-  // useEffect(() => {
-  //   dispatch(getPlayerId(id));
-  // }, [dispatch]);
   var { player, avatars } = useSelector((state) => state);
   player = player[0];
   var { id } = useParams();
@@ -51,6 +48,7 @@ export const EditPlayer = () => {
   const onClick = async () => {
     dispatch(getPlayers({}));
     dispatch(editPlayer(id, editform));
+    dispatch(getPlayerId(id));
     setCheckform(true);
   };
 
