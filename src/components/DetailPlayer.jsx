@@ -5,7 +5,7 @@ import { ContEdit} from "../styles/EditForm.js";
 import { useAuth0 } from "@auth0/auth0-react";
 import {
   getPlayerId,
-  getPlayers,
+  searchPlayers,
   // setId
 } from "../actions/index";
 import { EditPlayer } from "./EditPlayer.jsx";
@@ -20,15 +20,15 @@ export const DetailPlayer = () => {
   const { user, isAuthenticated } = useAuth0();
 
   useEffect(() => {
+    dispatch(searchPlayers({nick_name:""}));
     dispatch(getPlayerId(id));
-    dispatch(getPlayers({}));
     if (
       isAuthenticated === true &&
       user.email === "dreamteammanejantes@gmail.com"
     ) {
       setAdminStatus(true);
     }
-  }, [dispatch,player?.length]);
+  }, [dispatch,player?.score||player?.nickname]);
   // _____________________________________________________________________________
   // ------------------------------<State>----------------------------------
   const [checkform, setCheckform] = useState(false);
