@@ -3,7 +3,6 @@ import { useDispatch } from "react-redux";
 import { PlayersTen } from "./PlayersTen";
 import { BoldPlayers } from "./BoldPlayers";
 import { MainPanel } from "./MainPanel";
-import { Footer } from "./Footer";
 import { getPlayers,searchPlayers } from "../actions";
 import "../styles/styles.scss";
 
@@ -20,7 +19,6 @@ export const Home = () => {
       <PlayersTen />
       <MainPanel />
       <BoldPlayers />
-      <Footer />
     </main>
   );
 };
