@@ -5,14 +5,14 @@ import { getPlayers } from "../actions";
 
 export const Players = () => {
   const dispatch = useDispatch();
-  const { players } = useSelector((state) => state);
+  const { players,player } = useSelector((state) => state);
   const gridJugadores = createRef();
 
   useEffect(() => {
     setScrollContainer();
     document.addEventListener("click", setScrollContainer);
     dispatch(getPlayers({}));
-  }, [players?.length,dispatch]);
+  }, [players?.length,player,dispatch]);
 
   const setScrollContainer = (desktop = true) => {
     let container = gridJugadores.current;
