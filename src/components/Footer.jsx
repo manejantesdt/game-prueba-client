@@ -6,12 +6,12 @@ export const Footer = () =>{
     <ContFooter>
         <div className="elementFooter">
             <div className="element1">
-                Desarrollo a cargo de Dream Team Manejantes &copy;2022
+                Desarrollo a cargo de Dream Team Manejantes &copy; 2022
             </div>
             <div className="element2">
-                Tienes alguna duda? <a href="mailto:manejantes@gmail.com" target="_blank" 
-              rel="noopener noreferrer">Contáctanos</a>
+                Tienes alguna duda? <a href="#" className="">escríbenos</a>
             </div>
+
         </div>
     </ContFooter>
   )

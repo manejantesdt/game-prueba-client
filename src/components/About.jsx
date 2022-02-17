@@ -87,101 +87,10 @@ export const About = () => {
           </p>
           <p>
             {" "}
-            ¡Empieza a jugar y diviértete mientras reciclas! Esperamos verte en
-            el podio muy pronto :){" "}
+            ¡Empieza a jugar y diviértete mientras reciclas! Esperamos verte
+            en el podio muy pronto :){" "}
           </p>
-        </div>
-        <div>
-              <ul>
-                <li>
-                  <div></div>
-                  <pre>
-                    <img
-                      src="https://avatars.githubusercontent.com/u/85845504?v=4"
-                      width="150"
-                      height="150"
-                      alt="Foto 1"
-                    />
-                  </pre>
-                  <p className="p">
-                    <strong>Ramiro Villamizar:</strong>
-                  </p>
-                  <a
-              href="https://github.com/pivotsk8"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              pivotsk8
-            </a>
-                </li>
-                <br></br>
-                <li>
-                  <div></div>
-                  <pre>
-                    <img
-                      src="https://avatars.githubusercontent.com/u/87451265?v=4"
-                      width="150"
-                      height="150"
-                      alt="Foto 2"
-                    />
-                  </pre>
-                  <p className="p">
-                    <strong>Marisa Lia Pascal:</strong>
-                  </p>
-                  <a
-              href="https://github.com/Marisaliap"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Marisaliap
-            </a>
-                </li>
-                <br></br>
-                <li>
-                  <div></div>
-                  <pre>
-                    <img
-                      src="https://avatars.githubusercontent.com/u/79276560?v=4"
-                      width="150"
-                      height="150"
-                      alt="Foto 2"
-                    />
-                  </pre>
-                  <p className="p">
-                    <strong>Gustavo Montero:</strong>
-                  </p>
-                  <a
-              href="https://github.com/gamontero"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-             gamontero
-            </a>
-                </li>
-                <br></br>
-                <li>
-                  <div></div>
-                  <pre>
-                    <img
-                      src="https://avatars.githubusercontent.com/u/77559957?v=4"
-                      width="150"
-                      height="150"
-                      alt="Foto 2"
-                    />
-                  </pre>
-                  <p className="p">
-                    <strong>Daniel Alberto Mena:</strong>
-                  </p>
-                  <a
-              href="https://github.com/BtoMJ"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-             BtoMJ
-            </a>
-                </li>
-          </ul>
-        </div>
+           </div>
         <Link to="/">
           <button className="button_form">Volver </button>
         </Link>

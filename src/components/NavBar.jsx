@@ -5,7 +5,7 @@ import { SearchBar } from "./SearchBar";
 import { FilterBar } from "./FilterBar";
 import {
   ContNavBar,
-  LogoImg, 
+  LogoImg,
   ContNav,
   ContLogo,
   Ul,
@@ -39,9 +39,7 @@ export const NavBar = () => {
   return searchPlayer?.length > 0 ? (
     <ContNavBar>
       <ContLogo>
-      <Link to="/">
-      <LogoImg src={logo} alt="logo" />
-      </Link>
+        <LogoImg src={logo} alt="logo" />
         <SearchBar />
         <FilterBar />
         <AuthNav/>
@@ -81,9 +79,8 @@ export const NavBar = () => {
           )
         }
       </div>
-      <Link to="/">
+     
       <LogoImg src={logo} alt="logo" />
-      </Link>
       <SearchBar />
       <AuthNav/>
     </ContLogo>
