@@ -41,23 +41,13 @@ export const DetailPlayer = () => {
 return player? (
     checkform === false ? (
       <>
-        <h2
-          style={{
-            width: 500,
-            margin: "0 auto",
-            color: "white",
-            textAlign: "center",
-            marginTop: 60,
-            letterSpacing: 20,
-            textTransform: "uppercase",
-          }}
-        >
+        <ContEdit>
+        <h2 className="DetailPlayerTitle">
           Detalle del Jugador
         </h2>
-        <ContEdit>
           {player ? (
             <div key={player.Id} className="DetailContainer">
-              <div className="CloseDetail"></div>
+              {/* <div className="CloseDetail"></div> */}
               <div className="InfoContainer">
                 <div className="AvatarDetail">
                   <img src={player.avatar} alt={player.nickname} />

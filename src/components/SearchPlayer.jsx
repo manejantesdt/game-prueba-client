@@ -7,6 +7,7 @@ import {
 import { searchPlayers,} from "../actions";
 import { useEffect, useState } from "react";
 import Paged from "./Paged";
+import { FilterBar } from "./FilterBar";
 
 export const SearchPlayer = () => {
   const dispatch = useDispatch();
@@ -32,7 +33,7 @@ export const SearchPlayer = () => {
 
   return searchPlayer?.length > 0 && searchPlayer[0] !== null ? (
     <>
-    {/* <FilterBar /> */}
+    <FilterBar />
       <BoldPlayersSections>
         <div className="suplentes">
           {currentPlayers?.map((j, i) => {
@@ -61,7 +62,7 @@ export const SearchPlayer = () => {
         </div>
         <div className="returnContainer">
           <a href="/" className="BackHome">
-            Volver
+            Volver a la página principal
           </a>
         </div>
       </BoldPlayersPagination>

@@ -271,7 +271,7 @@ export const About = () => {
               alt="Ramiro"
             />
           </div>
-          <div className="NameMe">José Ángel Rey</div>
+          <div className="NameMe">Jose Angel Rey</div>
           <div className="redSocial">
             <a
               href="https://www.linkedin.com/in/jose-angel-rey/"

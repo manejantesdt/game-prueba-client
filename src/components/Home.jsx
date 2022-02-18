@@ -4,7 +4,7 @@ import { PlayersTen } from "./PlayersTen";
 import { BoldPlayers } from "./BoldPlayers";
 import { MainPanel } from "./MainPanel";
 import { getPlayers,searchPlayers } from "../actions";
-import "../styles/styles.scss";
+import {StyledHome} from "../styles/Home"
 
 export const Home = () => {
   const dispatch = useDispatch();
@@ -15,10 +15,10 @@ export const Home = () => {
   }, [dispatch]);
 
   return (
-    <main>
+    <StyledHome>
       <PlayersTen />
       <MainPanel />
       <BoldPlayers />
-    </main>
+    </StyledHome>
   );
 };
