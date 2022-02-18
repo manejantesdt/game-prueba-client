@@ -59,6 +59,65 @@ export const BoldPlayersSections = styled.section`
     }
   }
 
+  .jugador {
+    width: 200px;
+    height: 210px;
+    font-family: 'Russo One', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem;
+    margin: 0 10px;
+    border-radius: 0.8rem;
+    background-color: #ffffff20;
+    border-left: 1px solid #ffffff35;
+    border-bottom: 1px solid #ffffff35;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.4);
+    transition: all 0.5s; 
+  
+    h3 {
+      width: 100%;
+      height: 20px;
+      margin-bottom: var(--spacing);
+      color: white;
+      font-weight: normal;
+      margin-bottom: 5px;
+      // border: thin dotted rgb(0, 255, 98);
+    }
+  
+    .avatar{
+      width: 120px;
+      height: 85px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: 0.5s all;
+    }
+  
+    .avatar:hover{
+      transform: scale(1.1);
+      filter:drop-shadow( 0 5px 15px #00000080);
+    }
+  
+    .avatarStatus{
+      width: 100%;
+      color: #D4AC2B;
+      margin-bottom: 5px;
+    }
+
+    .avatarRanking{
+      width: 100%;
+      color: #FF0075;
+    }
+
+    &:hover{
+      transform: translateY(5px);
+      background-color: #ffffff18;
+    }
+  }
+
   h2 {
     height: 50px;
     color: #FF0075;
