@@ -119,29 +119,34 @@ export const ContNav = styled.nav`
   justify-content: space-evenly;
   gap: 1rem;
   text-align: center;
-  max-width: 60rem;
-  width: 85%;
+  max-width: 75rem;
+  width: 90%;
 `;
 
 export const Ul = styled.ul`
   .link {
     font-family: 'Orbitron', sans-serif;
     font-width: bold 500;
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: #fbf3e4;
     letter-spacing: 2px;
     transition: 0.5s all;
     // border: 1px solid #ccc;
     
      ${customMedia("740px")}{
-       font-size: 1.1rem;
+       font-size: 1rem;
     }
 
-      &:hover {
-        height: 2rem;
-        transform: translateY(-5px);
-        color: #77D970;
-        text-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
-      }
+    
+    &:hover {
+      height: 2rem;
+      transform: translateY(-5px);
+      color: #77D970;
+      text-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+    }
+  }
+  .active{
+    color: #77D970;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
   }
 `;
