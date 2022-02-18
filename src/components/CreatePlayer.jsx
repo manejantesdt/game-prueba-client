@@ -11,7 +11,7 @@ import default_avatar from "../img/Avatars/avatar1.png";
 function validate(player) {
   let errors = {};
   if (!player.nickname) {
-    errors.nickname = "Nickname is required";
+    errors.nickname = "Campo obligatorio";
   }
   return errors;
 }
