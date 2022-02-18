@@ -21,9 +21,6 @@ a{
   color: #1F3A52;
 }
 
-hr{
-  color: #1F3A52;
-}
 
 article{
   display:grid;
@@ -60,10 +57,10 @@ article{
 
 .inputSearch {
   width: 100%;
-  // height: 30px;
   border-radius: 5px;
   border: none;
   padding: 1rem;
+  padding-right: 60px;
   margin-right: 10px;
   &:focus{
     outline: solid 1px #77D970;
@@ -71,30 +68,29 @@ article{
 }
 
 .button {
-  width: 140px;
-  height: 30px;
+  width: 50px;
+  height: 100%;
+  cursor: pointer;
+  outline: none;
   border: none;
-  font-size: 1rem;
-  font-weight: bold;
   background-color: #b42769;
   color: #fff;
-  border-radius: 10px;
+  border-radius: 0 5px 5px 0;
+  padding: 0.5rem;
   transition: 0.5s all;
   &:hover {
     background-color: #172774;
-    // transition-delay: 0.2s;
-  color: #fff;
-  box-shadow: 0 3px 10px 0 rgba(0,0,0,0.5);
-  cursor: pointer;
   }
-  display: none;
+  &:active {
+    background-color: #2d4ad4;
+  }
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  svg{
+    width: 2rem;
+    height: 2rem;
+  }
 }
-
-// .LinkSearch {
-//   color: #fff;
-// }
-
-// .LinkSearch:hover{
-//   color: #fff;
-// }
 `;
