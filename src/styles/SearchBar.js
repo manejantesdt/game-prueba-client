@@ -11,9 +11,9 @@ const media = {
 
 export const SearchBarSection = styled.form`
 
-  ${media.xs}{
-      display: none;
-  }
+  // ${media.xs}{
+  //     display: none;
+  // }
 
 a{
   text-decoration: none;
@@ -59,11 +59,11 @@ article{
 // }
 
 .inputSearch {
-  width: 300px;
-  height: 30px;
-  border-radius: 10px;
+  width: 100%;
+  // height: 30px;
+  border-radius: 5px;
   border: none;
-  padding: 0 10px;
+  padding: 1rem;
   margin-right: 10px;
   &:focus{
     outline: solid 1px #77D970;
@@ -87,6 +87,7 @@ article{
   box-shadow: 0 3px 10px 0 rgba(0,0,0,0.5);
   cursor: pointer;
   }
+  display: none;
 }
 
 // .LinkSearch {
