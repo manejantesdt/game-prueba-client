@@ -1,8 +1,9 @@
-import { useState,useEffect } from "react";
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {  useParams } from "react-router";
+import { useNavigate } from "react-router-dom";
+import { useParams } from "react-router";
 import { ContEdit, IntoEdit } from "../styles/EditForm.js";
-import { getPlayerId, editPlayer, getPlayers } from "../actions/index";
+import { getPlayerId, editPlayer, deletePlayer } from "../actions/index";
 import { DetailPlayer } from "./DetailPlayer.jsx";
 
 function validate(editform) {
@@ -19,14 +20,11 @@ function validate(editform) {
 }
 
 export const EditPlayer = () => {
-  // useEffect(() => {
-  //   dispatch(getPlayerId(id));
-  // }, [dispatch]);
   var { player, avatars } = useSelector((state) => state);
+  const navigate = useNavigate();
   player = player[0];
   var { id } = useParams();
   const dispatch = useDispatch();
-
   const [checkform, setCheckform] = useState(false);
   const [error, setError] = useState({});
   const [editform, setEditform] = useState({
@@ -36,6 +34,7 @@ export const EditPlayer = () => {
     ranking: player.ranking,
     status: player.status,
   });
+  id = parseInt(id);
 
   const handleSelect = (e) => {
     setEditform({
@@ -48,10 +47,18 @@ export const EditPlayer = () => {
     checkform === false ? setCheckform(true) : setCheckform(false);
   };
 
-  const onClick = async () => {
-    dispatch(getPlayers({}));
+  const onClick = () => {
+    dispatch(getPlayerId(id));
     dispatch(editPlayer(id, editform));
     setCheckform(true);
+    alert("Jugador Editado exitosamente");
+    window.location.reload(true);
+  };
+  const onDelete = (e) => {
+    e.preventDefault();
+    dispatch(deletePlayer(id));
+    alert("Jugador Borrado Exitosamente");
+    navigate({ pathname: "/" });
   };
 
   const handleSubmit = async (e) => {
@@ -83,8 +90,7 @@ export const EditPlayer = () => {
       })
     );
   };
-  return checkform === false ? ( 
-   
+  return checkform === false ? (
     <>
       <h2
         style={{
@@ -102,6 +108,7 @@ export const EditPlayer = () => {
       <ContEdit>
         {player ? (
           <IntoEdit key={player.Id} onSubmit={handleSubmit}>
+            <button onClick={onDelete}>x</button>
             <img src={editform.avatar} alt="Ávatar" className="editAvatar" />
 
             <div className="editPlayerAvatar">
@@ -165,6 +172,7 @@ export const EditPlayer = () => {
 
             <div className="editButtons">
               <button onClick={onClick} type="submit" className="btnChange">
+                {/* <button onClick={onClick} onSubmit={handleSubmit} type="submit" className="btnChange"> */}
                 Cambiar
               </button>
               <button onClick={onClickCancel} className="btnChange">
@@ -177,6 +185,7 @@ export const EditPlayer = () => {
         )}
       </ContEdit>
     </>
-  ):(<DetailPlayer/>)
- 
+  ) : (
+    <DetailPlayer />
+  );
 };
