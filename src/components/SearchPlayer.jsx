@@ -4,10 +4,9 @@ import {
   BoldPlayersSections,
   BoldPlayersPagination,
 } from "../styles/BoldPlayers";
-import { searchPlayers, getPlayers } from "../actions";
+import { searchPlayers,} from "../actions";
 import { useEffect, useState } from "react";
 import Paged from "./Paged";
-/* import { FilterBar } from "./FilterBar"; */
 
 export const SearchPlayer = () => {
   const dispatch = useDispatch();
@@ -16,7 +15,6 @@ export const SearchPlayer = () => {
   useEffect(() => {
     dispatch(
       searchPlayers(nickname ? { nick_name: nickname } : { nick_name: "" }),
-      // getPlayers({})
     );
   }, [players, nickname, dispatch]);
 

@@ -10,7 +10,6 @@ const inizialstate = {
   avatar: "",
   order: "",
   status: "",
-  id: 0,
 };
 
 function rootReducer(state = inizialstate, action /* { type, payload } */) {
@@ -55,11 +54,6 @@ function rootReducer(state = inizialstate, action /* { type, payload } */) {
         ...state,
         status: action.payload,
       };
-    // case "SET_ID":
-    //   return {
-    //     ...state,
-    //     id: action.payload,
-    //   };
 
     default:
       return state;
