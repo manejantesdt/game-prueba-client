@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { SearchBar } from "./SearchBar";
 import {
   ContNavBar,
@@ -38,28 +38,28 @@ export const NavBar = () => {
   return searchPlayer?.length > 0 ? (
     <ContNavBar>
       <ContLogo>
-      <Link to="/">
+      <NavLink to="/">
       <LogoImg src={logo} alt="logo" />
-      </Link>
+      </NavLink>
         <SearchBar />
         <AuthNav/>
       </ContLogo>
         <MenuIcon style={{color: '#fff'}} />
       <ContNav>
         <Ul>
-          <Link to="/" className="link">
-            Inicio
-          </Link>
+          <NavLink to="/" className="link">
+          Salón de la fama
+          </NavLink>
         </Ul>
         <Ul>
-          <Link to="/create" className="link">
+          <NavLink to="/create" className="link">
             Crear Jugador
-          </Link>
+          </NavLink>
         </Ul>
         <Ul>
-          <Link to="about" className="link">
-            Sobre
-          </Link>
+          <NavLink to="about" className="link">
+            Acerca de
+          </NavLink>
         </Ul>
       </ContNav>
     </ContNavBar>
@@ -79,27 +79,27 @@ export const NavBar = () => {
           )
         }
       </div>
-      <Link to="/">
+      <NavLink to="/">
       <LogoImg src={logo} alt="logo" />
-      </Link>
+      </NavLink>
       <SearchBar />
       <AuthNav/>
     </ContLogo>
     <ContNav className="ContNav">
       <Ul>
-        <Link to="/" className="link">
-          Inicio
-        </Link>
+        <NavLink to="/" className="link">
+        Salón de la fama
+        </NavLink>
       </Ul>
       <Ul>
-        <Link to="/create" className="link">
+        <NavLink to="/create" className="link">
           Crear Jugador
-        </Link>
+        </NavLink>
       </Ul>
       <Ul>
-        <Link to="about" className="link">
-          Sobre
-        </Link>
+        <NavLink to="about" className="link">
+          Acerca de
+        </NavLink>
       </Ul>
     </ContNav>
   </ContNavBar>)
