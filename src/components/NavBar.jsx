@@ -2,7 +2,6 @@ import React from 'react';
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { SearchBar } from "./SearchBar";
-import { FilterBar } from "./FilterBar";
 import {
   ContNavBar,
   LogoImg, 
@@ -43,7 +42,6 @@ export const NavBar = () => {
       <LogoImg src={logo} alt="logo" />
       </Link>
         <SearchBar />
-        <FilterBar />
         <AuthNav/>
       </ContLogo>
         <MenuIcon style={{color: '#fff'}} />
