@@ -89,21 +89,18 @@ export const BoldPlayersSections = styled.section`
 
 export const BoldPlayersPagination = styled.div`
   .pagesContainer{
-    width: 100%;
-    height: 50px;
+    // background: #FF0075;
+    width: 90%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-top: 50px;
+    margin: 50px auto;
     // border: 1px solid #ccc;
   }
 
   .returnContainer{
-    width: 150px;
-    height: 80px;
-    margin-top: 80px;
-    margin: 0 auto;
+    margin: 30px auto 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -114,15 +111,16 @@ export const BoldPlayersPagination = styled.div`
     color: #fff;
     background-color: #FF0075;
     font-weight: bold;
-    padding: 8px 13px;
+    font-size: 1rem;
+    padding: 8px 2rem;
     border: none;
-    border-radius: 15px;
+    border-radius: 5px;
     transition: .5s all;
   }
   
   .BackHome:hover{
     background-color: #77D970;
-    transform: translateY(-5px);
+    transform: translateY(-3px);
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
   }
 `;
