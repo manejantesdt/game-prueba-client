@@ -92,23 +92,13 @@ export const EditPlayer = () => {
   };
   return checkform === false ? (
     <>
-      <h2
-        style={{
-          width: 700,
-          margin: "0 auto",
-          color: "white",
-          textAlign: "center",
-          marginTop: 20,
-          letterSpacing: 20,
-          textTransform: "uppercase",
-        }}
-      >
-        Editar Detalles del Jugador
-      </h2>
       <ContEdit>
+        <h2 className="DetailPlayerTitle">
+          Editar Detalles del Jugador
+        </h2>
         {player ? (
           <IntoEdit key={player.Id} onSubmit={handleSubmit}>
-            <button onClick={onDelete}>x</button>
+            <button className="deleteButton" onClick={onDelete}>x</button>
             <img src={editform.avatar} alt="Ávatar" className="editAvatar" />
 
             <div className="editPlayerAvatar">
