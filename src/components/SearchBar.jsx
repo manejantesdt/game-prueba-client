@@ -3,6 +3,7 @@ import { SearchBarSection } from "../styles/SearchBar";
 import { useDispatch } from "react-redux";
 import { setNickname, searchPlayers } from "../actions";
 import {useNavigate} from "react-router-dom";
+import SearchIcon from '@mui/icons-material/Search';
 
 export const SearchBar = () => {
   const navigate = useNavigate();
@@ -31,10 +32,11 @@ export const SearchBar = () => {
         type="text"
         value={nick_name ? nick_name : ""}
         onChange={handleOnChange}
+        required
       />
 
       <button className="button" type="submit">
-        Buscar Jugador
+        <SearchIcon />
       </button>
     </SearchBarSection>
   );

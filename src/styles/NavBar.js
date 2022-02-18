@@ -9,6 +9,12 @@ const media = {
   ulg: '@media(min-width: 1921px) and (max-width: 2560px)',
 }
 
+const customMedia = (maxWidth, minWidth) => {
+  if(maxWidth && !minWidth) return `@media (max-width: ${maxWidth})`;
+  if(minWidth && !maxWidth) return `@media (min-width: ${minWidth})`;
+  return `@media (min-width: ${minWidth}) and (max-width: ${maxWidth})`;
+}
+
 export const ContNavBar = styled.div`
 
   ${media.xs}{
@@ -22,21 +28,17 @@ export const ContNavBar = styled.div`
 
 export const ContLogo = styled.div`
   width: 100%;
-  height: 6rem;
+  // height: 6rem;
+  padding: 1rem 0.5rem;
   background: #FF0075;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: space-around;
-  
-  ${media.xs}{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    // border: 1px solid #ccc;
     
     .sidebarMenu{
       margin-left: 10%;
+      display: none !important;
     }
 
     .btnMenuMobile{
@@ -54,28 +56,56 @@ export const ContLogo = styled.div`
       // border: 1px solid #ccc;
     }
 
-  }
+    form{
+      position: relative;
+      max-width: 30rem;
+      width: 90%;
+      order: 2;
+    }
 
-  ${media.lg}{
-    .sidebarMenu{
-      display: none;
+    a{
+      max-width: 20rem;
+      width: 70%;
+    }
+   
+    button{
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      background-color: #172774;
+      font-size: 1.2rem;
+      outline: none;
+      padding: .8rem 2rem;
+    }
+    
+    ${media.xs}{
+      button{
+      font-size: 1rem;
+      padding: 0.5rem 1.2rem;
     }
   }
 
-  ${media.xlg}{
-    .sidebarMenu{
-      display: none;
+  ${customMedia(null, '767px')}{
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    padding: .5rem 2rem;
+    
+    form{
+      order: 0;
+      width: 30%;
     }
+
   }
 `;
 
 export const LogoImg = styled.img`
-  width: 25rem;
-  margin-left: 2rem;
+  width: 100%;
+  // width: 25rem;
+  // margin-left: 2rem;
 
   ${media.xs}{
-    width: 18rem;
-    margin-right: 10%;
+    // width: 100%;
+    // margin-right: 10%;
     // border: 1px solid #000;
   }
 
@@ -83,61 +113,40 @@ export const LogoImg = styled.img`
 `;  
 
 export const ContNav = styled.nav`
-  width: 50%;
-  height: 4rem;
-  margin: 0 auto;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin: 3.5rem auto;
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: space-around;
-  // background-color: #1f3a52;
-  // margin: 2rem 0;
-  // border: 1px solid #ccc;
-  
-  // ${media.xs}{
-  //   width: 100%;
-  //   height: 200px;
-  //   position: absolute;
-  //   top: -250px;
-  //   flex-direction: column;
-  //   background-color:#ffffff;
-  //   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-  //   transition: 0.5s all;
-
-  // }
-  
-  `;
+  justify-content: space-evenly;
+  gap: 1rem;
+  text-align: center;
+  max-width: 75rem;
+  width: 90%;
+`;
 
 export const Ul = styled.ul`
   .link {
     font-family: 'Orbitron', sans-serif;
     font-width: bold 500;
-    text-decoration: none;
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: #fbf3e4;
-    letter-spacing: 3px;
-    height: 2rem;
+    letter-spacing: 2px;
     transition: 0.5s all;
     // border: 1px solid #ccc;
     
-    // ${media.xs}{
-    //   font-size: 1.3rem;
-    //   color: #ccc;
-      
-    //   &:hover {
-    //     // height: 2rem;
-    //     color: #77D970;
-    //     text-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
-    //   }
-    // }
+     ${customMedia("740px")}{
+       font-size: 1rem;
+    }
 
-      &:hover {
-        height: 2rem;
-        transform: translateY(-5px);
-        color: #77D970;
-        text-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
-      }
+    
+    &:hover {
+      height: 2rem;
+      transform: translateY(-5px);
+      color: #77D970;
+      text-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+    }
+  }
+  .active{
+    color: #77D970;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
   }
 `;

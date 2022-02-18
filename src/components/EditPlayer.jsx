@@ -1,21 +1,17 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams, useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
+import { useParams } from "react-router";
 import { ContEdit, IntoEdit } from "../styles/EditForm.js";
-import { useAuth0 } from '@auth0/auth0-react';
-import {
-  getPlayerId,
-  editPlayer,
-  deletePlayer,
-  getPlayers,
-} from "../actions/index";
+import { getPlayerId, editPlayer, deletePlayer } from "../actions/index";
+import { DetailPlayer } from "./DetailPlayer.jsx";
 
 function validate(editform) {
   let errorValidate = {};
   var numbers = /^[1-9][0-9]*$/;
 
   //name validation
-   if (editform.score.length > 6) {
+  if (editform.score.length > 6) {
     errorValidate.score = "numberp muy largo, cifras max 6";
   } else if (!editform.score.match(numbers)) {
     errorValidate.score = "Solo números positivos permitidos";
@@ -24,54 +20,46 @@ function validate(editform) {
 }
 
 export const EditPlayer = () => {
-  // ------------------------------<Variables>--------------------------------
   var { player, avatars } = useSelector((state) => state);
-  player = player[0]
   const navigate = useNavigate();
-  const dispatch = useDispatch();
+  player = player[0];
   var { id } = useParams();
-  const { user, isAuthenticated } = useAuth0();
- 
-
-  useEffect(() => {
-    dispatch(getPlayerId(id));
-    // dispatch(getPlayers({}));
-    if (isAuthenticated === true && user.email === 'dreamteammanejantes@gmail.com' ) {
-      setAdminStatus(true)
-  }
-}, [dispatch, id]);
-  // _____________________________________________________________________________
-  // ------------------------------<State>----------------------------------
+  const dispatch = useDispatch();
   const [checkform, setCheckform] = useState(false);
-  const [editform, setEditform] = useState({});
   const [error, setError] = useState({});
-  const [adminStatus, setAdminStatus] = useState(false)
+  const [editform, setEditform] = useState({
+    nickname: player.nickname,
+    avatar: player.avatar,
+    score: player.score,
+    ranking: player.ranking,
+    status: player.status,
+  });
+  id = parseInt(id);
 
-  // __________________________________________________________________________
-
-  // ------------------------------<Functions>---------------------------------
-  const onClickCheck = async () => {
+  const handleSelect = (e) => {
     setEditform({
-      nickname: player.nickname,
-      status: player.status,
-      ranking: player.ranking,
-      avatar: player.avatar,
-      score: player.score,
+      ...editform,
+      [e.target.name]: e.target.value,
     });
-    checkform === true ? setCheckform(false) : setCheckform(true);
   };
-
   const onClickCancel = () => {
     setEditform({});
     checkform === false ? setCheckform(true) : setCheckform(false);
   };
 
-  // const onClick = async () => {
-  //   await dispatch(editPlayer(id, editform));
-  //   dispatch(getPlayers({}));
-  //   console.log(editform,id);
-
-  // };
+  const onClick = () => {
+    dispatch(getPlayerId(id));
+    dispatch(editPlayer(id, editform));
+    setCheckform(true);
+    alert("Jugador Editado exitosamente");
+    window.location.reload(true);
+  };
+  const onDelete = (e) => {
+    e.preventDefault();
+    dispatch(deletePlayer(id));
+    alert("Jugador Borrado Exitosamente");
+    navigate({ pathname: "/" });
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -82,11 +70,13 @@ export const EditPlayer = () => {
       })
     );
     if (!Object.getOwnPropertyNames(error).length) {
-    dispatch(editPlayer(id, editform));
-    dispatch(getPlayerId(id));
-    checkform === false ? setCheckform(true) : setCheckform(false);
-  } else {
-    alert("Errores, revisar información")}}
+      dispatch(editPlayer(id, editform));
+      dispatch(getPlayerId(id));
+      checkform === false ? setCheckform(true) : setCheckform(false);
+    } else {
+      alert("Errores, revisar información");
+    }
+  };
 
   const handleChange = (e) => {
     setEditform({
@@ -100,195 +90,92 @@ export const EditPlayer = () => {
       })
     );
   };
-
-  const handleSelect = (e) => {
-    setEditform({
-      ...editform,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  // _____________________________________________________________________________
-  //
-  return player?.ranking !== undefined ? (
-    checkform === false ? (
-      <>
-        <h2
-          style={{
-            width: 500,
-            margin: "0 auto",
-            color: "white",
-            textAlign: "center",
-            marginTop: 60,
-            // color: "#FF0075",
-            letterSpacing: 20,
-            textTransform: "uppercase",
-          }}
-        >
-          Detalle del Jugador
-        </h2>
-        <ContEdit>
-          {player ? (
-            <div key={player.Id} className="DetailContainer">
-              <div className="CloseDetail">
-                {/* <button
-                  className="btnCloseDetail"
-                  type="button"
-                  onClick={() =>
-                    dispatch(deletePlayer(player.Id), navigate("/"))
-                  }
-                >
-                  X
-                </button> */}
-              </div>
-              <div className="InfoContainer">
-                <div className="AvatarDetail">
-                  <img
-                    src={editform.avatar ? editform.avatar : player.avatar}
-                    alt={player.nickname}
-                  />
-                </div>
-
-                <div className="InfoDetail">
-                  <div className="detail">
-                    <p>Nickname:</p>
-                    <span>
-                      {editform.nickname ? editform.nickname : player.nickname}
-                    </span>
-                  </div>
-
-                  <div className="detail">
-                    <p>Status:</p>
-                    <span>
-                      {editform.status ? editform.status : player.status}
-                    </span>
-                  </div>
-
-                  <div className="detail">
-                    <p>Ranking:</p>
-
-                    <span>
-                      {editform.ranking ? editform.ranking : player.ranking}
-                    </span>
-                  </div>
-
-                  <div className="detail">
-                    <p>Score:</p>
-
-                    <span>
-                      {editform.score ? editform.score : player.score}
-                    </span>
-                  </div>
-
-                  <button className="btnEditPlayer" onClick={onClickCheck}>
-                    Editar
-                  </button>
-                </div>
-              </div>
-            </div>
-          ) : (
-            <div>...descargando...</div>
-          )}
-        </ContEdit>
-      </>
-    ) : (
-      <>
-        <h2
-          style={{
-            width: 700,
-            margin: "0 auto",
-            color: "white",
-            textAlign: "center",
-            marginTop: 20,
-            // color: "#FF0075",
-            letterSpacing: 20,
-            textTransform: "uppercase",
-          }}
-        >
+  return checkform === false ? (
+    <>
+      <ContEdit>
+        <h2 className="DetailPlayerTitle">
           Editar Detalles del Jugador
         </h2>
-        <ContEdit>
-          {player && adminStatus === true ? (
-            <IntoEdit key={player.Id} onSubmit={handleSubmit}>
-              <img src={editform.avatar} alt="Ávatar" className="editAvatar" />
+        {player ? (
+          <IntoEdit key={player.Id} onSubmit={handleSubmit}>
+            <button className="deleteButton" onClick={onDelete}>x</button>
+            <img src={editform.avatar} alt="Ávatar" className="editAvatar" />
 
-              <div className="editPlayerAvatar">
-                <p>Avatar</p>
-                <select
-                  type="text"
-                  name="avatar"
-                  className="input_form"
-                  onChange={(e) => handleSelect(e)}
-                >
-                  <option value={null}>{player.avatar}</option>
-                  {avatars.map((e, id) => (
-                    <option key={id} value={e}>
-                      {"Avatar " + (id + 1)}
-                    </option>
-                  ))}
-                </select>
-              </div>
+            <div className="editPlayerAvatar">
+              <p>Avatar</p>
+              <select
+                type="text"
+                name="avatar"
+                className="input_form"
+                onChange={(e) => handleSelect(e)}
+              >
+                <option value={null}>{player.avatar}</option>
+                {avatars.map((e, id) => (
+                  <option key={id} value={e}>
+                    {"Avatar " + (id + 1)}
+                  </option>
+                ))}
+              </select>
+            </div>
 
-              <div className="editPlayerAvatar">
-                <p>Status</p>
-                <select
-                  type="text"
-                  name="status"
-                  className="input_form"
-                  onChange={(e) => handleSelect(e)}
-                >
-                  <option value={null}>{editform.status}</option>
-                  <option value="oro">Oro</option>
-                  <option value="bronce">Bronce</option>
-                  <option value="plata">Plata</option>
-                  <option value="hierro">Hierro</option>
-                </select>
-              </div>
+            <div className="editPlayerAvatar">
+              <p>Status</p>
+              <select
+                type="text"
+                name="status"
+                className="input_form"
+                onChange={(e) => handleSelect(e)}
+              >
+                <option value={null}>{player.status}</option>
+                <option value="oro">Oro</option>
+                <option value="bronce">Bronce</option>
+                <option value="plata">Plata</option>
+                <option value="hierro">Hierro</option>
+              </select>
+            </div>
 
-              <div className="editPlayerAvatar">
-                <p>Nickname</p>
-                <input
-                  className="input_form"
-                  type="text"
-                  name="nickname"
-                  placeholder={player.nickname}
-                  onChange={(e) => handleChange(e)}
-                />
-              </div>
+            <div className="editPlayerAvatar">
+              <p>Nickname</p>
+              <input
+                className="input_form"
+                type="text"
+                name="nickname"
+                placeholder={player.nickname}
+                onChange={(e) => handleChange(e)}
+              />
+            </div>
 
-              <div className="editPlayerAvatar">
-                <p>Score</p>
-                <input
-                  className="input_form"
-                  type="number"
-                  name="score"
-                  min = "0"
-                  placeholder={parseInt(player.score)}
-                  onChange={(e) => handleChange(e)}
-                />
-                {console.log(player.ranking)}
-                {error.score && <p>{error.score}</p>}
-              </div>
+            <div className="editPlayerAvatar">
+              <p>Score</p>
+              <input
+                className="input_form"
+                type="number"
+                name="score"
+                min="0"
+                placeholder={parseInt(player.score)}
+                onChange={(e) => handleChange(e)}
+              />
+              {error.score && <p>{error.score}</p>}
+            </div>
 
-              {error.name && <p>{error.name}</p>}
+            {error.name && <p>{error.name}</p>}
 
-              <div className="editButtons">
-                {/* <button onClick={onClick} type="submit" className="btnChange"> */}
-                <button type="submit" className="btnChange">
-                  Cambiar
-                </button>
-                <button onClick={onClickCancel} className="btnChange">
-                  Cancelar
-                </button>
-              </div>
-            </IntoEdit>
-          ) : (
-            <div>...Log in o credenciales de administración requeridas...</div>
-          )}
-        </ContEdit>
-      </>
-    )
+            <div className="editButtons">
+              <button onClick={onClick} type="submit" className="btnChange">
+                {/* <button onClick={onClick} onSubmit={handleSubmit} type="submit" className="btnChange"> */}
+                Cambiar
+              </button>
+              <button onClick={onClickCancel} className="btnChange">
+                Cancelar
+              </button>
+            </div>
+          </IntoEdit>
+        ) : (
+          <div>...Log in o credenciales de administración requeridas...</div>
+        )}
+      </ContEdit>
+    </>
   ) : (
-    <div>...descargando...</div>
+    <DetailPlayer />
   );
 };

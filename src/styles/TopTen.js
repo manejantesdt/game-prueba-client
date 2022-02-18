@@ -18,7 +18,6 @@ export const TopTenSection = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  // border: 1px solid #000;
 }
 
 .avatarPosition{
@@ -33,7 +32,6 @@ export const TopTenSection = styled.section`
   backdrop-filter: blur(15px);
   transform: translatey(0px);
   animation: float 6s ease-in-out infinite;
-  // border: 1px solid #000;
 }
 
 .avatarPosition img{

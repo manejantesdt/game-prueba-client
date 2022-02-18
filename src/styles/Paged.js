@@ -1,48 +1,58 @@
 import styled from "styled-components";
 
-export const ContNavBar = styled.div``;
+export const StyledPaged = styled.nav`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 320px;
+  width: 90%;
 
-export const LogoImg = styled.img`
+  // @media (max-width: 420px) {
+  //   flex-wrap: wrap;
+  // }
 
-.paged {
-    text-decoration: none;
-  }
-  
-  .listContainer {
-    display: inline-flex;
-    flex-direction: row;
-  }
-  
-  .number {
-    color: #fff;
-    list-style: none;
-    padding: 1px;
-    font-size: 16px;
-    font-family: Lato, Arial, Helvetica, sans-serif;
-    text-align: center;
-  }
-  
-  .link {
-    color: #fff;
-    display:inline-flex;
-    padding: 10px;
-    margin: 2px;
+  button {
+    background-color: #ff0075;
+    border-radius: 5px;
     border: none;
+    color: #fff;
     cursor: pointer;
-    background-color: #c485ba83;
-    border-radius: 10%;
-    list-style:none;
-    width: 10px;
-    height: 10px;
-    font-size: 12px;
+    display: flex;
     align-items: center;
-  }    
-  
-  .link:hover {
-    background-color: #fff;
-    border: none;
-    color: #220F00;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 8px 1.5rem;
+    text-align: center;
     transition-delay: 0.2s;
     transition: 0.8s;
-  }    
-  `;
+
+    svg {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    :hover {
+      background-color: #77d970;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+    }
+    :active {
+      background-color: #479a41;
+      transform: translateY(0px);
+    }
+  }
+  .currentPage{
+    background-color: #fff;
+    border: 1px solid #fff;
+    color: #ff0075;
+    cursor: auto;
+    
+    &:hover{
+      background-color: #fff;
+      transform: none;
+    }
+  }
+`;
