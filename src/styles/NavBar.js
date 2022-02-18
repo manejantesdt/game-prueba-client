@@ -38,7 +38,7 @@ export const ContLogo = styled.div`
     
     .sidebarMenu{
       margin-left: 10%;
-      display: none;
+      display: none !important;
     }
 
     .btnMenuMobile{
@@ -57,6 +57,7 @@ export const ContLogo = styled.div`
     }
 
     form{
+      position: relative;
       max-width: 30rem;
       width: 90%;
       order: 2;
