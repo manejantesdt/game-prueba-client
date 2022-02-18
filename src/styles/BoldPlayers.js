@@ -18,6 +18,47 @@ export const BoldPlayersSections = styled.section`
   border-radius: 8px;
   text-align: center;
 
+  & h2{
+    margin-bottom: 2rem;
+  }
+
+  & .suplentes{
+    // background: red;
+    width: 100%;
+    // display: flex;
+    // flex-wrap: wrap;
+    // align-items: center;
+    // justify-content: space-evenly;
+    // gap: 2rem;
+
+      overflow-x: auto;
+      padding-bottom: 2rem;
+      width: 100%;
+
+     ::-webkit-scrollbar {
+        -webkit-appearance: none;
+      }
+      
+     ::-webkit-scrollbar:horizontal {
+        height: 10px;
+      }
+      
+      ::-webkit-scrollbar-thumb {
+        background-color: #ffffff15;
+        border-radius: 20px;
+      }
+      
+    ::-webkit-scrollbar-track {
+        border-radius: 10px;  
+      }
+      
+     ::-webkit-scrollbar-thumb:active {
+        background-color: #ffffff40;
+        cursor: pointer;
+      }
+    }
+  }
+
   h2 {
     height: 50px;
     color: #FF0075;
