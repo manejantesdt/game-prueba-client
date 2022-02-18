@@ -85,7 +85,7 @@ return player? (
 
                     <span>{player.score}</span>
                   </div>
-                  {adminStatus === false && (
+                  {adminStatus === true && (
                     <button className="btnEditPlayer" onClick={onClickCheck}>
                       Editar
                     </button>

@@ -113,7 +113,6 @@ export const editPlayer = (Id, player) => {
   };
 };
 export const deletePlayer = (Id) => {
-  console.log(Id);
   return async (dispatch) => {
     try {
       const json = (
