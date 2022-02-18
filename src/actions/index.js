@@ -1,13 +1,12 @@
 import axios from "axios";
-
+const endpoint = process.env.REACT_APP_END_POINT;
 // -----------------------<Gets>------------------------
 
 export const searchPlayers = ({ nick_name, order, status }) => {
   return async (dispatch) => {
     try {
       const json = (
-        await axios.get(
-          `https://mrsemsqfk6.execute-api.us-east-1.amazonaws.com/player?nick_name=${
+        await axios.get(`${endpoint}/player?nick_name=${
             nick_name ? nick_name : ""
           }&order=${order ? order : ""}&status=${
             status ? status : ""
@@ -28,11 +27,10 @@ export const getPlayers = () => {
   return async (dispatch) => {
     try {
       const json = (
-        await axios.get(
-          `https://mrsemsqfk6.execute-api.us-east-1.amazonaws.com/player?nickname=&amount=50&order=asc`
+        await axios.get(`${endpoint}/player?nickname=&amount=50&order=desc`
         )
       ).data;
-      const players = json.body.getPlayers;
+      const players = json.body.players;
       dispatch({
         type: "GET_PLAYERS",
         payload: players,
@@ -60,8 +58,7 @@ export const createPlayer = (player) => {
   return async (dispatch) => {
     try {
       const json = (
-        await axios.post(
-          "https://mrsemsqfk6.execute-api.us-east-1.amazonaws.com/player",
+        await axios.post(`${endpoint}/player`,
           player
         )
       ).data;
@@ -79,8 +76,7 @@ export const getPlayerId = (Id) => {
   return async (dispatch) => {
     try {
       const json = (
-        await axios.get(
-          `https://mrsemsqfk6.execute-api.us-east-1.amazonaws.com/player/${Id}`
+        await axios.get(`${endpoint}/player/${Id}`
         )
       ).data;
       const player = json.body;
@@ -98,8 +94,7 @@ export const editPlayer = (Id, player) => {
   return async (dispatch) => {
     try {
       const json = (
-        await axios.put(
-          `https://mrsemsqfk6.execute-api.us-east-1.amazonaws.com/player/` + Id,
+        await axios.put(`${endpoint}/player/` + Id,
           player
         )
       ).data;
@@ -116,8 +111,7 @@ export const deletePlayer = (Id) => {
   return async (dispatch) => {
     try {
       const json = (
-        await axios.delete(
-          `https://mrsemsqfk6.execute-api.us-east-1.amazonaws.com/player/${Id}`
+        await axios.delete(`${endpoint}/player/${Id}`
         )
       ).data;
       dispatch({
@@ -149,3 +143,4 @@ export const setOrder = (order) => {
     payload: order,
   };
 };
+
