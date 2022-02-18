@@ -10,7 +10,7 @@ export const Home = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(searchPlayers({nick_name:""}));
+    dispatch(searchPlayers({nick_name:"",order:"",status:""}));
     dispatch(getPlayers({}));
   }, [dispatch]);
 
