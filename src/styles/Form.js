@@ -10,48 +10,45 @@ const media = {
 }
 
 export const ContForm = styled.div`
-  width: 814px;
-  height: 300px;
-  margin: 0 auto;
+  width: 90%;
+  max-width: 820px;
+  padding: 1.5rem;
+  margin: 6rem auto;
   font-family: 'Russo One', sans-serif;
   display: flex;
-  flex-direction: row;
+  gap: 1rem;
   align-items: center;
   justify-content: space-around;
-  padding: 1rem;
-  margin-top: 150px;
   border-radius: 0.8rem;
   background-color: #ffffff20;
   border-left: 1px solid #ffffff35;
   border-bottom: 1px solid #ffffff35;
   box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.4);
   transition: all 0.5s;
+  
+  @media(max-width: 700px) {
+    flex-wrap: wrap;
+  }
 
   .createPlayerAvatar{
-    width: 30%;
-    height: 100%;
-    // border: 1px solid #ffffff35;
+    max-width: 200px;
+    width: 100%;
   }
   
   .createPlayerForm{
-    width: 70%;
-    height: 100%;
-    // border: 1px solid #ffffff35;
-  }
-  
-  .image{
-    padding: 5%;
+    min-width: 300px;
+    width: 100%;
   }
   
   `;
   
   export const IntoForm = styled.form`
-  height: 100%;
-  padding: 15px;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  width: 100%;
 
   // margin-top: 10px;
   // font-size: 14px;
@@ -78,12 +75,11 @@ export const ContForm = styled.div`
   }
   .button_form {
     width: 122px;
-    height: 30px;
-    margin-left: 20px;
+    height: 35px;
     border: none;
     background-color: #ff0075;
     color: white;
-    border-radius: 10px;
+    border-radius: 5px;
     text-align: center;
     cursor: pointer;
     transition: all 0.5s;
@@ -96,58 +92,50 @@ export const ContForm = styled.div`
     }
   }
   .error {
-    width: 200px;
+    width: 150px;
     height: 30px;
     border-radius: 10px;
-    position: relative;
-    top: -49px;
-    left: 378px;
+    position: absolute;
+    top: 0;
+    font-size: 12px;
+    right: 0;
     line-height: 30px;
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
-    // justify-content: center;
     background-color: #ff0000;
     color: #fff;
     text-align: center;
-    font-size: 14px;
+
+    @media(min-width: 700px) {
+      top: -1.5rem;
+    }
   }
-  
-  p {
-    margin: 0 10px;
-    color: #fff;
-    font-size: 0.9rem;
-  }
-  
+    
   .createData{
     width: 100%;
     height: 70px;
+    position: relative;
     display: flex;
-    flex-direction: row;
     align-items: center;
-    // border: 1px solid #ffffff35;
+
+    @media(max-width: 700px) {
+      flex-direction: column;
+      justify-content: center;
+    }
   }
   
   .letrero{
-    width: 500px;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    // justify-content: row reverse;
-    // padding: 0 10px 0 0;
+    width: 100%;
     color: #ffffff;
     font-size: 1.5rem;
-    // border: 1px solid #00f;
   }
   
-  .createButton{
-    width: 50%;
+  .createButtons{
+    max-width: 350px;
     margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    // border: 1px solid #00f;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
   }
 
  
