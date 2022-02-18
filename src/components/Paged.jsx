@@ -18,6 +18,11 @@ export default function Paged({ playersPerPage, searchPlayer, pagedTotal, curren
             {currentPage - 1}
           </button>
         )}
+        {paginate > 1  && (
+          <button className="currentPage">
+            {currentPage}
+          </button>
+        )}
         {paginate > 1 && currentPage < paginate && (
           <button onClick={() => pagedTotal(currentPage + 1)}>
             {currentPage + 1}
