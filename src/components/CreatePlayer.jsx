@@ -37,7 +37,6 @@ export const CreatePlayer = () => {
 
   // -----------------------------------< handles >------------------------------------------------
   const handleSelect = (e) => {
-    console.log(player)
     setPlayer({
       ...player,
       [e.target.name]: e.target.value,
@@ -45,7 +44,6 @@ export const CreatePlayer = () => {
   };
 
   const handleChange = (e) => {
-    console.log(player)
     setPlayer((prevState) => {
       return{
           ...prevState,

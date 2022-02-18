@@ -1,191 +1,317 @@
 import { AboutSection } from "../styles/About";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { Link } from "react-router-dom";
 
 export const About = () => {
   return (
     <AboutSection>
-      <article>
-        <div></div>
-        <div>
-          <br />
-          <br />
-          <h2>Acerca de Recicle Being</h2>
-          <p>
-            Cada vez más personas en todo el mundo son conscientes de la
-            necesidad de cuidar nuestro medio-ambiente. Sin embargo cuidar
-            nuestro entorno requiere, para la mayoría de nosotros, del
-            desarrollo de nuevos hábitos, como por ejemplo separar los residuos
-            clasificándolos en recipientes adecuados y así facilitar la tarea
-            para que esos elementos puedan ser reciclados.
-          </p>
-          <p>
-            Este juego nació de una idea eco-responsable, la cual desea enseñar
-            a las nuevas y no tan nuevas generaciones sobre la importancia de
-            reciclar.
-          </p>
-          <p>
-            El nombre del juego recuerda a la famosa "papelera de reciclaje" de
-            Windows. Lo aprovechamos como un juego de palabras divertido donde
-            el sentido de una simple papelera donde se descartan elementos que
-            ya no sirven, se transforma en un Ser (being) que Recicla. Sin duda
-            la actitud de reciclar requiere del desarrollo de nuestro ser!{" "}
-          </p>
-          <p>
-            Así, Recicle Being fue creado como un modo entretenido e interesante
-            de tener la experiencia de convertirnos en un "Ser Reciclador", un
-            personaje que contribuye a crear un medio-ambiente más saludable.{" "}
-          </p>
-          <p>
-            Creemos que una de las mejores maneras de aprender es jugando! la
-            mayoría no puede aprender de un libro. Pero sabemos que si jugamos a
-            reciclar, terminaremos aprendiendo y aplicándolo en la vida real.
-          </p>
-          <p>
-            Diseñamos un juego donde puedes crear tu propio personaje, un
-            jugador con tu propio nickname, donde puedes elegir tu avatar
-            favorito. Además, entre otras funcionalidades, puedes editar los
-            jugadores que quieras y también eliminarlos.{" "}
-          </p>
-          <p>
-            En Recicle Being como en cualquier otro juego siempre hay jugadores
-            que se destacan por sobre los demás, y merecen estar en un lugar
-            especial.{" "}
-          </p>
-          <p>
-            Por eso creamos el "Salón de la Fama", una solución especialmente
-            desarrollada para reconocer a los 10 jugadores con mayor ranking
-            entre todos los jugadores. También nos pareció justo reconocer a
-            otros 6 jugadores que, sin estar entre los 10 mejores, aún son muy
-            buenos así que reciben su reconocimiento en la sección "Bold
-            Players"{" "}
-          </p>
-          <p>
-            Desarrollar las habilidades de reciclar requiere constancia,
-            dedicación, amor por la naturaleza, y tiempo. Por eso es importante
-            reconocer a quienes con esfuerzo se destacan por sobre los demás.{" "}
-          </p>
-          <p>
-            En la barra de búsqueda podrás buscar cualquier usuario, tanto por
-            ID como por nickname y también por status. De esta forma, encontrar
-            al usuario que buscas es muy fácil.{" "}
-          </p>
-          <p>
-            Una funcionalidad que destaca en el Salón de la fama, es que puedes
-            filtrar a los jugadores por status: Oro, Plata, Bronce, Hierro. Esta
-            última categoría es la que obtienes cuando creas un nuevo jugador,
-            por lo tanto aún no acumula puntos para ascender al status
-            siguiente.{" "}
-          </p>
-          <p>
-            Esperamos que disfrutes el juego mientras aprendes conceptos
-            valiosos y desarrollas nuevos hábitos amigables con el medio
-            ambiente.
-          </p>
-          <p>
-            Tienes nuestro profundo agradecimiento por ser parte de esta
-            propuesta...
-          </p>
-          <p>
-            {" "}
-            ¡Empieza a jugar y diviértete mientras reciclas! Esperamos verte en
-            el podio muy pronto :){" "}
-          </p>
-        </div>
-        <div>
-              <ul>
-                <li>
-                  <div></div>
-                  <pre>
-                    <img
-                      src="https://avatars.githubusercontent.com/u/85845504?v=4"
-                      width="150"
-                      height="150"
-                      alt="Foto 1"
-                    />
-                  </pre>
-                  <p className="p">
-                    <strong>Ramiro Villamizar:</strong>
-                  </p>
-                  <a
+      <div className="aboutInfo">
+        <h2>Acerca de Recicle Being</h2>
+        <br />
+        <p>
+          Cada vez más personas en el mundo son conscientes de la necesidad de
+          cuidar el medio-ambiente. Sin embargo, cuidarlo requiere, para la
+          mayoría de nosotros, desarrollar nuevos hábitos, por ejemplo separar
+          los residuos, clasificarlos y ponerlos en los recipientes adecuados
+          para que puedan ser reciclados.
+        </p>
+        <p>
+          El nombre del juego recuerda a la "papelera de reciclaje" de Windows.
+          Lo aprovechamos como un juego de palabras divertido donde el sentido
+          de una simple papelera se transforma en un Ser (being) que Recicla.
+        </p>
+        <p>
+          Así, <strong>Recicle Being</strong> fue creado como un modo
+          entretenido e interesante de tener la experiencia de transformarnos en
+          un personaje que contribuye a crear un medio-ambiente más saludable.
+          Creemos que una de las mejores maneras de aprender es jugando! Si
+          jugamos a reciclar, terminaremos aprendiendo y aplicándolo en la vida
+          real.
+        </p>
+        <p>
+          En Recicle Being como en otros juegos, hay jugadores que se destacan,
+          y merecen estar en un lugar especial. Por eso creamos el{" "}
+          <strong>"Salón de la Fama"</strong>, una solución desarrollada para
+          reconocer a los 10 jugadores con mayor ranking. También nos pareció
+          justo reconocer a otros 6 jugadores que, sin estar entre los 10
+          mejores, aún son muy buenos así que reciben su reconocimiento en la
+          sección <strong>"Jugadores Destacados".</strong>
+        </p>
+        <p>
+          Puedes crear tus propios personajes, con su nickname y elegir tu
+          avatar favorito.
+        </p>
+        <p>
+          En la barra de búsqueda podrás buscar cualquier usuario, tanto por ID
+          como por nickname y también por status. De esta forma, encontrar al
+          usuario que buscas es muy fácil.
+        </p>
+        <p>
+          Una funcionalidad que destaca en el Salón de la fama, es que puedes
+          filtrar a los jugadores por status:{" "}
+          <strong>Oro, Plata, Bronce, Hierro</strong>. Esta última categoría es
+          la que obtienes apenas creas a un nuevo jugador.
+        </p>
+        <p>
+          Esperamos que disfrutes el juego mientras aprendes conceptos valiosos
+          y desarrollas nuevos hábitos amigables con el medio ambiente. Tienes
+          nuestro profundo agradecimiento por ser parte de esta propuesta.
+        </p>
+        <p>
+          {" "}
+          ¡Empieza a jugar y diviértete mientras reciclas! Esperamos verte en el
+          podio muy pronto :)
+        </p>
+
+        <Link to="/">
+          <button className="buttonBack">Volver </button>
+        </Link>
+      </div>
+
+      <h2 className="titleMe">Equipo de Desarrolladores</h2>
+
+      <div className="aboutFotos">
+        <div className="cardMe">
+          <div className="foto">
+            <img
+              src="https://avatars.githubusercontent.com/u/85845504?v=4"
+              alt="Ramiro"
+            />
+          </div>
+          <div className="NameMe">Ramiro Villamizar</div>
+          <div className="redSocial">
+            <a
+              href="https://www.linkedin.com/in/ramiro-villamizar-javascript/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <LinkedInIcon
+                sx={{
+                  color: "#fff",
+                  fontSize: "3rem",
+                  margin: "0 10px",
+                  transition: "0.5s all",
+                  "&:hover": {
+                    color: "#77D970",
+                    transform: "translateY(-3px)",
+                  },
+                }}
+              />
+            </a>
+            <a
               href="https://github.com/pivotsk8"
               target="_blank"
               rel="noopener noreferrer"
             >
-              pivotsk8
+              <GitHubIcon
+                sx={{
+                  color: "#fff",
+                  fontSize: "2.8rem",
+                  margin: "0 10px",
+                  transition: "0.5s all",
+                  "&:hover": {
+                    color: "#77D970",
+                    transform: "translateY(-3px)",
+                  },
+                }}
+              />
             </a>
-                </li>
-                <br></br>
-                <li>
-                  <div></div>
-                  <pre>
-                    <img
-                      src="https://avatars.githubusercontent.com/u/87451265?v=4"
-                      width="150"
-                      height="150"
-                      alt="Foto 2"
-                    />
-                  </pre>
-                  <p className="p">
-                    <strong>Marisa Lia Pascal:</strong>
-                  </p>
-                  <a
+          </div>
+        </div>
+
+        <div className="cardMe">
+          <div className="foto">
+            <img
+              src="https://avatars.githubusercontent.com/u/87451265?v=4"
+              alt="Ramiro"
+            />
+          </div>
+          <div className="NameMe">Marisa Lia Pascal</div>
+          <div className="redSocial">
+            <a
+              href="https://www.linkedin.com/in/marisaliapascal-fullstack/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <LinkedInIcon
+                sx={{
+                  color: "#fff",
+                  fontSize: "3rem",
+                  margin: "0 10px",
+                  transition: "0.5s all",
+                  "&:hover": {
+                    color: "#77D970",
+                    transform: "translateY(-3px)",
+                  },
+                }}
+              />
+            </a>
+            <a
               href="https://github.com/Marisaliap"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Marisaliap
+              <GitHubIcon
+                sx={{
+                  color: "#fff",
+                  fontSize: "2.8rem",
+                  margin: "0 10px",
+                  transition: "0.5s all",
+                  "&:hover": {
+                    color: "#77D970",
+                    transform: "translateY(-3px)",
+                  },
+                }}
+              />
             </a>
-                </li>
-                <br></br>
-                <li>
-                  <div></div>
-                  <pre>
-                    <img
-                      src="https://avatars.githubusercontent.com/u/79276560?v=4"
-                      width="150"
-                      height="150"
-                      alt="Foto 2"
-                    />
-                  </pre>
-                  <p className="p">
-                    <strong>Gustavo Montero:</strong>
-                  </p>
-                  <a
+          </div>
+        </div>
+
+        <div className="cardMe">
+          <div className="foto">
+            <img
+              src="https://avatars.githubusercontent.com/u/79276560?v=4"
+              alt="Ramiro"
+            />
+          </div>
+          <div className="NameMe">Gustavo Montero</div>
+          <div className="redSocial">
+            <a
+              href="https://www.linkedin.com/in/gamontero/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <LinkedInIcon
+                sx={{
+                  color: "#fff",
+                  fontSize: "3rem",
+                  margin: "0 10px",
+                  transition: "0.5s all",
+                  "&:hover": {
+                    color: "#77D970",
+                    transform: "translateY(-3px)",
+                  },
+                }}
+              />
+            </a>
+            <a
               href="https://github.com/gamontero"
               target="_blank"
               rel="noopener noreferrer"
             >
-             gamontero
+              <GitHubIcon
+                sx={{
+                  color: "#fff",
+                  fontSize: "2.8rem",
+                  margin: "0 10px",
+                  transition: "0.5s all",
+                  "&:hover": {
+                    color: "#77D970",
+                    transform: "translateY(-3px)",
+                  },
+                }}
+              />
             </a>
-                </li>
-                <br></br>
-                <li>
-                  <div></div>
-                  <pre>
-                    <img
-                      src="https://avatars.githubusercontent.com/u/77559957?v=4"
-                      width="150"
-                      height="150"
-                      alt="Foto 2"
-                    />
-                  </pre>
-                  <p className="p">
-                    <strong>Daniel Alberto Mena:</strong>
-                  </p>
-                  <a
+          </div>
+        </div>
+
+        <div className="cardMe">
+          <div className="foto">
+            <img
+              src="https://avatars.githubusercontent.com/u/77559957?v=4"
+              alt="Ramiro"
+            />
+          </div>
+          <div className="NameMe">Daniel Alberto Mena</div>
+          <div className="redSocial">
+            <a
+              href="https://www.linkedin.com/in/daniel-full-stack/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <LinkedInIcon
+                sx={{
+                  color: "#fff",
+                  fontSize: "3rem",
+                  margin: "0 10px",
+                  transition: "0.5s all",
+                  "&:hover": {
+                    color: "#77D970",
+                    transform: "translateY(-3px)",
+                  },
+                }}
+              />
+            </a>
+            <a
               href="https://github.com/BtoMJ"
               target="_blank"
               rel="noopener noreferrer"
             >
-             BtoMJ
+              <GitHubIcon
+                sx={{
+                  color: "#fff",
+                  fontSize: "2.8rem",
+                  margin: "0 10px",
+                  transition: "0.5s all",
+                  "&:hover": {
+                    color: "#77D970",
+                    transform: "translateY(-3px)",
+                  },
+                }}
+              />
             </a>
-                </li>
-          </ul>
+          </div>
         </div>
-        <Link to="/">
-          <button className="button_form">Volver </button>
-        </Link>
-      </article>
+
+        <div className="cardMe">
+          <div className="foto">
+            <img
+              src="https://avatars.githubusercontent.com/u/76404798?v=4"
+              alt="Ramiro"
+            />
+          </div>
+          <div className="NameMe">José Ángel Rey</div>
+          <div className="redSocial">
+            <a
+              href="https://www.linkedin.com/in/jose-angel-rey/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <LinkedInIcon
+                sx={{
+                  color: "#fff",
+                  fontSize: "3rem",
+                  margin: "0 10px",
+                  transition: "0.5s all",
+                  "&:hover": {
+                    color: "#77D970",
+                    transform: "translateY(-3px)",
+                  },
+                }}
+              />
+            </a>
+            <a
+              href="https://github.com/Jose-Angel-Rey"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <GitHubIcon
+                sx={{
+                  color: "#fff",
+                  fontSize: "2.8rem",
+                  margin: "0 10px",
+                  transition: "0.5s all",
+                  "&:hover": {
+                    color: "#77D970",
+                    transform: "translateY(-3px)",
+                  },
+                }}
+              />
+            </a>
+          </div>
+        </div>
+      </div>
     </AboutSection>
   );
 };

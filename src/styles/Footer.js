@@ -13,12 +13,15 @@ const media = {
 export const ContFooter = styled.div`
     width: 100%;
     height: 30px;
+    margin-top: 1rem;
     margin-bottom: 1rem;
     color: #ffffff70;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    // position: absolute;
+    // bottom: 0;
 
     ${media.xs}{
         width: 100%;
