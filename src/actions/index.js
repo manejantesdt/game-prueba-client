@@ -95,7 +95,6 @@ export const getPlayerId = (Id) => {
 };
 
 export const editPlayer = (Id, player) => {
-  console.log(Id,player);
   return async (dispatch) => {
     try {
       const json = (
@@ -114,6 +113,7 @@ export const editPlayer = (Id, player) => {
   };
 };
 export const deletePlayer = (Id) => {
+  console.log(Id);
   return async (dispatch) => {
     try {
       const json = (
@@ -150,9 +150,3 @@ export const setOrder = (order) => {
     payload: order,
   };
 };
-// export const setId = (id) => {
-//   return {
-//     type: "SET_ID",
-//     payload: id,
-//   };
-// };
