@@ -259,11 +259,10 @@
   justify-content: center;
 
   .imgPodio{
-    width: 60%;
-    height: 550px;
+    width: 90%;
     text-align: center;
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
     background-image: url(../img/flags.png);
@@ -274,6 +273,7 @@
   }
 
   .podioPlace{
+    margin: 1.5rem;
     width: 250px;
     height: 100%;
     display: flex;
