@@ -1,6 +1,7 @@
 import React from "react";
-import styles from "../styles/Paged.module.css"; 
-/*import "../Sass/Styles/Pagination.scss";*/
+import {StyledPaged} from "../styles/Paged" 
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 export default function Paged({ playersPerPage, searchPlayer, pagedTotal, currentPage }) {
   const pageNumber = [];
@@ -10,19 +11,19 @@ export default function Paged({ playersPerPage, searchPlayer, pagedTotal, curren
     pageNumber.push(i);
   }
     return (
-        <nav>
-            <ul className={styles.paged}>                                                     
-                {pageNumber?.map(num =>(        //si tengo ese arreglo, mapeálo y devolveme cada número que te devuelva el paginado    
-                  <div className={styles.listContainer} key={num}>
-                    <li className={styles.number} key={num}>
-                      {/* <button onClick={() => pagedTotal(num)} className={styles.link}> */}
-                      <button onClick={() => pagedTotal(num)} className={ num === currentPage ? styles.linkCurrent : styles.link}  >
-                        {num}
-                      </button>
-                    </li>
-                  </div>
-                ))}         
-            </ul>                                                
-        </nav>
-    )                //num es cada una de las páginas que necesito para renderizar todos mis jugadores
+      <StyledPaged>
+        {paginate > 1 && pageNumber[currentPage - 1] !== 1 && (
+          <button onClick={() => pagedTotal(currentPage - 1)}>
+            <ArrowBackIcon />
+            {currentPage - 1}
+          </button>
+        )}
+        {paginate > 1 && currentPage < paginate && (
+          <button onClick={() => pagedTotal(currentPage + 1)}>
+            {currentPage + 1}
+            <ArrowForwardIcon />
+          </button>
+        )}
+      </StyledPaged>
+    );                
 }
