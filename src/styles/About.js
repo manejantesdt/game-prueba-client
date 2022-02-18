@@ -10,8 +10,8 @@ const media = {
 }
 
 export const AboutSection = styled.div`
-  width: 70%;
-  height: 1200px;
+  width: 90%;
+  max-width: 1100px;
   margin: 0 auto;
   margin-top: 90px;
   display: flex;
@@ -19,6 +19,9 @@ export const AboutSection = styled.div`
   align-items: center;
   justify-content: space-around;
 
+  ${media.ulg}{
+    max-width: 1300px;
+  }
 
   /******************* ABOUTINFO **********************/
   
@@ -39,6 +42,8 @@ export const AboutSection = styled.div`
     h2{
       color: #ffffff;
       font-size: 2rem;
+      text-align: center;
+      padding: 1rem 0;
       
       ${media.ulg}{
         height: 40px;
@@ -60,14 +65,11 @@ export const AboutSection = styled.div`
     }
 
     .buttonBack{
-      width: 122px;
-      height: 30px;
+      padding: .7rem 3rem;
       border: none;
-      position: relative;
       background-color: #b42769;
       color: white;
-      border-radius: 10px;
-      text-align: center;
+      border-radius: 5px;
       transition: 0.5s all;
 
       ${media.ulg}{
@@ -89,23 +91,38 @@ export const AboutSection = styled.div`
   .titleMe{
     color: #ffffff;
     font-size: 2rem;
-    letter-spacing: 20px;
-    margin-bottom: 20px;
+    letter-spacing: 15px;
+    margin: 20px auto;
+    text-align: center;
+    padding: .5rem;
+    width: 100%;
+
+    ${media.xs}{
+      letter-spacing: 8px;
+      font-size: 1.5rem;
+    }
+    ${media.sm}{
+      font-size: 1.5rem;
+    }
   }
 
 
   /**************************** INTEGRANTES **************************/
   .aboutFotos{
     width: 100%;
-    height: 500px;
     margin-bottom: 50px;
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    gap: .5rem;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
+
+    ${media.xs}, ${media.sm}  {
+      gap: 1.5rem;
+    }
 
     .cardMe{
-      width: 200px;
+      width: 190px;
       height: 300px;
       display: flex;
       flex-direction: column;
