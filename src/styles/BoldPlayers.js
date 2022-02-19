@@ -101,10 +101,31 @@ export const BoldPlayersSections = styled.section`
       filter:drop-shadow( 0 5px 15px #00000080);
     }
   
+    // .avatarStatus{
+    //   width: 100%;
+    //   color: #D4AC2B;
+    //   margin-bottom: 5px;
+    // }
+
     .avatarStatus{
       width: 100%;
-      color: #D4AC2B;
       margin-bottom: 5px;
+    }
+
+    .Oro{
+      color: #D4AC2B;
+    }
+    
+    .Plata{
+      color: #CCCCCC;
+    }
+
+    .Bronce{
+      color: #D4AC2B;
+    }
+
+    .Hierro{
+      color: #00000080;
     }
 
     .avatarRanking{
