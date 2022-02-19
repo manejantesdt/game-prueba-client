@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { BoldPlayersSections } from "../styles/BoldPlayers";
 import Spinner from "./Spinner";
 
+
 export const PlayersTen = () => {
   // const dispatch = useDispatch();
   const { players } = useSelector((state) => state);
