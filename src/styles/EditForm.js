@@ -3,32 +3,29 @@ import styled from "styled-components";
 
 
 export const ContEdit = styled.div`
-  width: 800px;
-  height: 400px;
-  margin-top: 100px;
+  width: 90%;
+  margin: 2rem auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
-  // display: flex;
-  // flex-direction: row;
-  // justify-content: space-around;
-  // outline: none;
-  // background-color: #fdf6fc73;
-  // backdrop-filter: 1px;
-  // box-shadow:0 0 2px #2a8ce1, 0 0 2px #3a6351, 0 0 2px #e40320;
-  
-  // &:hover{
-  //   box-shadow: 0 0 10px rgba(44, 11, 34, 0.404), 0 0 10px rgba(44, 11, 34, 0.404), 0 0 10px rgba(44, 11, 34, 0.404); 
-  //   transition-delay: 0.2s;
-  //   transition: 0.8s; 
- }
+  padding: 2rem 0 4rem;
+
+ .DetailPlayerTitle {
+   color: #fff;
+   text-align: center;
+   font-size: 2rem;
+   margin-bottom: 60px;
+   letter-spacing: 10px;
+   text-transform: uppercase;
+   max-width: 25rem;
+   width: 100%;
+  }
 
 .DetailContainer{
-  width: 70%;
-  height: 300px;
-  padding: 2rem;
+  width: 90%;
+  max-width: 37rem;
+  padding: 2rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,17 +37,17 @@ export const ContEdit = styled.div`
   border-radius: 15px;
 }
 
-.CloseDetail{
-  width: 100%;
-  height: 10%;
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: flex-end;
-  position: relative;
-  rigth: 0;
-  justify-content: flex-end:
-  // border: thin dotted #f0f;
-}
+// .CloseDetail{
+//   width: 100%;
+//   height: 10%;
+//   display: flex;
+//   flex-direction: row-reverse;
+//   align-items: flex-end;
+//   position: relative;
+//   rigth: 0;
+//   justify-content: flex-end:
+//   // border: thin dotted #f0f;
+// }
   
 .btnCloseDetail{
   width: 25px;
@@ -73,14 +70,19 @@ export const ContEdit = styled.div`
   width: 100%;
   height: 90%;
   display: flex;
-  flex-direction: row;
+  gap: 1rem;
   align-items: center;
   justify-content: center;
   // border: thin dotted #f0f;
+  
+  @media (max-width: 700px) {
+    flex-wrap: wrap;
+  }
 }
 
 .AvatarDetail{
-  width: 40%;
+  width: 100%;
+  max-width: 200px;
   height: 90%;
   display: flex;
   flex-direction: column;
@@ -90,17 +92,15 @@ export const ContEdit = styled.div`
 }
 
 .InfoDetail{
-  width: 60%;
-  height: 90%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  // border: thin dotted #fff;
 }
 
 .detail{
-  width: 80%;
+  width: 100%;
   height: 30px;
   display: flex;
   flex-direction: row;
@@ -110,7 +110,7 @@ export const ContEdit = styled.div`
 }
 
 .detail p{
-  width: 40%;
+  width: 50%;
   padding-right: 8px;
   text-align: right;
   font-size: 18px;
@@ -119,7 +119,7 @@ export const ContEdit = styled.div`
 }
 
 .detail span{
-  width: 60%;
+  width: 50%;
   color: #fff;
 }
 
@@ -131,11 +131,12 @@ img{
 
 .btnEditPlayer{
   border: none;
-  padding: 5px 30px;
+  padding: .5rem 2.5rem;
   border-radius: 15px;
-  font-size: 14px;
+  font-size: 15px;
   font-width: bold;
   color: #FFFF;
+  margin-top: 1rem;
   background-color: #FF0075;
   transition: .5s all;
 }
@@ -151,8 +152,10 @@ img{
 `;
 
 export const IntoEdit = styled.form`
+// background-color: red !important;
   padding: 2rem;
-  margin-top: 300px;
+  // margin-top: 300px;
+  position: relative;
   font-size: 14px;
   color: #311601;
   font-weight: bold;
@@ -186,7 +189,27 @@ export const IntoEdit = styled.form`
 .editAvatar{
   width: 70%;
 }
+.deleteButton{
+  background-color: #FF0075;
+  cursor: pointer;
+  font-size: 2rem;
+  border: none;
+  border-radius: 0 15px 0 0;
+  outline: none;
+  color: #fff;
+  padding: .5rem 1rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .5s all;
 
+  &:hover{
+    background-color: #77D970;
+  }
+  &:active{
+    background-color: #FF0075;
+  }
+}
 .editPlayerAvatar{
   width: 100%;
   height: 40px;
@@ -240,7 +263,7 @@ select:focus{
 
 .btnChange{
   border: none;
-  padding: 5px 30px;
+  padding: 8px 30px;
   border-radius: 15px;
   font-size: 14px;
   font-width: bold;
@@ -253,7 +276,7 @@ select:focus{
   cursor: pointer;
   background-color: #77D970;
   color: #fff;
-  transform: translateY(-3px);
+  transform: translateY(-1px);
   box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.4);
 }
 

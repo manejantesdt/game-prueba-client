@@ -29,7 +29,7 @@ export const getPlayers = () => {
     try {
       const json = (
         await axios.get(
-          `https://mrsemsqfk6.execute-api.us-east-1.amazonaws.com/player?nickname=&amount=50&order=desc`
+          `https://mrsemsqfk6.execute-api.us-east-1.amazonaws.com/player?nickname=&amount=50&order=asc`
         )
       ).data;
       const players = json.body.getPlayers;
@@ -95,7 +95,6 @@ export const getPlayerId = (Id) => {
 };
 
 export const editPlayer = (Id, player) => {
-  console.log(Id,player);
   return async (dispatch) => {
     try {
       const json = (
@@ -150,9 +149,3 @@ export const setOrder = (order) => {
     payload: order,
   };
 };
-// export const setId = (id) => {
-//   return {
-//     type: "SET_ID",
-//     payload: id,
-//   };
-// };

@@ -18,6 +18,131 @@ export const BoldPlayersSections = styled.section`
   border-radius: 8px;
   text-align: center;
 
+  & h2{
+    margin-bottom: 2rem;
+  }
+
+  .one-row-grid{
+    grid-template-columns: repeat(10, 1fr) !important;
+  }
+
+  & .suplentes{
+    // background: red;
+    width: 100%;
+    // display: flex;
+    // flex-wrap: wrap;
+    // align-items: center;
+    // justify-content: space-evenly;
+    // gap: 2rem;
+
+      overflow-x: auto;
+      padding-bottom: 2rem;
+      width: 100%;
+
+     ::-webkit-scrollbar {
+        -webkit-appearance: none;
+      }
+      
+     ::-webkit-scrollbar:horizontal {
+        height: 10px;
+      }
+      
+      ::-webkit-scrollbar-thumb {
+        background-color: #ffffff15;
+        border-radius: 20px;
+      }
+      
+    ::-webkit-scrollbar-track {
+        border-radius: 10px;  
+      }
+      
+     ::-webkit-scrollbar-thumb:active {
+        background-color: #ffffff40;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .jugador {
+    width: 200px;
+    height: 210px;
+    font-family: 'Russo One', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem;
+    margin: 0 10px;
+    border-radius: 0.8rem;
+    background-color: #ffffff20;
+    border-left: 1px solid #ffffff35;
+    border-bottom: 1px solid #ffffff35;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.4);
+    transition: all 0.5s; 
+  
+    h3 {
+      width: 100%;
+      height: 20px;
+      margin-bottom: var(--spacing);
+      color: white;
+      font-weight: normal;
+      margin-bottom: 5px;
+      // border: thin dotted rgb(0, 255, 98);
+    }
+  
+    .avatar{
+      width: 120px;
+      height: 85px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: 0.5s all;
+    }
+  
+    .avatar:hover{
+      transform: scale(1.1);
+      filter:drop-shadow( 0 5px 15px #00000080);
+    }
+  
+    // .avatarStatus{
+    //   width: 100%;
+    //   color: #D4AC2B;
+    //   margin-bottom: 5px;
+    // }
+
+    .avatarStatus{
+      width: 100%;
+      margin-bottom: 5px;
+    }
+
+    .Oro{
+      color: #D4AC2B;
+    }
+    
+    .Plata{
+      color: #CCCCCC;
+    }
+
+    .Bronce{
+      color: #D4AC2B;
+    }
+
+    .Hierro{
+      color: #00000080;
+    }
+
+    .avatarRanking{
+      width: 100%;
+      color: #FF0075;
+    }
+
+    &:hover{
+      transform: translateY(5px);
+      background-color: #ffffff18;
+    }
+  }
+
   h2 {
     height: 50px;
     color: #FF0075;
@@ -48,21 +173,18 @@ export const BoldPlayersSections = styled.section`
 
 export const BoldPlayersPagination = styled.div`
   .pagesContainer{
-    width: 100%;
-    height: 50px;
+    // background: #FF0075;
+    width: 90%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-top: 50px;
+    margin: 50px auto;
     // border: 1px solid #ccc;
   }
 
   .returnContainer{
-    width: 150px;
-    height: 80px;
-    margin-top: 80px;
-    margin: 0 auto;
+    margin: 30px auto 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -73,16 +195,16 @@ export const BoldPlayersPagination = styled.div`
     color: #fff;
     background-color: #FF0075;
     font-weight: bold;
-    padding: 8px 13px;
+    font-size: 1rem;
+    padding: 8px 2rem;
     border: none;
-    border-radius: 15px;
+    border-radius: 5px;
     transition: .5s all;
   }
   
   .BackHome:hover{
     background-color: #77D970;
-    transform: translateY(-5px);
+    transform: translateY(-3px);
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
   }
 `;
-

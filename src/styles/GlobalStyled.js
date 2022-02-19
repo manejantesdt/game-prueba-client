@@ -49,6 +49,10 @@ hr{
   color: #FBF3E4;
 }
 
+#root{
+  overflow-x: hidden;
+  width: 100%;
+}
 
 ${'' /* h2 {
   margin-bottom: 1rem;

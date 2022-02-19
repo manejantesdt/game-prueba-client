@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
-
+import { useDispatch } from "react-redux";
+import { getPlayerId } from "../actions";
 
 export const CardPlayer = ({
   ranking,
@@ -9,9 +10,12 @@ export const CardPlayer = ({
   status,
   ...props
 }) => {
- 
+  const dispatch = useDispatch();
+  const onClick = () => {
+    dispatch(getPlayerId(id));
+  };
   return (
-    <article {...props} className="jugador">
+    <article {...props} className="jugador" onClick={onClick}>
       <NavLink to={`/id/${id}`}>
         <div className="avatar">
           <img src={image} alt={nickname} />
@@ -21,7 +25,7 @@ export const CardPlayer = ({
           <span>{status}</span>
         </div>
         <div className="avatarRanking">
-          <span  >Ranking: {ranking}</span>
+          <span>Ranking: {ranking}</span>
         </div>
       </NavLink>
     </article>

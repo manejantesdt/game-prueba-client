@@ -6,15 +6,15 @@ import { useAuth0 } from "@auth0/auth0-react";
 import {
   getPlayerId,
   searchPlayers,
-  // setId
 } from "../actions/index";
 import { EditPlayer } from "./EditPlayer.jsx";
+import Spinner from "./Spinner.jsx";
 
 export const DetailPlayer = () => {
   // ------------------------------<Variables>--------------------------------
   var { player } = useSelector((state) => state);
   player = player[0];
-  console.log(player);
+  
   const dispatch = useDispatch();
   var { id } = useParams();
   const { user, isAuthenticated } = useAuth0();
@@ -28,39 +28,27 @@ export const DetailPlayer = () => {
     ) {
       setAdminStatus(true);
     }
-  }, [dispatch,player?.score||player?.nickname]);
+  }, [dispatch,player?.score,player?.nickname,player?.length]);
   // _____________________________________________________________________________
   // ------------------------------<State>----------------------------------
   const [checkform, setCheckform] = useState(false);
   const [adminStatus, setAdminStatus] = useState(false);
   const onClickCheck = () => {
     checkform === true ? setCheckform(false) : setCheckform(true);
-    // dispatch(setId(id))
   };
 
   // __________________________________________________________________________
 
-  return player?.nickname ? (
+return player? (
     checkform === false ? (
       <>
-        <h2
-          style={{
-            width: 500,
-            margin: "0 auto",
-            color: "white",
-            textAlign: "center",
-            marginTop: 60,
-            // color: "#FF0075",
-            letterSpacing: 20,
-            textTransform: "uppercase",
-          }}
-        >
+        <ContEdit>
+        <h2 className="DetailPlayerTitle">
           Detalle del Jugador
         </h2>
-        <ContEdit>
           {player ? (
             <div key={player.Id} className="DetailContainer">
-              <div className="CloseDetail"></div>
+              {/* <div className="CloseDetail"></div> */}
               <div className="InfoContainer">
                 <div className="AvatarDetail">
                   <img src={player.avatar} alt={player.nickname} />
@@ -88,7 +76,7 @@ export const DetailPlayer = () => {
 
                     <span>{player.score}</span>
                   </div>
-                  {adminStatus === false && (
+                  {adminStatus === true && (
                     <button className="btnEditPlayer" onClick={onClickCheck}>
                       Editar
                     </button>
@@ -97,7 +85,7 @@ export const DetailPlayer = () => {
               </div>
             </div>
           ) : (
-            <div>...descargando...</div>
+            <Spinner />
           )}
         </ContEdit>
       </>
@@ -105,6 +93,6 @@ export const DetailPlayer = () => {
       <EditPlayer/>
     )
   ) : (
-    <>no found</>
+    <Spinner />
   );
 };

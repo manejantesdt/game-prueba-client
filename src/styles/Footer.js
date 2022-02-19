@@ -1,93 +1,111 @@
 import styled from "styled-components";
 
-const media = {
-    xs: '@media(max-width: 480px)',
-    sm: '@media(min-width: 481px) and (max-width: 768px)',
-    md: '@media(min-width: 769px) and (max-width: 992px)',
-    lg: '@media(min-width: 993px) and (max-width: 1200px)',
-    xlg: '@media(min-width: 1201px) and (max-width: 1920px)',
-    ulg: '@media(min-width: 1921px) and (max-width: 2560px)',
-  }
-
-
 export const ContFooter = styled.div`
     width: 100%;
-    height: 30px;
-    margin-bottom: 1rem;
+    margin: 1.5rem auto;
     color: #ffffff70;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
 
-    ${media.xs}{
-        width: 100%;
-        height: 50px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-    }
 
 .elementFooter{
-    width: 100%;
-    font-size: .9rem;
+    max-width: 850px;   
+    width: 90%;
+    font-size: 1rem;
     display: flex;
     flex-direction: row;
+    gap: 1rem;
     align-items: center;
     justify-content: space-around;
-
-    ${media.xs}{
+    padding: .5rem 1rem;
+    text-align: center;
+        
+    @media (max-width: 700px) {
+        flex-wrap: wrap;
+    }
+        
+    .element1, .element2{
         width: 100%;
-        height: 60px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
     }
 }
 
-.element1{
-    width: 50%;
-    text-align: right;
-    padding: 0 10px 0 0;
-    // border: solid 1px #fff;
+`;
+
+export const ContForm = styled.form`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    input{
+        width: 100%;
+        height: 30px;
+        font-family: 'Nunito';
+        margin: 10px 0;
+        padding: 0 0 0 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
     
-    ${media.xs}{
-        width: 100%;
-        text-align: center;
-        font-size: 0.8rem;
+    input:focus, textarea:focus{
+        border: none;
+        outline: none;
+        box-shadow: 0 3px 15px rgba(0,0,0,.3)
     }
-}
-
-.element2{
-    width: 50%;
-    padding: 0 0 0 10px;
-    text-align: left;
     
-    ${media.xs}{
+    textarea{
         width: 100%;
-        text-align: center;
-        font-size: 0.8rem;
+        height: 100px;
+        font-size: 0.9rem;
+        resize: none;   
+        margin: 10px 0 30px 0;
+        padding: 10px 0 0 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc; 
     }
-}
-
-.element2 a{
-    text-decoration: none;
-    color: #ff0075;
-    transition: all 0.5s;
-}
-
-.element2 a:hover{
-    color: #fff
-}
-
-// border: thin dotted #fff;
-// height: 4rem;
-// margin: 0 auto;
-// margin-top: 3rem;
-// margin-bottom: 3rem;
-// background-color: #1f3a52;
-// margin: 2rem 0;
-// border: 1px solid #ccc;
+    
+    button{
+        width: 100px;
+        height: 30px;
+        margin-top: 10px;
+        font-family: 'Nunito';
+        font-size: 1rem;
+        background-color: #FF0075;
+        color: #fff;
+        font-weight: bold;
+        border: none;
+        border-radius: 10px;
+        transition: 0.5s all;
+    }
+    
+    button:hover{
+        cursor: pointer;
+        background-color: #041562;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0,0,0,.5)
+    }
+    
+`;
+    
+    export const BtnClose = styled.button`
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 30px;
+    color: #FFF;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #FF0075;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    transition: 0.5s all;
+    
+    :hover{
+        background-color: #041562;
+        cursor: pointer;
+        transform: translateY(-3px);
+        box-shadow: 0 7px 5px 0 rgba(0,0,0,.4)
+    }
 `;

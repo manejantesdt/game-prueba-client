@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { IntoForm } from "../styles/Form.js";
+import { StyledFilterBar } from "../styles/FilterBar";
 import { setOrder, setStatus, searchPlayers } from "../actions/index";
 
 export const FilterBar = () => {
@@ -17,7 +17,8 @@ export const FilterBar = () => {
   }
 
   return (
-    <IntoForm>
+    <StyledFilterBar>
+      <div className="filter-container">
       <p>Filtrar por Status</p>
       <select className="input_form" onChange={handleStatus} name="status">
         <option value="">Todos</option>
@@ -26,13 +27,16 @@ export const FilterBar = () => {
         <option value="bronce">Bronce</option>
         <option value="hierro">Hierro</option>
       </select>
+      </div>
 
+      <div className="filter-container">
       <p>Ordenar por Ranking</p>
       <select className="input_form" onChange={handleOrder} name="order">
         <option value="">Todos</option>
         <option value="asc">Ascendente</option>
         <option value="desc">Descendente</option>
       </select>
-    </IntoForm>
+      </div>
+    </StyledFilterBar>
   );
 };

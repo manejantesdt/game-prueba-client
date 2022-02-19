@@ -11,7 +11,7 @@ import default_avatar from "../img/Avatars/avatar1.png";
 function validate(player) {
   let errors = {};
   if (!player.nickname) {
-    errors.nickname = "Nickname is required";
+    errors.nickname = "Campo obligatorio";
   }
   return errors;
 }
@@ -37,7 +37,6 @@ export const CreatePlayer = () => {
 
   // -----------------------------------< handles >------------------------------------------------
   const handleSelect = (e) => {
-    console.log(player)
     setPlayer({
       ...player,
       [e.target.name]: e.target.value,
@@ -45,7 +44,6 @@ export const CreatePlayer = () => {
   };
 
   const handleChange = (e) => {
-    console.log(player)
     setPlayer((prevState) => {
       return{
           ...prevState,
@@ -71,15 +69,16 @@ export const CreatePlayer = () => {
 
   const handleSubmit = (e) => {
     console.log("nombre: ",errors.nickname)
-    if (errors.nickname !== undefined || errors.avatar !== undefined) {
+    e.preventDefault();
+    if (player.nickname === "" || player.avatar === "") {
       document.getElementById("DoNotSubmit");
       return alert("Por favor completa todos los campos para poder crear el personaje");
+    }else{
+      dispatch(createPlayer(player));
+      alert("Jugador creado correctamente!");
+      window.location.reload(false);
+      navigate({ pathname: "/" });
     }
-    e.preventDefault();
-    dispatch(createPlayer(player));
-    alert("Jugador creado correctamente!");
-    window.location.reload(false);
-    navigate({ pathname: "/" });
   };
   // _______________________________________________________________________________________________
 
@@ -104,16 +103,12 @@ export const CreatePlayer = () => {
               type="text"
               placeholder="Escribe tu Nombre"
               name="nickname"
-              maxlength="20"
+              maxLength="20"
               value={player.nickname}
               onChange={(e) => handleChange(e)}
             />
+          {errors.nickname && <p className="error">{errors.nickname}</p>}
           </div>
-          {
-            errors.nickname && <div className="error">
-              <p >{errors.nickname}</p>
-            </div>
-          }
             {/* <div className="error">
               {errors.nickname && <p >{errors.nickname}</p>}
             </div> */}
@@ -136,7 +131,7 @@ export const CreatePlayer = () => {
             </select>
           </div>
 
-          <div className="createData">
+          <div className="createData createButtons">
             <div className="createButton">
               <button className="button_form" type="submit" name="submit">
                 Crear Jugador
