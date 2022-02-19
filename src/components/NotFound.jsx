@@ -1,6 +1,14 @@
+import { ContNotFound } from "../styles/NotFound";
+import { Link } from "react-router-dom";
+import imagen from '../img/NotFound.png'
+
 export  const NotFound = ()=> {
-    return <div>
-      <h1>404</h1>
-      <h2>Página no Encontrada</h2>
-    </div>;
+    return (
+      <ContNotFound>
+        <img src={imagen}/>
+        <Link to="/">
+          <button className="buttonBack">Volver </button>
+        </Link>
+      </ContNotFound>
+    )
   }

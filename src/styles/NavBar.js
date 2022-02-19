@@ -21,9 +21,6 @@ export const ContNavBar = styled.div`
     background-color: transparent;
   }
 
-
-
-
 `;
 
 export const ContLogo = styled.div`
@@ -36,26 +33,6 @@ export const ContLogo = styled.div`
   flex-wrap: wrap;
   justify-content: space-around;
     
-    .sidebarMenu{
-      margin-left: 10%;
-      display: none !important;
-    }
-
-    .btnMenuMobile{
-      background-color: transparent;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      border: none;
-    }
-    
-    .iconMenu{
-      font-size: 34px;
-      color: #fff;
-      // border: 1px solid #ccc;
-    }
-
     form{
       position: relative;
       max-width: 30rem;

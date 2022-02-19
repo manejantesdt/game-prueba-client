@@ -112,19 +112,19 @@ export const BoldPlayersSections = styled.section`
       margin-bottom: 5px;
     }
 
-    .Oro{
+    .oro{
       color: #D4AC2B;
     }
     
-    .Plata{
+    .plata{
       color: #CCCCCC;
     }
 
-    .Bronce{
+    .bronce{
       color: #D4AC2B;
     }
 
-    .Hierro{
+    .hierro{
       color: #00000080;
     }
 
@@ -152,7 +152,6 @@ export const BoldPlayersSections = styled.section`
       letter-spacing: 8px;
       text-align: center;
       margin-bottom: 10%;
-      // border: 1px solid #ccc;
     }
   }
 
@@ -176,7 +175,6 @@ export const BoldPlayersPagination = styled.div`
     align-items: center;
     justify-content: center;
     margin: 50px auto;
-    // border: 1px solid #ccc;
   }
 
   .returnContainer{
