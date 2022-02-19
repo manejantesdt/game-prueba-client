@@ -57,7 +57,7 @@ La página se volverá a descargar si haces cambios en el código.
 jugadores con mayor ranking, incluyendo id, nickname, ranking, status y avatar.
 
 <p align='left'>
-    <img height="120" src='https://drive.google.com/thumbnail?id=1ZhFz6JMOtT3107w-z2KuO0PZMOKEzIYx' </img>
+    <img height="120" src='https://github.com/manejantesdt/game-prueba-client/blob/dev/Screenshot_top.png' </img>
 </p> 
 
 - Puedes ver efectivamente que en el panel superior, en la sección titulada "Top Ten", aparecen las tarjetas de 7 de los 10 jugadores con mayor ranking de toda la aplicación, que cuenta actualmente con una base de datos de más de tres mil jugadores.
@@ -65,18 +65,34 @@ jugadores con mayor ranking, incluyendo id, nickname, ranking, status y avatar.
 - En el panel central, puedes ver en el podio, en un lugar destacado, a los 3 mejores dentro de esos 10 primeros. 
 
 <p align='left'>
-    <img height="150" src='http://game-prueba-client.s3-website-us-east-1.amazonaws.com/static/media/podio.56d7824ee98f76bacb0e.png' </img>
+    <img height="150" src='https://github.com/manejantesdt/game-prueba-client/blob/dev/Screenshot_medium.png' </img>
 </p> 
 
 - En el panel inferior, llamado "Jugadores Destacados", puedes ver 6 jugadores destacados - es decir, 10 forman parte del Top Ten y otros 6 forman parte de Jugadores Destacados porque quisimos que esos jugadores también tengan un lugar remarcable dentro del Salón de la Fama.
 
-- Al hacer click sobre la tarjeta de cualquier jugador, puedes ver los detalles específicos de ese jugador:  Id, avatar, nickname, status y ranking. 
+<p align='left'>
+    <img height="150" src='https://github.com/manejantesdt/game-prueba-client/blob/dev/Screenshot_bottom.png' </img>
+</p> 
+
+- Al hacer click sobre la tarjeta de cualquier jugador, puedes ver los detalles específicos de ese jugador:  Id, avatar, nickname, status y ranking, score. 
+
+<p align='left'>
+    <img height="150" src='https://github.com/manejantesdt/game-prueba-client/blob/dev/Screenshot_detail.png' </img>
+</p> 
 
 - Puedes ir a la pestaña "Create Player" (crear un jugador), donde podrás elegir tu nickname (campo obligatorio) y de manera opcional elegir tu avatar favorito.
 
-- También puedes editar los jugadores que ya están creados, e incluso borrarlos.
+<p align='left'>
+    <img height="150" src='https://github.com/manejantesdt/game-prueba-client/blob/dev/Screenshot_create_player.png' </img>
+</p>
+
+- Logueado como administrador, también puedes editar los jugadores que ya están creados, e incluso borrarlos.
 
 - Al hacer click en el enlace "Sobre", encontrarás información sobre este juego y su salón de la fama.
+
+<p align='left'>
+    <img height="150" src='https://github.com/manejantesdt/game-prueba-client/blob/dev/Screenshot_about.png' </img>
+</p>
 
 # Desarrollo
 
@@ -174,12 +190,10 @@ Da un ejemplo
 
 * **Ramiro Villamizar ** - [pivotsk8](https://github.com/pivotsk8)
 * **Marisa Lia Pascal ** - [Marisaliap](https://github.com/Marisaliap)
-* **Nelson Albera ** - [nalbera](https://github.com/nalbera)
+* **José Ángel Rey ** - [Jose-Angel-Rey](https://github.com/Jose-Angel-Rey)
 * **Gustavo Montero ** - [gamontero](https://github.com/gamontero)
 * **Daniel Alberto Mena ** - [BtoMJ](https://github.com/BtoMJ)
 
-#### Una mención especial por su compañerismo y su aporte a este proyecto para
-* **Fabrizio Santandrea ** - [fabsantandrea](https://github.com/fabsantandrea)
 
 ## Licencia 📄
 
