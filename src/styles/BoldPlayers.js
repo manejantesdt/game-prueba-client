@@ -22,6 +22,10 @@ export const BoldPlayersSections = styled.section`
     margin-bottom: 2rem;
   }
 
+  .one-row-grid{
+    grid-template-columns: repeat(10, 1fr) !important;
+  }
+
   & .suplentes{
     // background: red;
     width: 100%;
@@ -112,19 +116,19 @@ export const BoldPlayersSections = styled.section`
       margin-bottom: 5px;
     }
 
-    .oro{
+    .Oro{
       color: #D4AC2B;
     }
     
-    .plata{
+    .Plata{
       color: #CCCCCC;
     }
 
-    .bronce{
+    .Bronce{
       color: #D4AC2B;
     }
 
-    .hierro{
+    .Hierro{
       color: #00000080;
     }
 
@@ -152,6 +156,7 @@ export const BoldPlayersSections = styled.section`
       letter-spacing: 8px;
       text-align: center;
       margin-bottom: 10%;
+      // border: 1px solid #ccc;
     }
   }
 
@@ -175,6 +180,7 @@ export const BoldPlayersPagination = styled.div`
     align-items: center;
     justify-content: center;
     margin: 50px auto;
+    // border: 1px solid #ccc;
   }
 
   .returnContainer{
@@ -202,4 +208,3 @@ export const BoldPlayersPagination = styled.div`
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
   }
 `;
-

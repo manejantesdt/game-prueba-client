@@ -7,6 +7,7 @@ export const StyledFilterBar = styled.section`
   align-items: center;
   gap: 30px;
   margin-bottom: 4rem;
+  padding: 0.5rem 1rem;
 
   .filter-container {
     display: flex !important;
