@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import flags from "../img/flags.png";
+import confetti from "../img/confetti.gif";
 
 export const StyledHome = styled.main`
   .jugador {
@@ -163,6 +165,7 @@ export const StyledHome = styled.main`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
 
     .imgPodio {
       width: 90%;
@@ -171,7 +174,7 @@ export const StyledHome = styled.main`
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-around;
-      background-image: url(../img/flags.png);
+      background-image: url(${flags});
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
@@ -191,33 +194,11 @@ export const StyledHome = styled.main`
 
     .podioPlace:hover {
       cursor: pointer;
-      background-image: url(../img/confetti.gif);
+      background-image: url(${confetti});
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
     }
-
-    // .columna{
-    //   width: 60%;
-    //   height: 550px;
-    //   text-align: center;
-    //   display: flex;
-    //   flex-direction: column;
-    //   align-items: center;
-    //   justify-content: space-around;
-    //   background-image: url(../img/flags.png);
-    //   background-repeat: no-repeat;
-    //   background-position: center;
-    //   background-size: contain;
-    //   // border: thin dotted rgb(111, 0, 255);
-    // }
-
-    // .columna:hover{
-    //   background-image: url(../img/confetti.gif);
-    //   background-repeat: no-repeat;
-    //   background-position: center;
-    //   background-size: contain;
-    // }
 
     .titular {
       position: absolute;
@@ -234,65 +215,5 @@ export const StyledHome = styled.main`
         }
       }
     }
-
-    //----- Posiciones de los jugadores -----//
-
-    .titular:first-child {
-      left: 5%;
-      top: 50%;
-      transform: translateY(-25%);
-    }
-
-    .titular:nth-child(2) {
-      left: 30%;
-      top: 10%;
-    }
-
-    .titular:nth-child(3) {
-      left: 25%;
-      top: 30%;
-    }
-
-    .titular:nth-child(4) {
-      left: 25%;
-      top: 50%;
-    }
-
-    .titular:nth-child(5) {
-      left: 30%;
-      top: 75%;
-    }
-
-    .titular:nth-child(6) {
-      left: 50%;
-      top: 30%;
-      transform: translateX(-50%);
-    }
-
-    .titular:nth-child(7) {
-      left: 50%;
-      top: 55%;
-      transform: translateX(-50%);
-    }
-
-    .titular:nth-child(8) {
-      left: 60%;
-      top: 15%;
-    }
-
-    .titular:nth-child(9) {
-      left: 60%;
-      top: 70%;
-    }
-
-    .titular:nth-child(10) {
-      left: 70%;
-      top: 50%;
-    }
-
-    .titular:nth-child(11) {
-      left: 80%;
-      top: 30%;
-    }
-  }
+  
 `;
