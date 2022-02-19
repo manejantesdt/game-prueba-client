@@ -22,6 +22,10 @@ export const BoldPlayersSections = styled.section`
     margin-bottom: 2rem;
   }
 
+  .one-row-grid{
+    grid-template-columns: repeat(10, 1fr) !important;
+  }
+
   & .suplentes{
     // background: red;
     width: 100%;
@@ -101,10 +105,31 @@ export const BoldPlayersSections = styled.section`
       filter:drop-shadow( 0 5px 15px #00000080);
     }
   
+    // .avatarStatus{
+    //   width: 100%;
+    //   color: #D4AC2B;
+    //   margin-bottom: 5px;
+    // }
+
     .avatarStatus{
       width: 100%;
-      color: #D4AC2B;
       margin-bottom: 5px;
+    }
+
+    .Oro{
+      color: #D4AC2B;
+    }
+    
+    .Plata{
+      color: #CCCCCC;
+    }
+
+    .Bronce{
+      color: #D4AC2B;
+    }
+
+    .Hierro{
+      color: #00000080;
     }
 
     .avatarRanking{
@@ -183,4 +208,3 @@ export const BoldPlayersPagination = styled.div`
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
   }
 `;
-
