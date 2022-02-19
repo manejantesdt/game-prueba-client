@@ -1,0 +1,69 @@
+import React, { useEffect, createRef } from "react";
+import { CardPlayer } from "./CardPlayer";
+import { useSelector, useDispatch } from "react-redux";
+import { getPlayers } from "../actions";
+
+export const Players = () => {
+  const dispatch = useDispatch();
+  const { players,player } = useSelector((state) => state);
+  const gridJugadores = createRef();
+
+  useEffect(() => {
+    setScrollContainer();
+    document.addEventListener("click", setScrollContainer);
+    dispatch(getPlayers({}));
+  }, [players?.length,player,dispatch]);
+
+  const setScrollContainer = (desktop = true) => {
+    let container = gridJugadores.current;
+    if (container) {
+      const generatedGrid = () => {
+        let items = container.getElementsByClassName("jugador");
+        let itemsLength = items.length;
+        let bp = window.matchMedia("(min-width: 640px)").matches
+          ? window.matchMedia("(min-width: 1024px)").matches
+            ? 4
+            : 2
+          : 1;
+
+        const getWidth = () => {
+          let n = bp + (itemsLength > bp ? 0.3 : 0);
+          return (itemsLength / n) * 100;
+        };
+        return `
+                    display: grid;
+                    grid-template-columns: repeat(${itemsLength}, 225px);
+                    grid-gap: 1rem;
+                    width : ${getWidth()}%;
+                  `;
+      };
+      let styles =
+        !desktop && window.matchMedia("(min-width: 1024px)").matches
+          ? `display: grid; grid-row-gap: 1rem;`
+          : generatedGrid();
+      container.setAttribute("style", styles);
+    }
+  };
+  const tenPlayers = players.slice(2, 10);
+  return (
+    <section>
+      <h2>Jugadores</h2>
+      <div className="contenedor-jugadores">
+        <div ref={gridJugadores} onClick={() => setScrollContainer.bind(this)}>
+          {tenPlayers.map((j) => {
+            return (
+              <CardPlayer
+                nickname={j.nickname}
+                image={j.avatar}
+                key={j.Id}s
+                id={j.Id}
+                ranking={j.ranking}
+                status={j.status}
+              />
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+};
