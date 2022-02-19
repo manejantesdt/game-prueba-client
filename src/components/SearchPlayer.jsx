@@ -8,6 +8,7 @@ import { searchPlayers,} from "../actions";
 import { useEffect, useState } from "react";
 import Paged from "./Paged";
 import { FilterBar } from "./FilterBar";
+import Spinner from "./Spinner";
 
 export const SearchPlayer = () => {
   const dispatch = useDispatch();
@@ -68,8 +69,6 @@ export const SearchPlayer = () => {
       </BoldPlayersPagination>
     </>
   ) : (
-    <>
-      <h4>...descargando búsqueda</h4>
-    </>
+      <Spinner />
   );
 };

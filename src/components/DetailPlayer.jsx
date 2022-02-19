@@ -8,6 +8,7 @@ import {
   searchPlayers,
 } from "../actions/index";
 import { EditPlayer } from "./EditPlayer.jsx";
+import Spinner from "./Spinner.jsx";
 
 export const DetailPlayer = () => {
   // ------------------------------<Variables>--------------------------------
@@ -84,7 +85,7 @@ return player? (
               </div>
             </div>
           ) : (
-            <div>...descargando...</div>
+            <Spinner />
           )}
         </ContEdit>
       </>
@@ -92,6 +93,6 @@ return player? (
       <EditPlayer/>
     )
   ) : (
-    <>no found</>
+    <Spinner />
   );
 };
