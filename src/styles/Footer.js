@@ -11,28 +11,23 @@ export const ContFooter = styled.div`
 
 
 .elementFooter{
-    max-width: 900px;   
-    width: 100%;
+    max-width: 850px;   
+    width: 90%;
     font-size: 1rem;
     display: flex;
     flex-direction: row;
-    // flex-wrap: wrap;
     gap: 1rem;
     align-items: center;
     justify-content: space-around;
     padding: .5rem 1rem;
     text-align: center;
-    
+        
+    @media (max-width: 700px) {
+        flex-wrap: wrap;
+    }
+        
     .element1, .element2{
-        width: 50%;
-    }
-    
-    .element1{
-        text-align: right;
-    }
-    
-    .element2{
-        text-align: left;
+        width: 100%;
     }
 }
 
