@@ -77,7 +77,7 @@ jugadores con mayor ranking, incluyendo id, nickname, ranking, status y avatar.
 - Al hacer click sobre la tarjeta de cualquier jugador, puedes ver los detalles específicos de ese jugador:  Id, avatar, nickname, status y ranking, score. 
 
 <p align='left'>
-    <img height="170" src='https://github.com/manejantesdt/game-prueba-client/blob/dev/Screenshot_detail.png' </img>
+    <img height="240" src='https://github.com/manejantesdt/game-prueba-client/blob/dev/Screenshot_detail.png' </img>
 </p> 
 
 - Puedes ir a la pestaña "Create Player" (crear un jugador), donde podrás elegir tu nickname (campo obligatorio) y de manera opcional elegir tu avatar favorito.
@@ -91,18 +91,18 @@ jugadores con mayor ranking, incluyendo id, nickname, ranking, status y avatar.
 - Puedes buscar un jugador por Id o por nickname, y también en la página de los resultados de búsqueda, filtrarlos por ranking o por status.
 
 <p align='left'>
-    <img height="170" src='https://github.com/manejantesdt/game-prueba-client/blob/dev/Screenshot_search_bar.png' </img>
+    <img height="110" src='https://github.com/manejantesdt/game-prueba-client/blob/dev/Screenshot_search_bar.png' </img>
 </p>
 
 <p align='left'>
-    <img height="170" src='https://github.com/manejantesdt/game-prueba-client/blob/dev/Screenshot_filters.png' </img>
-    <img height="170" src='https://github.com/manejantesdt/game-prueba-client/blob/dev/Screenshot_filter_ranking.png' </img>
+    <img height="150" src='https://github.com/manejantesdt/game-prueba-client/blob/dev/Screenshot_filters.png' </img>
+    <img height="150" src='https://github.com/manejantesdt/game-prueba-client/blob/dev/Screenshot_filter_ranking.png' </img>
 </p>
 
 - Al hacer click en el enlace "Sobre", encontrarás información sobre este juego y su salón de la fama.
 
 <p align='left'>
-    <img height="170" src='https://github.com/manejantesdt/game-prueba-client/blob/dev/Screenshot_about.png' </img>
+    <img height="240" src='https://github.com/manejantesdt/game-prueba-client/blob/dev/Screenshot_about.png' </img>
 </p>
 
 # Desarrollo
