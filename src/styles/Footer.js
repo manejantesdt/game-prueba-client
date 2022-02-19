@@ -1,15 +1,5 @@
 import styled from "styled-components";
 
-const media = {
-    xs: '@media(max-width: 480px)',
-    sm: '@media(min-width: 481px) and (max-width: 768px)',
-    md: '@media(min-width: 769px) and (max-width: 992px)',
-    lg: '@media(min-width: 993px) and (max-width: 1200px)',
-    xlg: '@media(min-width: 1201px) and (max-width: 1920px)',
-    ulg: '@media(min-width: 1921px) and (max-width: 2560px)',
-  }
-
-
 export const ContFooter = styled.div`
     width: 100%;
     margin: 1.5rem auto;
@@ -18,8 +8,6 @@ export const ContFooter = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    // position: absolute;
-    // bottom: 0;
 
 
 .elementFooter{
@@ -34,9 +22,6 @@ export const ContFooter = styled.div`
     justify-content: space-around;
     padding: .5rem 1rem;
     text-align: center;
-    // border: 1px solid #000;
-
-    
     
     .element1, .element2{
         width: 50%;
@@ -71,7 +56,6 @@ export const ContForm = styled.form`
     input:focus, textarea:focus{
         border: none;
         outline: none;
-        // outline: 1px solid #FF0075;
         box-shadow: 0 3px 15px rgba(0,0,0,.3)
     }
     
@@ -106,6 +90,27 @@ export const ContForm = styled.form`
         transform: translateY(-3px);
         box-shadow: 0 5px 15px rgba(0,0,0,.5)
     }
-
-
+    
+`;
+    
+    export const BtnClose = styled.button`
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 30px;
+    color: #FFF;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #FF0075;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    transition: 0.5s all;
+    
+    :hover{
+        background-color: #041562;
+        cursor: pointer;
+        transform: translateY(-3px);
+        box-shadow: 0 7px 5px 0 rgba(0,0,0,.4)
+    }
 `;

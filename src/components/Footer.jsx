@@ -1,5 +1,5 @@
 import React from 'react';
-import { ContFooter, ContForm } from "../styles/Footer";
+import { ContFooter, ContForm, BtnClose } from "../styles/Footer";
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
@@ -7,8 +7,6 @@ import Modal from '@mui/material/Modal';
 import ApiKey from '../ApiKey.js';
 import emailjs from '@emailjs/browser';
 import swal from 'sweetalert';
-// import "../styles/Footer.js";
-
 
 const style = {
   position: 'absolute',
@@ -83,8 +81,6 @@ export const Footer = () =>{
                 >
                   Contáctanos
                 </Button>
-                {/* <a href="mailto:manejantes@gmail.com" target="_blank" 
-              rel="noopener noreferrer">Contáctanos</a> */}
             </div>
 
         </div>
@@ -96,7 +92,13 @@ export const Footer = () =>{
           aria-describedby="modal-modal-description"
         >
           <Box sx={style}>
-            <Typography id="modal-modal-title" variant="h4" component="h2">
+            <BtnClose onClick={handleClose} > x </BtnClose>
+            <Typography 
+              sx={{fontFamily: 'Nunito', fontWeight: 'bold'}}
+              id="modal-modal-title" 
+              component="h2" 
+              variant="h4" 
+            >
               Escríbenos
             </Typography>
             <Typography id="modal-modal-description" sx={{ width: "100%", textAlign: "center", height: "50px"}}>
