@@ -22,6 +22,10 @@ export const BoldPlayersSections = styled.section`
     margin-bottom: 2rem;
   }
 
+  .one-row-grid{
+    grid-template-columns: repeat(10, 1fr) !important;
+  }
+
   & .suplentes{
     // background: red;
     width: 100%;
