@@ -1,13 +1,16 @@
+import { DetailPlayer } from './components/DetailPlayer'
+import React from 'react'
+import { mount } from '@cypress/react'
 
 describe('access secret admin functionality', () => {
     it('should be able to navigate to', () => {
-      cy.visitHome()
-      cy.findByRole('textbox').type('nath')
-      cy.findByTestId('SearchIcon').click()
-      cy.findByText(/ranking: 783/i).should('be.visible').click()
-      cy.loginAsAdmin()
+        mount(<DetailPlayer/>)
+    //   cy.findByRole('textbox').type('nath')
+    //   cy.findByTestId('SearchIcon').click()
+    //   cy.findByText(/ranking: 783/i).should('be.visible').click()
+    //   cy.loginAsAdmin()
      
-      cy.findByRole('button', {  name: /editar/i})
+    //   cy.findByRole('button', {  name: /editar/i})
 
       // cy.visitHome().loginAsAdmin()
 
@@ -23,4 +26,3 @@ describe('access secret admin functionality', () => {
         // .should('contain', 'secret-adminny-stuff/'); // non-admins should be redirected away from this url
     });
   });
-

@@ -44,6 +44,7 @@ Cypress.Commands.add('loginAsAdmin', (overrides = {}) => {
       scope: 'openid',
     },
     function (err, authResult) {
+      console.log(authResult)
       // Auth tokens in the result or an error
       if (authResult && authResult.accessToken && authResult.idToken) {
         const token = {

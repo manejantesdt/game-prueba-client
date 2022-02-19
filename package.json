@@ -59,11 +59,13 @@
     ]
   },
   "devDependencies": {
+    "@cypress/react": "^5.12.3",
+    "@cypress/webpack-dev-server": "^1.8.1",
     "@testing-library/cypress": "^8.0.2",
     "@testing-library/react": "^12.1.2",
     "auth0-js": "^9.19.0",
     "chai": "^4.3.6",
-    "cypress": "^9.4.1",
+    "cypress": "^9.5.0",
     "eslint-plugin-cypress": "^2.12.1",
     "mocha": "^9.2.0"
   }

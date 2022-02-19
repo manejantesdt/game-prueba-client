@@ -18,13 +18,14 @@ export const DetailPlayer = () => {
   const dispatch = useDispatch();
   var { id } = useParams();
   const { user, isAuthenticated } = useAuth0();
+  console.log(isAuthenticated)
 
   useEffect(() => {
     dispatch(searchPlayers({nick_name:""}));
     dispatch(getPlayerId(id));
     if (
       isAuthenticated === true &&
-      user.email === "dreamteammanejantes@gmail.com"
+      user.email === "gusmonterop@gmail.com"
     ) {
       setAdminStatus(true);
     }
