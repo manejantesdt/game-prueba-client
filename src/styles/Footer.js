@@ -29,6 +29,7 @@ export const ContFooter = styled.div`
         width: 100%;
     }
 
+    
     .buttonFooter {
         text-transform: lowercase;
         font-size: 1.05rem;
