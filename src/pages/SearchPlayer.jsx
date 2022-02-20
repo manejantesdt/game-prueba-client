@@ -1,14 +1,14 @@
 import { useSelector, useDispatch } from "react-redux";
-import { CardPlayer } from "./CardPlayer";
+import { CardPlayer } from "../components/CardPlayer";
 import {
   BoldPlayersSections,
   BoldPlayersPagination,
 } from "../styles/BoldPlayers";
 import { searchPlayers,} from "../actions";
 import { useEffect, useState } from "react";
-import Paged from "./Paged";
-import { FilterBar } from "./FilterBar";
-import Spinner from "./Spinner";
+import Paged from "../components/Paged";
+import { FilterBar } from "../components/FilterBar";
+import Spinner from "../components/Spinner";
 
 export const SearchPlayer = () => {
   const dispatch = useDispatch();
@@ -37,15 +37,15 @@ export const SearchPlayer = () => {
     <FilterBar />
       <BoldPlayersSections>
         <div className="suplentes">
-          {currentPlayers?.map((j, i) => {
+          {currentPlayers?.map((player, i) => {
             return (
               <CardPlayer
                 key={i}
-                nickname={j.nickname}
-                image={j.avatar}
-                id={j.Id}
-                status={j.status}
-                ranking={j.ranking}
+                nickname={player.nickname}
+                image={player.avatar}
+                id={player.Id}
+                status={player.status}
+                ranking={player.ranking}
               />
             );
           })}

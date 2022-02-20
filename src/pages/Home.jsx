@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { PlayersTen } from "./PlayersTen";
-import { BoldPlayers } from "./BoldPlayers";
-import { MainPanel } from "./MainPanel";
+import { PlayersTen } from "../components/PlayersTen";
+import { BoldPlayers } from "../components/BoldPlayers";
 import { getPlayers,searchPlayers } from "../actions";
 import {StyledHome} from "../styles/Home"
+import {TopThree} from "../components/TopThree";
 
 export const Home = () => {
   const dispatch = useDispatch();
@@ -17,7 +17,7 @@ export const Home = () => {
   return (
     <StyledHome>
       <PlayersTen />
-      <MainPanel />
+      <TopThree />
       <BoldPlayers />
     </StyledHome>
   );

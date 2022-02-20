@@ -27,6 +27,9 @@ export const CardPlayer = ({
         <div className="avatarRanking">
           <span>Ranking: {ranking}</span>
         </div>
+        <div className="avatarRanking">
+          <span>Id: {id}</span>
+        </div>
       </NavLink>
     </article>
   );

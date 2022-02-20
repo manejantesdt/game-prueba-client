@@ -10,20 +10,18 @@ function validate(editform) {
   let errorValidate = {};
   var numbers = /^[1-9][0-9]*$/;
 
-  //name validation
   if (editform.score.length > 6) {
-    errorValidate.score = "numberp muy largo, cifras max 6";
+    errorValidate.score = "numbero muy largo, cifras max 6";
   } else if (!editform.score.match(numbers)) {
     errorValidate.score = "Solo números positivos permitidos";
   }
   return errorValidate;
 }
 
-export const EditPlayer = () => {
-  var { player, avatars } = useSelector((state) => state);
+export const EditPlayer = ({player}) => {
+  const { avatars } = useSelector((state) => state);
   const navigate = useNavigate();
-  player = player[0];
-  var { id } = useParams();
+  const { id } = useParams();
   const dispatch = useDispatch();
   const [checkform, setCheckform] = useState(false);
   const [error, setError] = useState({});
@@ -34,7 +32,7 @@ export const EditPlayer = () => {
     ranking: player.ranking,
     status: player.status,
   });
-  id = parseInt(id);
+  const idParsed = parseInt(id);
 
   const handleSelect = (e) => {
     setEditform({
@@ -47,16 +45,10 @@ export const EditPlayer = () => {
     checkform === false ? setCheckform(true) : setCheckform(false);
   };
 
-  const onClick = () => {
-    dispatch(getPlayerId(id));
-    dispatch(editPlayer(id, editform));
-    setCheckform(true);
-    alert("Jugador Editado exitosamente");
-    window.location.reload(true);
-  };
+  
   const onDelete = (e) => {
     e.preventDefault();
-    dispatch(deletePlayer(id));
+    dispatch(deletePlayer(idParsed));
     alert("Jugador Borrado Exitosamente");
     navigate({ pathname: "/" });
   };
@@ -70,8 +62,11 @@ export const EditPlayer = () => {
       })
     );
     if (!Object.getOwnPropertyNames(error).length) {
-      dispatch(editPlayer(id, editform));
-      dispatch(getPlayerId(id));
+      console.log(editform)
+      dispatch(editPlayer(idParsed, editform));
+      dispatch(getPlayerId(idParsed));
+      alert("Jugador Editado exitosamente");
+      window.location.reload(true);
       checkform === false ? setCheckform(true) : setCheckform(false);
     } else {
       alert("Errores, revisar información");
@@ -97,7 +92,7 @@ export const EditPlayer = () => {
           Editar Detalles del Jugador
         </h2>
         {player ? (
-          <IntoEdit key={player.Id} onSubmit={handleSubmit}>
+          <IntoEdit key={player.Id}>
             <button className="deleteButton" onClick={onDelete}>x</button>
             <img src={editform.avatar} alt="Ávatar" className="editAvatar" />
 
@@ -157,12 +152,10 @@ export const EditPlayer = () => {
               />
               {error.score && <p>{error.score}</p>}
             </div>
-
             {error.name && <p>{error.name}</p>}
 
             <div className="editButtons">
-              <button onClick={onClick} type="submit" className="btnChange">
-                {/* <button onClick={onClick} onSubmit={handleSubmit} type="submit" className="btnChange"> */}
+              <button  onClick={handleSubmit} type="submit" className="btnChange">
                 Cambiar
               </button>
               <button onClick={onClickCancel} className="btnChange">

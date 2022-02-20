@@ -1,6 +1,5 @@
 import axios from "axios";
 const endpoint = process.env.REACT_APP_END_POINT;
-// -----------------------<Gets>------------------------
 
 export const searchPlayers = ({ nick_name, order, status }) => {
   return async (dispatch) => {
@@ -123,7 +122,6 @@ export const deletePlayer = (Id) => {
     }
   };
 };
-// ______________________________________________________
 
 export const setStatus = (status) => {
   return {

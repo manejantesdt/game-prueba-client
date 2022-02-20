@@ -71,6 +71,7 @@ export const AboutSection = styled.div`
       color: white;
       border-radius: 5px;
       transition: 0.5s all;
+      margin: .5rem auto;
 
       ${media.ulg}{
         left: 1180px;

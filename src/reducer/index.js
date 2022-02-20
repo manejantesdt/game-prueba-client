@@ -1,4 +1,4 @@
-import { avatars } from "../Aux_Data";
+import { avatars } from "../utils/AuxData";
 
 const inizialstate = {
   form: {},
@@ -12,12 +12,13 @@ const inizialstate = {
   status: "",
 };
 
-function rootReducer(state = inizialstate, action /* { type, payload } */) {
+function rootReducer(state = inizialstate, action ) {
   switch (action.type) {
     case "GET_PLAYER_ID":
-      return {
+         return {
         ...state,
-        player: action.payload,
+        
+        player: action.payload[0],
       };
     case "GET_PLAYERS":
       return {
