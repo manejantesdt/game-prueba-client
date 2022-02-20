@@ -1,10 +1,16 @@
-import { DetailPlayer } from './components/DetailPlayer'
+import { About } from '../components/About'
 import React from 'react'
 import { mount } from '@cypress/react'
+import {  Routes, Route} from "react-router-dom";
+
 
 describe('access secret admin functionality', () => {
     it('should be able to navigate to', () => {
-        mount(<DetailPlayer/>)
+      
+        
+      
+        mount(<Routes> <Route path="/about" element={<About />} /></Routes>)
+       
     //   cy.findByRole('textbox').type('nath')
     //   cy.findByTestId('SearchIcon').click()
     //   cy.findByText(/ranking: 783/i).should('be.visible').click()
