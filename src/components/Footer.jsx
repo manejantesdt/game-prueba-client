@@ -15,18 +15,8 @@ export const Footer = () =>{
             </div>
             <div className="element2">
                 Tienes alguna duda? 
-                <Button 
-                  sx={{
-                    textTransform: 'lowercase',
-                    fontWeight: '300',
-                    fontSize: '1.05rem',
-                    color: '#FF0075',
-                    transition: 'all 0.5s',
-                    '&:hover':{
-                      color: 'white',
-                    }
-
-                  }}
+                <Button
+                  className="contactButton"
                   onClick={() => setOpen(true)}
                 >
                   Contáctanos
@@ -34,8 +24,6 @@ export const Footer = () =>{
             </div>
             <ContactForm open={open} setOpen={setOpen} />
         </div>
-
-      
     </ContFooter>
   )
 }
