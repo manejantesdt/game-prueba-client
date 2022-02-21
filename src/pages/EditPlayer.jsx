@@ -5,6 +5,7 @@ import { useParams } from "react-router";
 import { ContEdit, IntoEdit } from "../styles/EditForm.js";
 import { getPlayerId, editPlayer, deletePlayer } from "../actions/index";
 import { DetailPlayer } from "./DetailPlayer.jsx";
+import swal from "sweetalert";
 
 function validate(editform) {
   let errorValidate = {};
@@ -49,7 +50,7 @@ export const EditPlayer = ({player}) => {
   const onDelete = (e) => {
     e.preventDefault();
     dispatch(deletePlayer(idParsed));
-    alert("Jugador Borrado Exitosamente");
+    swal("Completo!", "Jugador eliminado exitosamente!", "success");
     navigate({ pathname: "/" });
   };
 
@@ -65,11 +66,11 @@ export const EditPlayer = ({player}) => {
       console.log(editform)
       dispatch(editPlayer(idParsed, editform));
       dispatch(getPlayerId(idParsed));
-      alert("Jugador Editado exitosamente");
+      swal("Completo!", "Jugador editado exitosamente!", "success");
       window.location.reload(true);
       checkform === false ? setCheckform(true) : setCheckform(false);
     } else {
-      alert("Errores, revisar información");
+      swal("Incompleto!", "Verificar información requerida!", "error");
     }
   };
 
