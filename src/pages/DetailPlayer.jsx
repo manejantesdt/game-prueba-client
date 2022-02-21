@@ -23,7 +23,7 @@ export const DetailPlayer = () => {
       setAdminStatus(true);
     }
     // eslint-disable-next-line
-  }, [id, isAuthenticated]);
+  }, [isAuthenticated, player?.score, player?.nickname]);
 
   const onClickCheck = () => {
     checkform === true ? setCheckform(false) : setCheckform(true);

@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { ContForm, IntoForm } from "../styles/Form.js";
 import { createPlayer } from "../actions/index";
 import default_avatar from "../assets/img/Avatars/avatar1.png";
+import swal from "sweetalert";
 
 function validate(player) {
   let errors = {};
@@ -50,12 +51,10 @@ export const CreatePlayer = () => {
   const handleSubmit = (e) => {
      e.preventDefault();
     if (player.nickname === "" || player.avatar === "") {
-      return alert(
-        "Por favor completa todos los campos para poder crear el personaje"
-      );
+      return swal("Incompleto!", "Verifica la información requerida", "error");
     } else {
       dispatch(createPlayer(player));
-      alert("Jugador creado correctamente!");
+      swal("Enviado!", "Jugador creado exitosamente", "success");
       navigate({ pathname: "/" });
     }
   };
