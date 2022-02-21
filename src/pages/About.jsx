@@ -7,7 +7,7 @@ export const About = () => {
     <AboutSection>
       <div className="aboutInfo">
         <h2>Acerca de Recicle Being</h2>
-        <br />
+
         <p>
           Cada vez más personas en el mundo son conscientes de la necesidad de
           cuidar el medio-ambiente. Sin embargo, cuidarlo requiere, para la
@@ -58,13 +58,14 @@ export const About = () => {
           nuestro profundo agradecimiento por ser parte de esta propuesta.
         </p>
         <p>
-          {" "}
           ¡Empieza a jugar y diviértete mientras reciclas! Esperamos verte en el
           podio muy pronto :)
         </p>
 
         <Link to="/">
-          <button className="buttonBack">Volver </button>
+          <button className="buttonBack">
+            Volver al salón de la fama
+          </button>
         </Link>
       </div> 
       <DevTeam/>

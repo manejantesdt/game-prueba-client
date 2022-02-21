@@ -35,7 +35,6 @@ export const AboutSection = styled.div`
     
     ${media.ulg}{
       width: 100%;
-      height: 90%;
     }
     
     
@@ -43,6 +42,7 @@ export const AboutSection = styled.div`
       color: #ffffff;
       font-size: 2rem;
       text-align: center;
+      margin-bottom: 30px;
       padding: 1rem 0;
       
       ${media.ulg}{
@@ -64,10 +64,15 @@ export const AboutSection = styled.div`
       margin-bottom: 20px;
     }
 
+    a{
+      display: block;
+      margin: 0.5rem auto;
+      text-align: center;
+    }
     .buttonBack{
-      padding: .7rem 3rem;
+      padding: .7rem 2rem;
       border: none;
-      background-color: #b42769;
+      background-color: #FF0075;
       color: white;
       border-radius: 5px;
       transition: 0.5s all;
@@ -165,6 +170,18 @@ export const AboutSection = styled.div`
 
     .redSocial a{
       text-decoration: none;
+    }
+
+    .redSocialIcon{
+      color: #fff;
+      font-size: 2.5rem;
+      margin: 0 10px;
+      transition: 0.5s all;
+      
+      &:hover {
+        color: #77D970;
+        transform: translateY(-3px);
+        }
     }
 
     @keyframes float {
