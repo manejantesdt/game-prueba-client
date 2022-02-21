@@ -19,6 +19,7 @@ function validate(editform) {
 }
 
 export const EditPlayer = ({ player }) => {
+ 
   const { avatars } = useSelector((state) => state);
   const navigate = useNavigate();
   const id = player.Id;
