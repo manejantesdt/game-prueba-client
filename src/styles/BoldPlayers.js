@@ -105,11 +105,31 @@ export const BoldPlayersSections = styled.section`
       filter:drop-shadow( 0 5px 15px #00000080);
     }
   
-    // .avatarStatus{
-    //   width: 100%;
-    //   color: #D4AC2B;
-    //   margin-bottom: 5px;
-    // }
+    .avatarStatusOro{
+      color: #D4AC2B;
+    }
+    
+    .avatarStatusPlata{
+      color: #CCCCCC;
+    }
+
+    .avatarStatusBronce{
+      color: #cd7f32;
+    }
+
+    .avatarStatusHierro{
+      color: #00000060;
+    }
+
+    .avatarRanking{
+      width: 100%;
+      color: #FF0075;
+    }
+
+    .avatarId{
+      color: #FFF;
+      width: 100%;
+    }
 
     .avatarStatus{
       width: 100%;
@@ -189,6 +209,12 @@ export const BoldPlayersPagination = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+  
+  .returnContainerAux {
+    color: #FFF;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
   }
 
   .BackHome{

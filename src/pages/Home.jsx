@@ -13,7 +13,7 @@ export const Home = () => {
   useEffect(() => {
     dispatch(searchPlayers({nick_name:"",order:"",status:""}));
     dispatch(getPlayers({}));
-  }, [dispatch, players?.length]);
+  }, [dispatch, players]);
 
   return (
     <StyledHome>

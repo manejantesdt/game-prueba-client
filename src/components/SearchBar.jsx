@@ -20,7 +20,7 @@ export const SearchBar = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    // dispatch(setNickname(nick_name));
+    dispatch(setNickname(nick_name));
     dispatch(searchPlayers({ nick_name: nick_name }));
     setInput("");
     navigate("/search");
