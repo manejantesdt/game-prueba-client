@@ -24,7 +24,6 @@ const style = {
   border: "none",
   borderRadius: "10px",
   boxShadow: 24,
-  p: 4,
 };
 
 export default function ContactForm({ open, setOpen }) {
