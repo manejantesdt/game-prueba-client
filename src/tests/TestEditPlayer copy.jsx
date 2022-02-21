@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { ContEdit, IntoEdit } from "../styles/EditForm.js";
 import { getPlayerId, editPlayer, deletePlayer } from "../actions/index";
-import { DetailPlayer } from "./DetailPlayer.jsx";
+import { DetailPlayer } from "../pages/DetailPlayer.jsx";
 import swal from "sweetalert";
 
 function validate(editform) {
@@ -18,8 +18,8 @@ function validate(editform) {
   return errorValidate;
 }
 
-export const EditPlayer = ({ player }) => {
- 
+export const TestEditPlayer = ({ player }) => {
+  console.log(player)
   const { avatars } = useSelector((state) => state);
   const navigate = useNavigate();
   const id = player.Id;
@@ -65,9 +65,11 @@ export const EditPlayer = ({ player }) => {
     if (!Object.getOwnPropertyNames(error).length) {
       dispatch(editPlayer(id, editform));
       dispatch(getPlayerId(id));
-      swal("Jugador editado exitosamente.").then((value) => {
-        window.location.reload(true);
-      });      
+      setTimeout(() => {
+         navigate({ pathname: "/id/11" })
+      }, 2000);
+       
+          
       checkform === false ? setCheckform(true) : setCheckform(false);
     } else {
       swal("Incompleto!", "Verificar información requerida!", "error");

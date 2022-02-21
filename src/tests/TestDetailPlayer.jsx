@@ -4,11 +4,11 @@ import { useParams } from "react-router";
 import { ContEdit } from "../styles/EditForm.js";
 import { useAuth0 } from "@auth0/auth0-react";
 import { getPlayerId } from "../actions/index";
-import { EditPlayer } from "./EditPlayer.jsx";
+import { EditPlayer } from "../pages/EditPlayer";
 import Spinner from "../components/Spinner.jsx";
 
-export const DetailPlayer = () => {
-  
+export const TestDetailPlayer = (props) => {
+  console.log(props)
   const { player } = useSelector((state) => state);
   const dispatch = useDispatch();
   const { id } = useParams();
@@ -18,8 +18,8 @@ export const DetailPlayer = () => {
   useEffect(() => {
     dispatch(getPlayerId(id));
     if (
-      isAuthenticated === true &&
-      user.email === process.env.REACT_APP_EMAIL
+      (isAuthenticated === true &&
+      user.email === process.env.REACT_APP_EMAIL) || props.props===true
       ) {
       setAdminStatus(true);
     }

@@ -2,14 +2,18 @@ describe('Search player', () => {
     it('usuario puede buscar a jugador', () => {
       cy.visit('http://localhost:3000/');
       cy.findByRole('textbox').type('950')
-      cy.findByRole('button', {name: /buscar jugador/i}).click()
-      cy.findByRole('heading', {  name: /gustavo/i}).should('be.visible')
-      cy.findByRole('link', {  name: /volver/i}).click()
+      cy.findByTestId('SearchIcon').click()
+      cy.findByText(/id: 950/i).should('be.visible')
+     
     });
     it('si no se encuentra que emita la alerta correspondiente', () => {
       cy.visit('http://localhost:3000/');
       cy.findByRole('textbox').type('fkhgdkjfgh')
-      cy.findByRole('button', {name: /buscar jugador/i}).click()
-      cy.findByRole('heading', {  name: /\.\.\.descargando búsqueda/i}).contains("descargando búsqueda").should('be.visible')
+      cy.findByTestId('SearchIcon').click()
+      cy.wait(6000)
+      cy.findByRole('heading', {  name: /no se encontraron jugadores/i}).should('be.visible')
+      cy.findByRole('link', {  name: /volver al salón de la fama/i}).click()
+      cy.findByText(/id: 4/i).should('be.visible')
+     
     });
 });

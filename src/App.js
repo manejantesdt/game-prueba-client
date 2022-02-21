@@ -9,6 +9,8 @@ import { CreatePlayer } from "./pages/CreatePlayer";
 import  {NavBar}  from "./components/NavBar";
 import  {SearchPlayer}  from "./pages/SearchPlayer";
 import {NotFound} from "./pages/NotFound";
+import { TestDetailPlayer } from "./tests/TestDetailPlayer"
+
 import store from "./store/store";
 
 const App = () => (
@@ -20,6 +22,7 @@ const App = () => (
         <Route path="/id/:id" element={<DetailPlayer />} />
         <Route path="/create" element={<CreatePlayer />} />
         <Route path="/search" element={<SearchPlayer />} />
+        <Route path="/test/:id" element={<TestDetailPlayer  props={true} />} />
         <Route path="*" element={<NotFound />} />
       </Routes>  
       <Footer />  
