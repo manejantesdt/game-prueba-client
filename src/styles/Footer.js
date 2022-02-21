@@ -31,6 +31,18 @@ export const ContFooter = styled.div`
     }
 }
 
+    .contactButton{
+        text-transform: lowercase;
+        // font-weight: 300;
+        font-size: 1.05rem;
+        color: #FF0075;
+        transition: all 0.5s;
+
+        &:hover:{
+          color: white;
+        }
+    }
+
 `;
 
 export const ContForm = styled.form`
