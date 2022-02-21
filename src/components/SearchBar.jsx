@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import { SearchBarSection } from "../styles/SearchBar";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { setNickname, searchPlayers } from "../actions";
 import {useNavigate} from "react-router-dom";
 import SearchIcon from '@mui/icons-material/Search';
-import swal from "sweetalert";
+
 
 export const SearchBar = () => {
 
   const navigate = useNavigate();
   const [nick_name, setInput] = useState("");
   const dispatch = useDispatch();
-  const { searchPlayer } = useSelector((state) => state);
+
  
   function handleOnChange(e) { 
     e.preventDefault();
@@ -20,12 +20,10 @@ export const SearchBar = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    dispatch(setNickname(nick_name));
+    // dispatch(setNickname(nick_name));
     dispatch(searchPlayers({ nick_name: nick_name }));
     setInput("");
-    searchPlayer.length === 0 ? 
-      swal("No encontrado!", "La información suministrada no se encuentra!", "error") :
-      navigate("/search");
+    navigate("/search");
           
   };
 
