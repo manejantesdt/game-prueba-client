@@ -1,62 +1,12 @@
-import React from 'react';
-import { ContFooter, ContForm, BtnClose } from "../styles/Footer";
-import Box from '@mui/material/Box';
+import React, {useState} from 'react';
+import { ContFooter } from "../styles/Footer";
 import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import Modal from '@mui/material/Modal';
-import ApiKey from '../ApiKey.js';
-import emailjs from '@emailjs/browser';
-import swal from 'sweetalert';
-
-const style = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  width: 350,
-  height: 650,
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  justifyContent: 'space-around',
-  bgcolor: 'background.paper',
-  border: 'none',
-  borderRadius: '10px',
-  boxShadow: 24,
-  p: 4,
-};
-
-const enviarCorreo =(e) => {
-  e.preventDefault()
-
-  emailjs.sendForm(ApiKey.SERVICE_ID, ApiKey.TEMPLATE_ID, e.target, ApiKey.USER_ID).then(
-      result => {
-         
-          swal("Correo enviado correctamente", {
-              icon: "success",
-              buttons: false,
-              timer: 3000,
-            });
-            
-          document.getElementById('nombre').value = ''
-          document.getElementById('correo').value = ''
-          document.getElementById('tel').value = ''
-          document.getElementById('asunto').value = ''
-          document.getElementById('mensaje').value = ''
-      },
-      error => {
-          alert( 'Ocurrio un error, intente nuevamente')
-          }
-  )
-}
+import ContactForm from "./ContactForm";
 
 export const Footer = () =>{
 
-  const [open, setOpen] = React.useState(false);
-
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-
+  const [open, setOpen] = useState(false);
+  
   return (
     <ContFooter>
         <div className="elementFooter">
@@ -65,67 +15,15 @@ export const Footer = () =>{
             </div>
             <div className="element2">
                 Tienes alguna duda? 
-                <Button 
-                  sx={{
-                    textTransform: 'lowercase',
-                    fontWeight: '300',
-                    fontSize: '1.05rem',
-                    color: '#FF0075',
-                    transition: 'all 0.5s',
-                    '&:hover':{
-                      color: 'white',
-                    }
-
-                  }}
-                  onClick={handleOpen}
+                <Button
+                  className="contactButton"
+                  onClick={() => setOpen(true)}
                 >
                   Contáctanos
                 </Button>
             </div>
-
+            <ContactForm open={open} setOpen={setOpen} />
         </div>
-
-        <Modal
-          open={open}
-          onClose={handleClose}
-          aria-labelledby="modal-modal-title"
-          aria-describedby="modal-modal-description"
-        >
-          <Box sx={style}>
-            <BtnClose onClick={handleClose} > x </BtnClose>
-            <Typography 
-              sx={{fontFamily: 'Nunito', fontWeight: 'bold'}}
-              id="modal-modal-title" 
-              component="h2" 
-              variant="h4" 
-            >
-              Escríbenos
-            </Typography>
-            <Typography id="modal-modal-description" sx={{ width: "100%", textAlign: "center", height: "50px"}}>
-              Si tienes alguna duda o sugerencia llena el siguiente formulario y
-              nos pondremos en contacto contigo.
-            </Typography>
-            <Box 
-              sx={{
-                width: '90%',
-                height: '60%',
-                margin: '10px 0',
-                display: 'flex',
-                flexDirection: 'column'
-                }}
-            >
-              <ContForm onSubmit = {enviarCorreo}>
-                <input type="text" id="nombre" name="nombre" maxLength="20" placeholder="Nombre" />
-                <input type="email" id="correo" name="correo" maxLength="30" placeholder="Email" />
-                <input type="tel" id="tel" name="tel" maxLength="13" placeholder="Teléfono" />
-                <input type="text" id="asunto" name="asunto" maxLength="20" placeholder="Asunto" />
-                <textarea id="mensaje" name="mensaje" placeholder="Mensaje"></textarea>
-                <button type="submit" className="btnContact">Enviar</button>
-              </ContForm>
-
-            </Box>
-          </Box>
-        </Modal>
     </ContFooter>
   )
 }

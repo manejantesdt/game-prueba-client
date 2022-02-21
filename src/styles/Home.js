@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import flags from "../img/flags.png";
-import confetti from "../img/confetti.gif";
+import flags from "../assets/img/flags.png";
+import confetti from "../assets/img/confetti.gif";
 
 export const StyledHome = styled.main`
   .jugador {

@@ -21,11 +21,24 @@ export const CardPlayer = ({
           <img src={image} alt={nickname} />
         </div>
         <h3>{nickname}</h3>
-        <div className="avatarStatus">
+        <div
+          className={
+            status === "oro"
+              ? "avatarStatusOro"
+              : status === "plata"
+              ? "avatarStatusPlata"
+              : status === "bronce"
+              ? "avatarStatusBronce"
+              : "avatarStatusHierro"
+          }
+        >
           <span>{status}</span>
         </div>
         <div className="avatarRanking">
           <span>Ranking: {ranking}</span>
+        </div>
+        <div className="avatarId">
+          <span>Id: {id}</span>
         </div>
       </NavLink>
     </article>

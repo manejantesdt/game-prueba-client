@@ -1,32 +1,21 @@
-import { useSelector, useDispatch } from "react-redux";
-import { CardPlayer } from "./CardPlayer";
+import { useSelector } from "react-redux";
+import { CardPlayer } from "../components/CardPlayer";
 import {
   BoldPlayersSections,
   BoldPlayersPagination,
 } from "../styles/BoldPlayers";
-import { searchPlayers,} from "../actions";
-import { useEffect, useState } from "react";
-import Paged from "./Paged";
-import { FilterBar } from "./FilterBar";
-import Spinner from "./Spinner";
+import { useState } from "react";
+import Paged from "../components/Paged";
+import { FilterBar } from "../components/FilterBar";
+import Spinner from "../components/Spinner";
 
 export const SearchPlayer = () => {
-  const dispatch = useDispatch();
-  const { searchPlayer, nickname, players } = useSelector((state) => state);
-
-  useEffect(() => {
-    dispatch(
-      searchPlayers(nickname ? { nick_name: nickname } : { nick_name: "" }),
-    );
-  }, [players, nickname, dispatch]);
-
+  const { searchPlayer } = useSelector((state) => state);
   const [currentPage, setCurrentPage] = useState(1);
   const [playersPerPage] = useState(18);
   const indexOfLastPlayer = currentPage * playersPerPage;
   const indexOffirstPlayer = indexOfLastPlayer - playersPerPage;
-  const currentPlayers = searchPlayer
-    ? searchPlayer.slice(indexOffirstPlayer, indexOfLastPlayer)
-    : [];
+  const currentPlayers = searchPlayer ? searchPlayer.slice(indexOffirstPlayer, indexOfLastPlayer) : [];
 
   const pagedTotal = (pageNumber) => {
     setCurrentPage(pageNumber);
@@ -34,18 +23,18 @@ export const SearchPlayer = () => {
 
   return searchPlayer?.length > 0 && searchPlayer[0] !== null ? (
     <>
-    <FilterBar />
+      <FilterBar />
       <BoldPlayersSections>
         <div className="suplentes">
-          {currentPlayers?.map((j, i) => {
+          {currentPlayers?.map((player, i) => {
             return (
               <CardPlayer
                 key={i}
-                nickname={j.nickname}
-                image={j.avatar}
-                id={j.Id}
-                status={j.status}
-                ranking={j.ranking}
+                nickname={player.nickname}
+                image={player.avatar}
+                id={player.Id}
+                status={player.status}
+                ranking={player.ranking}
               />
             );
           })}
@@ -63,12 +52,10 @@ export const SearchPlayer = () => {
         </div>
         <div className="returnContainer">
           <a href="/" className="BackHome">
-            Volver a la página principal
+            Volver al salón de la fama
           </a>
         </div>
       </BoldPlayersPagination>
     </>
-  ) : (
-      <Spinner />
-  );
+  ) : <Spinner timer={true} />
 };

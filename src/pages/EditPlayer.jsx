@@ -1,29 +1,27 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { useParams } from "react-router";
 import { ContEdit, IntoEdit } from "../styles/EditForm.js";
 import { getPlayerId, editPlayer, deletePlayer } from "../actions/index";
 import { DetailPlayer } from "./DetailPlayer.jsx";
+import swal from "sweetalert";
 
 function validate(editform) {
   let errorValidate = {};
-  var numbers = /^[1-9][0-9]*$/;
-
-  //name validation
+  
   if (editform.score.length > 6) {
-    errorValidate.score = "numberp muy largo, cifras max 6";
-  } else if (!editform.score.match(numbers)) {
-    errorValidate.score = "Solo números positivos permitidos";
-  }
+    errorValidate.score = "numbero muy largo, cifras max 6";
+  } 
+  
+  
+ 
   return errorValidate;
 }
 
-export const EditPlayer = () => {
-  var { player, avatars } = useSelector((state) => state);
+export const EditPlayer = ({ player }) => {
+  const { avatars } = useSelector((state) => state);
   const navigate = useNavigate();
-  player = player[0];
-  var { id } = useParams();
+  const id = player.Id;
   const dispatch = useDispatch();
   const [checkform, setCheckform] = useState(false);
   const [error, setError] = useState({});
@@ -34,7 +32,6 @@ export const EditPlayer = () => {
     ranking: player.ranking,
     status: player.status,
   });
-  id = parseInt(id);
 
   const handleSelect = (e) => {
     setEditform({
@@ -47,18 +44,13 @@ export const EditPlayer = () => {
     checkform === false ? setCheckform(true) : setCheckform(false);
   };
 
-  const onClick = () => {
-    dispatch(getPlayerId(id));
-    dispatch(editPlayer(id, editform));
-    setCheckform(true);
-    alert("Jugador Editado exitosamente");
-    window.location.reload(true);
-  };
   const onDelete = (e) => {
     e.preventDefault();
     dispatch(deletePlayer(id));
-    alert("Jugador Borrado Exitosamente");
-    navigate({ pathname: "/" });
+    swal("Jugador borrado exitosamente.").then((value) => {
+      navigate({ pathname: "/" })
+    });      
+    ;
   };
 
   const handleSubmit = async (e) => {
@@ -72,9 +64,12 @@ export const EditPlayer = () => {
     if (!Object.getOwnPropertyNames(error).length) {
       dispatch(editPlayer(id, editform));
       dispatch(getPlayerId(id));
+      swal("Jugador editado exitosamente.").then((value) => {
+        window.location.reload(true);
+      });      
       checkform === false ? setCheckform(true) : setCheckform(false);
     } else {
-      alert("Errores, revisar información");
+      swal("Incompleto!", "Verificar información requerida!", "error");
     }
   };
 
@@ -93,12 +88,12 @@ export const EditPlayer = () => {
   return checkform === false ? (
     <>
       <ContEdit>
-        <h2 className="DetailPlayerTitle">
-          Editar Detalles del Jugador
-        </h2>
+        <h2 className="DetailPlayerTitle">Editar Detalles del Jugador</h2>
         {player ? (
-          <IntoEdit key={player.Id} onSubmit={handleSubmit}>
-            <button className="deleteButton" onClick={onDelete}>x</button>
+          <IntoEdit key={player.Id}>
+            <button className="deleteButton" onClick={onDelete}>
+              x
+            </button>
             <img src={editform.avatar} alt="Ávatar" className="editAvatar" />
 
             <div className="editPlayerAvatar">
@@ -120,18 +115,13 @@ export const EditPlayer = () => {
 
             <div className="editPlayerAvatar">
               <p>Status</p>
-              <select
+              <input
+                className="input_form"
                 type="text"
                 name="status"
-                className="input_form"
-                onChange={(e) => handleSelect(e)}
-              >
-                <option value={null}>{player.status}</option>
-                <option value="oro">Oro</option>
-                <option value="bronce">Bronce</option>
-                <option value="plata">Plata</option>
-                <option value="hierro">Hierro</option>
-              </select>
+                readOnly
+                placeholder={player.status}
+              />
             </div>
 
             <div className="editPlayerAvatar">
@@ -150,6 +140,8 @@ export const EditPlayer = () => {
               <input
                 className="input_form"
                 type="number"
+                pattern="/^[1-9][0-9]*$/"
+                maxLength={6}
                 name="score"
                 min="0"
                 placeholder={parseInt(player.score)}
@@ -157,12 +149,14 @@ export const EditPlayer = () => {
               />
               {error.score && <p>{error.score}</p>}
             </div>
-
             {error.name && <p>{error.name}</p>}
 
             <div className="editButtons">
-              <button onClick={onClick} type="submit" className="btnChange">
-                {/* <button onClick={onClick} onSubmit={handleSubmit} type="submit" className="btnChange"> */}
+              <button
+                onClick={handleSubmit}
+                type="submit"
+                className="btnChange"
+              >
                 Cambiar
               </button>
               <button onClick={onClickCancel} className="btnChange">

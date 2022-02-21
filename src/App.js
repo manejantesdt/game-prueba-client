@@ -1,14 +1,14 @@
 import React from "react";
-import { Route, Routes, BrowserRouter } from "react-router-dom";
-import { About } from "./components/About";
-import {Home} from "./components/Home";
+import { Route, Routes } from "react-router-dom";
+import { About } from "./pages/About.jsx";
+import {Home} from "./pages/Home";
 import {Footer} from "./components/Footer";
 import { Provider } from "react-redux";
-import { DetailPlayer } from "./components/DetailPlayer";
-import { CreatePlayer } from "./components/CreatePlayer";
+import { DetailPlayer } from "./pages/DetailPlayer";
+import { CreatePlayer } from "./pages/CreatePlayer";
 import  {NavBar}  from "./components/NavBar";
-import  {SearchPlayer}  from "./components/SearchPlayer";
-import {NotFound} from "./components/NotFound";
+import  {SearchPlayer}  from "./pages/SearchPlayer";
+import {NotFound} from "./pages/NotFound";
 import store from "./store/store";
 
 const App = () => (

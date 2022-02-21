@@ -5,12 +5,15 @@ import { setNickname, searchPlayers } from "../actions";
 import {useNavigate} from "react-router-dom";
 import SearchIcon from '@mui/icons-material/Search';
 
+
 export const SearchBar = () => {
+
   const navigate = useNavigate();
   const [nick_name, setInput] = useState("");
   const dispatch = useDispatch();
 
-  function handleOnChange(e) {
+ 
+  function handleOnChange(e) { 
     e.preventDefault();
     setInput(e.target.value);
   }
@@ -21,7 +24,7 @@ export const SearchBar = () => {
     dispatch(searchPlayers({ nick_name: nick_name }));
     setInput("");
     navigate("/search");
-    
+          
   };
 
   return (
