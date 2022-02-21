@@ -13,12 +13,12 @@ export const Home = () => {
   useEffect(() => {
     dispatch(searchPlayers({nick_name:"",order:"",status:""}));
     dispatch(getPlayers({}));
-  }, [dispatch, players]);
+  }, [dispatch, players?.length]);
 
   return (
     <StyledHome>
-      <PlayersTen />
       <TopThree />
+      <PlayersTen />
       <BoldPlayers />
     </StyledHome>
   );
