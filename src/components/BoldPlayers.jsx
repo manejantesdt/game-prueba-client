@@ -14,15 +14,15 @@ export const BoldPlayers = () => {
     <BoldPlayersSections>
       <h2>Jugadores Destacados</h2>
       <div className="suplentes">
-      {boldPlayers.map((j) => {
+      {boldPlayers.map((player) => {
             return (
               <CardPlayer
-              nickname={j.nickname}
-                image={j.avatar}
-                key={j.Id}
-                id={j.Id}
-                status={j.status}
-                ranking={j.ranking}
+              nickname={player.nickname}
+                image={player.avatar}
+                key={player.Id}
+                id={player.Id}
+                status={player.status}
+                ranking={player.ranking}
                 />
                 );
               })}
