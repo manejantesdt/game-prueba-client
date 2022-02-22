@@ -37,10 +37,10 @@ Para verificar que versión tienes instalada:
 
 Es necesario definir un archivo .env que tenga la siguiente forma:
 
-REACT_APP_AUTH0_DOMAIN= Dominio de cuenta Auth0. [Aqui](https://manage.auth0.com/#/applications) 
-REACT_APP_AUTH0_CLIENT_ID= ClientId de cuenta Auth0. [Aqui](https://manage.auth0.com/#/applications) 
-REACT_APP_EMAIL=Email de cuenta admind configurada en Auth0. 
-REACT_APP_END_POINT=Enpoint proveniente del despliegue de serverless AWS. [Aqui](https://manage.auth0.com/#/applications) 
+* REACT_APP_AUTH0_DOMAIN= Dominio de cuenta Auth0. [Aqui](https://manage.auth0.com/#/applications) 
+* REACT_APP_AUTH0_CLIENT_ID= ClientId de cuenta Auth0. [Aqui](https://manage.auth0.com/#/applications) 
+* REACT_APP_EMAIL=Email de cuenta admind configurada en Auth0. 
+* REACT_APP_END_POINT=Enpoint proveniente del despliegue de serverless AWS. [Aqui](https://manage.auth0.com/#/applications) 
 
 
 
@@ -182,9 +182,9 @@ Para correr los test, ejecutar el comando:
 ```
 npx cypress open
 ```
-Cypress de forma automatica reconocera los archivos de test definidos en el repositorio. Posteriormente, permitirá de forma interactiva correr cada uno de los test. [Ver Documentación](https://docs.cypress.io/guides/core-concepts/test-runner#Overview)
+Cypress de forma automatica reconocerá los archivos de test definidos en el repositorio. Posteriormente, permitirá de forma interactiva correr cada uno de los test. [Ver Documentación](https://docs.cypress.io/guides/core-concepts/test-runner#Overview)
 
-Las pruebas se centrar en testear las funcionalidades centrales de la aplicación asi como comprobar el renderizado de los distintos componentes mostrados. 
+Las pruebas se centrar en testear las funcionalidades centrales de la aplicación así como verificar el renderizado de los distintos componentes mostrados. 
 
 
 ## Construído con 🛠️
