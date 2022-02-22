@@ -3,7 +3,7 @@ describe('Eliminar usuario', () => {
     it('usuario puede borrar satisfactoriamente un jugador', () => {
         cy.visit('http://localhost:3000/');
         cy.findByRole('link', { name: /crear jugador/i}).click()
-        cy.get('input[name="nickname"]').type('Prueba6000')
+        cy.get('input[name="nickname"]').type('prueba5')
         cy.findByRole('combobox').select('Avatar 5')
         cy.findByRole('button', { name: /crear jugador/i}).click()
         cy.findByRole('button', {  name: /ok/i}).click()
