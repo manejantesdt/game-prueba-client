@@ -35,9 +35,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "CI=false react-scripts build",
-    "test": "react-scripts test",
+    "test": "cypress open",
     "eject": "react-scripts eject",
-    "deploy": "aws s3 sync build/ s3://game-prueba-client --acl public-read",
     "cypress:open": "cypress open"
   },
   "eslintConfig": {
