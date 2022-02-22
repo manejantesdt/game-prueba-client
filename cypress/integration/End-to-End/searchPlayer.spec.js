@@ -15,5 +15,6 @@ describe('Search player', () => {
       cy.findByRole('link', {  name: /volver al salón de la fama/i}).click()
       cy.findByText(/id: 4/i).should('be.visible')
      
+      
     });
 });

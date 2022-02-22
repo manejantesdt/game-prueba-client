@@ -22,6 +22,7 @@ describe('Renderizado de componentes', () => {
     cy.visit('http://localhost:3000/id/1');
     cy.findByText(/116508/i).should('be.visible')
     
+    
   });
 });
 
