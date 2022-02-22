@@ -8,8 +8,8 @@ quiénes son los jugadores del mismo.
 
 ## ¿Puedo ver esta aplicación en vivo? 💻
 
-Claro que sí! Tanto el Front-end como el Back-end fueron deployadas utilizando diferentes servicios en AWS (Lambda, Dynamo, S3, APi Gateway, entre otros).
-[Puedes visitar la versión online haciendo click en el siguiente  enlace:](https://dfuf67ce7t2lm.cloudfront.net/)
+Claro que sí! Tanto el Front-end como el Back-end fueron deployadas utilizando diferentes servicios en AWS (Lambda, Dynamo, S3, APi Gateway, entre otros) y Vercel.
+[Puedes visitar la versión online haciendo click en el siguiente  enlace](https://recicle-being.vercel.app/)
 
 ## Comenzando 🚀
 
@@ -34,6 +34,15 @@ Para verificar que versión tienes instalada:
 > node -v
 >
 > npm –v
+
+Es necesario definir un archivo .env que tenga la siguiente forma:
+
+REACT_APP_AUTH0_DOMAIN= Dominio de cuenta Auth0. [Aqui](https://manage.auth0.com/#/applications) 
+REACT_APP_AUTH0_CLIENT_ID= ClientId de cuenta Auth0. [Aqui](https://manage.auth0.com/#/applications) 
+REACT_APP_EMAIL=Email de cuenta admind configurada en Auth0. 
+REACT_APP_END_POINT=Enpoint proveniente del despliegue de serverless AWS. [Aqui](https://manage.auth0.com/#/applications) 
+
+
 
 ### Instalación 🔧
 
@@ -168,23 +177,15 @@ __Ruta Sobre__: contiene
 
 ## Ejecutando las pruebas ⚙️
 
-_Explica como ejecutar las pruebas automatizadas para este sistema_
-
-### Analice las pruebas end-to-end 🔩
-
-_Explica que verifican estas pruebas y por qué_
+Para correr los test, ejecutar el comando:
 
 ```
-Da un ejemplo
+npx cypress open
 ```
+Cypress de forma automatica reconocera los archivos de test definidos en el repositorio. Posteriormente, permitirá de forma interactiva correr cada uno de los test. [Ver Documentación](https://docs.cypress.io/guides/core-concepts/test-runner#Overview)
 
-### Y las pruebas de estilo de codificación ⌨️
+Las pruebas se centrar en testear las funcionalidades centrales de la aplicación asi como comprobar el renderizado de los distintos componentes mostrados. 
 
-_Explica que verifican estas pruebas y por qué_
-
-```
-Da un ejemplo
-```
 
 ## Construído con 🛠️
 
