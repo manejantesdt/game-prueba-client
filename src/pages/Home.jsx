@@ -11,6 +11,7 @@ export const Home = () => {
   const { players } = useSelector((state) => state);
 
   useEffect(() => {
+    dispatch(searchPlayers({nick_name:"",order:"",status:"",}));
     dispatch(getPlayers({}));
   }, [dispatch, players?.length]);
 
