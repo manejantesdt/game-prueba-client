@@ -29,7 +29,7 @@ export const getPlayers = () => {
         await axios.get(`${endpoint}/player?nickname=&amount=50&order=asc`
         )
       ).data;
-      const players = json.body.players;
+      const players = json.body.getPlayers;
       dispatch({
         type: "GET_PLAYERS",
         payload: players,
